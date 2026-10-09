@@ -192,8 +192,13 @@ void main(List<String> args) async {
             stringParams.add("enumValues: [$enumValuesStr]");
           }
           if (prop.pattern != null && prop.pattern!.isNotEmpty) {
-            final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
-            stringParams.add("pattern: '$escapedPattern'");
+            try {
+              RegExp(prop.pattern!);
+              final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
+              stringParams.add("pattern: '$escapedPattern'");
+            } catch (_) {
+              // Skip invalid regular expressions from schema definition
+            }
           }
           buffer.writeln("  @StringField(${stringParams.join(', ')})");
         } else if (dartType == 'int') {
