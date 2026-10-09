@@ -33,9 +33,25 @@ void main(List<String> args) async {
 
   String sanitizeClassName(String name) {
     var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
-    if (cleaned == 'Class') return 'SchemaClass';
-    if (cleaned == 'Map') return 'SchemaMap';
-    if (cleaned == 'Set') return 'SchemaSet';
+    const dartCoreTypes = {
+      'Class': 'SchemaClass',
+      'Map': 'SchemaMap',
+      'Set': 'SchemaSet',
+      'List': 'SchemaList',
+      'DateTime': 'SchemaDateTime',
+      'Duration': 'SchemaDuration',
+      'Type': 'SchemaType',
+      'Function': 'SchemaFunction',
+      'Object': 'SchemaObject',
+      'String': 'SchemaString',
+      'int': 'SchemaInt',
+      'double': 'SchemaDouble',
+      'num': 'SchemaNum',
+      'bool': 'SchemaBool',
+    };
+    if (dartCoreTypes.containsKey(cleaned)) {
+      return dartCoreTypes[cleaned]!;
+    }
     if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
       cleaned = 'Schema_$cleaned';
     }

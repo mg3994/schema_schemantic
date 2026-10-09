@@ -292,7 +292,7 @@ abstract class Accommodation implements Place, $Thing {
   QuantitativeValue? get floorSize;
 
   /// Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'leaseLength', includeIfNull: false)
   Object? get leaseLength;
 
@@ -929,7 +929,7 @@ abstract class AudioObjectSnapshot implements AudioObject, $Thing {
 @Schema(description: 'An audiobook.')
 abstract class Audiobook implements AudioObject, Book, $Thing {
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -2957,7 +2957,7 @@ abstract class CreativeWork implements Thing, $Thing {
 
   /// Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience.
   @JsonKey(name: 'timeRequired', includeIfNull: false)
-  Duration? get timeRequired;
+  SchemaDuration? get timeRequired;
 
   /// The work that this work has been translated from. E.g. 物种起源 is a translationOf “On the Origin of Species”.
   @JsonKey(name: 'translationOfWork', includeIfNull: false)
@@ -3086,7 +3086,7 @@ abstract class Credential implements CreativeWork, $Thing {
 
   /// The duration of validity of a permit or similar thing.
   @JsonKey(name: 'validFor', includeIfNull: false)
-  Duration? get validFor;
+  SchemaDuration? get validFor;
 
   /// The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
   @JsonKey(name: 'validIn', includeIfNull: false)
@@ -3287,7 +3287,7 @@ abstract class Date implements $Thing {
 
 /// A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
 @Schema(description: 'A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).')
-abstract class DateTime implements $Thing {
+abstract class SchemaDateTime implements $Thing {
 }
 
 /// A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
@@ -4115,7 +4115,7 @@ abstract class DryCleaningOrLaundry implements LocalBusiness, $Thing {
 
 /// Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
 @Schema(description: 'Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).')
-abstract class Duration implements Quantity, $Thing {
+abstract class SchemaDuration implements Quantity, $Thing {
 }
 
 /// Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
@@ -4260,7 +4260,7 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
 
   /// The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
   @JsonKey(name: 'termDuration', includeIfNull: false)
-  Duration? get termDuration;
+  SchemaDuration? get termDuration;
 
   /// The number of times terms of study are offered per year. Semesters and quarters are common units for term. For example, if the student can only take 2 semesters for the program in one year, then termsPerYear should be 2.
   @DoubleField(name: 'termsPerYear')
@@ -4272,7 +4272,7 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
 
   /// The expected length of time to complete the program if attending full-time.
   @JsonKey(name: 'timeToComplete', includeIfNull: false)
-  Duration? get timeToComplete;
+  SchemaDuration? get timeToComplete;
 
   /// The estimated salary earned while in the program.
   @JsonKey(name: 'trainingSalary', includeIfNull: false)
@@ -4508,7 +4508,7 @@ abstract class Episode implements CreativeWork, $Thing {
   Person? get directors;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -4599,7 +4599,7 @@ abstract class Event implements Thing, $Thing {
   String? get doorTime;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -4872,7 +4872,7 @@ abstract class ExerciseGym implements SportsActivityLocation, $Thing {
 @Schema(description: 'Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.')
 abstract class ExercisePlan implements CreativeWork, PhysicalActivity, $Thing {
   /// Length of time to engage in the activity.
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'activityDuration', includeIfNull: false)
   Object? get activityDuration;
 
@@ -5178,7 +5178,7 @@ abstract class Flight implements Trip, $Thing {
   String? get departureTerminal;
 
   /// The estimated time the flight will take.
-  @AnyOf([Duration, String])
+  @AnyOf([SchemaDuration, String])
   @JsonKey(name: 'estimatedFlightDuration', includeIfNull: false)
   Object? get estimatedFlightDuration;
 
@@ -5993,11 +5993,11 @@ abstract class HowTo implements CreativeWork, $Thing {
 
   /// The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'performTime', includeIfNull: false)
-  Duration? get performTime;
+  SchemaDuration? get performTime;
 
   /// The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'prepTime', includeIfNull: false)
-  Duration? get prepTime;
+  SchemaDuration? get prepTime;
 
   /// A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.
   @AnyOf([CreativeWork, HowToSection, HowToStep, String])
@@ -6021,7 +6021,7 @@ abstract class HowTo implements CreativeWork, $Thing {
 
   /// The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'totalTime', includeIfNull: false)
-  Duration? get totalTime;
+  SchemaDuration? get totalTime;
 
   /// The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
   @AnyOf([QuantitativeValue, String])
@@ -6050,11 +6050,11 @@ abstract class HowToDirection implements CreativeWork, ListItem, $Thing {
 
   /// The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'performTime', includeIfNull: false)
-  Duration? get performTime;
+  SchemaDuration? get performTime;
 
   /// The length of time it takes to prepare the items to be used in instructions or a direction, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'prepTime', includeIfNull: false)
-  Duration? get prepTime;
+  SchemaDuration? get prepTime;
 
   /// A sub-property of instrument. A supply consumed when performing instructions or a direction.
   @AnyOf([HowToSupply, String])
@@ -6068,7 +6068,7 @@ abstract class HowToDirection implements CreativeWork, ListItem, $Thing {
 
   /// The total time required to perform instructions or a direction (including time to prepare the supplies), in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'totalTime', includeIfNull: false)
-  Duration? get totalTime;
+  SchemaDuration? get totalTime;
 
 }
 
@@ -6396,7 +6396,7 @@ abstract class Invoice implements Intangible, $Thing {
 
   /// The time interval used to compute the invoice.
   @JsonKey(name: 'billingPeriod', includeIfNull: false)
-  Duration? get billingPeriod;
+  SchemaDuration? get billingPeriod;
 
   /// An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
   @AnyOf([Organization, Person])
@@ -6591,7 +6591,7 @@ abstract class JobPosting implements Intangible, $Thing {
   String? get jobBenefits;
 
   /// The expected duration of an employment offer as advertised by the employer. Relevant for job postings that have a clearly defined period in mind such as seasonal work, substitutes for maternal leave or any other temporary employment.
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'jobDuration', includeIfNull: false)
   Object? get jobDuration;
 
@@ -7012,7 +7012,7 @@ abstract class LoanOrCredit implements FinancialProduct, $Thing {
 
   /// The period of time after any due date that the borrower has to fulfil its obligations before a default (failure to pay) is deemed to have occurred.
   @JsonKey(name: 'gracePeriod', includeIfNull: false)
-  Duration? get gracePeriod;
+  SchemaDuration? get gracePeriod;
 
   /// A form of paying back money previously borrowed from a lender. Repayment usually takes the form of periodic payments that normally include part principal plus interest in each payment.
   @JsonKey(name: 'loanRepaymentForm', includeIfNull: false)
@@ -7287,7 +7287,7 @@ abstract class MediaObject implements CreativeWork, $Thing {
   String? get contentUrl;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -8460,7 +8460,7 @@ abstract class Movie implements CreativeWork, $Thing {
   Person? get directors;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -8723,7 +8723,7 @@ abstract class MusicRecording implements CreativeWork, $Thing {
   Object? get byArtist;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -8758,7 +8758,7 @@ abstract class MusicRelease implements MusicPlaylist, $Thing {
   Object? get creditedTo;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -9309,7 +9309,7 @@ abstract class Offer implements Intangible, $Thing {
   Object? get itemPopularity;
 
   /// Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'leaseLength', includeIfNull: false)
   Object? get leaseLength;
 
@@ -10391,7 +10391,7 @@ abstract class Permit implements Intangible, $Thing {
 
   /// The duration of validity of a permit or similar thing.
   @JsonKey(name: 'validFor', includeIfNull: false)
-  Duration? get validFor;
+  SchemaDuration? get validFor;
 
   /// The date when the item becomes valid.
   @StringField(name: 'validFrom', format: 'date-time')
@@ -12034,7 +12034,7 @@ abstract class QuantitativeValue implements StructuredValue, $Thing {
 @Schema(description: 'A statistical distribution of values.')
 abstract class QuantitativeValueDistribution implements StructuredValue, $Thing {
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -12276,7 +12276,7 @@ abstract class RealEstateListing implements WebPage, $Thing {
   String? get datePosted;
 
   /// Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'leaseLength', includeIfNull: false)
   Object? get leaseLength;
 
@@ -12301,7 +12301,7 @@ abstract class ReceiveAction implements TransferAction, $Thing {
 abstract class Recipe implements HowTo, $Thing {
   /// The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'cookTime', includeIfNull: false)
-  Duration? get cookTime;
+  SchemaDuration? get cookTime;
 
   /// The method of cooking, such as Frying, Steaming, ...
   @StringField(name: 'cookingMethod')
@@ -12823,7 +12823,7 @@ abstract class Schedule implements Intangible, $Thing {
   int? get byMonthWeek;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -12848,7 +12848,7 @@ abstract class Schedule implements Intangible, $Thing {
 
   /// Defines the frequency at which [[Event]]s will occur according to a schedule [[Schedule]]. The intervals between
   /// events should be defined as a [[Duration]] of time.
-  @AnyOf([Duration, String])
+  @AnyOf([SchemaDuration, String])
   @JsonKey(name: 'repeatFrequency', includeIfNull: false)
   Object? get repeatFrequency;
 
@@ -13139,7 +13139,7 @@ abstract class ServiceChannel implements Intangible, $Thing {
 
   /// Estimated processing time for the service using this channel.
   @JsonKey(name: 'processingTime', includeIfNull: false)
-  Duration? get processingTime;
+  SchemaDuration? get processingTime;
 
   /// The service provided by this channel.
   @JsonKey(name: 'providesService', includeIfNull: false)
@@ -13180,7 +13180,7 @@ abstract class ServicePeriod implements StructuredValue, $Thing {
   String? get cutoffTime;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
-  @AnyOf([Duration, QuantitativeValue])
+  @AnyOf([SchemaDuration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
   Object? get duration;
 
@@ -14673,7 +14673,7 @@ abstract class UnRegisterAction implements InteractAction, $Thing {
 @Schema(description: 'The price asked for a given offer by the respective organization or person.')
 abstract class UnitPriceSpecification implements PriceSpecification, $Thing {
   /// Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
-  @AnyOf([Duration, double, QuantitativeValue])
+  @AnyOf([SchemaDuration, double, QuantitativeValue])
   @JsonKey(name: 'billingDuration', includeIfNull: false)
   Object? get billingDuration;
 

@@ -92,6 +92,12 @@ void main() {
 
       final voDouble = ValueObject(value: '3.14159');
       expect(voDouble.asDouble, equals(3.14159));
+
+      final voDate = ValueObject(value: '2023-10-25T12:00:00Z');
+      expect(voDate.asDateTime, equals(DateTime.utc(2023, 10, 25, 12, 0, 0)));
+
+      final voUri = ValueObject(value: 'https://schema.org/Person');
+      expect(voUri.asUri, equals(Uri.parse('https://schema.org/Person')));
     });
 
     test('SchemaOrgContext resolves prefix IRIs', () {
