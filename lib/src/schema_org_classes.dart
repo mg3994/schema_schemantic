@@ -8,616 +8,208 @@ import 'base_types.dart';
 
 @Schema(description: 'bibo:Issue')
 abstract class bibo_Issue implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'bibo:Periodical')
 abstract class bibo_Periodical implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-cls:Classifier')
 abstract class cmns_cls_Classifier implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-col:Collection')
 abstract class cmns_col_Collection implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-dt:Date')
 abstract class cmns_dt_Date implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-dt:DateTime')
 abstract class cmns_dt_DateTime implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-dt:Duration')
 abstract class cmns_dt_Duration implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-ge:GeopoliticalEntity')
 abstract class cmns_ge_GeopoliticalEntity implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-ge:Subdivision')
 abstract class cmns_ge_Subdivision implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-loc:Address')
 abstract class cmns_loc_Address implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-loc:GeographicCoordinate')
 abstract class cmns_loc_GeographicCoordinate implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'cmns-loc:Location')
 abstract class cmns_loc_Location implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dcat:Catalog')
 abstract class dcat_Catalog implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dcat:Dataset')
 abstract class dcat_Dataset implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dcat:Distribution')
 abstract class dcat_Distribution implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dctype:Dataset')
 abstract class dctype_Dataset implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dctype:Event')
 abstract class dctype_Event implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dctype:Image')
 abstract class dctype_Image implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'dctype:Text')
 abstract class dctype_Text implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-be-corp-corp:Corporation')
 abstract class fibo_be_corp_corp_Corporation implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-be-le-cb:CooperativeSociety')
 abstract class fibo_be_le_cb_CooperativeSociety implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-be-nfp-nfp:NonGovernmentalOrganization')
 abstract class fibo_be_nfp_nfp_NonGovernmentalOrganization implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fbc-pas-fpas:BankAccount')
 abstract class fibo_fbc_pas_fpas_BankAccount implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fbc-pas-fpas:PaymentMechanism')
 abstract class fibo_fbc_pas_fpas_PaymentMechanism implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-agr-ctr:MutualContractualAgreement')
 abstract class fibo_fnd_agr_ctr_MutualContractualAgreement implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-arr-doc:Certificate')
 abstract class fibo_fnd_arr_doc_Certificate implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-arr-doc:Document')
 abstract class fibo_fnd_arr_doc_Document implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-arr-doc:LegalDocument')
 abstract class fibo_fnd_arr_doc_LegalDocument implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-dt-oc:Occurrence')
 abstract class fibo_fnd_dt_oc_Occurrence implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-org-org:ContactPoint')
 abstract class fibo_fnd_org_org_ContactPoint implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-org-org:Organization')
 abstract class fibo_fnd_org_org_Organization implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-pas-pas:Offer')
 abstract class fibo_fnd_pas_pas_Offer implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-pas-pas:Price')
 abstract class fibo_fnd_pas_pas_Price implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-pas-pas:Product')
 abstract class fibo_fnd_pas_pas_Product implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-plc-adr:PostalAddress')
 abstract class fibo_fnd_plc_adr_PostalAddress implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-fnd-plc-loc:Municipality')
 abstract class fibo_fnd_plc_loc_Municipality implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'fibo-pay-ps-ps:PaymentService')
 abstract class fibo_pay_ps_ps_PaymentService implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'foaf:Person')
 abstract class foaf_Person implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'gs1:CertificationDetails')
 abstract class gs1_CertificationDetails implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'gs1:ContactPoint')
 abstract class gs1_ContactPoint implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'gs1:Country')
 abstract class gs1_Country implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'gs1:Organization')
 abstract class gs1_Organization implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'gs1:PostalAddress')
 abstract class gs1_PostalAddress implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'hydra:Error')
 abstract class hydra_Error implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'lcc-cr:Continent')
 abstract class lcc_cr_Continent implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'lcc-cr:Country')
 abstract class lcc_cr_Country implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'lrmoo:F31_Performance')
 abstract class lrmoo_F31_Performance implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'prov:InstantaneousEvent')
 abstract class prov_InstantaneousEvent implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'prov:atTime')
 abstract class prov_atTime implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'sarif:Result')
 abstract class sarif_Result implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the
 /// case of a single file published after Zip compression, the convention of appending '+zip' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].
 @Schema(description: 'A 3D model represents some kind of 3D content, which may have [[encoding]]s in one or more [[MediaObject]]s. Many 3D formats are available (e.g. see [Wikipedia](https://en.wikipedia.org/wiki/Category:3D_graphics_file_formats)); specific encoding formats can be represented using the [[encodingFormat]] property applied to the relevant [[MediaObject]]. For the case of a single file published after Zip compression, the convention of appending \'+zip\' to the [[encodingFormat]] can be used. Geospatial, AR/VR, artistic/animation, gaming, engineering and scientific content can all be represented using [[3DModel]].')
 abstract class Schema_3DModel implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Whether the 3DModel allows resizing. For example, room layout applications often do not allow 3DModel elements to be resized to reflect reality.
   @JsonKey(name: 'isResizable', includeIfNull: false)
   bool? get isResizable;
@@ -627,27 +219,11 @@ abstract class Schema_3DModel implements MediaObject, $Thing {
 /// A radio channel that uses AM.
 @Schema(description: 'A radio channel that uses AM.')
 abstract class AMRadioChannel implements RadioChannel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Reference documentation for application programming interfaces (APIs).
 @Schema(description: 'Reference documentation for application programming interfaces (APIs).')
 abstract class APIReference implements TechArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Library file name, e.g., mscorlib.dll, system.web.dll.
   @StringField(name: 'assembly')
   String? get assembly;
@@ -673,27 +249,11 @@ abstract class APIReference implements TechArticle, $Thing {
 /// Web page type: About page.
 @Schema(description: 'Web page type: About page.')
 abstract class AboutPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of committing to/adopting an object.\n\nRelated actions:\n\n* [[RejectAction]]: The antonym of AcceptAction.
 @Schema(description: 'The act of committing to/adopting an object.\\n\\nRelated actions:\\n\\n* [[RejectAction]]: The antonym of AcceptAction.')
 abstract class AcceptAction implements AllocateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement.
@@ -703,14 +263,6 @@ abstract class AcceptAction implements AllocateAction, $Thing {
 ///
 @Schema(description: 'An accommodation is a place that can accommodate human beings, e.g. a hotel room, a camping pitch, or a meeting room. Many accommodations are for overnight stays, but this is not a mandatory requirement. For more specific types of accommodations not defined in schema.org, one can use [[additionalType]] with external vocabularies. <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Accommodation implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Category of an [[Accommodation]], following real estate conventions, e.g. RESO (see [PropertySubType](https://ddwiki.reso.org/display/DDW17/PropertySubType+Field), and [PropertyType](https://ddwiki.reso.org/display/DDW17/PropertyType+Field) fields  for suggested values).
   @StringField(name: 'accommodationCategory')
   String? get accommodationCategory;
@@ -795,40 +347,16 @@ abstract class Accommodation implements Place, $Thing {
 ///
 @Schema(description: 'Accountancy business.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).       ')
 abstract class AccountingService implements FinancialService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.
 @Schema(description: 'The act of accomplishing something via previous efforts. It is an instantaneous action rather than an ongoing process.')
 abstract class AchieveAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\n\nSee also [blog post](https://blog.schema.org/2014/04/16/announcing-schema-org-actions/) and [Actions overview document](https://schema.org/docs/actions.html).
 @Schema(description: 'An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.\\n\\nSee also [blog post](https://blog.schema.org/2014/04/16/announcing-schema-org-actions/) and [Actions overview document](https://schema.org/docs/actions.html).')
 abstract class Action implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Description of the process by which the action was performed.
   @JsonKey(name: 'actionProcess', includeIfNull: false)
   HowTo? get actionProcess;
@@ -891,14 +419,6 @@ abstract class Action implements Thing, $Thing {
 /// A set of requirements that must be fulfilled in order to perform an Action.
 @Schema(description: 'A set of requirements that must be fulfilled in order to perform an Action.')
 abstract class ActionAccessSpecification implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The end of the availability of the product or service included in the offer.
   @StringField(name: 'availabilityEnds', format: 'date-time')
   String? get availabilityEnds;
@@ -938,105 +458,41 @@ abstract class ActionAccessSpecification implements Intangible, $Thing {
 /// The status of an Action.
 @Schema(description: 'The status of an Action.')
 abstract class ActionStatusType implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).
 @Schema(description: 'The act of starting or activating a device or application (e.g. starting a timer or turning on a flashlight).')
 abstract class ActivateAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of editing by adding an object to a collection.
 @Schema(description: 'The act of editing by adding an object to a collection.')
 abstract class AddAction implements UpdateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A geographical region, typically under the jurisdiction of a particular government.
 @Schema(description: 'A geographical region, typically under the jurisdiction of a particular government.')
 abstract class AdministrativeArea implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An adult entertainment establishment.
 @Schema(description: 'An adult entertainment establishment.')
 abstract class AdultEntertainment implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumeration of considerations that make a product relevant or potentially restricted for adults only.
 @Schema(description: 'Enumeration of considerations that make a product relevant or potentially restricted for adults only.')
 abstract class AdultOrientedEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.
 @Schema(description: 'An [[Article]] that an external entity has paid to place or to produce to its specifications. Includes [advertorials](https://en.wikipedia.org/wiki/Advertorial), sponsored content, native advertising and other paid content.')
 abstract class AdvertiserContentArticle implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\n\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.
 @Schema(description: 'When a single product is associated with multiple offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.\\n\\nNote: AggregateOffers are normally expected to associate multiple offers that all share the same defined [[businessFunction]] value, or default to http://purl.org/goodrelations/v1#Sell if businessFunction is not explicitly defined.')
 abstract class AggregateOffer implements Offer, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The highest price of all offers available.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
   @AnyOf([double, String])
   @JsonKey(name: 'highPrice', includeIfNull: false)
@@ -1062,14 +518,6 @@ abstract class AggregateOffer implements Offer, $Thing {
 /// The average rating based on multiple ratings or reviews.
 @Schema(description: 'The average rating based on multiple ratings or reviews.')
 abstract class AggregateRating implements Rating, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The item that is being reviewed/rated.
   @JsonKey(name: 'itemReviewed', includeIfNull: false)
   Thing? get itemReviewed;
@@ -1087,27 +535,11 @@ abstract class AggregateRating implements Rating, $Thing {
 /// The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.
 @Schema(description: 'The act of expressing a consistency of opinion with the object. An agent agrees to/about an object (a proposition, topic or theme) with participants.')
 abstract class AgreeAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An organization that provides flights for passengers.
 @Schema(description: 'An organization that provides flights for passengers.')
 abstract class Airline implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of boarding policy used by the airline (e.g. zone-based or group-based).
   @StringField(name: 'boardingPolicy', enumValues: ['GroupBoardingPolicy', 'ZoneBoardingPolicy'])
   String? get boardingPolicy;
@@ -1121,14 +553,6 @@ abstract class Airline implements Organization, $Thing {
 /// An airport.
 @Schema(description: 'An airport.')
 abstract class Airport implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// IATA identifier for an airline or airport.
   @StringField(name: 'iataCode')
   String? get iataCode;
@@ -1143,14 +567,6 @@ abstract class Airport implements CivicStructure, $Thing {
 /// Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.
 @Schema(description: 'An intangible item that describes an alignment between a learning resource and a node in an educational framework. Should not be used where the nature of the alignment can be described using a simple property, for example to express that a resource [[teaches]] or [[assesses]] a competency.')
 abstract class AlignmentObject implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A category of alignment between the learning resource and the framework node. Recommended values include: 'requires', 'textComplexity', 'readingLevel', and 'educationalSubject'.
   @StringField(name: 'alignmentType')
   String? get alignmentType;
@@ -1176,66 +592,26 @@ abstract class AlignmentObject implements Intangible, $Thing {
 /// The act of organizing tasks/objects/events by associating resources to it.
 @Schema(description: 'The act of organizing tasks/objects/events by associating resources to it.')
 abstract class AllocateAction implements OrganizeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.
 @Schema(description: 'A creative work with a visual storytelling format intended to be viewed online, particularly on mobile devices.')
 abstract class AmpStory implements CreativeWork, MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An amusement park.
 @Schema(description: 'An amusement park.')
 abstract class AmusementPark implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.
 @Schema(description: 'An AnalysisNewsArticle is a [[NewsArticle]] that, while based on factual reporting, incorporates the expertise of the author/producer, offering interpretations and conclusions.')
 abstract class AnalysisNewsArticle implements NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.
 @Schema(description: 'Any part of the human body, typically a component of an anatomical system. Organs, tissues, and cells are all anatomical structures.')
 abstract class AnatomicalStructure implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
   @StringField(name: 'associatedPathophysiology')
   String? get associatedPathophysiology;
@@ -1273,14 +649,6 @@ abstract class AnatomicalStructure implements MedicalEntity, $Thing {
 /// An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.
 @Schema(description: 'An anatomical system is a group of anatomical structures that work together to perform a certain task. Anatomical systems, such as organ systems, are one organizing principle of anatomy, and can include circulatory, digestive, endocrine, integumentary, immune, lymphatic, muscular, nervous, reproductive, respiratory, skeletal, urinary, vestibular, and other systems.')
 abstract class AnatomicalSystem implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
   @StringField(name: 'associatedPathophysiology')
   String? get associatedPathophysiology;
@@ -1307,27 +675,11 @@ abstract class AnatomicalSystem implements MedicalEntity, $Thing {
 /// Animal shelter.
 @Schema(description: 'Animal shelter.')
 abstract class AnimalShelter implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An answer offered to a question; perhaps correct, perhaps opinionated or wrong.
 @Schema(description: 'An answer offered to a question; perhaps correct, perhaps opinionated or wrong.')
 abstract class Answer implements Comment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A step-by-step or full explanation about Answer. Can outline how this Answer was achieved or contain more broad clarification or statement about it.
   @AnyOf([Comment, WebContent])
   @JsonKey(name: 'answerExplanation', includeIfNull: false)
@@ -1343,14 +695,6 @@ abstract class Answer implements Comment, $Thing {
 /// An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).
 @Schema(description: 'An apartment (in American English) or flat (in British English) is a self-contained housing unit (a type of residential real estate) that occupies only part of a building (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Apartment">http://en.wikipedia.org/wiki/Apartment</a>).')
 abstract class Apartment implements Accommodation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
   /// Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
   @AnyOf([double, QuantitativeValue])
@@ -1367,14 +711,6 @@ abstract class Apartment implements Accommodation, $Thing {
 /// Residence type: Apartment complex.
 @Schema(description: 'Residence type: Apartment complex.')
 abstract class ApartmentComplex implements Residence, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the total (available plus unavailable) number of accommodation units in an [[ApartmentComplex]], or the number of accommodation units for a specific [[FloorPlan]] (within its specific [[ApartmentComplex]]). See also [[numberOfAvailableAccommodationUnits]].
   @JsonKey(name: 'numberOfAccommodationUnits', includeIfNull: false)
   QuantitativeValue? get numberOfAccommodationUnits;
@@ -1402,66 +738,26 @@ abstract class ApartmentComplex implements Residence, $Thing {
 /// The act of inserting at the end if an ordered collection.
 @Schema(description: 'The act of inserting at the end if an ordered collection.')
 abstract class AppendAction implements InsertAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of registering to an organization/service without the guarantee to receive it.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.
 @Schema(description: 'The act of registering to an organization/service without the guarantee to receive it.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.')
 abstract class ApplyAction implements OrganizeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.
 @Schema(description: 'An indication for a medical therapy that has been formally specified or approved by a regulatory body that regulates use of the therapy; for example, the US FDA approves indications for most drugs in the US.')
 abstract class ApprovedIndication implements MedicalIndication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Aquarium.
 @Schema(description: 'Aquarium.')
 abstract class Aquarium implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.
 @Schema(description: 'An intangible type to be applied to any archive content, carrying with it a set of properties required to describe archival items and collections.')
 abstract class ArchiveComponent implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// [[ArchiveOrganization]] that holds, keeps or maintains the [[ArchiveComponent]].
   @JsonKey(name: 'holdingArchive', includeIfNull: false)
   ArchiveOrganization? get holdingArchive;
@@ -1476,14 +772,6 @@ abstract class ArchiveComponent implements CreativeWork, $Thing {
 /// An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.
 @Schema(description: 'An organization with archival holdings. An organization which keeps and preserves archival material and typically makes it accessible to the public.')
 abstract class ArchiveOrganization implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Collection, [fonds](https://en.wikipedia.org/wiki/Fonds), or item held, kept or maintained by an [[ArchiveOrganization]].
   @JsonKey(name: 'archiveHeld', includeIfNull: false)
   ArchiveComponent? get archiveHeld;
@@ -1493,40 +781,16 @@ abstract class ArchiveOrganization implements LocalBusiness, $Thing {
 /// The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.
 @Schema(description: 'The act of arriving at a place. An agent arrives at a destination from a fromLocation, optionally with participants.')
 abstract class ArriveAction implements MoveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An art gallery.
 @Schema(description: 'An art gallery.')
 abstract class ArtGallery implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of blood vessel that specifically carries blood away from the heart.
 @Schema(description: 'A type of blood vessel that specifically carries blood away from the heart.')
 abstract class Artery implements Vessel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The branches that comprise the arterial structure.
   @JsonKey(name: 'arterialBranch', includeIfNull: false)
   AnatomicalStructure? get arterialBranch;
@@ -1540,14 +804,6 @@ abstract class Artery implements Vessel, $Thing {
 /// An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\n\nSee also [blog post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
 @Schema(description: 'An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.\\n\\nSee also [blog post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).')
 abstract class Article implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The actual body of the article.
   @StringField(name: 'articleBody')
   String? get articleBody;
@@ -1602,14 +858,6 @@ abstract class Article implements CreativeWork, $Thing {
 /// The act of posing a question / favor to someone.\n\nRelated actions:\n\n* [[ReplyAction]]: Appears generally as a response to AskAction.
 @Schema(description: 'The act of posing a question / favor to someone.\\n\\nRelated actions:\\n\\n* [[ReplyAction]]: Appears generally as a response to AskAction.')
 abstract class AskAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. A question.
   @JsonKey(name: 'question', includeIfNull: false)
   Question? get question;
@@ -1619,79 +867,31 @@ abstract class AskAction implements CommunicateAction, $Thing {
 /// A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.
 @Schema(description: 'A [[NewsArticle]] expressing an open call by a [[NewsMediaOrganization]] asking the public for input, insights, clarifications, anecdotes, documentation, etc., on an issue, for reporting purposes.')
 abstract class AskPublicNewsArticle implements NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of forming one's opinion, reaction or sentiment.
 @Schema(description: 'The act of forming one\'s opinion, reaction or sentiment.')
 abstract class AssessAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of allocating an action/event/task to some destination (someone or something).
 @Schema(description: 'The act of allocating an action/event/task to some destination (someone or something).')
 abstract class AssignAction implements AllocateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.
 @Schema(description: 'A collection or bound volume of maps, charts, plates or tables, physical or in media form illustrating any subject.')
 abstract class Atlas implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Professional service: Attorney. \n\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.
 @Schema(description: 'Professional service: Attorney. \\n\\nThis type is deprecated - [[LegalService]] is more inclusive and less ambiguous.')
 abstract class Attorney implements LegalService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Intended audience for an item, i.e. the group for whom the item was created.
 @Schema(description: 'Intended audience for an item, i.e. the group for whom the item was created.')
 abstract class Audience implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The target group associated with a given audience (e.g. veterans, car owners, musicians, etc.).
   @StringField(name: 'audienceType')
   String? get audienceType;
@@ -1705,14 +905,6 @@ abstract class Audience implements Intangible, $Thing {
 /// An audio file.
 @Schema(description: 'An audio file.')
 abstract class AudioObject implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
   @AnyOf([MediaObject, String])
   @JsonKey(name: 'caption', includeIfNull: false)
@@ -1731,27 +923,11 @@ abstract class AudioObject implements MediaObject, $Thing {
 /// A specific and exact (byte-for-byte) version of an [[AudioObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
 @Schema(description: 'A specific and exact (byte-for-byte) version of an [[AudioObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren\'t represented in their actual content, do not affect this notion of identity.')
 abstract class AudioObjectSnapshot implements AudioObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An audiobook.
 @Schema(description: 'An audiobook.')
 abstract class Audiobook implements AudioObject, Book, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @AnyOf([Duration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
@@ -1766,27 +942,11 @@ abstract class Audiobook implements AudioObject, Book, $Thing {
 /// The action of authenticating into a device or application.
 @Schema(description: 'The action of authenticating into a device or application.')
 abstract class AuthenticateAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of granting permission to an object.
 @Schema(description: 'The act of granting permission to an object.')
 abstract class AuthorizeAction implements AllocateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'recipient', includeIfNull: false)
@@ -1797,144 +957,56 @@ abstract class AuthorizeAction implements AllocateAction, $Thing {
 /// Auto body shop.
 @Schema(description: 'Auto body shop.')
 abstract class AutoBodyShop implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An car dealership.
 @Schema(description: 'An car dealership.')
 abstract class AutoDealer implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An auto parts store.
 @Schema(description: 'An auto parts store.')
 abstract class AutoPartsStore implements AutomotiveBusiness, Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A car rental business.
 @Schema(description: 'A car rental business.')
 abstract class AutoRental implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Car repair business.
 @Schema(description: 'Car repair business.')
 abstract class AutoRepair implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A car wash business.
 @Schema(description: 'A car wash business.')
 abstract class AutoWash implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// ATM/cash machine.
 @Schema(description: 'ATM/cash machine.')
 abstract class AutomatedTeller implements FinancialService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Car repair, sales, or parts.
 @Schema(description: 'Car repair, sales, or parts.')
 abstract class AutomotiveBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.
 @Schema(description: 'A [[NewsArticle]] providing historical context, definition and detail on a specific topic (aka "explainer" or "backgrounder"). For example, an in-depth article or frequently-asked-questions ([FAQ](https://en.wikipedia.org/wiki/FAQ)) document on topics such as Climate Change or the European Union. Other kinds of background material from a non-news setting are often described using [[Book]] or [[Article]], in particular [[ScholarlyArticle]]. See also [[NewsArticle]] for related vocabulary from a learning/education perspective.')
 abstract class BackgroundNewsArticle implements NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bakery.
 @Schema(description: 'A bakery.')
 abstract class Bakery implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.
 @Schema(description: 'A product or service offered by a bank whereby one may deposit, withdraw or transfer money and in some cases be paid interest.')
 abstract class BankAccount implements FinancialProduct, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A minimum amount that has to be paid in every month.
   @JsonKey(name: 'accountMinimumInflow', includeIfNull: false)
   MonetaryAmount? get accountMinimumInflow;
@@ -1952,66 +1024,26 @@ abstract class BankAccount implements FinancialProduct, $Thing {
 /// Bank or credit union.
 @Schema(description: 'Bank or credit union.')
 abstract class BankOrCreditUnion implements FinancialService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bar or pub.
 @Schema(description: 'A bar or pub.')
 abstract class BarOrPub implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An image of a visual machine-readable code such as a barcode or QR code.
 @Schema(description: 'An image of a visual machine-readable code such as a barcode or QR code.')
 abstract class Barcode implements ImageObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Beach.
 @Schema(description: 'Beach.')
 abstract class Beach implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Beauty salon.
 @Schema(description: 'Beauty salon.')
 abstract class BeautySalon implements HealthAndBeautyBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Bed and breakfast.
@@ -2020,27 +1052,11 @@ abstract class BeautySalon implements HealthAndBeautyBusiness, $Thing {
 ///
 @Schema(description: 'Bed and breakfast. <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class BedAndBreakfast implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also [[BedType]] (under development).
 @Schema(description: 'An entity holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use bed directly with a text. See also [[BedType]] (under development).')
 abstract class BedDetails implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The quantity of the given bed type available in the HotelRoom, Suite, House, or Apartment.
   @DoubleField(name: 'numberOfBeds')
   double? get numberOfBeds;
@@ -2055,53 +1071,21 @@ abstract class BedDetails implements Intangible, $Thing {
 /// A type of bed. This is used for indicating the bed or beds available in an accommodation.
 @Schema(description: 'A type of bed. This is used for indicating the bed or beds available in an accommodation.')
 abstract class BedType implements QualitativeValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.
 @Schema(description: 'The act of forming a personal connection with someone (object) mutually/bidirectionally/symmetrically.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, BefriendAction implies that the connection is reciprocal.')
 abstract class BefriendAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bike store.
 @Schema(description: 'A bike store.')
 abstract class BikeStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.
 @Schema(description: 'Any biological, chemical, or biochemical thing. For example: a protein; a gene; a chemical; a synthetic chemical.')
 abstract class BioChemEntity implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.
   @AnyOf([MedicalCondition, PropertyValue, String])
   @JsonKey(name: 'associatedDisease', includeIfNull: false)
@@ -2165,14 +1149,6 @@ abstract class BioChemEntity implements Thing, $Thing {
 /// A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.
 @Schema(description: 'A [blog](https://en.wikipedia.org/wiki/Blog), sometimes known as a "weblog". Note that the individual posts ([[BlogPosting]]s) in a [[Blog]] are often colloquially referred to by the same term.')
 abstract class Blog implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A posting that is part of this blog.
   @JsonKey(name: 'blogPost', includeIfNull: false)
   BlogPosting? get blogPost;
@@ -2190,40 +1166,16 @@ abstract class Blog implements CreativeWork, $Thing {
 /// A blog post.
 @Schema(description: 'A blog post.')
 abstract class BlogPosting implements SocialMediaPosting, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical test performed on a sample of a patient's blood.
 @Schema(description: 'A medical test performed on a sample of a patient\'s blood.')
 abstract class BloodTest implements MedicalTest, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of boarding policy used by an airline.
 @Schema(description: 'A type of boarding policy used by an airline.')
 abstract class BoardingPolicyType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A reservation for boat travel.
@@ -2231,40 +1183,16 @@ abstract class BoardingPolicyType implements Enumeration, $Thing {
 /// Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for boat travel.  Note: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class BoatReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A terminal for boats, ships, and other water vessels.
 @Schema(description: 'A terminal for boats, ships, and other water vessels.')
 abstract class BoatTerminal implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A trip on a commercial ferry line.
 @Schema(description: 'A trip on a commercial ferry line.')
 abstract class BoatTrip implements Trip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The terminal or port from which the boat arrives.
   @JsonKey(name: 'arrivalBoatTerminal', includeIfNull: false)
   BoatTerminal? get arrivalBoatTerminal;
@@ -2278,53 +1206,21 @@ abstract class BoatTrip implements Trip, $Thing {
 /// Enumerates types (or dimensions) of a person's body measurements, for example for fitting of clothes.
 @Schema(description: 'Enumerates types (or dimensions) of a person\'s body measurements, for example for fitting of clothes.')
 abstract class BodyMeasurementTypeEnumeration implements MeasurementTypeEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A body of water, such as a sea, ocean, or lake.
 @Schema(description: 'A body of water, such as a sea, ocean, or lake.')
 abstract class BodyOfWater implements Landform, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Rigid connective tissue that comprises up the skeletal structure of the human body.
 @Schema(description: 'Rigid connective tissue that comprises up the skeletal structure of the human body.')
 abstract class Bone implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A book.
 @Schema(description: 'A book.')
 abstract class Book implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates whether the book is an abridged edition.
   @JsonKey(name: 'abridged', includeIfNull: false)
   bool? get abridged;
@@ -2354,79 +1250,31 @@ abstract class Book implements CreativeWork, $Thing {
 /// The publication format of the book.
 @Schema(description: 'The publication format of the book.')
 abstract class BookFormatType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A series of books. Included books can be indicated with the hasPart property.
 @Schema(description: 'A series of books. Included books can be indicated with the hasPart property.')
 abstract class BookSeries implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bookstore.
 @Schema(description: 'A bookstore.')
 abstract class BookStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent bookmarks/flags/labels/tags/marks an object.
 @Schema(description: 'An agent bookmarks/flags/labels/tags/marks an object.')
 abstract class BookmarkAction implements OrganizeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Boolean: True or False.
 @Schema(description: 'Boolean: True or False.')
 abstract class Boolean implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\n\nRelated actions:\n\n* [[LendAction]]: Reciprocal of BorrowAction.
 @Schema(description: 'The act of obtaining an object under an agreement to return it at a later date. Reciprocal of LendAction.\\n\\nRelated actions:\\n\\n* [[LendAction]]: Reciprocal of BorrowAction.')
 abstract class BorrowAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The person that lends the object being borrowed.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'lender', includeIfNull: false)
@@ -2437,40 +1285,16 @@ abstract class BorrowAction implements TransferAction, $Thing {
 /// A bowling alley.
 @Schema(description: 'A bowling alley.')
 abstract class BowlingAlley implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.
 @Schema(description: 'Any anatomical structure which pertains to the soft nervous tissue functioning as the coordinating center of sensation and intellectual and nervous activity.')
 abstract class BrainStructure implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A brand is a name used by an organization or business person for labeling a product, product group, or similar.
 @Schema(description: 'A brand is a name used by an organization or business person for labeling a product, product group, or similar.')
 abstract class Brand implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The overall rating, based on a collection of reviews or ratings, of the item.
   @JsonKey(name: 'aggregateRating', includeIfNull: false)
   AggregateRating? get aggregateRating;
@@ -2494,53 +1318,21 @@ abstract class Brand implements Intangible, $Thing {
 ///
 @Schema(description: 'A BreadcrumbList is an ItemList consisting of a chain of linked Web pages, typically described using at least their URL and their name, and typically ending with the current page.\\n\\nThe [[position]] property is used to reconstruct the order of the items in a BreadcrumbList. The convention is that a breadcrumb list has an [[itemListOrder]] of [[ItemListOrderAscending]] (lower values listed first), and that the first items in this list correspond to the "top" or beginning of the breadcrumb trail, e.g. with a site or section homepage. The specific values of \'position\' are not assigned meaning for a BreadcrumbList, but they should be integers, e.g. beginning with \'1\' for the first item in the list.       ')
 abstract class BreadcrumbList implements ItemList, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Brewery.
 @Schema(description: 'Brewery.')
 abstract class Brewery implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bridge.
 @Schema(description: 'A bridge.')
 abstract class Bridge implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A unique instance of a BroadcastService on a CableOrSatelliteService lineup.
 @Schema(description: 'A unique instance of a BroadcastService on a CableOrSatelliteService lineup.')
 abstract class BroadcastChannel implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The unique address by which the BroadcastService can be identified in a provider lineup. In US, this is typically a number.
   @StringField(name: 'broadcastChannelId')
   String? get broadcastChannelId;
@@ -2572,14 +1364,6 @@ abstract class BroadcastChannel implements Intangible, $Thing {
 /// An over the air or online broadcast event.
 @Schema(description: 'An over the air or online broadcast event.')
 abstract class BroadcastEvent implements PublicationEvent, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The event being broadcast such as a sporting event or awards ceremony.
   @JsonKey(name: 'broadcastOfEvent', includeIfNull: false)
   Event? get broadcastOfEvent;
@@ -2602,14 +1386,6 @@ abstract class BroadcastEvent implements PublicationEvent, $Thing {
 /// The frequency in MHz and the modulation used for a particular BroadcastService.
 @Schema(description: 'The frequency in MHz and the modulation used for a particular BroadcastService.')
 abstract class BroadcastFrequencySpecification implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The frequency in MHz for a particular broadcast.
   @AnyOf([double, QuantitativeValue])
   @JsonKey(name: 'broadcastFrequencyValue', includeIfNull: false)
@@ -2629,14 +1405,6 @@ abstract class BroadcastFrequencySpecification implements Intangible, $Thing {
 /// A delivery service through which content is provided via broadcast over the air or online.
 @Schema(description: 'A delivery service through which content is provided via broadcast over the air or online.')
 abstract class BroadcastService implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The area within which users can expect to reach the broadcast service.
   @JsonKey(name: 'area', includeIfNull: false)
   Place? get area;
@@ -2688,40 +1456,16 @@ abstract class BroadcastService implements Service, $Thing {
 /// An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.
 @Schema(description: 'An account that allows an investor to deposit funds and place investment orders with a licensed broker or brokerage firm.')
 abstract class BrokerageAccount implements InvestmentOrDeposit, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Buddhist temple.
 @Schema(description: 'A Buddhist temple.')
 abstract class BuddhistTemple implements PlaceOfWorship, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.
 @Schema(description: 'A bus (also omnibus or autobus) is a road vehicle designed to carry passengers. Coaches are luxury buses, usually in service for long distance travel.')
 abstract class BusOrCoach implements Vehicle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.
   @StringField(name: 'acrissCode')
   String? get acrissCode;
@@ -2735,53 +1479,21 @@ abstract class BusOrCoach implements Vehicle, $Thing {
 /// A reservation for bus travel. \n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for bus travel. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class BusReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bus station.
 @Schema(description: 'A bus station.')
 abstract class BusStation implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A bus stop.
 @Schema(description: 'A bus stop.')
 abstract class BusStop implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A trip on a commercial bus line.
 @Schema(description: 'A trip on a commercial bus line.')
 abstract class BusTrip implements Trip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The stop or station from which the bus arrives.
   @AnyOf([BusStation, BusStop])
   @JsonKey(name: 'arrivalBusStop', includeIfNull: false)
@@ -2805,14 +1517,6 @@ abstract class BusTrip implements Trip, $Thing {
 /// A set of characteristics belonging to businesses, e.g. who compose an item's target audience.
 @Schema(description: 'A set of characteristics belonging to businesses, e.g. who compose an item\'s target audience.')
 abstract class BusinessAudience implements Audience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of employees in an organization, e.g. business.
   @JsonKey(name: 'numberOfEmployees', includeIfNull: false)
   QuantitativeValue? get numberOfEmployees;
@@ -2831,54 +1535,22 @@ abstract class BusinessAudience implements Audience, $Thing {
 ///
 @Schema(description: 'A business entity type is a conceptual entity representing the legal form, the size, the main line of business, the position in the value chain, or any combination thereof, of an organization or business person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Business\\n* http://purl.org/goodrelations/v1#Enduser\\n* http://purl.org/goodrelations/v1#PublicInstitution\\n* http://purl.org/goodrelations/v1#Reseller     ')
 abstract class BusinessEntityType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Business event.
 @Schema(description: 'Event type: Business event.')
 abstract class BusinessEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the organization or business person through the offer. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation. Proprietary specifications of access rights are also instances of this class.\n\nCommonly used values:\n\n* http://purl.org/goodrelations/v1#ConstructionInstallation\n* http://purl.org/goodrelations/v1#Dispose\n* http://purl.org/goodrelations/v1#LeaseOut\n* http://purl.org/goodrelations/v1#Maintain\n* http://purl.org/goodrelations/v1#ProvideService\n* http://purl.org/goodrelations/v1#Repair\n* http://purl.org/goodrelations/v1#Sell\n* http://purl.org/goodrelations/v1#Buy
 ///
 @Schema(description: 'The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the organization or business person through the offer. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation. Proprietary specifications of access rights are also instances of this class.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#ConstructionInstallation\\n* http://purl.org/goodrelations/v1#Dispose\\n* http://purl.org/goodrelations/v1#LeaseOut\\n* http://purl.org/goodrelations/v1#Maintain\\n* http://purl.org/goodrelations/v1#ProvideService\\n* http://purl.org/goodrelations/v1#Repair\\n* http://purl.org/goodrelations/v1#Sell\\n* http://purl.org/goodrelations/v1#Buy         ')
 abstract class BusinessFunction implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.
 @Schema(description: 'The act of giving money to a seller in exchange for goods or services rendered. An agent buys an object, product, or service from a seller for a price. Reciprocal of SellAction.')
 abstract class BuyAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'seller', includeIfNull: false)
@@ -2901,14 +1573,6 @@ abstract class BuyAction implements TradeAction, $Thing {
 ///
 @Schema(description: 'A CDCPMDRecord is a data structure representing a record in a CDC tabular data format       used for hospital data reporting. See [documentation](/docs/cdc-covid.html) for details, and the linked CDC materials for authoritative       definitions used as the source here.       ')
 abstract class CDCPMDRecord implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// collectiondate - Date for which patient counts are reported.
   @StringField(name: 'cvdCollectionDate', format: 'date-time')
   String? get cvdCollectionDate;
@@ -2982,27 +1646,11 @@ abstract class CDCPMDRecord implements StructuredValue, $Thing {
 /// A service which provides access to media programming like TV or radio. Access may be via cable or satellite.
 @Schema(description: 'A service which provides access to media programming like TV or radio. Access may be via cable or satellite.')
 abstract class CableOrSatelliteService implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A cafe or coffee shop.
 @Schema(description: 'A cafe or coffee shop.')
 abstract class CafeOrCoffeeShop implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A camping site, campsite, or [[Campground]] is a place used for overnight stay in the outdoors, typically containing individual [[CampingPitch]] locations. \n\n
@@ -3012,14 +1660,6 @@ abstract class CafeOrCoffeeShop implements FoodEstablishment, $Thing {
 ///
 @Schema(description: 'A camping site, campsite, or [[Campground]] is a place used for overnight stay in the outdoors, typically containing individual [[CampingPitch]] locations. \\n\\n In British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite)).\\n\\n  See also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html). ')
 abstract class Campground implements CivicStructure, LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[CampingPitch]] is an individual place for overnight stay in the outdoors, typically being part of a larger camping site, or [[Campground]].\n\n
@@ -3029,53 +1669,21 @@ abstract class Campground implements CivicStructure, LodgingBusiness, $Thing {
 ///
 @Schema(description: 'A [[CampingPitch]] is an individual place for overnight stay in the outdoors, typically being part of a larger camping site, or [[Campground]].\\n\\n In British English a campsite, or campground, is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites. (Source: Wikipedia, see [https://en.wikipedia.org/wiki/Campsite](https://en.wikipedia.org/wiki/Campsite).)\\n\\n See also the dedicated [document on the use of schema.org for marking up hotels and other forms of accommodations](/docs/hotels.html). ')
 abstract class CampingPitch implements Accommodation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A canal, like the Panama Canal.
 @Schema(description: 'A canal, like the Panama Canal.')
 abstract class Canal implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of asserting that a future event/action is no longer going to happen.\n\nRelated actions:\n\n* [[ConfirmAction]]: The antonym of CancelAction.
 @Schema(description: 'The act of asserting that a future event/action is no longer going to happen.\\n\\nRelated actions:\\n\\n* [[ConfirmAction]]: The antonym of CancelAction.')
 abstract class CancelAction implements PlanAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A car is a wheeled, self-powered motor vehicle used for transportation.
 @Schema(description: 'A car is a wheeled, self-powered motor vehicle used for transportation.')
 abstract class Car implements Vehicle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards.
   @StringField(name: 'acrissCode')
   String? get acrissCode;
@@ -3089,40 +1697,16 @@ abstract class Car implements Vehicle, $Thing {
 /// A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.
 @Schema(description: 'A value indicating a special usage of a car, e.g. commercial rental, driving school, or as a taxi.')
 abstract class CarUsageType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A casino.
 @Schema(description: 'A casino.')
 abstract class Casino implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Category Code.
 @Schema(description: 'A Category Code.')
 abstract class CategoryCode implements DefinedTerm, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A short textual code that uniquely identifies the value.
   @StringField(name: 'codeValue')
   String? get codeValue;
@@ -3137,14 +1721,6 @@ abstract class CategoryCode implements DefinedTerm, $Thing {
 /// A set of Category Code values.
 @Schema(description: 'A set of Category Code values.')
 abstract class CategoryCodeSet implements DefinedTermSet, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A Category code contained in this code set.
   @JsonKey(name: 'hasCategoryCode', includeIfNull: false)
   CategoryCode? get hasCategoryCode;
@@ -3154,40 +1730,16 @@ abstract class CategoryCodeSet implements DefinedTermSet, $Thing {
 /// A Catholic church.
 @Schema(description: 'A Catholic church.')
 abstract class CatholicChurch implements Church, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A graveyard.
 @Schema(description: 'A graveyard.')
 abstract class Cemetery implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Certification is an official and authoritative statement about a subject, for example a product, service, person, or organization. A certification is typically issued by an indendent certification body, for example a professional organization or government. It formally attests certain characteristics about the subject, for example Organizations can be ISO certified, Food products can be certified Organic or Vegan, a Person can be a certified professional, a Place can be certified for food processing. There are certifications for many domains: regulatory, organizational, recycling, food, efficiency, educational, ecological, etc. A certification is a form of credential, as are accreditations and licenses. Mapped from the [gs1:CertificationDetails](https://www.gs1.org/voc/CertificationDetails) class in the GS1 Web Vocabulary.
 @Schema(description: 'A Certification is an official and authoritative statement about a subject, for example a product, service, person, or organization. A certification is typically issued by an indendent certification body, for example a professional organization or government. It formally attests certain characteristics about the subject, for example Organizations can be ISO certified, Food products can be certified Organic or Vegan, a Person can be a certified professional, a Place can be certified for food processing. There are certifications for many domains: regulatory, organizational, recycling, food, efficiency, educational, ecological, etc. A certification is a form of credential, as are accreditations and licenses. Mapped from the [gs1:CertificationDetails](https://www.gs1.org/voc/CertificationDetails) class in the GS1 Web Vocabulary.')
 abstract class Certification implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -3243,27 +1795,11 @@ abstract class Certification implements CreativeWork, $Thing {
 /// Enumerates the different statuses of a Certification (Active and Inactive).
 @Schema(description: 'Enumerates the different statuses of a Certification (Active and Inactive).')
 abstract class CertificationStatusEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// One of the sections into which a book is divided. A chapter usually has a section number or a name.
 @Schema(description: 'One of the sections into which a book is divided. A chapter usually has a section number or a name.')
 abstract class Chapter implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The page on which the work ends; for example "138" or "xvi".
   @AnyOf([int, String])
   @JsonKey(name: 'pageEnd', includeIfNull: false)
@@ -3283,66 +1819,26 @@ abstract class Chapter implements CreativeWork, $Thing {
 /// An agent inspects, determines, investigates, inquires, or examines an object's accuracy, quality, condition, or state.
 @Schema(description: 'An agent inspects, determines, investigates, inquires, or examines an object\'s accuracy, quality, condition, or state.')
 abstract class CheckAction implements FindAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\n\nRelated actions:\n\n* [[CheckOutAction]]: The antonym of CheckInAction.\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.
 @Schema(description: 'The act of an agent communicating (service provider, social media, etc) their arrival by registering/confirming for a previously reserved service (e.g. flight check-in) or at a place (e.g. hotel), possibly resulting in a result (boarding pass, etc).\\n\\nRelated actions:\\n\\n* [[CheckOutAction]]: The antonym of CheckInAction.\\n* [[ArriveAction]]: Unlike ArriveAction, CheckInAction implies that the agent is informing/confirming the start of a previously reserved service.\\n* [[ConfirmAction]]: Unlike ConfirmAction, CheckInAction implies that the agent is informing/confirming the *start* of a previously reserved service rather than its validity/existence.')
 abstract class CheckInAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\n\nRelated actions:\n\n* [[CheckInAction]]: The antonym of CheckOutAction.\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.
 @Schema(description: 'The act of an agent communicating (service provider, social media, etc) their departure of a previously reserved service (e.g. flight check-in) or place (e.g. hotel).\\n\\nRelated actions:\\n\\n* [[CheckInAction]]: The antonym of CheckOutAction.\\n* [[DepartAction]]: Unlike DepartAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.\\n* [[CancelAction]]: Unlike CancelAction, CheckOutAction implies that the agent is informing/confirming the end of a previously reserved service.')
 abstract class CheckOutAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Checkout page.
 @Schema(description: 'Web page type: Checkout page.')
 abstract class CheckoutPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).
 @Schema(description: 'A chemical substance is \'a portion of matter of constant composition, composed of molecular entities of the same type or of different types\' (source: [ChEBI:59999](https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999)).')
 abstract class ChemicalSubstance implements BioChemEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.
   @StringField(name: 'chemicalComposition')
   String? get chemicalComposition;
@@ -3360,40 +1856,16 @@ abstract class ChemicalSubstance implements BioChemEntity, $Thing {
 /// A Childcare center.
 @Schema(description: 'A Childcare center.')
 abstract class ChildCare implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Children's event.
 @Schema(description: 'Event type: Children\'s event.')
 abstract class ChildrensEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a preference from a set of options or a large or unbounded set of choices/options.
 @Schema(description: 'The act of expressing a preference from a set of options or a large or unbounded set of choices/options.')
 abstract class ChooseAction implements AssessAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. The options subject to this action.
   @AnyOf([String, Thing])
   @JsonKey(name: 'actionOption', includeIfNull: false)
@@ -3409,53 +1881,21 @@ abstract class ChooseAction implements AssessAction, $Thing {
 /// A church.
 @Schema(description: 'A church.')
 abstract class Church implements PlaceOfWorship, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A city or town.
 @Schema(description: 'A city or town.')
 abstract class City implements AdministrativeArea, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A city hall.
 @Schema(description: 'A city hall.')
 abstract class CityHall implements GovernmentBuilding, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A public structure, such as a town hall or concert hall.
 @Schema(description: 'A public structure, such as a town hall or concert hall.')
 abstract class CivicStructure implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The general opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.\n\n* Days are specified using the following two-letter combinations: ```Mo```, ```Tu```, ```We```, ```Th```, ```Fr```, ```Sa```, ```Su```.\n* Times are specified using 24:00 format. For example, 3pm is specified as ```15:00```, 10am as ```10:00```. \n* Here is an example: <code>&lt;time itemprop="openingHours" datetime=&quot;Tu,Th 16:00-20:00&quot;&gt;Tuesdays and Thursdays 4-8pm&lt;/time&gt;</code>.\n* If a business is open 7 days a week, then it can be specified as <code>&lt;time itemprop=&quot;openingHours&quot; datetime=&quot;Mo-Su&quot;&gt;Monday through Sunday, all day&lt;/time&gt;</code>.
   @StringField(name: 'openingHours')
   String? get openingHours;
@@ -3470,14 +1910,6 @@ abstract class CivicStructure implements Place, $Thing {
 ///
 @Schema(description: 'A [[Claim]] in Schema.org represents a specific, factually-oriented claim that could be the [[itemReviewed]] in a [[ClaimReview]]. The content of a claim can be summarized with the [[text]] property. Variations on well known claims can have their common identity indicated via [[sameAs]] links, and summarized with a [[name]]. Ideally, a [[Claim]] description includes enough contextual information to minimize the risk of ambiguity or inclarity. In practice, many claims are better understood in the context in which they appear or the interpretations provided by claim reviews.    Beyond [[ClaimReview]], the Claim type can be associated with related creative works - for example a [[ScholarlyArticle]] or [[Question]] might be [[about]] some [[Claim]].    At this time, Schema.org does not define any types of relationship between claims. This is a natural area for future exploration.   ')
 abstract class Claim implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates an occurrence of a [[Claim]] in some [[CreativeWork]].
   @JsonKey(name: 'appearance', includeIfNull: false)
   CreativeWork? get appearance;
@@ -3496,14 +1928,6 @@ abstract class Claim implements CreativeWork, $Thing {
 /// A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).
 @Schema(description: 'A fact-checking review of claims made (or reported) in some creative work (referenced via itemReviewed).')
 abstract class ClaimReview implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A short summary of the specific claims reviewed in a ClaimReview.
   @StringField(name: 'claimReviewed')
   String? get claimReviewed;
@@ -3513,14 +1937,6 @@ abstract class ClaimReview implements Review, $Thing {
 /// A class, also often called a 'Type'; equivalent to rdfs:Class.
 @Schema(description: 'A class, also often called a \'Type\'; equivalent to rdfs:Class.')
 abstract class SchemaClass implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
   @AnyOf([SchemaClass, Enumeration, Property])
   @JsonKey(name: 'supersededBy', includeIfNull: false)
@@ -3531,14 +1947,6 @@ abstract class SchemaClass implements Intangible, $Thing {
 /// A short TV or radio program or a segment/part of a program.
 @Schema(description: 'A short TV or radio program or a segment/part of a program.')
 abstract class Clip implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -3593,40 +2001,16 @@ abstract class Clip implements CreativeWork, $Thing {
 /// A clothing store.
 @Schema(description: 'A clothing store.')
 abstract class ClothingStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
 @Schema(description: 'Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.')
 abstract class Code implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A collection of items, e.g. creative works or products.
 @Schema(description: 'A collection of items, e.g. creative works or products.')
 abstract class Collection implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of items in the [[Collection]].
   @IntegerField(name: 'collectionSize')
   int? get collectionSize;
@@ -3636,66 +2020,26 @@ abstract class Collection implements CreativeWork, $Thing {
 /// Web page type: Collection page.
 @Schema(description: 'Web page type: Collection page.')
 abstract class CollectionPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A college, university, or other third-level educational institution.
 @Schema(description: 'A college, university, or other third-level educational institution.')
 abstract class CollegeOrUniversity implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A comedy club.
 @Schema(description: 'A comedy club.')
 abstract class ComedyClub implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Comedy event.
 @Schema(description: 'Event type: Comedy event.')
 abstract class ComedyEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The artwork on the cover of a comic.
 @Schema(description: 'The artwork on the cover of a comic.')
 abstract class ComicCoverArt implements ComicStory, CoverArt, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Individual comic issues are serially published as
@@ -3706,14 +2050,6 @@ abstract class ComicCoverArt implements ComicStory, CoverArt, $Thing {
 /// description of the issue (if any).
 @Schema(description: 'Individual comic issues are serially published as     	part of a larger series. For the sake of consistency, even one-shot issues     	belong to a series comprised of a single issue. All comic issues can be     	uniquely identified by: the combination of the name and volume number of the     	series to which the issue belongs; the issue number; and the variant     	description of the issue (if any).')
 abstract class ComicIssue implements PublicationIssue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The primary artist for a work
   /// in a medium other than pencils or digital line art--for example, if the
   /// primary artwork is done in watercolors or digital paints.
@@ -3749,14 +2085,6 @@ abstract class ComicIssue implements PublicationIssue, $Thing {
 /// Wanderer".
 @Schema(description: 'A sequential publication of comic stories under a     	unifying title, for example "The Amazing Spider-Man" or "Groo the     	Wanderer".')
 abstract class ComicSeries implements Periodical, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The term "story" is any indivisible, re-printable
@@ -3764,14 +2092,6 @@ abstract class ComicSeries implements Periodical, $Thing {
 /// comics have at least two stories: a cover (ComicCoverArt) and an interior story.
 @Schema(description: 'The term "story" is any indivisible, re-printable     	unit of a comic, including the interior stories, covers, and backmatter. Most     	comics have at least two stories: a cover (ComicCoverArt) and an interior story.')
 abstract class ComicStory implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The primary artist for a work
   /// in a medium other than pencils or digital line art--for example, if the
   /// primary artwork is done in watercolors or digital paints.
@@ -3799,14 +2119,6 @@ abstract class ComicStory implements CreativeWork, $Thing {
 /// A comment on an item - for example, a comment on a blog post. The comment's content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.
 @Schema(description: 'A comment on an item - for example, a comment on a blog post. The comment\'s content is expressed via the [[text]] property, and its topic via [[about]], properties shared with all CreativeWorks.')
 abstract class Comment implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of downvotes this question, answer or comment has received from the community.
   @IntegerField(name: 'downvoteCount')
   int? get downvoteCount;
@@ -3829,14 +2141,6 @@ abstract class Comment implements CreativeWork, $Thing {
 /// The act of generating a comment about a subject.
 @Schema(description: 'The act of generating a comment about a subject.')
 abstract class CommentAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of result. The Comment created or sent as a result of this action.
   @JsonKey(name: 'resultComment', includeIfNull: false)
   Comment? get resultComment;
@@ -3846,14 +2150,6 @@ abstract class CommentAction implements CommunicateAction, $Thing {
 /// The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.
 @Schema(description: 'The act of conveying information to another person via a communication medium (instrument) such as speech, email, or telephone conversation.')
 abstract class CommunicateAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -3879,27 +2175,11 @@ abstract class CommunicateAction implements InteractAction, $Thing {
 /// This is the equivalent of Atom's element as defined in Feed Paging and Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), for example (and as defined for Atom), when using data from a feed that represents a collection of items that varies over time (e.g. "Top Twenty Records") there is no need to have newer entries mixed in alongside older, obsolete entries. By marking this feed as a CompleteDataFeed, old entries can be safely discarded when the feed is refreshed, since we can assume the feed has provided descriptions for all current items.
 @Schema(description: 'A [[CompleteDataFeed]] is a [[DataFeed]] whose standard representation includes content for every item currently in the feed.  This is the equivalent of Atom\'s element as defined in Feed Paging and Archiving [RFC 5005](https://tools.ietf.org/html/rfc5005), for example (and as defined for Atom), when using data from a feed that represents a collection of items that varies over time (e.g. "Top Twenty Records") there is no need to have newer entries mixed in alongside older, obsolete entries. By marking this feed as a CompleteDataFeed, old entries can be safely discarded when the feed is refreshed, since we can assume the feed has provided descriptions for all current items.')
 abstract class CompleteDataFeed implements DataFeed, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component (e.g. "electricity" or "final cleaning").
 @Schema(description: 'A compound price specification is one that bundles multiple prices that all apply in combination for different dimensions of consumption. Use the name property of the attached unit price specification for indicating the dimension of a price component (e.g. "electricity" or "final cleaning").')
 abstract class CompoundPriceSpecification implements PriceSpecification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// This property links to all [[UnitPriceSpecification]] nodes that apply in parallel for the [[CompoundPriceSpecification]] node.
   @JsonKey(name: 'priceComponent', includeIfNull: false)
   PriceSpecification? get priceComponent;
@@ -3913,80 +2193,32 @@ abstract class CompoundPriceSpecification implements PriceSpecification, $Thing 
 /// This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.
 @Schema(description: 'This type covers computer programming languages such as Scheme and Lisp, as well as other language-like computer representations. Natural languages are best represented with the [[Language]] type.')
 abstract class ComputerLanguage implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A computer store.
 @Schema(description: 'A computer store.')
 abstract class ComputerStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Conference event.
 @Schema(description: 'Event type: Conference event.')
 abstract class ConferenceEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of notifying someone that a future event/action is going to happen as expected.\n\nRelated actions:\n\n* [[CancelAction]]: The antonym of ConfirmAction.
 @Schema(description: 'The act of notifying someone that a future event/action is going to happen as expected.\\n\\nRelated actions:\\n\\n* [[CancelAction]]: The antonym of ConfirmAction.')
 abstract class ConfirmAction implements InformAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Consortium is a membership [[Organization]] whose members are typically Organizations.
 @Schema(description: 'A Consortium is a membership [[Organization]] whose members are typically Organizations.')
 abstract class Consortium implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a
 /// variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.
 @Schema(description: 'The ConstraintNode type is provided to support usecases in which a node in a structured data graph is described with properties which appear to describe a single entity, but are being used in a situation where they serve a more abstract purpose. A [[ConstraintNode]] can be described using [[constraintProperty]] and [[numConstraints]]. These constraint properties can serve a     variety of purposes, and their values may sometimes be understood to indicate sets of possible values rather than single, exact and specific values.')
 abstract class ConstraintNode implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a property used as a constraint. For example, in the definition of a [[StatisticalVariable]]. The value is a property, either from within Schema.org or from other compatible (e.g. RDF) systems such as DataCommons.org or Wikidata.org.
   @AnyOf([Property, String])
   @JsonKey(name: 'constraintProperty', includeIfNull: false)
@@ -4001,14 +2233,6 @@ abstract class ConstraintNode implements Intangible, $Thing {
 /// The act of ingesting information/resources/food.
 @Schema(description: 'The act of ingesting information/resources/food.')
 abstract class ConsumeAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A set of requirements that must be fulfilled in order to perform an Action. If more than one value is specified, fulfilling one set of requirements will allow the Action to be performed.
   @JsonKey(name: 'actionAccessibilityRequirement', includeIfNull: false)
   ActionAccessSpecification? get actionAccessibilityRequirement;
@@ -4022,27 +2246,11 @@ abstract class ConsumeAction implements Action, $Thing {
 /// Web page type: Contact page.
 @Schema(description: 'Web page type: Contact page.')
 abstract class ContactPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A contact point&#x2014;for example, a Customer Complaints department.
 @Schema(description: 'A contact point&#x2014;for example, a Customer Complaints department.')
 abstract class ContactPoint implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The geographic area where a service or offered item is provided.
   @AnyOf([AdministrativeArea, GeoShape, Place, String])
   @JsonKey(name: 'areaServed', includeIfNull: false)
@@ -4092,79 +2300,31 @@ abstract class ContactPoint implements StructuredValue, $Thing {
 /// Enumerated options related to a ContactPoint.
 @Schema(description: 'Enumerated options related to a ContactPoint.')
 abstract class ContactPointOption implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// One of the continents (for example, Europe or Africa).
 @Schema(description: 'One of the continents (for example, Europe or Africa).')
 abstract class Continent implements Landform, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent controls a device or application.
 @Schema(description: 'An agent controls a device or application.')
 abstract class ControlAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A convenience store.
 @Schema(description: 'A convenience store.')
 abstract class ConvenienceStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.
 @Schema(description: 'One or more messages between organizations or people on a particular topic. Individual messages can be linked to the conversation with isPartOf or hasPart properties.')
 abstract class Conversation implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of producing/preparing food.
 @Schema(description: 'The act of producing/preparing food.')
 abstract class CookAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The specific food establishment where the action occurred.
   @AnyOf([FoodEstablishment, Place])
   @JsonKey(name: 'foodEstablishment', includeIfNull: false)
@@ -4183,27 +2343,11 @@ abstract class CookAction implements CreateAction, $Thing {
 /// An organization that is a joint project of multiple organizations or persons.
 @Schema(description: 'An organization that is a joint project of multiple organizations or persons.')
 abstract class Cooperative implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Organization: A business corporation.
 @Schema(description: 'Organization: A business corporation.')
 abstract class Corporation implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we recommend using the controlled vocabulary of Market Identifier Codes (MIC) specified in ISO 15022.
   @StringField(name: 'tickerSymbol')
   String? get tickerSymbol;
@@ -4213,40 +2357,16 @@ abstract class Corporation implements Organization, $Thing {
 /// A [[comment]] that corrects [[CreativeWork]].
 @Schema(description: 'A [[comment]] that corrects [[CreativeWork]].')
 abstract class CorrectionComment implements Comment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A country.
 @Schema(description: 'A country.')
 abstract class Country implements AdministrativeArea, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.
 @Schema(description: 'A description of an educational course which may be offered as distinct instances which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners.')
 abstract class Course implements CreativeWork, LearningResource, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'availableLanguage', includeIfNull: false)
@@ -4298,14 +2418,6 @@ abstract class Course implements CreativeWork, LearningResource, $Thing {
 /// An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.
 @Schema(description: 'An instance of a [[Course]] which is distinct from other instances because it is offered at a different time or location or through different media or modes of study or to a specific section of students.')
 abstract class CourseInstance implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
   @StringField(name: 'courseMode', format: 'uri')
   String? get courseMode;
@@ -4327,27 +2439,11 @@ abstract class CourseInstance implements Event, $Thing {
 /// A courthouse.
 @Schema(description: 'A courthouse.')
 abstract class Courthouse implements GovernmentBuilding, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The artwork on the outer surface of a CreativeWork.
 @Schema(description: 'The artwork on the outer surface of a CreativeWork.')
 abstract class CoverArt implements VisualArtwork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus
@@ -4357,40 +2453,16 @@ abstract class CoverArt implements VisualArtwork, $Thing {
 ///
 @Schema(description: 'A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus       disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other       non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information       about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.       ')
 abstract class CovidTestingFacility implements MedicalClinic, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of deliberately creating/producing/generating/building a result out of the agent.
 @Schema(description: 'The act of deliberately creating/producing/generating/building a result out of the agent.')
 abstract class CreateAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The most generic kind of creative work, including books, movies, photographs, software programs, etc.
 @Schema(description: 'The most generic kind of creative work, including books, movies, photographs, software programs, etc.')
 abstract class CreativeWork implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -4934,14 +3006,6 @@ abstract class CreativeWork implements Thing, $Thing {
 /// A media season, e.g. TV, radio, video game etc.
 @Schema(description: 'A media season, e.g. TV, radio, video game etc.')
 abstract class CreativeWorkSeason implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -4994,14 +3058,6 @@ abstract class CreativeWorkSeason implements CreativeWork, $Thing {
 ///
 @Schema(description: 'A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind. CreativeWorkSeries are usually organized into some order, often chronological. Unlike [[ItemList]] which is a general purpose data structure for lists of things, the emphasis with CreativeWorkSeries is on published materials (written e.g. books and periodicals, or media such as TV, radio and games).\\n\\nSpecific subtypes are available for describing [[TVSeries]], [[RadioSeries]], [[MovieSeries]], [[BookSeries]], [[Periodical]] and [[VideoGameSeries]]. In each case, the [[hasPart]] / [[isPartOf]] properties can be used to relate the CreativeWorkSeries to its parts. The general CreativeWorkSeries type serves largely just to organize these more specific and practical subtypes.\\n\\nIt is common for properties applicable to an item from the series to be usefully applied to the containing group. Schema.org attempts to anticipate some of these cases, but publishers should be free to apply properties of the series parts to the series as a whole wherever they seem appropriate.     ')
 abstract class CreativeWorkSeries implements CreativeWork, Series, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
   @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
@@ -5019,14 +3075,6 @@ abstract class CreativeWorkSeries implements CreativeWork, Series, $Thing {
 /// A credential is a certificate that is used to verify the identity of a person or entity.
 @Schema(description: 'A credential is a certificate that is used to verify the identity of a person or entity.')
 abstract class Credential implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The category or type of credential being described, for example "degree”, “certificate”, “badge”, or more specific term.
   @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'credentialCategory', includeIfNull: false)
@@ -5050,79 +3098,31 @@ abstract class Credential implements CreativeWork, $Thing {
 ///
 @Schema(description: 'A card payment method of a particular brand or name.  Used to mark up a particular payment method and/or the financial product/service that supplies the card account.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#AmericanExpress\\n* http://purl.org/goodrelations/v1#DinersClub\\n* http://purl.org/goodrelations/v1#Discover\\n* http://purl.org/goodrelations/v1#JCB\\n* http://purl.org/goodrelations/v1#MasterCard\\n* http://purl.org/goodrelations/v1#VISA        ')
 abstract class CreditCard implements LoanOrCredit, PaymentCard, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A crematorium.
 @Schema(description: 'A crematorium.')
 abstract class Crematorium implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[CriticReview]] is a more specialized form of Review written or published by a source that is recognized for its reviewing activities. These can include online columns, travel and food guides, TV and radio shows, blogs and other independent Web sites. [[CriticReview]]s are typically more in-depth and professionally written. For simpler, casually written user/visitor/viewer/customer reviews, it is more appropriate to use the [[UserReview]] type. Review aggregator sites such as Metacritic already separate out the site's user reviews from selected critic reviews that originate from third-party sources.
 @Schema(description: 'A [[CriticReview]] is a more specialized form of Review written or published by a source that is recognized for its reviewing activities. These can include online columns, travel and food guides, TV and radio shows, blogs and other independent Web sites. [[CriticReview]]s are typically more in-depth and professionally written. For simpler, casually written user/visitor/viewer/customer reviews, it is more appropriate to use the [[UserReview]] type. Review aggregator sites such as Metacritic already separate out the site\'s user reviews from selected critic reviews that originate from third-party sources.')
 abstract class CriticReview implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Text representing a CSS selector.
 @Schema(description: 'Text representing a CSS selector.')
 abstract class CssSelectorType implements Text, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A service to convert funds from one currency to another currency.
 @Schema(description: 'A service to convert funds from one currency to another currency.')
 abstract class CurrencyConversionService implements FinancialProduct, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.
 @Schema(description: 'An alternative, closely-related condition typically considered later in the differential diagnosis process along with the signs that are used to distinguish it.')
 abstract class DDxElement implements MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
   @JsonKey(name: 'diagnosis', includeIfNull: false)
   MedicalCondition? get diagnosis;
@@ -5136,53 +3136,21 @@ abstract class DDxElement implements MedicalIntangible, $Thing {
 /// DENonprofitType: Non-profit organization type originating from Germany in accordance with article 52 of the German fiscal code (Abgabenverordnung or AO).
 @Schema(description: 'DENonprofitType: Non-profit organization type originating from Germany in accordance with article 52 of the German fiscal code (Abgabenverordnung or AO).')
 abstract class DENonprofitType implements NonprofitType, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: A social dance.
 @Schema(description: 'Event type: A social dance.')
 abstract class DanceEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.
 @Schema(description: 'A dance group&#x2014;for example, the Alvin Ailey Dance Theater or Riverdance.')
 abstract class DanceGroup implements PerformingGroup, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A collection of datasets.
 @Schema(description: 'A collection of datasets.')
 abstract class DataCatalog implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A dataset contained in this catalog.
   @JsonKey(name: 'dataset', includeIfNull: false)
   Dataset? get dataset;
@@ -5208,14 +3176,6 @@ abstract class DataCatalog implements CreativeWork, $Thing {
 /// All or part of a [[Dataset]] in downloadable form.
 @Schema(description: 'All or part of a [[Dataset]] in downloadable form. ')
 abstract class DataDownload implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
   @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
@@ -5237,14 +3197,6 @@ abstract class DataDownload implements MediaObject, $Thing {
 /// A single feed providing structured information about one or more entities or topics.
 @Schema(description: 'A single feed providing structured information about one or more entities or topics.')
 abstract class DataFeed implements Dataset, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An item within a data feed. Data feeds may have many elements.
   @AnyOf([DataFeedItem, String, Thing])
   @JsonKey(name: 'dataFeedElement', includeIfNull: false)
@@ -5255,14 +3207,6 @@ abstract class DataFeed implements Dataset, $Thing {
 /// A single item within a larger data feed.
 @Schema(description: 'A single item within a larger data feed.')
 abstract class DataFeedItem implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The date on which the CreativeWork was created or the item was added to a DataFeed.
   @StringField(name: 'dateCreated', format: 'date-time')
   String? get dateCreated;
@@ -5284,27 +3228,11 @@ abstract class DataFeedItem implements Intangible, $Thing {
 /// The basic data types such as Integers, Strings, etc.
 @Schema(description: 'The basic data types such as Integers, Strings, etc.')
 abstract class DataType implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A body of structured information describing some topic(s) of interest.
 @Schema(description: 'A body of structured information describing some topic(s) of interest.')
 abstract class Dataset implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A data catalog which contains this dataset.
   @JsonKey(name: 'catalog', includeIfNull: false)
   DataCatalog? get catalog;
@@ -5355,40 +3283,16 @@ abstract class Dataset implements CreativeWork, $Thing {
 /// A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).
 @Schema(description: 'A date value in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601).')
 abstract class Date implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).
 @Schema(description: 'A combination of date and time of day in the form [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm] (see Chapter 5.4 of ISO 8601).')
 abstract class DateTime implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.
 @Schema(description: 'A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee\'s salary over a specific period of time. __Note:__ This type has been superseded by [[MonetaryAmount]], use of that type is recommended.')
 abstract class DatedMoneySpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The amount of money.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'amount', includeIfNull: false)
@@ -5414,66 +3318,26 @@ abstract class DatedMoneySpecification implements StructuredValue, $Thing {
 ///
 @Schema(description: 'The day of the week, e.g. used to specify to which day the opening hours of an OpeningHoursSpecification refer.  Originally, URLs from [GoodRelations](http://purl.org/goodrelations/v1) were used (for [[Monday]], [[Tuesday]], [[Wednesday]], [[Thursday]], [[Friday]], [[Saturday]], [[Sunday]] plus a special entry for [[PublicHolidays]]); these have now been integrated directly into schema.org.       ')
 abstract class DayOfWeek implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A day spa.
 @Schema(description: 'A day spa.')
 abstract class DaySpa implements HealthAndBeautyBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).
 @Schema(description: 'The act of stopping or deactivating a device or application (e.g. stopping a timer or turning off a flashlight).')
 abstract class DeactivateAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Declaration of Conformity (DoC), a formal document issued by a manufacturer declaring that a product meets specific regulatory requirements.
 @Schema(description: 'A Declaration of Conformity (DoC), a formal document issued by a manufacturer declaring that a product meets specific regulatory requirements.')
 abstract class DeclarationOfConformity implements Certification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A defence establishment, such as an army or navy base.
 @Schema(description: 'A defence establishment, such as an army or navy base.')
 abstract class DefenceEstablishment implements GovernmentBuilding, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.
@@ -5492,14 +3356,6 @@ abstract class DefenceEstablishment implements GovernmentBuilding, $Thing {
 ///
 @Schema(description: 'A DefinedRegion is a geographic area defined by potentially arbitrary (rather than political, administrative or natural geographical) criteria. Properties are provided for defining a region by reference to sets of postal codes.  Examples: a delivery destination when shopping. Region where regional pricing is configured.  Requirement 1: Country: US States: "NY", "CA"  Requirement 2: Country: US PostalCode Set: { [94000-94585], [97000, 97999], [13000, 13599]} { [12345, 12345], [78945, 78945], } Region = state, canton, prefecture, autonomous community... ')
 abstract class DefinedRegion implements Place, StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
   @AnyOf([Country, String])
   @JsonKey(name: 'addressCountry', includeIfNull: false)
@@ -5527,14 +3383,6 @@ abstract class DefinedRegion implements Place, StructuredValue, $Thing {
 /// A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term. Use the about property to specify what the term is about.
 @Schema(description: 'A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc. Use the name property for the term being defined, use termCode if the term has an alpha-numeric code allocated, use description to provide the definition of the term. Use the about property to specify what the term is about.')
 abstract class DefinedTerm implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -5553,14 +3401,6 @@ abstract class DefinedTerm implements Intangible, $Thing {
 /// A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration. Use the about property to specify what the term set is about.
 @Schema(description: 'A set of defined terms, for example a set of categories or a classification scheme, a glossary, dictionary or enumeration. Use the about property to specify what the term set is about.')
 abstract class DefinedTermSet implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -5574,27 +3414,11 @@ abstract class DefinedTermSet implements CreativeWork, $Thing {
 /// The act of editing a recipient by removing one of its objects.
 @Schema(description: 'The act of editing a recipient by removing one of its objects.')
 abstract class DeleteAction implements UpdateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The price for the delivery of an offer using a particular delivery method.
 @Schema(description: 'The price for the delivery of an offer using a particular delivery method.')
 abstract class DeliveryChargeSpecification implements PriceSpecification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The delivery method(s) to which the delivery charge or payment charge specification applies.
   @StringField(name: 'appliesToDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get appliesToDeliveryMethod;
@@ -5621,14 +3445,6 @@ abstract class DeliveryChargeSpecification implements PriceSpecification, $Thing
 /// An event involving the delivery of an item.
 @Schema(description: 'An event involving the delivery of an item.')
 abstract class DeliveryEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Password, PIN, or access code needed for delivery (e.g. from a locker).
   @StringField(name: 'accessCode')
   String? get accessCode;
@@ -5651,27 +3467,11 @@ abstract class DeliveryEvent implements Event, $Thing {
 ///
 @Schema(description: 'A delivery method is a standardized procedure for transferring the product or service to the destination of fulfillment chosen by the customer. Delivery methods are characterized by the means of transportation used, and by the organization or group that is the contracting party for the sending organization or person.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#DeliveryModeDirectDownload\\n* http://purl.org/goodrelations/v1#DeliveryModeFreight\\n* http://purl.org/goodrelations/v1#DeliveryModeMail\\n* http://purl.org/goodrelations/v1#DeliveryModeOwnFleet\\n* http://purl.org/goodrelations/v1#DeliveryModePickUp\\n* http://purl.org/goodrelations/v1#DHL\\n* http://purl.org/goodrelations/v1#FederalExpress\\n* http://purl.org/goodrelations/v1#UPS         ')
 abstract class DeliveryMethod implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].
 @Schema(description: 'A DeliveryTimeSettings represents re-usable pieces of shipping information, relating to timing. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished (and identified/referenced) by their different values for [[transitTimeLabel]].')
 abstract class DeliveryTimeSettings implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The total delay between the receipt of the order and the goods reaching the final customer.
   @JsonKey(name: 'deliveryTime', includeIfNull: false)
   ShippingDeliveryTime? get deliveryTime;
@@ -5693,14 +3493,6 @@ abstract class DeliveryTimeSettings implements StructuredValue, $Thing {
 /// A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.
 @Schema(description: 'A demand entity represents the public, not necessarily binding, not necessarily exclusive, announcement by an organization or person to seek a certain type of goods or services. For describing demand using this type, the very same properties used for Offer apply.')
 abstract class Demand implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The payment method(s) that are accepted in general by an organization, or for some specific demand or offer.
   @AnyOf([LoanOrCredit, PaymentMethod, String])
   @JsonKey(name: 'acceptedPaymentMethod', includeIfNull: false)
@@ -5860,66 +3652,26 @@ abstract class Demand implements Intangible, $Thing {
 /// A dentist.
 @Schema(description: 'A dentist.')
 abstract class Dentist implements LocalBusiness, MedicalBusiness, MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.
 @Schema(description: 'The act of  departing from a place. An agent departs from a fromLocation for a destination, optionally with participants.')
 abstract class DepartAction implements MoveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A department store.
 @Schema(description: 'A department store.')
 abstract class DepartmentStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.
 @Schema(description: 'A type of Bank Account with a main purpose of depositing funds to gain interest or other benefits.')
 abstract class DepositAccount implements BankAccount, InvestmentOrDeposit, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical laboratory that offers on-site or off-site diagnostic services.
 @Schema(description: 'A medical laboratory that offers on-site or off-site diagnostic services.')
 abstract class DiagnosticLab implements MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A diagnostic test or procedure offered by this lab.
   @JsonKey(name: 'availableTest', includeIfNull: false)
   MedicalTest? get availableTest;
@@ -5929,27 +3681,11 @@ abstract class DiagnosticLab implements MedicalOrganization, $Thing {
 /// A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.
 @Schema(description: 'A medical procedure intended primarily for diagnostic, as opposed to therapeutic, purposes.')
 abstract class DiagnosticProcedure implements MedicalProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.
 @Schema(description: 'A strategy of regulating the intake of food to achieve or maintain a specific health-related goal.')
 abstract class Diet implements CreativeWork, LifestyleModification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Nutritional information specific to the dietary plan. May include dietary recommendations on what foods to avoid, what foods to consume, and specific alterations/deviations from the USDA or other regulatory body's approved dietary guidelines.
   @StringField(name: 'dietFeatures')
   String? get dietFeatures;
@@ -5976,14 +3712,6 @@ abstract class Diet implements CreativeWork, LifestyleModification, $Thing {
 /// A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.
 @Schema(description: 'A product taken by mouth that contains a dietary ingredient intended to supplement the diet. Dietary ingredients may include vitamins, minerals, herbs or other botanicals, amino acids, and substances such as enzymes, organ tissues, glandulars and metabolites.')
 abstract class DietarySupplement implements Product, Substance, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An active ingredient, typically chemical compounds and/or biologic substances.
   @StringField(name: 'activeIngredient')
   String? get activeIngredient;
@@ -6030,14 +3758,6 @@ abstract class DietarySupplement implements Product, Substance, $Thing {
 /// An electronic file or document.
 @Schema(description: 'An electronic file or document.')
 abstract class DigitalDocument implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A permission related to the access to this document (e.g. permission to read or write an electronic document). For a public document, specify a grantee with an Audience with audienceType equal to "public".
   @JsonKey(name: 'hasDigitalDocumentPermission', includeIfNull: false)
   DigitalDocumentPermission? get hasDigitalDocumentPermission;
@@ -6047,14 +3767,6 @@ abstract class DigitalDocument implements CreativeWork, $Thing {
 /// A permission for a particular person or group to access a particular file.
 @Schema(description: 'A permission for a particular person or group to access a particular file.')
 abstract class DigitalDocumentPermission implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The person, organization, contact point, or audience that has been granted this permission.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'grantee', includeIfNull: false)
@@ -6069,131 +3781,51 @@ abstract class DigitalDocumentPermission implements Intangible, $Thing {
 /// A type of permission which can be granted for accessing a digital document.
 @Schema(description: 'A type of permission which can be granted for accessing a digital document.')
 abstract class DigitalDocumentPermissionType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057).
 @Schema(description: 'Enumerates some common technology platforms, for use with properties such as [[actionPlatform]]. It is not supposed to be comprehensive - when a suitable code is not enumerated here, textual or URL values can be used instead. These codes are at a fairly high level and do not deal with versioning and other nuance. Additional codes can be suggested [in github](https://github.com/schemaorg/schemaorg/issues/3057). ')
 abstract class DigitalPlatformEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A digital product passport (DPP), a record containing information about a product's lifecycle, sustainability, and compliance.
 @Schema(description: 'A digital product passport (DPP), a record containing information about a product\'s lifecycle, sustainability, and compliance.')
 abstract class DigitalProductPassport implements Certification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.
 @Schema(description: 'The act of expressing a difference of opinion with the object. An agent disagrees to/about an object (a proposition, topic or theme) with participants.')
 abstract class DisagreeAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of discovering/finding an object.
 @Schema(description: 'The act of discovering/finding an object.')
 abstract class DiscoverAction implements FindAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A posting to a discussion forum.
 @Schema(description: 'A posting to a discussion forum.')
 abstract class DiscussionForumPosting implements SocialMediaPosting, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.
 @Schema(description: 'The act of expressing a negative sentiment about the object. An agent dislikes an object (a proposition, topic or theme) with participants.')
 abstract class DislikeAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Properties that take Distances as values are of the form '&lt;Number&gt; &lt;Length unit of measure&gt;'. E.g., '7 ft'.
 @Schema(description: 'Properties that take Distances as values are of the form \'&lt;Number&gt; &lt;Length unit of measure&gt;\'. E.g., \'7 ft\'.')
 abstract class Distance implements Quantity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A distillery.
 @Schema(description: 'A distillery.')
 abstract class Distillery implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of providing goods, services, or money without compensation, often for philanthropic reasons.
 @Schema(description: 'The act of providing goods, services, or money without compensation, often for philanthropic reasons.')
 abstract class DonateAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.
   ///
   @AnyOf([double, String])
@@ -6218,14 +3850,6 @@ abstract class DonateAction implements TransferAction, $Thing {
 /// A specific dosing schedule for a drug or supplement.
 @Schema(description: 'A specific dosing schedule for a drug or supplement.')
 abstract class DoseSchedule implements MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The unit of the dose, e.g. 'mg'.
   @StringField(name: 'doseUnit')
   String? get doseUnit;
@@ -6248,79 +3872,31 @@ abstract class DoseSchedule implements MedicalIntangible, $Thing {
 /// The act of downloading an object.
 @Schema(description: 'The act of downloading an object.')
 abstract class DownloadAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.
 @Schema(description: 'The act of producing a visual/graphical representation of an object, typically with a pen/pencil and paper as instruments.')
 abstract class DrawAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A picture or diagram made with a pencil, pen, or crayon rather than paint.
 @Schema(description: 'A picture or diagram made with a pencil, pen, or crayon rather than paint.')
 abstract class Drawing implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of swallowing liquids.
 @Schema(description: 'The act of swallowing liquids.')
 abstract class DrinkAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A value indicating which roadwheels will receive torque.
 @Schema(description: 'A value indicating which roadwheels will receive torque.')
 abstract class DriveWheelConfigurationValue implements QualitativeValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.
 @Schema(description: 'A chemical or biologic substance, used as a medical therapy, that has a physiological effect on an organism. Here the term drug is used interchangeably with the term medicine although clinical knowledge makes a clear difference between them.')
 abstract class Drug implements Product, Substance, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An active ingredient, typically chemical compounds and/or biologic substances.
   @StringField(name: 'activeIngredient')
   String? get activeIngredient;
@@ -6447,14 +4023,6 @@ abstract class Drug implements Product, Substance, $Thing {
 /// A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.
 @Schema(description: 'A class of medical drugs, e.g., statins. Classes can represent general pharmacological class, common mechanisms of action, common physiological effects, etc.')
 abstract class DrugClass implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifying a drug or medicine used in a medication procedure.
   @JsonKey(name: 'drug', includeIfNull: false)
   Drug? get drug;
@@ -6464,14 +4032,6 @@ abstract class DrugClass implements MedicalEntity, $Thing {
 /// The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema's markup.
 @Schema(description: 'The cost per unit of a medical drug. Note that this type is not meant to represent the price in an offer of a drug for sale; see the Offer type for that. This type will typically be used to tag wholesale or average retail cost of a drug, or maximum reimbursable cost. Costs of medical drugs vary widely depending on how and where they are paid for, so while this type captures some of the variables, costs should be used with caution by consumers of this schema\'s markup.')
 abstract class DrugCost implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The location in which the status applies.
   @JsonKey(name: 'applicableLocation', includeIfNull: false)
   AdministrativeArea? get applicableLocation;
@@ -6502,27 +4062,11 @@ abstract class DrugCost implements MedicalEntity, $Thing {
 /// Enumerated categories of medical drug costs.
 @Schema(description: 'Enumerated categories of medical drug costs.')
 abstract class DrugCostCategory implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The legal availability status of a medical drug.
 @Schema(description: 'The legal availability status of a medical drug.')
 abstract class DrugLegalStatus implements MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The location in which the status applies.
   @JsonKey(name: 'applicableLocation', includeIfNull: false)
   AdministrativeArea? get applicableLocation;
@@ -6532,40 +4076,16 @@ abstract class DrugLegalStatus implements MedicalIntangible, $Thing {
 /// Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.
 @Schema(description: 'Categories that represent an assessment of the risk of fetal injury due to a drug or pharmaceutical used as directed by the mother during pregnancy.')
 abstract class DrugPregnancyCategory implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Indicates whether this drug is available by prescription or over-the-counter.
 @Schema(description: 'Indicates whether this drug is available by prescription or over-the-counter.')
 abstract class DrugPrescriptionStatus implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A specific strength in which a medical drug is available in a specific country.
 @Schema(description: 'A specific strength in which a medical drug is available in a specific country.')
 abstract class DrugStrength implements MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An active ingredient, typically chemical compounds and/or biologic substances.
   @StringField(name: 'activeIngredient')
   String? get activeIngredient;
@@ -6591,66 +4111,26 @@ abstract class DrugStrength implements MedicalIntangible, $Thing {
 /// A dry-cleaning business.
 @Schema(description: 'A dry-cleaning business.')
 abstract class DryCleaningOrLaundry implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).
 @Schema(description: 'Quantity: Duration (use [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601)).')
 abstract class Duration implements Quantity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.
 @Schema(description: 'Enumerates the EU energy efficiency classes A-G as well as A+, A++, and A+++ as defined in EU directive 2017/1369.')
 abstract class EUEnergyEfficiencyEnumeration implements EnergyEfficiencyEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of swallowing solid objects.
 @Schema(description: 'The act of swallowing solid objects.')
 abstract class EatAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Education event.
 @Schema(description: 'Event type: Education event.')
 abstract class EducationEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The item being described is intended to assess the competency or learning outcome defined by the referenced term.
   @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'assesses', includeIfNull: false)
@@ -6671,14 +4151,6 @@ abstract class EducationEvent implements Event, $Thing {
 /// An EducationalAudience.
 @Schema(description: 'An EducationalAudience.')
 abstract class EducationalAudience implements Audience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An educationalRole of an EducationalAudience.
   @StringField(name: 'educationalRole')
   String? get educationalRole;
@@ -6688,14 +4160,6 @@ abstract class EducationalAudience implements Audience, $Thing {
 /// An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.
 @Schema(description: 'An educational or occupational credential. A diploma, academic degree, certification, qualification, badge, etc., that may be awarded to a person or other entity that meets the requirements defined by the credentialer.')
 abstract class EducationalOccupationalCredential implements Credential, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to do something such as earn an Educational Occupational Credential or understand a LearningResource.
   @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'competencyRequired', includeIfNull: false)
@@ -6711,14 +4175,6 @@ abstract class EducationalOccupationalCredential implements Credential, $Thing {
 /// A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).
 @Schema(description: 'A program offered by an institution which determines the learning progress to achieve an outcome, usually a credential like a degree or certificate. This would define a discrete set of opportunities (e.g., job, courses) that together constitute a program with a clear start, end, set of requirements, and transition to a new occupational opportunity (e.g., a job), or sometimes a higher educational opportunity (e.g., an advanced degree).')
 abstract class EducationalOccupationalProgram implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.
   @StringField(name: 'applicationDeadline', format: 'date')
   String? get applicationDeadline;
@@ -6832,14 +4288,6 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
 /// An educational organization.
 @Schema(description: 'An educational organization.')
 abstract class EducationalOrganization implements CivicStructure, Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Alumni of an organization.
   @JsonKey(name: 'alumni', includeIfNull: false)
   Person? get alumni;
@@ -6849,92 +4297,36 @@ abstract class EducationalOrganization implements CivicStructure, Organization, 
 /// An electrician.
 @Schema(description: 'An electrician.')
 abstract class Electrician implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An electronics store.
 @Schema(description: 'An electronics store.')
 abstract class ElectronicsStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An elementary school.
 @Schema(description: 'An elementary school.')
 abstract class ElementarySchool implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An email message.
 @Schema(description: 'An email message.')
 abstract class EmailMessage implements Message, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An embassy.
 @Schema(description: 'An embassy.')
 abstract class Embassy implements GovernmentBuilding, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An emergency service, such as a fire station or ER.
 @Schema(description: 'An emergency service, such as a fire station or ER.')
 abstract class EmergencyService implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A subclass of OrganizationRole used to describe employee relationships.
 @Schema(description: 'A subclass of OrganizationRole used to describe employee relationships.')
 abstract class EmployeeRole implements OrganizationRole, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The base salary of the job or of an employee in an EmployeeRole.
   @AnyOf([MonetaryAmount, double, PriceSpecification])
   @JsonKey(name: 'baseSalary', includeIfNull: false)
@@ -6949,53 +4341,21 @@ abstract class EmployeeRole implements OrganizationRole, $Thing {
 /// An aggregate rating of an Organization related to its role as an employer.
 @Schema(description: 'An aggregate rating of an Organization related to its role as an employer.')
 abstract class EmployerAggregateRating implements AggregateRating, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.
 @Schema(description: 'An [[EmployerReview]] is a review of an [[Organization]] regarding its role as an employer, written by a current or former employee of that organization.')
 abstract class EmployerReview implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An employment agency.
 @Schema(description: 'An employment agency.')
 abstract class EmploymentAgency implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent approves/certifies/likes/supports/sanctions an object.
 @Schema(description: 'An agent approves/certifies/likes/supports/sanctions an object.')
 abstract class EndorseAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The person/organization being supported.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'endorsee', includeIfNull: false)
@@ -7012,40 +4372,16 @@ abstract class EndorseAction implements ReactAction, $Thing {
 ///
 @Schema(description: 'An EndorsementRating is a rating that expresses some level of endorsement, for example inclusion in a "critic\'s pick" blog, a "Like" or "+1" on a social network. It can be considered the [[result]] of an [[EndorseAction]] in which the [[object]] of the action is rated positively by some [[agent]]. As is common elsewhere in schema.org, it is sometimes more useful to describe the results of such an action without explicitly describing the [[Action]].  An [[EndorsementRating]] may be part of a numeric scale or organized system, but this is not required: having an explicit type for indicating a positive, endorsement rating is particularly useful in the absence of numeric scales as it helps consumers understand that the rating is broadly positive. ')
 abstract class EndorsementRating implements Rating, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Properties that take Energy as values are of the form '&lt;Number&gt; &lt;Energy unit of measure&gt;'.
 @Schema(description: 'Properties that take Energy as values are of the form \'&lt;Number&gt; &lt;Energy unit of measure&gt;\'.')
 abstract class Energy implements Quantity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.
 @Schema(description: 'EnergyConsumptionDetails represents information related to the energy efficiency of a product that consumes energy. The information that can be provided is based on international regulations such as for example [EU directive 2017/1369](https://eur-lex.europa.eu/eli/reg/2017/1369/oj) for energy labeling and the [Energy labeling rule](https://www.ftc.gov/enforcement/rules/rulemaking-regulatory-reform-proceedings/energy-water-use-labeling-consumer) under the Energy Policy and Conservation Act (EPCA) in the US.')
 abstract class EnergyConsumptionDetails implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
   @StringField(name: 'energyEfficiencyScaleMax', enumValues: ['EUEnergyEfficiencyCategoryA', 'EUEnergyEfficiencyCategoryA1Plus', 'EUEnergyEfficiencyCategoryA2Plus', 'EUEnergyEfficiencyCategoryA3Plus', 'EUEnergyEfficiencyCategoryB', 'EUEnergyEfficiencyCategoryC', 'EUEnergyEfficiencyCategoryD', 'EUEnergyEfficiencyCategoryE', 'EUEnergyEfficiencyCategoryF', 'EUEnergyEfficiencyCategoryG'])
   String? get energyEfficiencyScaleMax;
@@ -7063,40 +4399,16 @@ abstract class EnergyConsumptionDetails implements Intangible, $Thing {
 /// Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.
 @Schema(description: 'Enumerates energy efficiency levels (also known as "classes" or "ratings") and certifications that are part of several international energy efficiency standards.')
 abstract class EnergyEfficiencyEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Used to indicate whether a product is EnergyStar certified.
 @Schema(description: 'Used to indicate whether a product is EnergyStar certified.')
 abstract class EnergyStarEnergyEfficiencyEnumeration implements EnergyEfficiencyEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.
 @Schema(description: 'Information about the engine of the vehicle. A vehicle can have multiple engines represented by multiple engine specification entities.')
 abstract class EngineSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The volume swept by all of the pistons inside the cylinders of an internal combustion engine in a single movement. \n\nTypical unit code(s): CMQ for cubic centimeter, LTR for liters, INQ for cubic inches\n* Note 1: You can link to information about how the given value has been determined using the [[valueReference]] property.\n* Note 2: You can use [[minValue]] and [[maxValue]] to indicate ranges.
   @JsonKey(name: 'engineDisplacement', includeIfNull: false)
   QuantitativeValue? get engineDisplacement;
@@ -7125,27 +4437,11 @@ abstract class EngineSpecification implements StructuredValue, $Thing {
 /// A business providing entertainment.
 @Schema(description: 'A business providing entertainment.')
 abstract class EntertainmentBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An entry point, within some Web-based protocol.
 @Schema(description: 'An entry point, within some Web-based protocol.')
 abstract class EntryPoint implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An application that can complete the request.
   @JsonKey(name: 'actionApplication', includeIfNull: false)
   SoftwareApplication? get actionApplication;
@@ -7179,14 +4475,6 @@ abstract class EntryPoint implements Intangible, $Thing {
 /// Lists or enumerations—for example, a list of cuisines or music genres, etc.
 @Schema(description: 'Lists or enumerations—for example, a list of cuisines or music genres, etc.')
 abstract class Enumeration implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Relates a term (i.e. a property, class or enumeration) to one that supersedes it.
   @AnyOf([SchemaClass, Enumeration, Property])
   @JsonKey(name: 'supersededBy', includeIfNull: false)
@@ -7197,27 +4485,11 @@ abstract class Enumeration implements Intangible, $Thing {
 /// An Environmental Product Declaration (EPD) that quantifies environmental information on the life cycle of a product.
 @Schema(description: 'An Environmental Product Declaration (EPD) that quantifies environmental information on the life cycle of a product.')
 abstract class EnvironmentalProductDeclaration implements Certification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A media episode (e.g. TV, radio, video game) which can be part of a series or season.
 @Schema(description: 'A media episode (e.g. TV, radio, video game) which can be part of a series or season.')
 abstract class Episode implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -7271,14 +4543,6 @@ abstract class Episode implements CreativeWork, $Thing {
 /// Representation of an Error.
 @Schema(description: 'Representation of an Error.')
 abstract class Error implements InstantaneousEvent, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Application or platform dependant error code.
   @AnyOf([DefinedTerm, int, StatusEnumeration, String])
   @JsonKey(name: 'errorCode', includeIfNull: false)
@@ -7289,14 +4553,6 @@ abstract class Error implements InstantaneousEvent, $Thing {
 /// An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [[offers]] property. Repeated events may be structured as separate Event objects.
 @Schema(description: 'An event happening at a certain time and location, such as a concert, lecture, or festival. Ticketing information may be added via the [[offers]] property. Repeated events may be structured as separate Event objects.')
 abstract class Event implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The subject matter of an object.
   @JsonKey(name: 'about', includeIfNull: false)
   Thing? get about;
@@ -7497,27 +4753,11 @@ abstract class Event implements Thing, $Thing {
 /// An EventAttendanceModeEnumeration value is one of potentially several modes of organising an event, relating to whether it is online or offline.
 @Schema(description: 'An EventAttendanceModeEnumeration value is one of potentially several modes of organising an event, relating to whether it is online or offline.')
 abstract class EventAttendanceModeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A reservation for an event like a concert, sporting event, or lecture.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for an event like a concert, sporting event, or lecture.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class EventReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A series of [[Event]]s. Included events can relate with the series using the [[superEvent]] property.
@@ -7536,53 +4776,21 @@ abstract class EventReservation implements Reservation, $Thing {
 ///
 @Schema(description: 'A series of [[Event]]s. Included events can relate with the series using the [[superEvent]] property.  An EventSeries is a collection of events that share some unifying characteristic. For example, "The Olympic Games" is a series, which is repeated regularly. The "2012 London Olympics" can be presented both as an [[Event]] in the series "Olympic Games", and as an [[EventSeries]] that included a number of sporting competitions as Events.  The nature of the association between the events in an [[EventSeries]] can vary, but typical examples could include a thematic event series (e.g. topical meetups or classes), or a series of regular events that share a location, attendee group and/or organizers.  EventSeries has been defined as a kind of Event to make it easy for publishers to use it in an Event context without worrying about which kinds of series are really event-like enough to call an Event. In general an EventSeries may seem more Event-like when the period of time is compact and when aspects such as location are fixed, but it may also sometimes prove useful to describe a longer-term series as an Event.    ')
 abstract class EventSeries implements Event, Series, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// EventStatusType is an enumeration type whose instances represent several states that an Event may be in.
 @Schema(description: 'EventStatusType is an enumeration type whose instances represent several states that an Event may be in.')
 abstract class EventStatusType implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An event venue.
 @Schema(description: 'An event venue.')
 abstract class EventVenue implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A structured value representing exchange rate.
 @Schema(description: 'A structured value representing exchange rate.')
 abstract class ExchangeRateSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
   @StringField(name: 'currency')
   String? get currency;
@@ -7601,14 +4809,6 @@ abstract class ExchangeRateSpecification implements StructuredValue, $Thing {
 /// The act of participating in exertive activity for the purposes of improving health and fitness.
 @Schema(description: 'The act of participating in exertive activity for the purposes of improving health and fitness.')
 abstract class ExerciseAction implements PlayAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The course where this action was taken.
   @JsonKey(name: 'course', includeIfNull: false)
   Place? get course;
@@ -7666,27 +4866,11 @@ abstract class ExerciseAction implements PlayAction, $Thing {
 /// A gym.
 @Schema(description: 'A gym.')
 abstract class ExerciseGym implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.
 @Schema(description: 'Fitness-related activity designed for a specific health-related purpose, including defined exercise routines as well as activity prescribed by a clinician.')
 abstract class ExercisePlan implements CreativeWork, PhysicalActivity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Length of time to engage in the activity.
   @AnyOf([Duration, QuantitativeValue])
   @JsonKey(name: 'activityDuration', includeIfNull: false)
@@ -7730,79 +4914,31 @@ abstract class ExercisePlan implements CreativeWork, PhysicalActivity, $Thing {
 /// Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...
 @Schema(description: 'Event type: Exhibition event, e.g. at a museum, library, archive, tradeshow, ...')
 abstract class ExhibitionEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).
 @Schema(description: 'A [[FAQPage]] is a [[WebPage]] presenting one or more "[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)" (see also [[QAPage]]).')
 abstract class FAQPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A radio channel that uses FM.
 @Schema(description: 'A radio channel that uses FM.')
 abstract class FMRadioChannel implements RadioChannel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A fast-food restaurant.
 @Schema(description: 'A fast-food restaurant.')
 abstract class FastFoodRestaurant implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Festival.
 @Schema(description: 'Event type: Festival.')
 abstract class Festival implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of capturing sound and moving images on film, video, or digitally.
 @Schema(description: 'The act of capturing sound and moving images on film, video, or digitally.')
 abstract class FilmAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// <p>Represents financial incentives for goods/services offered by an organization (or individual).</p>
@@ -7813,14 +4949,6 @@ abstract class FilmAction implements CreateAction, $Thing {
 ///
 @Schema(description: '<p>Represents financial incentives for goods/services offered by an organization (or individual).</p>  <p>Typically contains the [[name]] of the incentive, the [[incentivizedItem]], the [[incentiveAmount]], the [[incentiveStatus]], [[incentiveType]], the [[provider]] of the incentive, and [[eligibleWithSupplier]].</p>  <p>Optionally contains criteria on whether the incentive is limited based on [[purchaseType]], [[purchasePriceLimit]], [[incomeLimit]], and the [[qualifiedExpense]].     ')
 abstract class FinancialIncentive implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The geographic area where a service or offered item is provided.
   @AnyOf([AdministrativeArea, GeoShape, Place, String])
   @JsonKey(name: 'areaServed', includeIfNull: false)
@@ -7974,14 +5102,6 @@ abstract class FinancialIncentive implements Intangible, $Thing {
 /// A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.
 @Schema(description: 'A product provided to consumers and businesses by financial institutions such as banks, insurance companies, brokerage firms, consumer finance companies, and investment companies which comprise the financial services industry.')
 abstract class FinancialProduct implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The annual rate that is charged for borrowing (or made by investing), expressed as a single percentage number that represents the actual yearly cost of funds over the term of a loan. This includes any fees or additional costs associated with the transaction.
   @AnyOf([double, QuantitativeValue])
   @JsonKey(name: 'annualPercentageRate', includeIfNull: false)
@@ -8001,14 +5121,6 @@ abstract class FinancialProduct implements Service, $Thing {
 /// Financial services business.
 @Schema(description: 'Financial services business.')
 abstract class FinancialService implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
   @StringField(name: 'feesAndCommissionsSpecification', format: 'uri')
   String? get feesAndCommissionsSpecification;
@@ -8018,40 +5130,16 @@ abstract class FinancialService implements LocalBusiness, $Thing {
 /// The act of finding an object.\n\nRelated actions:\n\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.
 @Schema(description: 'The act of finding an object.\\n\\nRelated actions:\\n\\n* [[SearchAction]]: FindAction is generally lead by a SearchAction, but not necessarily.')
 abstract class FindAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A fire station. With firemen.
 @Schema(description: 'A fire station. With firemen.')
 abstract class FireStation implements CivicStructure, EmergencyService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An airline flight.
 @Schema(description: 'An airline flight.')
 abstract class Flight implements Trip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The kind of aircraft (e.g., "Boeing 747").
   @AnyOf([String, Vehicle])
   @JsonKey(name: 'aircraft', includeIfNull: false)
@@ -8121,14 +5209,6 @@ abstract class Flight implements Trip, $Thing {
 /// A reservation for air travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for air travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class FlightReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The airline-specific indicator of boarding order / preference.
   @StringField(name: 'boardingGroup')
   String? get boardingGroup;
@@ -8151,27 +5231,11 @@ abstract class FlightReservation implements Reservation, $Thing {
 /// Data type: Floating number.
 @Schema(description: 'Data type: Floating number.')
 abstract class Float implements Number, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]].
 @Schema(description: 'A FloorPlan is an explicit representation of a collection of similar accommodations, allowing the provision of common information (room counts, sizes, layout diagrams) and offers for rental or sale. In typical use, some [[ApartmentComplex]] has an [[accommodationFloorPlan]] which is a [[FloorPlan]].  A FloorPlan is always in the context of a particular place, either a larger [[ApartmentComplex]] or a single [[Apartment]]. The visual/spatial aspects of a floor plan (i.e. room layout, [see wikipedia](https://en.wikipedia.org/wiki/Floor_plan)) can be indicated using [[image]]. ')
 abstract class FloorPlan implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
   @JsonKey(name: 'amenityFeature', includeIfNull: false)
   LocationFeatureSpecification? get amenityFeature;
@@ -8231,27 +5295,11 @@ abstract class FloorPlan implements Intangible, $Thing {
 /// A florist.
 @Schema(description: 'A florist.')
 abstract class Florist implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\n\nRelated actions:\n\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).
 @Schema(description: 'The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.\\n\\nRelated actions:\\n\\n* [[BefriendAction]]: Unlike BefriendAction, FollowAction implies that the connection is *not* necessarily reciprocal.\\n* [[SubscribeAction]]: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.\\n* [[TrackAction]]: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don\'t follow it).')
 abstract class FollowAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. The person or organization being followed.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'followee', includeIfNull: false)
@@ -8262,14 +5310,6 @@ abstract class FollowAction implements InteractAction, $Thing {
 /// A food-related business.
 @Schema(description: 'A food-related business.')
 abstract class FoodEstablishment implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings ```Yes``` or ```No```.
   @AnyOf([bool, String])
   @JsonKey(name: 'acceptsReservations', includeIfNull: false)
@@ -8298,14 +5338,6 @@ abstract class FoodEstablishment implements LocalBusiness, $Thing {
 /// A reservation to dine at a food-related business.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
 @Schema(description: 'A reservation to dine at a food-related business.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.')
 abstract class FoodEstablishmentReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
   @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
@@ -8324,40 +5356,16 @@ abstract class FoodEstablishmentReservation implements Reservation, $Thing {
 /// Event type: Food event.
 @Schema(description: 'Event type: Food event.')
 abstract class FoodEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A food service, like breakfast, lunch, or dinner.
 @Schema(description: 'A food service, like breakfast, lunch, or dinner.')
 abstract class FoodService implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of product fulfillment.
 @Schema(description: 'A type of product fulfillment.')
 abstract class FulfillmentTypeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages
@@ -8368,14 +5376,6 @@ abstract class FulfillmentTypeEnumeration implements Enumeration, $Thing {
 ///
 @Schema(description: 'A FundingAgency is an organization that implements one or more [[FundingScheme]]s and manages     the granting process (via [[Grant]]s, typically [[MonetaryGrant]]s).     A funding agency is not always required for grant funding, e.g. philanthropic giving, corporate sponsorship etc.      Examples of funding agencies include ERC, REA, NIH, Bill and Melinda Gates Foundation, ...     ')
 abstract class FundingAgency implements Project, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A FundingScheme combines organizational, project and policy aspects of grant-based funding
@@ -8383,40 +5383,16 @@ abstract class FundingAgency implements Project, $Thing {
 /// Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...
 @Schema(description: 'A FundingScheme combines organizational, project and policy aspects of grant-based funding     that sets guidelines, principles and mechanisms to support other kinds of projects and activities.     Funding is typically organized via [[Grant]] funding. Examples of funding schemes: Swiss Priority Programmes (SPPs); EU Framework 7 (FP7); Horizon 2020; the NIH-R01 Grant Program; Wellcome institutional strategic support fund. For large scale public sector funding, the management and administration of grant awards is often handled by other, dedicated, organizations - [[FundingAgency]]s such as ERC, REA, ...')
 abstract class FundingScheme implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A furniture store.
 @Schema(description: 'A furniture store.')
 abstract class FurnitureStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.
 @Schema(description: 'The Game type represents things which are games. These are typically rule-governed recreational activities, e.g. role-playing games in which players assume the role of characters in a fictional setting.')
 abstract class Game implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A piece of data that represents a particular aspect of a fictional character (skill, power, character points, advantage, disadvantage).
   @JsonKey(name: 'characterAttribute', includeIfNull: false)
   Thing? get characterAttribute;
@@ -8443,40 +5419,16 @@ abstract class Game implements CreativeWork, $Thing {
 /// For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered.
 @Schema(description: 'For a [[VideoGame]], such as used with a [[PlayGameAction]], an enumeration of the kind of game availability offered. ')
 abstract class GameAvailabilityEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Indicates whether this game is multi-player, co-op or single-player.
 @Schema(description: 'Indicates whether this game is multi-player, co-op or single-player.')
 abstract class GamePlayMode implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Server that provides game interaction in a multiplayer game.
 @Schema(description: 'Server that provides game interaction in a multiplayer game.')
 abstract class GameServer implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Video game which is played on this server.
   @JsonKey(name: 'game', includeIfNull: false)
   VideoGame? get game;
@@ -8494,79 +5446,31 @@ abstract class GameServer implements Intangible, $Thing {
 /// Status of a game server.
 @Schema(description: 'Status of a game server.')
 abstract class GameServerStatus implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A garden store.
 @Schema(description: 'A garden store.')
 abstract class GardenStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A gas station.
 @Schema(description: 'A gas station.')
 abstract class GasStation implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Residence type: Gated community.
 @Schema(description: 'Residence type: Gated community.')
 abstract class GatedResidenceCommunity implements Residence, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An enumeration of genders.
 @Schema(description: 'An enumeration of genders.')
 abstract class GenderType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).
 @Schema(description: 'A discrete unit of inheritance which affects one or more biological traits (Source: [https://en.wikipedia.org/wiki/Gene](https://en.wikipedia.org/wiki/Gene)). Examples include FOXP2 (Forkhead box protein P2), SCARNA21 (small Cajal body-specific RNA 21), A- (agouti genotype).')
 abstract class Gene implements BioChemEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Another gene which is a variation of this one.
   @JsonKey(name: 'alternativeOf', includeIfNull: false)
   Gene? get alternativeOf;
@@ -8589,14 +5493,6 @@ abstract class Gene implements BioChemEntity, $Thing {
 /// A general contractor.
 @Schema(description: 'A general contractor.')
 abstract class GeneralContractor implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape
@@ -8605,14 +5501,6 @@ abstract class GeneralContractor implements HomeAndConstructionBusiness, $Thing 
 ///
 @Schema(description: 'A GeoCircle is a GeoShape representing a circular geographic area. As it is a GeoShape           it provides the simple textual property \'circle\', but also allows the combination of postalCode alongside geoRadius.           The center of the circle can be indicated via the \'geoMidpoint\' property, or more approximately using \'address\', \'postalCode\'.        ')
 abstract class GeoCircle implements GeoShape, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the GeoCoordinates at the centre of a GeoShape, e.g. GeoCircle.
   @JsonKey(name: 'geoMidpoint', includeIfNull: false)
   GeoCoordinates? get geoMidpoint;
@@ -8627,14 +5515,6 @@ abstract class GeoCircle implements GeoShape, $Thing {
 /// The geographic coordinates of a place or event.
 @Schema(description: 'The geographic coordinates of a place or event.')
 abstract class GeoCoordinates implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Physical address of the item.
   @AnyOf([PostalAddress, String])
   @JsonKey(name: 'address', includeIfNull: false)
@@ -8669,14 +5549,6 @@ abstract class GeoCoordinates implements StructuredValue, $Thing {
 /// The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.
 @Schema(description: 'The geographic shape of a place. A GeoShape can be described using several properties whose values are based on latitude/longitude pairs. Either whitespace or commas can be used to separate latitude and longitude; whitespace should be used when writing a list of several such points.')
 abstract class GeoShape implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Physical address of the item.
   @AnyOf([PostalAddress, String])
   @JsonKey(name: 'address', includeIfNull: false)
@@ -8717,14 +5589,6 @@ abstract class GeoShape implements StructuredValue, $Thing {
 /// (Eventually to be defined as) a supertype of GeoShape designed to accommodate definitions from Geo-Spatial best practices.
 @Schema(description: '(Eventually to be defined as) a supertype of GeoShape designed to accommodate definitions from Geo-Spatial best practices.')
 abstract class GeospatialGeometry implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Represents a relationship between two geometries (or the places they represent), relating a containing geometry to a contained geometry. "a contains b iff no points of b lie in the exterior of a, and at least one point of the interior of b lies in the interior of a". As defined in [DE-9IM](https://en.wikipedia.org/wiki/DE-9IM).
   @AnyOf([GeospatialGeometry, Place])
   @JsonKey(name: 'geoContains', includeIfNull: false)
@@ -8780,14 +5644,6 @@ abstract class GeospatialGeometry implements Intangible, $Thing {
 /// The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\n\nRelated actions:\n\n* [[TakeAction]]: Reciprocal of GiveAction.\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn't mean I'm giving it to you).
 @Schema(description: 'The act of transferring ownership of an object to a destination. Reciprocal of TakeAction.\\n\\nRelated actions:\\n\\n* [[TakeAction]]: Reciprocal of GiveAction.\\n* [[SendAction]]: Unlike SendAction, GiveAction implies that ownership is being transferred (e.g. I may send my laptop to you, but that doesn\'t mean I\'m giving it to you).')
 abstract class GiveAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'recipient', includeIfNull: false)
@@ -8798,92 +5654,36 @@ abstract class GiveAction implements TransferAction, $Thing {
 /// A golf course.
 @Schema(description: 'A golf course.')
 abstract class GolfCourse implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.
 @Schema(description: 'GovernmentBenefitsType enumerates several kinds of government benefits to support the COVID-19 situation. Note that this structure may not capture all benefits offered.')
 abstract class GovernmentBenefitsType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A government building.
 @Schema(description: 'A government building.')
 abstract class GovernmentBuilding implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A government office&#x2014;for example, an IRS or DMV office.
 @Schema(description: 'A government office&#x2014;for example, an IRS or DMV office.')
 abstract class GovernmentOffice implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A governmental organization or agency.
 @Schema(description: 'A governmental organization or agency.')
 abstract class GovernmentOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A permit issued by a government agency.
 @Schema(description: 'A permit issued by a government agency.')
 abstract class GovernmentPermit implements Permit, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A service provided by a government organization, e.g. food stamps, veterans benefits, etc.
 @Schema(description: 'A service provided by a government organization, e.g. food stamps, veterans benefits, etc.')
 abstract class GovernmentService implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
   @AnyOf([AdministrativeArea, String])
   @JsonKey(name: 'jurisdiction', includeIfNull: false)
@@ -8904,14 +5704,6 @@ abstract class GovernmentService implements Service, $Thing {
 ///
 @Schema(description: 'A grant, typically financial or otherwise quantifiable, of resources. Typically a [[funder]] sponsors some [[MonetaryAmount]] to an [[Organization]] or [[Person]],     sometimes not necessarily via a dedicated or long-lived [[Project]], resulting in one or more outputs, or [[fundedItem]]s. For financial sponsorship, indicate the [[funder]] of a [[MonetaryGrant]]. For non-financial support, indicate [[sponsor]] of [[Grant]]s of resources (e.g. office space).  Grants support  activities directed towards some agreed collective goals, often but not always organized as [[Project]]s. Long-lived projects are sometimes sponsored by a variety of grants over time, but it is also common for a project to be associated with a single grant.  The amount of a [[Grant]] is represented using [[amount]] as a [[MonetaryAmount]].     ')
 abstract class Grant implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates something directly or indirectly funded or sponsored through a [[Grant]]. See also [[ownershipFundingInfo]].
   @AnyOf([BioChemEntity, CreativeWork, Event, MedicalEntity, Organization, Person, Product])
   @JsonKey(name: 'fundedItem', includeIfNull: false)
@@ -8932,27 +5724,11 @@ abstract class Grant implements Intangible, $Thing {
 /// A grocery store.
 @Schema(description: 'A grocery store.')
 abstract class GroceryStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// [[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.
 @Schema(description: '[[Guide]] is a page or article that recommends specific products or services, or aspects of a thing for a user to consider. A [[Guide]] may represent a Buying Guide and detail aspects of products or services for a user to consider. A [[Guide]] may represent a Product Guide and recommend specific products or services. A [[Guide]] may represent a Ranked List and recommend specific products or services with ranking.')
 abstract class Guide implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
   @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
@@ -8968,105 +5744,41 @@ abstract class Guide implements CreativeWork, $Thing {
 /// A business that provides Heating, Ventilation and Air Conditioning services.
 @Schema(description: 'A business that provides Heating, Ventilation and Air Conditioning services.')
 abstract class HVACBusiness implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.
 @Schema(description: 'A [hackathon](https://en.wikipedia.org/wiki/Hackathon) event.')
 abstract class Hackathon implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A hair salon.
 @Schema(description: 'A hair salon.')
 abstract class HairSalon implements HealthAndBeautyBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A hardware store.
 @Schema(description: 'A hardware store.')
 abstract class HardwareStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Health and beauty.
 @Schema(description: 'Health and beauty.')
 abstract class HealthAndBeautyBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].
 @Schema(description: 'HealthAspectEnumeration enumerates several aspects of health content online, each of which might be described using [[hasHealthAspect]] and [[HealthTopicContent]].')
 abstract class HealthAspectEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A health club.
 @Schema(description: 'A health club.')
 abstract class HealthClub implements HealthAndBeautyBusiness, SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A US-style health insurance plan, including PPOs, EPOs, and HMOs.
 @Schema(description: 'A US-style health insurance plan, including PPOs, EPOs, and HMOs.')
 abstract class HealthInsurancePlan implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
   @StringField(name: 'benefitsSummaryUrl', format: 'uri')
   String? get benefitsSummaryUrl;
@@ -9108,14 +5820,6 @@ abstract class HealthInsurancePlan implements Intangible, $Thing {
 /// A description of costs to the patient under a given network or formulary.
 @Schema(description: 'A description of costs to the patient under a given network or formulary.')
 abstract class HealthPlanCostSharingSpecification implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Whether the coinsurance applies before or after deductible, etc. TODO: Is this a closed set?
   @StringField(name: 'healthPlanCoinsuranceOption')
   String? get healthPlanCoinsuranceOption;
@@ -9141,14 +5845,6 @@ abstract class HealthPlanCostSharingSpecification implements Intangible, $Thing 
 /// For a given health insurance plan, the specification for costs and coverage of prescription drugs.
 @Schema(description: 'For a given health insurance plan, the specification for costs and coverage of prescription drugs.')
 abstract class HealthPlanFormulary implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The costs to the patient for services under this network or formulary.
   @AnyOf([bool, HealthPlanCostSharingSpecification])
   @JsonKey(name: 'healthPlanCostSharing', includeIfNull: false)
@@ -9167,14 +5863,6 @@ abstract class HealthPlanFormulary implements Intangible, $Thing {
 /// A US-style health insurance plan network.
 @Schema(description: 'A US-style health insurance plan network.')
 abstract class HealthPlanNetwork implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The costs to the patient for services under this network or formulary.
   @AnyOf([bool, HealthPlanCostSharingSpecification])
   @JsonKey(name: 'healthPlanCostSharing', includeIfNull: false)
@@ -9194,14 +5882,6 @@ abstract class HealthPlanNetwork implements Intangible, $Thing {
 ///
 @Schema(description: '[[HealthTopicContent]] is [[WebContent]] that is about some aspect of a health topic, e.g. a condition, its symptoms or treatments. Such content may be comprised of several parts or sections and use different types of media. Multiple instances of [[WebContent]] (and hence [[HealthTopicContent]]) can be related using [[hasPart]] / [[isPartOf]] where there is some kind of content hierarchy, and their content described with [[about]] and [[mentions]] e.g. building upon the existing [[MedicalCondition]] vocabulary.   ')
 abstract class HealthTopicContent implements WebContent, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.
   @StringField(name: 'hasHealthAspect', enumValues: ['AllergiesHealthAspect', 'BenefitsHealthAspect', 'CausesHealthAspect', 'ContagiousnessHealthAspect', 'EffectivenessHealthAspect', 'GettingAccessHealthAspect', 'HowItWorksHealthAspect', 'HowOrWhereHealthAspect', 'IngredientsHealthAspect', 'LivingWithHealthAspect', 'MayTreatHealthAspect', 'MisconceptionsHealthAspect', 'OverviewHealthAspect', 'PatientExperienceHealthAspect', 'PregnancyHealthAspect', 'PreventionHealthAspect', 'PrognosisHealthAspect', 'RelatedTopicsHealthAspect', 'RisksOrComplicationsHealthAspect', 'SafetyHealthAspect', 'ScreeningHealthAspect', 'SeeDoctorHealthAspect', 'SelfCareHealthAspect', 'SideEffectsHealthAspect', 'StagesHealthAspect', 'SymptomsHealthAspect', 'TreatmentsHealthAspect', 'TypesHealthAspect', 'UsageOrScheduleHealthAspect'])
   String? get hasHealthAspect;
@@ -9211,79 +5891,31 @@ abstract class HealthTopicContent implements WebContent, $Thing {
 /// A high school.
 @Schema(description: 'A high school.')
 abstract class HighSchool implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Hindu temple.
 @Schema(description: 'A Hindu temple.')
 abstract class HinduTemple implements PlaceOfWorship, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A store that sells materials useful or necessary for various hobbies.
 @Schema(description: 'A store that sells materials useful or necessary for various hobbies.')
 abstract class HobbyShop implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A construction business.\n\nA HomeAndConstructionBusiness is a [[LocalBusiness]] that provides services around homes and buildings.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
 @Schema(description: 'A construction business.\\n\\nA HomeAndConstructionBusiness is a [[LocalBusiness]] that provides services around homes and buildings.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).')
 abstract class HomeAndConstructionBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A home goods store.
 @Schema(description: 'A home goods store.')
 abstract class HomeGoodsStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A hospital.
 @Schema(description: 'A hospital.')
 abstract class Hospital implements CivicStructure, EmergencyService, MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A medical service available from this provider.
   @AnyOf([MedicalProcedure, MedicalTest, MedicalTherapy])
   @JsonKey(name: 'availableService', includeIfNull: false)
@@ -9306,14 +5938,6 @@ abstract class Hospital implements CivicStructure, EmergencyService, MedicalOrga
 ///
 @Schema(description: 'A hostel - cheap accommodation, often in shared dormitories. <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Hostel implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel).
@@ -9322,14 +5946,6 @@ abstract class Hostel implements LodgingBusiness, $Thing {
 ///
 @Schema(description: 'A hotel is an establishment that provides lodging paid on a short-term basis (source: Wikipedia, the free encyclopedia, see http://en.wikipedia.org/wiki/Hotel). <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Hotel implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A hotel room is a single room in a hotel.
@@ -9338,14 +5954,6 @@ abstract class Hotel implements LodgingBusiness, $Thing {
 ///
 @Schema(description: 'A hotel room is a single room in a hotel. <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class HotelRoom implements Room, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.
   /// If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
   @AnyOf([BedDetails, BedType, String])
@@ -9362,14 +5970,6 @@ abstract class HotelRoom implements Room, $Thing {
 /// A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).
 @Schema(description: 'A house is a building or structure that has the ability to be occupied for habitation by humans or other creatures (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/House">http://en.wikipedia.org/wiki/House</a>).')
 abstract class House implements Accommodation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
   /// Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
   @AnyOf([double, QuantitativeValue])
@@ -9381,27 +5981,11 @@ abstract class House implements Accommodation, $Thing {
 /// A house painting service.
 @Schema(description: 'A house painting service.')
 abstract class HousePainter implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Instructions that explain how to achieve a result by performing a sequence of steps.
 @Schema(description: 'Instructions that explain how to achieve a result by performing a sequence of steps.')
 abstract class HowTo implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The estimated cost of the supply or supplies consumed when performing instructions.
   @AnyOf([MonetaryAmount, String])
   @JsonKey(name: 'estimatedCost', includeIfNull: false)
@@ -9449,14 +6033,6 @@ abstract class HowTo implements CreativeWork, $Thing {
 /// A direction indicating a single action to do in the instructions for how to achieve a result.
 @Schema(description: 'A direction indicating a single action to do in the instructions for how to achieve a result.')
 abstract class HowToDirection implements CreativeWork, ListItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A media object representing the circumstances after performing this direction.
   @AnyOf([MediaObject, String])
   @JsonKey(name: 'afterMedia', includeIfNull: false)
@@ -9499,14 +6075,6 @@ abstract class HowToDirection implements CreativeWork, ListItem, $Thing {
 /// An item used as either a tool or supply when performing the instructions for how to achieve a result.
 @Schema(description: 'An item used as either a tool or supply when performing the instructions for how to achieve a result.')
 abstract class HowToItem implements ListItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The required quantity of the item(s).
   @AnyOf([double, QuantitativeValue, String])
   @JsonKey(name: 'requiredQuantity', includeIfNull: false)
@@ -9517,14 +6085,6 @@ abstract class HowToItem implements ListItem, $Thing {
 /// A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).
 @Schema(description: 'A sub-grouping of steps in the instructions for how to achieve a result (e.g. steps for making a pie crust within a pie recipe).')
 abstract class HowToSection implements CreativeWork, ItemList, ListItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A single step item (as HowToStep, text, document, video, etc.) or a HowToSection (originally misnamed 'steps'; 'step' is preferred).
   @AnyOf([CreativeWork, ItemList, String])
   @JsonKey(name: 'steps', includeIfNull: false)
@@ -9535,27 +6095,11 @@ abstract class HowToSection implements CreativeWork, ItemList, ListItem, $Thing 
 /// A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.
 @Schema(description: 'A step in the instructions for how to achieve a result. It is an ordered list with HowToDirection and/or HowToTip items.')
 abstract class HowToStep implements CreativeWork, ItemList, ListItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A supply consumed when performing the instructions for how to achieve a result.
 @Schema(description: 'A supply consumed when performing the instructions for how to achieve a result.')
 abstract class HowToSupply implements HowToItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The estimated cost of the supply or supplies consumed when performing instructions.
   @AnyOf([MonetaryAmount, String])
   @JsonKey(name: 'estimatedCost', includeIfNull: false)
@@ -9566,40 +6110,16 @@ abstract class HowToSupply implements HowToItem, $Thing {
 /// An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author's preference, etc. It can explain what could be done, or what should not be done, but doesn't specify what should be done (see HowToDirection).
 @Schema(description: 'An explanation in the instructions for how to achieve a result. It provides supplementary information about a technique, supply, author\'s preference, etc. It can explain what could be done, or what should not be done, but doesn\'t specify what should be done (see HowToDirection).')
 abstract class HowToTip implements CreativeWork, ListItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A tool used (but not consumed) when performing instructions for how to achieve a result.
 @Schema(description: 'A tool used (but not consumed) when performing instructions for how to achieve a result.')
 abstract class HowToTool implements HowToItem, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.
 @Schema(description: 'A HyperToc represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. Items in the table of contents are indicated using the [[tocEntry]] property, and typed [[HyperTocEntry]]. For cases where the same larger work is split into multiple files, [[associatedMedia]] can be used on individual [[HyperTocEntry]] items.')
 abstract class HyperToc implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A media object that encodes this CreativeWork. This property is a synonym for encoding.
   @JsonKey(name: 'associatedMedia', includeIfNull: false)
   MediaObject? get associatedMedia;
@@ -9613,14 +6133,6 @@ abstract class HyperToc implements CreativeWork, $Thing {
 /// A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].
 @Schema(description: 'A HyperToEntry is an item within a [[HyperToc]], which represents a hypertext table of contents for complex media objects, such as [[VideoObject]], [[AudioObject]]. The media object itself is indicated using [[associatedMedia]]. Each section of interest within that content can be described with a [[HyperTocEntry]], with associated [[startOffset]] and [[endOffset]]. When several entries are all from the same file, [[associatedMedia]] is used on the overarching [[HyperTocEntry]]; if the content has been split into multiple files, they can be referenced using [[associatedMedia]] on each [[HyperTocEntry]].')
 abstract class HyperTocEntry implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A media object that encodes this CreativeWork. This property is a synonym for encoding.
   @JsonKey(name: 'associatedMedia', includeIfNull: false)
   MediaObject? get associatedMedia;
@@ -9640,79 +6152,31 @@ abstract class HyperTocEntry implements CreativeWork, $Thing {
 /// for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.
 @Schema(description: '<a href="https://www.iptc.org/">IPTC</a> "Digital Source" codes for use with the [[digitalSourceType]] property, providing information about the source for a digital media object. In general these codes are not declared here to be mutually exclusive, although some combinations would be contradictory if applied simultaneously, or might be considered mutually incompatible by upstream maintainers of the definitions. See the IPTC <a href="https://www.iptc.org/std/photometadata/documentation/userguide/">documentation</a>  for <a href="https://cv.iptc.org/newscodes/digitalsourcetype/">detailed definitions</a> of all terms.')
 abstract class IPTCDigitalSourceEnumeration implements MediaEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// ITNonprofitType: Non-profit organization type originating from Italy. Most categories are drawn from the Italian Third Sector Code (Legislative Decree No. 117 of 3 July 2017), although some Italian non-profit entities, such as amateur sports entities, are primarily governed by other legislation.
 @Schema(description: 'ITNonprofitType: Non-profit organization type originating from Italy. Most categories are drawn from the Italian Third Sector Code (Legislative Decree No. 117 of 3 July 2017), although some Italian non-profit entities, such as amateur sports entities, are primarily governed by other legislation.')
 abstract class ITNonprofitType implements NonprofitType, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An ice cream shop.
 @Schema(description: 'An ice cream shop.')
 abstract class IceCreamShop implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of intentionally disregarding the object. An agent ignores an object.
 @Schema(description: 'The act of intentionally disregarding the object. An agent ignores an object.')
 abstract class IgnoreAction implements AssessAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Image gallery page.
 @Schema(description: 'Web page type: Image gallery page.')
 abstract class ImageGallery implements MediaGallery, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An image file.
 @Schema(description: 'An image file.')
 abstract class ImageObject implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The caption for this object. For downloadable machine formats (closed caption, subtitles etc.) use MediaObject and indicate the [[encodingFormat]].
   @AnyOf([MediaObject, String])
   @JsonKey(name: 'caption', includeIfNull: false)
@@ -9736,27 +6200,11 @@ abstract class ImageObject implements MediaObject, $Thing {
 /// A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
 @Schema(description: 'A specific and exact (byte-for-byte) version of an [[ImageObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata (e.g. XMP, EXIF) the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren\'t represented in their actual content, do not affect this notion of identity.')
 abstract class ImageObjectSnapshot implements ImageObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any medical imaging modality typically used for diagnostic purposes.
 @Schema(description: 'Any medical imaging modality typically used for diagnostic purposes.')
 abstract class ImagingTest implements MedicalTest, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Imaging technique used.
   @StringField(name: 'imagingTechnique', enumValues: ['CT', 'MRI', 'PET', 'Radiography', 'Ultrasound', 'XRay'])
   String? get imagingTechnique;
@@ -9766,54 +6214,22 @@ abstract class ImagingTest implements MedicalTest, $Thing {
 /// The types of expenses that are covered by the incentive. For example some incentives are only for the goods (tangible items) but the services (labor) are excluded.
 @Schema(description: 'The types of expenses that are covered by the incentive. For example some incentives are only for the goods (tangible items) but the services (labor) are excluded.')
 abstract class IncentiveQualifiedExpenseType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates a status for an incentive, such as whether it is active.
 @Schema(description: 'Enumerates a status for an incentive, such as whether it is active.')
 abstract class IncentiveStatus implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates common financial incentives for products, including tax credits, tax deductions, rebates and subsidies, etc.
 @Schema(description: 'Enumerates common financial incentives for products, including tax credits, tax deductions, rebates and subsidies, etc.')
 abstract class IncentiveType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]].
 /// The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
 @Schema(description: 'An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]].  The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.')
 abstract class IndividualPhysician implements Physician, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
   @JsonKey(name: 'practicesAt', includeIfNull: false)
   MedicalOrganization? get practicesAt;
@@ -9823,14 +6239,6 @@ abstract class IndividualPhysician implements Physician, $Thing {
 /// A single, identifiable product instance (e.g. a laptop with a particular serial number).
 @Schema(description: 'A single, identifiable product instance (e.g. a laptop with a particular serial number).')
 abstract class IndividualProduct implements Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The serial number or any alphanumeric identifier of a particular product. When attached to an offer, it is a shortcut for the serial number of the product included in the offer.
   @StringField(name: 'serialNumber')
   String? get serialNumber;
@@ -9840,27 +6248,11 @@ abstract class IndividualProduct implements Product, $Thing {
 /// Classes of agents or pathogens that transmit infectious diseases. Enumerated type.
 @Schema(description: 'Classes of agents or pathogens that transmit infectious diseases. Enumerated type.')
 abstract class InfectiousAgentClass implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.
 @Schema(description: 'An infectious disease is a clinically evident human disease resulting from the presence of pathogenic microbial agents, like pathogenic viruses, pathogenic bacteria, fungi, protozoa, multicellular parasites, and prions. To be considered an infectious disease, such pathogens are known to be able to cause this disease.')
 abstract class InfectiousDisease implements MedicalCondition, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The actual infectious agent, such as a specific bacterium.
   @StringField(name: 'infectiousAgent')
   String? get infectiousAgent;
@@ -9878,14 +6270,6 @@ abstract class InfectiousDisease implements MedicalCondition, $Thing {
 /// The act of notifying someone of information pertinent to them, with no expectation of a response.
 @Schema(description: 'The act of notifying someone of information pertinent to them, with no expectation of a response.')
 abstract class InformAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Upcoming or past event associated with this place, organization, or action.
   @JsonKey(name: 'event', includeIfNull: false)
   Event? get event;
@@ -9895,14 +6279,6 @@ abstract class InformAction implements CommunicateAction, $Thing {
 /// The act of adding at a specific location in an ordered collection.
 @Schema(description: 'The act of adding at a specific location in an ordered collection.')
 abstract class InsertAction implements AddAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The final location of the object or the agent after the action.
   @JsonKey(name: 'toLocation', includeIfNull: false)
   Place? get toLocation;
@@ -9912,27 +6288,11 @@ abstract class InsertAction implements AddAction, $Thing {
 /// The act of installing an application.
 @Schema(description: 'The act of installing an application.')
 abstract class InstallAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An event with no duration, like for instance a computer log entry.
 @Schema(description: 'An event with no duration, like for instance a computer log entry.')
 abstract class InstantaneousEvent implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Data associated with the event, like for instance a log message.
   @JsonKey(name: 'data', includeIfNull: false)
   Thing? get data;
@@ -9950,66 +6310,26 @@ abstract class InstantaneousEvent implements StructuredValue, $Thing {
 /// An Insurance agency.
 @Schema(description: 'An Insurance agency.')
 abstract class InsuranceAgency implements FinancialService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.
 @Schema(description: 'A utility class that serves as the umbrella for a number of \'intangible\' things such as quantities, structured values, etc.')
 abstract class Intangible implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Data type: Integer.
 @Schema(description: 'Data type: Integer.')
 abstract class Integer implements Number, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of interacting with another person or organization.
 @Schema(description: 'The act of interacting with another person or organization.')
 abstract class InteractAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.
 @Schema(description: 'A summary of how users have interacted with this CreativeWork. In most cases, authors will use a subtype to specify the specific type of interaction.')
 abstract class InteractionCounter implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
   @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
@@ -10041,40 +6361,16 @@ abstract class InteractionCounter implements StructuredValue, $Thing {
 /// An internet cafe.
 @Schema(description: 'An internet cafe.')
 abstract class InternetCafe implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.
 @Schema(description: 'A company or fund that gathers capital from a number of investors to create a pool of money that is then re-invested into stocks, bonds and other assets.')
 abstract class InvestmentFund implements InvestmentOrDeposit, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.
 @Schema(description: 'A type of financial product that typically requires the client to transfer funds to a financial service in return for potential beneficial financial return.')
 abstract class InvestmentOrDeposit implements FinancialProduct, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The amount of money.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'amount', includeIfNull: false)
@@ -10085,14 +6381,6 @@ abstract class InvestmentOrDeposit implements FinancialProduct, $Thing {
 /// The act of asking someone to attend an event. Reciprocal of RsvpAction.
 @Schema(description: 'The act of asking someone to attend an event. Reciprocal of RsvpAction.')
 abstract class InviteAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Upcoming or past event associated with this place, organization, or action.
   @JsonKey(name: 'event', includeIfNull: false)
   Event? get event;
@@ -10102,14 +6390,6 @@ abstract class InviteAction implements CommunicateAction, $Thing {
 /// A statement of the money due for goods or services; a bill.
 @Schema(description: 'A statement of the money due for goods or services; a bill.')
 abstract class Invoice implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The identifier for the account the payment will be applied to.
   @StringField(name: 'accountId')
   String? get accountId;
@@ -10186,27 +6466,11 @@ abstract class Invoice implements Intangible, $Thing {
 /// A list of possible product availability options.
 @Schema(description: 'A list of possible product availability options.')
 abstract class ItemAvailability implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.
 @Schema(description: 'A list of items of any sort&#x2014;for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.')
 abstract class ItemList implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a prototype of the elements in the list that is used to hold aggregate information (ratings, offers, etc.).
   @JsonKey(name: 'aggregateElement', includeIfNull: false)
   Thing? get aggregateElement;
@@ -10229,53 +6493,21 @@ abstract class ItemList implements Intangible, $Thing {
 /// Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.
 @Schema(description: 'Enumerated for values for itemListOrder for indicating how an ordered ItemList is organized.')
 abstract class ItemListOrderType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A page devoted to a single item, such as a particular product or hotel.
 @Schema(description: 'A page devoted to a single item, such as a particular product or hotel.')
 abstract class ItemPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A jewelry store.
 @Schema(description: 'A jewelry store.')
 abstract class JewelryStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A listing that describes a job opening in a certain organization.
 @Schema(description: 'A listing that describes a job opening in a certain organization.')
 abstract class JobPosting implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The location(s) applicants can apply from. This is usually used for telecommuting jobs where the applicant does not need to be in a physical office. Note: This should not be used for citizenship or work visa requirements.
   @JsonKey(name: 'applicantLocationRequirements', includeIfNull: false)
   AdministrativeArea? get applicantLocationRequirements;
@@ -10446,14 +6678,6 @@ abstract class JobPosting implements Intangible, $Thing {
 /// An agent joins an event/group with participants/friends at a location.\n\nRelated actions:\n\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you'll be receiving updates.\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you'll be polling for updates.
 @Schema(description: 'An agent joins an event/group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: Unlike RegisterAction, JoinAction refers to joining a group/team of people.\\n* [[SubscribeAction]]: Unlike SubscribeAction, JoinAction does not imply that you\'ll be receiving updates.\\n* [[FollowAction]]: Unlike FollowAction, JoinAction does not imply that you\'ll be polling for updates.')
 abstract class JoinAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Upcoming or past event associated with this place, organization, or action.
   @JsonKey(name: 'event', includeIfNull: false)
   Event? get event;
@@ -10463,14 +6687,6 @@ abstract class JoinAction implements InteractAction, $Thing {
 /// The anatomical location at which two or more bones make contact.
 @Schema(description: 'The anatomical location at which two or more bones make contact.')
 abstract class Joint implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The biomechanical properties of the bone.
   @StringField(name: 'biomechnicalClass')
   String? get biomechnicalClass;
@@ -10489,53 +6705,21 @@ abstract class Joint implements AnatomicalStructure, $Thing {
 /// A lake (for example, Lake Pontrachain).
 @Schema(description: 'A lake (for example, Lake Pontrachain).')
 abstract class LakeBodyOfWater implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.
 @Schema(description: 'A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.')
 abstract class Landform implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An historical landmark or building.
 @Schema(description: 'An historical landmark or building.')
 abstract class LandmarksOrHistoricalBuildings implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].
 @Schema(description: 'Natural languages such as Spanish, Tamil, Hindi, English, etc. Formal language code tags expressed in [BCP 47](https://en.wikipedia.org/wiki/IETF_language_tag) can be used via the [[alternateName]] property. The Language type previously also covered programming languages such as Scheme and Lisp, which are now best represented using [[ComputerLanguage]].')
 abstract class Language implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.
@@ -10545,14 +6729,6 @@ abstract class Language implements Intangible, $Thing {
 /// [[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.
 @Schema(description: 'The LearningResource type can be used to indicate [[CreativeWork]]s (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes.  [[LearningResource]] is expected to be used as an addition to a primary type such as [[Book]], [[VideoObject]], [[Product]] etc.  [[EducationEvent]] serves a similar purpose for event-like things (e.g. a [[Trip]]). A [[LearningResource]] may be created as a result of an [[EducationEvent]], for example by recording one.')
 abstract class LearningResource implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The item being described is intended to assess the competency or learning outcome defined by the referenced term.
   @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'assesses', includeIfNull: false)
@@ -10594,14 +6770,6 @@ abstract class LearningResource implements CreativeWork, $Thing {
 /// An agent leaves an event / group with participants/friends at a location.\n\nRelated actions:\n\n* [[JoinAction]]: The antonym of LeaveAction.\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.
 @Schema(description: 'An agent leaves an event / group with participants/friends at a location.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: The antonym of LeaveAction.\\n* [[UnRegisterAction]]: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.')
 abstract class LeaveAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Upcoming or past event associated with this place, organization, or action.
   @JsonKey(name: 'event', includeIfNull: false)
   Event? get event;
@@ -10611,53 +6779,21 @@ abstract class LeaveAction implements InteractAction, $Thing {
 /// A list of possible statuses for the legal force of a legislation.
 @Schema(description: 'A list of possible statuses for the legal force of a legislation.')
 abstract class LegalForceStatus implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\n\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\(s).
 @Schema(description: 'A LegalService is a business that provides legally-oriented services, advice and representation, e.g. law firms.\\n\\nAs a [[LocalBusiness]] it can be described as a [[provider]] of one or more [[Service]]\\(s).')
 abstract class LegalService implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A list of possible levels for the legal validity of a legislation.
 @Schema(description: 'A list of possible levels for the legal validity of a legislation.')
 abstract class LegalValueLevel implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article).
 @Schema(description: 'A legal document such as an act, decree, bill, etc. (enforceable or not) or a component of a legal act (like an article).')
 abstract class Legislation implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a legal jurisdiction, e.g. of some legislation, or where some government service is based.
   @AnyOf([AdministrativeArea, String])
   @JsonKey(name: 'jurisdiction', includeIfNull: false)
@@ -10749,14 +6885,6 @@ abstract class Legislation implements CreativeWork, $Thing {
 /// A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.
 @Schema(description: 'A specific object or file containing a Legislation. Note that the same Legislation can be published in multiple files. For example, a digitally signed PDF, a plain PDF and an HTML version.')
 abstract class LegislationObject implements Legislation, MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
   @StringField(name: 'legislationLegalValue', enumValues: ['AuthoritativeLegalValue', 'DefinitiveLegalValue', 'OfficialLegalValue', 'UnofficialLegalValue'])
   String? get legislationLegalValue;
@@ -10766,27 +6894,11 @@ abstract class LegislationObject implements Legislation, MediaObject, $Thing {
 /// A legislative building&#x2014;for example, the state capitol.
 @Schema(description: 'A legislative building&#x2014;for example, the state capitol.')
 abstract class LegislativeBuilding implements GovernmentBuilding, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\n\nRelated actions:\n\n* [[BorrowAction]]: Reciprocal of LendAction.
 @Schema(description: 'The act of providing an object under an agreement that it will be returned at a later date. Reciprocal of BorrowAction.\\n\\nRelated actions:\\n\\n* [[BorrowAction]]: Reciprocal of LendAction.')
 abstract class LendAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The person that borrows the object being lent.
   @JsonKey(name: 'borrower', includeIfNull: false)
   Person? get borrower;
@@ -10796,79 +6908,31 @@ abstract class LendAction implements TransferAction, $Thing {
 /// A library.
 @Schema(description: 'A library.')
 abstract class Library implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[LibrarySystem]] is a collaborative system amongst several libraries.
 @Schema(description: 'A [[LibrarySystem]] is a collaborative system amongst several libraries.')
 abstract class LibrarySystem implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.
 @Schema(description: 'A process of care involving exercise, changes to diet, fitness routines, and other lifestyle changes aimed at improving a health condition.')
 abstract class LifestyleModification implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.
 @Schema(description: 'A short band of tough, flexible, fibrous connective tissue that functions to connect multiple bones, cartilages, and structurally support joints.')
 abstract class Ligament implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.
 @Schema(description: 'The act of expressing a positive sentiment about the object. An agent likes an object (a proposition, topic or theme) with participants.')
 abstract class LikeAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Role that represents a Web link, e.g. as expressed via the 'url' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as 'amphtml'. This structure provides a placeholder where details from HTML's link element can be represented outside of HTML, e.g. in JSON-LD feeds.
 @Schema(description: 'A Role that represents a Web link, e.g. as expressed via the \'url\' property. Its linkRelationship property can indicate URL-based and plain textual link types, e.g. those in IANA link registry or others such as \'amphtml\'. This structure provides a placeholder where details from HTML\'s link element can be represented outside of HTML, e.g. in JSON-LD feeds.')
 abstract class LinkRole implements Role, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'inLanguage', includeIfNull: false)
@@ -10883,27 +6947,11 @@ abstract class LinkRole implements Role, $Thing {
 /// A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.
 @Schema(description: 'A shop that sells alcoholic drinks such as wine, beer, whisky and other spirits.')
 abstract class LiquorStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An list item, e.g. a step in a checklist or how-to description.
 @Schema(description: 'An list item, e.g. a step in a checklist or how-to description.')
 abstract class ListItem implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
   @JsonKey(name: 'item', includeIfNull: false)
   Thing? get item;
@@ -10926,40 +6974,16 @@ abstract class ListItem implements Intangible, $Thing {
 /// The act of consuming audio content.
 @Schema(description: 'The act of consuming audio content.')
 abstract class ListenAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Literary event.
 @Schema(description: 'Event type: Literary event.')
 abstract class LiteraryEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
 @Schema(description: 'A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.')
 abstract class LiveBlogPosting implements BlogPosting, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
   @StringField(name: 'coverageEndTime', format: 'date-time')
   String? get coverageEndTime;
@@ -10977,14 +7001,6 @@ abstract class LiveBlogPosting implements BlogPosting, $Thing {
 /// A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.
 @Schema(description: 'A financial product for the loaning of an amount of money, or line of credit, under agreed terms and charges.')
 abstract class LoanOrCredit implements FinancialProduct, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The amount of money.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'amount', includeIfNull: false)
@@ -11028,14 +7044,6 @@ abstract class LoanOrCredit implements FinancialProduct, $Thing {
 /// A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.
 @Schema(description: 'A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.')
 abstract class LocalBusiness implements Organization, Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The larger organization that this local business is a branch of, if any. Not to be confused with (anatomical) [[branch]].
   @JsonKey(name: 'branchOf', includeIfNull: false)
   Organization? get branchOf;
@@ -11066,14 +7074,6 @@ abstract class LocalBusiness implements Organization, Place, $Thing {
 /// Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.
 @Schema(description: 'Specifies a location feature by providing a structured value representing a feature of an accommodation as a property-value pair of varying degrees of formality.')
 abstract class LocationFeatureSpecification implements PropertyValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The hours during which this service or contact is available.
   @JsonKey(name: 'hoursAvailable', includeIfNull: false)
   OpeningHoursSpecification? get hoursAvailable;
@@ -11091,27 +7091,11 @@ abstract class LocationFeatureSpecification implements PropertyValue, $Thing {
 /// A locksmith.
 @Schema(description: 'A locksmith.')
 abstract class Locksmith implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A lodging business, such as a motel, hotel, or inn.
 @Schema(description: 'A lodging business, such as a motel, hotel, or inn.')
 abstract class LodgingBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An amenity feature (e.g. a characteristic or service) of the Accommodation. This generic property does not make a statement about whether the feature is included in an offer for the main accommodation or available at extra costs.
   @JsonKey(name: 'amenityFeature', includeIfNull: false)
   LocationFeatureSpecification? get amenityFeature;
@@ -11153,14 +7137,6 @@ abstract class LodgingBusiness implements LocalBusiness, $Thing {
 /// A reservation for lodging at a hotel, motel, inn, etc.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
 @Schema(description: 'A reservation for lodging at a hotel, motel, inn, etc.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.')
 abstract class LodgingReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The earliest someone may check into a lodging establishment.
   @StringField(name: 'checkinTime', format: 'date-time')
   String? get checkinTime;
@@ -11193,27 +7169,11 @@ abstract class LodgingReservation implements Reservation, $Thing {
 /// The action of logging into a device or application.
 @Schema(description: 'The action of logging into a device or application.')
 abstract class LoginAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of being defeated in a competitive activity.
 @Schema(description: 'The act of being defeated in a competitive activity.')
 abstract class LoseAction implements AchieveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The winner of the action.
   @JsonKey(name: 'winner', includeIfNull: false)
   Person? get winner;
@@ -11223,14 +7183,6 @@ abstract class LoseAction implements AchieveAction, $Thing {
 /// A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.
 @Schema(description: 'A type of blood vessel that specifically carries lymph fluid unidirectionally toward the heart.')
 abstract class LymphaticVessel implements Vessel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The vasculature the lymphatic structure originates, or afferents, from.
   @JsonKey(name: 'originatesFrom', includeIfNull: false)
   Vessel? get originatesFrom;
@@ -11249,27 +7201,11 @@ abstract class LymphaticVessel implements Vessel, $Thing {
 /// A book, document, or piece of music written by hand rather than typed or printed.
 @Schema(description: 'A book, document, or piece of music written by hand rather than typed or printed.')
 abstract class Manuscript implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A map.
 @Schema(description: 'A map.')
 abstract class SchemaMap implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the kind of Map, from the MapCategoryType Enumeration.
   @StringField(name: 'mapType', enumValues: ['ParkingMap', 'SeatingMap', 'TransitMap', 'VenueMap'])
   String? get mapType;
@@ -11279,53 +7215,21 @@ abstract class SchemaMap implements CreativeWork, $Thing {
 /// An enumeration of several kinds of Map.
 @Schema(description: 'An enumeration of several kinds of Map.')
 abstract class MapCategoryType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of marrying a person.
 @Schema(description: 'The act of marrying a person.')
 abstract class MarryAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Properties that take Mass as values are of the form '&lt;Number&gt; &lt;Mass unit of measure&gt;'. E.g., '7 kg'.
 @Schema(description: 'Properties that take Mass as values are of the form \'&lt;Number&gt; &lt;Mass unit of measure&gt;\'. E.g., \'7 kg\'.')
 abstract class Mass implements Quantity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A math solver which is capable of solving a subset of mathematical problems.
 @Schema(description: 'A math solver which is capable of solving a subset of mathematical problems.')
 abstract class MathSolver implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A mathematical expression (e.g. 'x^2-3x=0') that may be solved for a specific variable, simplified, or transformed. This can take many formats, e.g. LaTeX, Ascii-Math, or math as you would write with a keyboard.
   @AnyOf([SolveMathAction, String])
   @JsonKey(name: 'mathExpression', includeIfNull: false)
@@ -11336,92 +7240,36 @@ abstract class MathSolver implements CreativeWork, $Thing {
 /// The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
 @Schema(description: 'The maximum dosing schedule considered safe for a drug or supplement as recommended by an authority or by the drug/supplement\'s manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.')
 abstract class MaximumDoseSchedule implements DoseSchedule, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumeration(s) for use with [[measurementMethod]].
 @Schema(description: 'Enumeration(s) for use with [[measurementMethod]].')
 abstract class MeasurementMethodEnum implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.
 @Schema(description: 'Enumeration of common measurement types (or dimensions), for example "chest" for a person, "inseam" for pants, "gauge" for screws, or "wheel" for bicycles.')
 abstract class MeasurementTypeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.
 @Schema(description: 'MediaEnumeration enumerations are lists of codes, labels etc. useful for describing media objects. They may be reflections of externally developed lists, or created at schema.org, or a combination.')
 abstract class MediaEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.
 @Schema(description: 'Web page type: Media gallery page. A mixed-media page that can contain media such as images, videos, and other multimedia.')
 abstract class MediaGallery implements CollectionPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Codes for use with the [[mediaAuthenticityCategory]] property, indicating the authenticity of a media object (in the context of how it was published or shared). In general these codes are not mutually exclusive, although some combinations (such as 'original' versus 'transformed', 'edited' and 'staged') would be contradictory if applied in the same [[MediaReview]]. Note that the application of these codes is with regard to a piece of media shared or published in a particular context.
 @Schema(description: ' Codes for use with the [[mediaAuthenticityCategory]] property, indicating the authenticity of a media object (in the context of how it was published or shared). In general these codes are not mutually exclusive, although some combinations (such as \'original\' versus \'transformed\', \'edited\' and \'staged\') would be contradictory if applied in the same [[MediaReview]]. Note that the application of these codes is with regard to a piece of media shared or published in a particular context.')
 abstract class MediaManipulationRatingEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).
 @Schema(description: 'A media object, such as an image, video, audio, or text object embedded in a web page or a downloadable dataset i.e. DataDownload. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject\'s).')
 abstract class MediaObject implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A NewsArticle associated with the Media Object.
   @JsonKey(name: 'associatedArticle', includeIfNull: false)
   NewsArticle? get associatedArticle;
@@ -11520,14 +7368,6 @@ abstract class MediaObject implements CreativeWork, $Thing {
 /// to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.
 @Schema(description: 'A [[MediaReview]] is a more specialized form of Review dedicated to the evaluation of media content online, typically in the context of fact-checking and misinformation.     For more general reviews of media in the broader sense, use [[UserReview]], [[CriticReview]] or other [[Review]] types. This definition is     a work in progress. While the [[MediaManipulationRatingEnumeration]] list reflects significant community review amongst fact-checkers and others working     to combat misinformation, the specific structures for representing media objects, their versions and publication context, are still evolving. Similarly, best practices for the relationship between [[MediaReview]] and [[ClaimReview]] markup have not yet been finalized.')
 abstract class MediaReview implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
   @StringField(name: 'mediaAuthenticityCategory', enumValues: ['DecontextualizedContent', 'EditedOrCroppedContent', 'OriginalMediaContent', 'SatireOrParodyContent', 'StagedContent', 'TransformedContent'])
   String? get mediaAuthenticityCategory;
@@ -11546,14 +7386,6 @@ abstract class MediaReview implements Review, $Thing {
 /// Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.
 @Schema(description: 'Represents an item or group of closely related items treated as a unit for the sake of evaluation in a [[MediaReview]]. Authorship etc. apply to the items rather than to the curation/grouping or reviewing party.')
 abstract class MediaReviewItem implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// In the context of a [[MediaReview]], indicates specific media item(s) that are grouped using a [[MediaReviewItem]].
   @JsonKey(name: 'mediaItemAppearance', includeIfNull: false)
   MediaObject? get mediaItemAppearance;
@@ -11563,14 +7395,6 @@ abstract class MediaReviewItem implements CreativeWork, $Thing {
 /// A subscription which allows a user to access media including audio, video, books, etc.
 @Schema(description: 'A subscription which allows a user to access media including audio, video, books, etc.')
 abstract class MediaSubscription implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The Organization responsible for authenticating the user's subscription. For example, many media apps require a cable/satellite provider to authenticate your subscription before playing media.
   @JsonKey(name: 'authenticator', includeIfNull: false)
   Organization? get authenticator;
@@ -11584,53 +7408,21 @@ abstract class MediaSubscription implements Intangible, $Thing {
 /// Target audiences for medical web pages.
 @Schema(description: 'Target audiences for medical web pages.')
 abstract class MedicalAudience implements Audience, PeopleAudience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Target audiences types for medical web pages. Enumerated type.
 @Schema(description: 'Target audiences types for medical web pages. Enumerated type.')
 abstract class MedicalAudienceType implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.
 @Schema(description: 'A particular physical or virtual business of an organization for medical purposes. Examples of MedicalBusiness include different businesses run by health professionals.')
 abstract class MedicalBusiness implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The causative agent(s) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest (the proximate cause) would be the pulmonary embolism and not the fall. Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.
 @Schema(description: 'The causative agent(s) that are responsible for the pathophysiologic process that eventually results in a medical condition, symptom or sign. In this schema, unless otherwise specified this is meant to be the proximate cause of the medical condition, symptom or sign. The proximate cause is defined as the causative agent that most directly results in the medical condition, symptom or sign. For example, the HIV virus could be considered a cause of AIDS. Or in a diagnostic context, if a patient fell and sustained a hip fracture and two days later sustained a pulmonary embolism which eventuated in a cardiac arrest, the cause of the cardiac arrest (the proximate cause) would be the pulmonary embolism and not the fall. Medical causes can include cardiovascular, chemical, dermatologic, endocrine, environmental, gastroenterologic, genetic, hematologic, gynecologic, iatrogenic, infectious, musculoskeletal, neurologic, nutritional, obstetric, oncologic, otolaryngologic, pharmacologic, psychiatric, pulmonary, renal, rheumatologic, toxic, traumatic, or urologic causes; medical conditions can be causes as well.')
 abstract class MedicalCause implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The condition, complication, symptom, sign, etc. caused.
   @JsonKey(name: 'causeOf', includeIfNull: false)
   MedicalEntity? get causeOf;
@@ -11640,14 +7432,6 @@ abstract class MedicalCause implements MedicalEntity, $Thing {
 /// A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.
 @Schema(description: 'A facility, often associated with a hospital or medical school, that is devoted to the specific diagnosis and/or healthcare. Previously limited to outpatients but with evolution it may be open to inpatients as well.')
 abstract class MedicalClinic implements MedicalBusiness, MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A medical service available from this provider.
   @AnyOf([MedicalProcedure, MedicalTest, MedicalTherapy])
   @JsonKey(name: 'availableService', includeIfNull: false)
@@ -11662,14 +7446,6 @@ abstract class MedicalClinic implements MedicalBusiness, MedicalOrganization, $T
 /// A code for a medical entity.
 @Schema(description: 'A code for a medical entity.')
 abstract class MedicalCode implements CategoryCode, MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A short textual code that uniquely identifies the value.
   @StringField(name: 'codeValue')
   String? get codeValue;
@@ -11683,14 +7459,6 @@ abstract class MedicalCode implements CategoryCode, MedicalIntangible, $Thing {
 /// Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.
 @Schema(description: 'Any condition of the human body that affects the normal functioning of a person, whether physically or mentally. Includes diseases, injuries, disabilities, disorders, syndromes, etc.')
 abstract class MedicalCondition implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The anatomy of the underlying organ system or structures associated with this entity.
   @AnyOf([AnatomicalStructure, AnatomicalSystem, SuperficialAnatomy])
   @JsonKey(name: 'associatedAnatomy', includeIfNull: false)
@@ -11767,14 +7535,6 @@ abstract class MedicalCondition implements MedicalEntity, $Thing {
 /// A stage of a medical condition, such as 'Stage IIIa'.
 @Schema(description: 'A stage of a medical condition, such as \'Stage IIIa\'.')
 abstract class MedicalConditionStage implements MedicalIntangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The stage represented as a number, e.g. 3.
   @DoubleField(name: 'stageAsNumber')
   double? get stageAsNumber;
@@ -11788,27 +7548,11 @@ abstract class MedicalConditionStage implements MedicalIntangible, $Thing {
 /// A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).
 @Schema(description: 'A condition or factor that serves as a reason to withhold a certain medical therapy. Contraindications can be absolute (there are no reasonable circumstances for undertaking a course of action) or relative (the patient is at higher risk of complications, but these risks may be outweighed by other considerations or mitigated by other measures).')
 abstract class MedicalContraindication implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any object used in a medical capacity, such as to diagnose or treat a patient.
 @Schema(description: 'Any object used in a medical capacity, such as to diagnose or treat a patient.')
 abstract class MedicalDevice implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
   @JsonKey(name: 'adverseOutcome', includeIfNull: false)
   MedicalEntity? get adverseOutcome;
@@ -11839,27 +7583,11 @@ abstract class MedicalDevice implements MedicalEntity, $Thing {
 /// Categories of medical devices, organized by the purpose or intended use of the device.
 @Schema(description: 'Categories of medical devices, organized by the purpose or intended use of the device.')
 abstract class MedicalDevicePurpose implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The most generic type of entity related to health and the practice of medicine.
 @Schema(description: 'The most generic type of entity related to health and the practice of medicine.')
 abstract class MedicalEntity implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A medical code for the entity, taken from a controlled vocabulary or ontology such as ICD-9, DiseasesDB, MeSH, SNOMED-CT, RxNorm, etc.
   @JsonKey(name: 'code', includeIfNull: false)
   MedicalCode? get code;
@@ -11898,40 +7626,16 @@ abstract class MedicalEntity implements Thing, $Thing {
 /// Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.
 @Schema(description: 'Enumerations related to health and the practice of medicine: A concept that is used to attribute a quality to another concept, as a qualifier, a collection of items or a listing of all of the elements of a set in medicine practice.')
 abstract class MedicalEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Level of evidence for a medical guideline. Enumerated type.
 @Schema(description: 'Level of evidence for a medical guideline. Enumerated type.')
 abstract class MedicalEvidenceLevel implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.
 @Schema(description: 'Any recommendation made by a standard society (e.g. ACC/AHA) or consensus statement that denotes how to diagnose and treat a particular condition. Note: this type should be used to tag the actual guideline recommendation; if the guideline recommendation occurs in a larger scholarly article, use MedicalScholarlyArticle to tag the overall article, not this type. Note also: the organization making the recommendation should be captured in the recognizingAuthority base property of MedicalEntity.')
 abstract class MedicalGuideline implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Strength of evidence of the data used to formulate the guideline (enumerated).
   @StringField(name: 'evidenceLevel', enumValues: ['EvidenceLevelA', 'EvidenceLevelB', 'EvidenceLevelC'])
   String? get evidenceLevel;
@@ -11953,27 +7657,11 @@ abstract class MedicalGuideline implements MedicalEntity, $Thing {
 /// A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.
 @Schema(description: 'A guideline contraindication that designates a process as harmful and where quality of the data supporting the contraindication is sound.')
 abstract class MedicalGuidelineContraindication implements MedicalGuideline, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.
 @Schema(description: 'A guideline recommendation that is regarded as efficacious and where quality of the data supporting the recommendation is sound.')
 abstract class MedicalGuidelineRecommendation implements MedicalGuideline, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Strength of the guideline's recommendation (e.g. 'class I').
   @StringField(name: 'recommendationStrength')
   String? get recommendationStrength;
@@ -11983,53 +7671,21 @@ abstract class MedicalGuidelineRecommendation implements MedicalGuideline, $Thin
 /// Any medical imaging modality typically used for diagnostic purposes. Enumerated type.
 @Schema(description: 'Any medical imaging modality typically used for diagnostic purposes. Enumerated type.')
 abstract class MedicalImagingTechnique implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.
 @Schema(description: 'A condition or factor that indicates use of a medical therapy, including signs, symptoms, risk factors, anatomical states, etc.')
 abstract class MedicalIndication implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A utility class that serves as the umbrella for a number of 'intangible' things in the medical space.
 @Schema(description: 'A utility class that serves as the umbrella for a number of \'intangible\' things in the medical space.')
 abstract class MedicalIntangible implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.
 @Schema(description: 'An observational study is a type of medical study that attempts to infer the possible effect of a treatment through observation of a cohort of subjects over a period of time. In an observational study, the assignment of subjects into treatment groups versus control groups is outside the control of the investigator. This is in contrast with controlled studies, such as the randomized controlled trials represented by MedicalTrial, where each subject is randomly assigned to a treatment group or a control group before the start of the treatment.')
 abstract class MedicalObservationalStudy implements MedicalStudy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifics about the observational study design (enumerated).
   @StringField(name: 'studyDesign', enumValues: ['CaseSeries', 'CohortStudy', 'CrossSectional', 'Longitudinal', 'Observational', 'Registry'])
   String? get studyDesign;
@@ -12039,27 +7695,11 @@ abstract class MedicalObservationalStudy implements MedicalStudy, $Thing {
 /// Design models for observational medical studies. Enumerated type.
 @Schema(description: 'Design models for observational medical studies. Enumerated type.')
 abstract class MedicalObservationalStudyDesign implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical organization (physical or not), such as hospital, institution or clinic.
 @Schema(description: 'A medical organization (physical or not), such as hospital, institution or clinic.')
 abstract class MedicalOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Name or unique ID of network. (Networks are often reused across different insurance plans.)
   @StringField(name: 'healthPlanNetworkId')
   String? get healthPlanNetworkId;
@@ -12077,14 +7717,6 @@ abstract class MedicalOrganization implements Organization, $Thing {
 /// A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.
 @Schema(description: 'A process of care used in either a diagnostic, therapeutic, preventive or palliative capacity that relies on invasive (surgical), non-invasive, or other techniques.')
 abstract class MedicalProcedure implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Location in the body of the anatomical structure.
   @StringField(name: 'bodyLocation')
   String? get bodyLocation;
@@ -12115,40 +7747,16 @@ abstract class MedicalProcedure implements MedicalEntity, $Thing {
 /// An enumeration that describes different types of medical procedures.
 @Schema(description: 'An enumeration that describes different types of medical procedures.')
 abstract class MedicalProcedureType implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.
 @Schema(description: 'A complex mathematical calculation requiring an online calculator, used to assess prognosis. Note: use the url property of Thing to record any URLs for online calculators.')
 abstract class MedicalRiskCalculator implements MedicalRiskEstimator, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any rule set or interactive tool for estimating the risk of developing a complication or condition.
 @Schema(description: 'Any rule set or interactive tool for estimating the risk of developing a complication or condition.')
 abstract class MedicalRiskEstimator implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The condition, complication, or symptom whose risk is being estimated.
   @JsonKey(name: 'estimatesRiskOf', includeIfNull: false)
   MedicalEntity? get estimatesRiskOf;
@@ -12162,14 +7770,6 @@ abstract class MedicalRiskEstimator implements MedicalEntity, $Thing {
 /// A risk factor is anything that increases a person's likelihood of developing or contracting a disease, medical condition, or complication.
 @Schema(description: 'A risk factor is anything that increases a person\'s likelihood of developing or contracting a disease, medical condition, or complication.')
 abstract class MedicalRiskFactor implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The condition, complication, etc. influenced by this factor.
   @JsonKey(name: 'increasesRiskOf', includeIfNull: false)
   MedicalEntity? get increasesRiskOf;
@@ -12179,14 +7779,6 @@ abstract class MedicalRiskFactor implements MedicalEntity, $Thing {
 /// A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.
 @Schema(description: 'A simple system that adds up the number of risk factors to yield a score that is associated with prognosis, e.g. CHAD score, TIMI risk score.')
 abstract class MedicalRiskScore implements MedicalRiskEstimator, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The algorithm or rules to follow to compute the score.
   @StringField(name: 'algorithm')
   String? get algorithm;
@@ -12196,14 +7788,6 @@ abstract class MedicalRiskScore implements MedicalRiskEstimator, $Thing {
 /// A scholarly article in the medical domain.
 @Schema(description: 'A scholarly article in the medical domain.')
 abstract class MedicalScholarlyArticle implements ScholarlyArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of the medical article, taken from the US NLM MeSH publication type catalog. See also [MeSH documentation](http://www.nlm.nih.gov/mesh/pubtypes.html).
   @StringField(name: 'publicationType')
   String? get publicationType;
@@ -12213,14 +7797,6 @@ abstract class MedicalScholarlyArticle implements ScholarlyArticle, $Thing {
 /// Any physical manifestation of a person's medical condition discoverable by objective diagnostic tests or physical examination.
 @Schema(description: 'Any physical manifestation of a person\'s medical condition discoverable by objective diagnostic tests or physical examination.')
 abstract class MedicalSign implements MedicalSignOrSymptom, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A physical examination that can identify this sign.
   @StringField(name: 'identifyingExam', enumValues: ['Abdomen', 'Appearance', 'CardiovascularExam', 'Ear', 'Eye', 'Genitourinary', 'Head', 'Lung', 'MusculoskeletalExam', 'Neck', 'Neuro', 'Nose', 'Skin', 'Throat'])
   String? get identifyingExam;
@@ -12234,14 +7810,6 @@ abstract class MedicalSign implements MedicalSignOrSymptom, $Thing {
 /// Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.
 @Schema(description: 'Any feature associated or not with a medical condition. In medicine a symptom is generally subjective while a sign is objective.')
 abstract class MedicalSignOrSymptom implements MedicalCondition, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A possible treatment to address this condition, sign or symptom.
   @AnyOf([Drug, DrugClass, LifestyleModification, MedicalTherapy])
   @JsonKey(name: 'possibleTreatment', includeIfNull: false)
@@ -12252,27 +7820,11 @@ abstract class MedicalSignOrSymptom implements MedicalCondition, $Thing {
 /// Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.
 @Schema(description: 'Any specific branch of medical science or practice. Medical specialities include clinical specialties that pertain to particular organ systems and their respective disease states, as well as allied health specialties. Enumerated type.')
 abstract class MedicalSpecialty implements MedicalEnumeration, Specialty, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.
 @Schema(description: 'A medical study is an umbrella type covering all kinds of research studies relating to human medicine or health, including observational studies and interventional trials and registries, randomized, controlled or not. When the specific type of study is known, use one of the extensions of this type, such as MedicalTrial or MedicalObservationalStudy. Also, note that this type should be used to mark up data that describes the study itself; to tag an article that publishes the results of a study, use MedicalScholarlyArticle. Note: use the code property of MedicalEntity to store study IDs, e.g. clinicaltrials.gov ID.')
 abstract class MedicalStudy implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifying the health condition(s) of a patient, medical study, or other target audience.
   @JsonKey(name: 'healthCondition', includeIfNull: false)
   MedicalCondition? get healthCondition;
@@ -12299,40 +7851,16 @@ abstract class MedicalStudy implements MedicalEntity, $Thing {
 /// The status of a medical study. Enumerated type.
 @Schema(description: 'The status of a medical study. Enumerated type.')
 abstract class MedicalStudyStatus implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.
 @Schema(description: 'Any complaint sensed and expressed by the patient (therefore defined as subjective)  like stomachache, lower-back pain, or fatigue.')
 abstract class MedicalSymptom implements MedicalSignOrSymptom, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any medical test, typically performed for diagnostic purposes.
 @Schema(description: 'Any medical test, typically performed for diagnostic purposes.')
 abstract class MedicalTest implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Drugs that affect the test's results.
   @JsonKey(name: 'affectedBy', includeIfNull: false)
   Drug? get affectedBy;
@@ -12359,14 +7887,6 @@ abstract class MedicalTest implements MedicalEntity, $Thing {
 /// Any collection of tests commonly ordered together.
 @Schema(description: 'Any collection of tests commonly ordered together.')
 abstract class MedicalTestPanel implements MedicalTest, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A component test of the panel.
   @JsonKey(name: 'subTest', includeIfNull: false)
   MedicalTest? get subTest;
@@ -12376,14 +7896,6 @@ abstract class MedicalTestPanel implements MedicalTest, $Thing {
 /// Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.
 @Schema(description: 'Any medical intervention designed to prevent, treat, and cure human diseases and medical conditions, including both curative and palliative therapies. Medical therapies are typically processes of care relying upon pharmacotherapy, behavioral therapy, supportive therapy (with fluid or nutrition for example), or detoxification (e.g. hemodialysis) aimed at improving or preventing a health condition.')
 abstract class MedicalTherapy implements TherapeuticProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A contraindication for this therapy.
   @AnyOf([MedicalContraindication, String])
   @JsonKey(name: 'contraindication', includeIfNull: false)
@@ -12402,14 +7914,6 @@ abstract class MedicalTherapy implements TherapeuticProcedure, $Thing {
 /// A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.
 @Schema(description: 'A medical trial is a type of medical study that uses a scientific process to compare the safety and efficacy of medical therapies or medical procedures. In general, medical trials are controlled and subjects are allocated at random to the different treatment and/or control groups.')
 abstract class MedicalTrial implements MedicalStudy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifics about the trial design (enumerated).
   @StringField(name: 'trialDesign', enumValues: ['DoubleBlindedTrial', 'InternationalTrial', 'MultiCenterTrial', 'OpenTrial', 'PlaceboControlledTrial', 'RandomizedTrial', 'SingleBlindedTrial', 'SingleCenterTrial', 'TripleBlindedTrial'])
   String? get trialDesign;
@@ -12419,27 +7923,11 @@ abstract class MedicalTrial implements MedicalStudy, $Thing {
 /// Design models for medical trials. Enumerated type.
 @Schema(description: 'Design models for medical trials. Enumerated type.')
 abstract class MedicalTrialDesign implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A web page that provides medical information.
 @Schema(description: 'A web page that provides medical information.')
 abstract class MedicalWebPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An aspect of medical practice that is considered on the page, such as 'diagnosis', 'treatment', 'causes', 'prognosis', 'etiology', 'epidemiology', etc.
   @StringField(name: 'aspect')
   String? get aspect;
@@ -12454,14 +7942,6 @@ abstract class MedicalWebPage implements WebPage, $Thing {
 /// Systems of medical practice.
 @Schema(description: 'Systems of medical practice.')
 abstract class MedicineSystem implements MedicalEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>).
@@ -12470,27 +7950,11 @@ abstract class MedicineSystem implements MedicalEnumeration, $Thing {
 ///
 @Schema(description: 'A meeting room, conference room, or conference hall is a room provided for singular events such as business conferences and meetings (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Conference_hall">http://en.wikipedia.org/wiki/Conference_hall</a>). <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class MeetingRoom implements Room, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.
 @Schema(description: 'A MemberProgram defines a loyalty (or membership) program that provides its members with certain benefits, for example better pricing, free shipping or returns, or the ability to earn loyalty points. Member programs may have multiple tiers, for example silver and gold members, each with different benefits.')
 abstract class MemberProgram implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The tiers of a member program.
   @JsonKey(name: 'hasTiers', includeIfNull: false)
   MemberProgramTier? get hasTiers;
@@ -12504,14 +7968,6 @@ abstract class MemberProgram implements Intangible, $Thing {
 /// A MemberProgramTier specifies a tier under a loyalty (member) program, for example "gold".
 @Schema(description: 'A MemberProgramTier specifies a tier under a loyalty (member) program, for example "gold".')
 abstract class MemberProgramTier implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A member benefit for a particular tier of a loyalty program.
   @StringField(name: 'hasTierBenefit', enumValues: ['TierBenefitLoyaltyPoints', 'TierBenefitLoyaltyPrice', 'TierBenefitLoyaltyReturns', 'TierBenefitLoyaltyShipping'])
   String? get hasTierBenefit;
@@ -12535,27 +7991,11 @@ abstract class MemberProgramTier implements Intangible, $Thing {
 /// A men's clothing store.
 @Schema(description: 'A men\'s clothing store.')
 abstract class MensClothingStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A structured representation of food or drink items available from a FoodEstablishment.
 @Schema(description: 'A structured representation of food or drink items available from a FoodEstablishment.')
 abstract class Menu implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A food or drink item contained in a menu or menu section.
   @JsonKey(name: 'hasMenuItem', includeIfNull: false)
   MenuItem? get hasMenuItem;
@@ -12569,14 +8009,6 @@ abstract class Menu implements CreativeWork, $Thing {
 /// A food or drink item listed in a menu or menu section.
 @Schema(description: 'A food or drink item listed in a menu or menu section.')
 abstract class MenuItem implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Additional menu item(s) such as a side dish of salad or side order of fries that can be added to this menu item. Additionally it can be a menu section containing allowed add-on menu items for this menu item.
   @AnyOf([MenuItem, MenuSection])
   @JsonKey(name: 'menuAddOn', includeIfNull: false)
@@ -12602,14 +8034,6 @@ abstract class MenuItem implements Intangible, $Thing {
 /// A sub-grouping of food or drink items in a menu. E.g. courses (such as 'Dinner', 'Breakfast', etc.), specific type of dishes (such as 'Meat', 'Vegan', 'Drinks', etc.), or some other classification made by the menu provider.
 @Schema(description: 'A sub-grouping of food or drink items in a menu. E.g. courses (such as \'Dinner\', \'Breakfast\', etc.), specific type of dishes (such as \'Meat\', \'Vegan\', \'Drinks\', etc.), or some other classification made by the menu provider.')
 abstract class MenuSection implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A food or drink item contained in a menu or menu section.
   @JsonKey(name: 'hasMenuItem', includeIfNull: false)
   MenuItem? get hasMenuItem;
@@ -12623,27 +8047,11 @@ abstract class MenuSection implements CreativeWork, $Thing {
 /// Enumerates several kinds of product return policies.
 @Schema(description: 'Enumerates several kinds of product return policies.')
 abstract class MerchantReturnEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].
 @Schema(description: 'A MerchantReturnPolicy provides information about product return policies associated with an [[Organization]], [[Product]], or [[Offer]].')
 abstract class MerchantReturnPolicy implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   ///
   @JsonKey(name: 'additionalProperty', includeIfNull: false)
@@ -12742,14 +8150,6 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
 /// A seasonal override of a return policy, for example used for holidays.
 @Schema(description: 'A seasonal override of a return policy, for example used for holidays.')
 abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
   @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
@@ -12793,14 +8193,6 @@ abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thin
 /// A single message from a sender to one or more organizations or people.
 @Schema(description: 'A single message from a sender to one or more organizations or people.')
 abstract class Message implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of recipient. The recipient blind copied on a message.
   @AnyOf([ContactPoint, Organization, Person])
   @JsonKey(name: 'bccRecipient', includeIfNull: false)
@@ -12847,27 +8239,11 @@ abstract class Message implements CreativeWork, $Thing {
 /// A middle school (typically for children aged around 11-14, although this varies somewhat).
 @Schema(description: 'A middle school (typically for children aged around 11-14, although this varies somewhat).')
 abstract class MiddleSchool implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A software application designed specifically to work well on a mobile device such as a telephone.
 @Schema(description: 'A software application designed specifically to work well on a mobile device such as a telephone.')
 abstract class MobileApplication implements SoftwareApplication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifies specific carrier(s) requirements for the application (e.g. an application may only work on a specific carrier network).
   @StringField(name: 'carrierRequirements')
   String? get carrierRequirements;
@@ -12877,27 +8253,11 @@ abstract class MobileApplication implements SoftwareApplication, $Thing {
 /// A store that sells mobile phones and related accessories.
 @Schema(description: 'A store that sells mobile phones and related accessories.')
 abstract class MobilePhoneStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.
 @Schema(description: 'Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.')
 abstract class MolecularEntity implements BioChemEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A role played by the BioChemEntity within a chemical context.
   @JsonKey(name: 'chemicalRole', includeIfNull: false)
   DefinedTerm? get chemicalRole;
@@ -12941,14 +8301,6 @@ abstract class MolecularEntity implements BioChemEntity, $Thing {
 /// A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.
 @Schema(description: 'A monetary value or range. This type can be used to describe an amount of money such as \$50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use [[PriceSpecification]] Types to describe the price of an Offer, Invoice, etc.')
 abstract class MonetaryAmount implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
   @StringField(name: 'currency')
   String? get currency;
@@ -12979,14 +8331,6 @@ abstract class MonetaryAmount implements StructuredValue, $Thing {
 /// A statistical distribution of monetary amounts.
 @Schema(description: 'A statistical distribution of monetary amounts.')
 abstract class MonetaryAmountDistribution implements QuantitativeValueDistribution, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The currency in which the monetary amount is expressed.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
   @StringField(name: 'currency')
   String? get currency;
@@ -12996,14 +8340,6 @@ abstract class MonetaryAmountDistribution implements QuantitativeValueDistributi
 /// A monetary grant.
 @Schema(description: 'A monetary grant.')
 abstract class MonetaryGrant implements Grant, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The amount of money.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'amount', includeIfNull: false)
@@ -13019,14 +8355,6 @@ abstract class MonetaryGrant implements Grant, $Thing {
 /// The act of transferring money from one place to another place. This may occur electronically or physically.
 @Schema(description: 'The act of transferring money from one place to another place. This may occur electronically or physically.')
 abstract class MoneyTransfer implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The amount of money.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'amount', includeIfNull: false)
@@ -13042,14 +8370,6 @@ abstract class MoneyTransfer implements TransferAction, $Thing {
 /// A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)
 @Schema(description: 'A loan in which property or real estate is used as collateral. (A loan securitized against some real estate.)')
 abstract class MortgageLoan implements LoanOrCredit, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Whether borrower is a resident of the jurisdiction where the property is located.
   @JsonKey(name: 'domiciledMortgage', includeIfNull: false)
   bool? get domiciledMortgage;
@@ -13063,14 +8383,6 @@ abstract class MortgageLoan implements LoanOrCredit, $Thing {
 /// A mosque.
 @Schema(description: 'A mosque.')
 abstract class Mosque implements PlaceOfWorship, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A motel.
@@ -13079,92 +8391,36 @@ abstract class Mosque implements PlaceOfWorship, $Thing {
 ///
 @Schema(description: 'A motel. <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Motel implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.
 @Schema(description: 'A motorcycle or motorbike is a single-track, two-wheeled motor vehicle.')
 abstract class Motorcycle implements Vehicle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A motorcycle dealer.
 @Schema(description: 'A motorcycle dealer.')
 abstract class MotorcycleDealer implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A motorcycle repair shop.
 @Schema(description: 'A motorcycle repair shop.')
 abstract class MotorcycleRepair implements AutomotiveBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.
 @Schema(description: 'A motorized bicycle is a bicycle with an attached motor used to power the vehicle, or to assist with pedaling.')
 abstract class MotorizedBicycle implements Vehicle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A mountain, like Mount Whitney or Mount Everest.
 @Schema(description: 'A mountain, like Mount Whitney or Mount Everest.')
 abstract class Mountain implements Landform, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of an agent relocating to a place.\n\nRelated actions:\n\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.
 @Schema(description: 'The act of an agent relocating to a place.\\n\\nRelated actions:\\n\\n* [[TransferAction]]: Unlike TransferAction, the subject of the move is a living Person or Organization rather than an inanimate object.')
 abstract class MoveAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The original location of the object or the agent before the action.
   @JsonKey(name: 'fromLocation', includeIfNull: false)
   Place? get fromLocation;
@@ -13178,14 +8434,6 @@ abstract class MoveAction implements Action, $Thing {
 /// A movie.
 @Schema(description: 'A movie.')
 abstract class Movie implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -13248,40 +8496,16 @@ abstract class Movie implements CreativeWork, $Thing {
 /// A short segment/part of a movie.
 @Schema(description: 'A short segment/part of a movie.')
 abstract class MovieClip implements Clip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A movie rental store.
 @Schema(description: 'A movie rental store.')
 abstract class MovieRentalStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A series of movies. Included movies can be indicated with the hasPart property.
 @Schema(description: 'A series of movies. Included movies can be indicated with the hasPart property.')
 abstract class MovieSeries implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -13317,14 +8541,6 @@ abstract class MovieSeries implements CreativeWorkSeries, $Thing {
 /// A movie theater.
 @Schema(description: 'A movie theater.')
 abstract class MovieTheater implements CivicStructure, EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of screens in the movie theater.
   @DoubleField(name: 'screenCount')
   double? get screenCount;
@@ -13334,27 +8550,11 @@ abstract class MovieTheater implements CivicStructure, EntertainmentBusiness, $T
 /// A moving company.
 @Schema(description: 'A moving company.')
 abstract class MovingCompany implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.
 @Schema(description: 'A muscle is an anatomical structure consisting of a contractile form of tissue that animals use to effect movement.')
 abstract class Muscle implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The muscle whose action counteracts the specified muscle.
   @JsonKey(name: 'antagonist', includeIfNull: false)
   Muscle? get antagonist;
@@ -13380,27 +8580,11 @@ abstract class Muscle implements AnatomicalStructure, $Thing {
 /// A museum.
 @Schema(description: 'A museum.')
 abstract class Museum implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A collection of music tracks.
 @Schema(description: 'A collection of music tracks.')
 abstract class MusicAlbum implements MusicPlaylist, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Classification of the album by its type of content: soundtrack, live album, studio album, etc.
   @StringField(name: 'albumProductionType', enumValues: ['CompilationAlbum', 'DJMixAlbum', 'DemoAlbum', 'LiveAlbum', 'MixtapeAlbum', 'RemixAlbum', 'SoundtrackAlbum', 'SpokenWordAlbum', 'StudioAlbum'])
   String? get albumProductionType;
@@ -13423,40 +8607,16 @@ abstract class MusicAlbum implements MusicPlaylist, $Thing {
 /// Classification of the album by its type of content: soundtrack, live album, studio album, etc.
 @Schema(description: 'Classification of the album by its type of content: soundtrack, live album, studio album, etc.')
 abstract class MusicAlbumProductionType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The kind of release which this album is: single, EP or album.
 @Schema(description: 'The kind of release which this album is: single, EP or album.')
 abstract class MusicAlbumReleaseType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A musical composition.
 @Schema(description: 'A musical composition.')
 abstract class MusicComposition implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The person or organization who wrote a composition, or who is the composer of a work performed at some event.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'composer', includeIfNull: false)
@@ -13503,27 +8663,11 @@ abstract class MusicComposition implements CreativeWork, $Thing {
 /// Event type: Music event.
 @Schema(description: 'Event type: Music event.')
 abstract class MusicEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.
 @Schema(description: 'A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.')
 abstract class MusicGroup implements PerformingGroup, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A music album.
   @JsonKey(name: 'album', includeIfNull: false)
   MusicAlbum? get album;
@@ -13555,14 +8699,6 @@ abstract class MusicGroup implements PerformingGroup, $Thing {
 /// A collection of music tracks in playlist form.
 @Schema(description: 'A collection of music tracks in playlist form.')
 abstract class MusicPlaylist implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of tracks in this album or playlist.
   @IntegerField(name: 'numTracks')
   int? get numTracks;
@@ -13581,14 +8717,6 @@ abstract class MusicPlaylist implements CreativeWork, $Thing {
 /// A music recording (track), usually a single song.
 @Schema(description: 'A music recording (track), usually a single song.')
 abstract class MusicRecording implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The artist that performed this album or recording.
   @AnyOf([MusicGroup, Person])
   @JsonKey(name: 'byArtist', includeIfNull: false)
@@ -13620,14 +8748,6 @@ abstract class MusicRecording implements CreativeWork, $Thing {
 /// A MusicRelease is a specific release of a music album.
 @Schema(description: 'A MusicRelease is a specific release of a music album.')
 abstract class MusicRelease implements MusicPlaylist, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The catalog number for the release.
   @StringField(name: 'catalogNumber')
   String? get catalogNumber;
@@ -13659,105 +8779,41 @@ abstract class MusicRelease implements MusicPlaylist, $Thing {
 /// Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
 @Schema(description: 'Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).')
 abstract class MusicReleaseFormatType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A music store.
 @Schema(description: 'A music store.')
 abstract class MusicStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A music venue.
 @Schema(description: 'A music venue.')
 abstract class MusicVenue implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A music video file.
 @Schema(description: 'A music video file.')
 abstract class MusicVideoObject implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Organization: Non-governmental Organization.
 @Schema(description: 'Organization: Non-governmental Organization.')
 abstract class NGO implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// NLNonprofitType: Non-profit organization type originating from the Netherlands.
 @Schema(description: 'NLNonprofitType: Non-profit organization type originating from the Netherlands.')
 abstract class NLNonprofitType implements NonprofitType, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A nail salon.
 @Schema(description: 'A nail salon.')
 abstract class NailSalon implements HealthAndBeautyBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.
 @Schema(description: 'A common pathway for the electrochemical nerve impulses that are transmitted along each of the axons.')
 abstract class Nerve implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The branches that delineate from the nerve bundle. Not to be confused with [[branchOf]].
   @JsonKey(name: 'branch', includeIfNull: false)
   AnatomicalStructure? get branch;
@@ -13783,14 +8839,6 @@ abstract class Nerve implements AnatomicalStructure, $Thing {
 ///
 @Schema(description: 'A NewsArticle is an article whose content reports news, or provides background context and supporting materials for understanding the news.  A more detailed overview of [schema.org News markup](/docs/news.html) is also available. ')
 abstract class NewsArticle implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A [dateline](https://en.wikipedia.org/wiki/Dateline) is a brief piece of text included in news articles that describes where and when the story was written or filed though the date is often omitted. Sometimes only a placename is provided.
   ///
   /// Structured representations of dateline-related information can also be expressed more explicitly using [[locationCreated]] (which represents where a work was created, e.g. where a news report was written).  For location depicted or described in the content, use [[contentLocation]].
@@ -13821,14 +8869,6 @@ abstract class NewsArticle implements Article, $Thing {
 /// A News/Media organization such as a newspaper or TV station.
 @Schema(description: 'A News/Media organization such as a newspaper or TV station.')
 abstract class NewsMediaOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// For a [[NewsMediaOrganization]] or other news-related [[Organization]], a statement about public engagement activities (for news media, the newsroom’s), including involving the public - digitally or otherwise -- in coverage decisions, reporting and activities after publication.
   @AnyOf([CreativeWork, String])
   @JsonKey(name: 'actionableFeedbackPolicy', includeIfNull: false)
@@ -13889,92 +8929,36 @@ abstract class NewsMediaOrganization implements Organization, $Thing {
 /// A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.
 @Schema(description: 'A publication containing information about varied topics that are pertinent to general information, a geographic area, or a specific subject matter (i.e. business, culture, education). Often published daily.')
 abstract class Newspaper implements Periodical, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A nightclub or discotheque.
 @Schema(description: 'A nightclub or discotheque.')
 abstract class NightClub implements EntertainmentBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.
 @Schema(description: 'NonprofitType enumerates several kinds of official non-profit types of which a non-profit organization can be.')
 abstract class NonprofitType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A notary.
 @Schema(description: 'A notary.')
 abstract class Notary implements LegalService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A file containing a note, primarily for the author.
 @Schema(description: 'A file containing a note, primarily for the author.')
 abstract class NoteDigitalDocument implements DigitalDocument, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Data type: Number.\n\nUsage guidelines:\n\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
 @Schema(description: 'Data type: Number.\\n\\nUsage guidelines:\\n\\n* Use values from 0123456789 (Unicode \'DIGIT ZERO\' (U+0030) to \'DIGIT NINE\' (U+0039)) rather than superficially similar Unicode symbols.\\n* Use \'.\' (Unicode \'FULL STOP\' (U+002E)) rather than \',\' to indicate a decimal point. Avoid using these symbols as a readability separator.')
 abstract class Number implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Nutritional information about the recipe.
 @Schema(description: 'Nutritional information about the recipe.')
 abstract class NutritionInformation implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of calories.
   @JsonKey(name: 'calories', includeIfNull: false)
   Energy? get calories;
@@ -14033,14 +9017,6 @@ abstract class NutritionInformation implements StructuredValue, $Thing {
 ///
 @Schema(description: 'Instances of the class [[Observation]] are used to specify observations about an entity at a particular time. The principal properties of an [[Observation]] are [[observationAbout]], [[measuredProperty]], [[statType]], [[value] and [[observationDate]]  and [[measuredProperty]]. Some but not all Observations represent a [[QuantitativeValue]]. Quantitative observations can be about a [[StatisticalVariable]], which is an abstract specification about which we can make observations that are grounded at a particular location and time.  Observations can also encode a subset of simple RDF-like statements (its observationAbout, a StatisticalVariable, defining the measuredPoperty; its observationAbout property indicating the entity the statement is about, and [[value]] )  In the context of a quantitative knowledge graph, typical properties could include [[measuredProperty]], [[observationAbout]], [[observationDate]], [[value]], [[unitCode]], [[unitText]], [[measurementMethod]].     ')
 abstract class Observation implements Intangible, QuantitativeValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A [[marginOfError]] for an [[Observation]].
   @JsonKey(name: 'marginOfError', includeIfNull: false)
   QuantitativeValue? get marginOfError;
@@ -14096,14 +9072,6 @@ abstract class Observation implements Intangible, QuantitativeValue, $Thing {
 /// A profession, may involve prolonged training and/or a formal qualification.
 @Schema(description: 'A profession, may involve prolonged training and/or a formal qualification.')
 abstract class Occupation implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Educational background needed for the position or Occupation.
   @AnyOf([EducationalOccupationalCredential, String])
   @JsonKey(name: 'educationRequirements', includeIfNull: false)
@@ -14148,14 +9116,6 @@ abstract class Occupation implements Intangible, $Thing {
 /// Indicates employment-related experience requirements, e.g. [[monthsOfExperience]].
 @Schema(description: 'Indicates employment-related experience requirements, e.g. [[monthsOfExperience]].')
 abstract class OccupationalExperienceRequirements implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the minimal number of months of experience required for a position.
   @DoubleField(name: 'monthsOfExperience')
   double? get monthsOfExperience;
@@ -14165,40 +9125,16 @@ abstract class OccupationalExperienceRequirements implements Intangible, $Thing 
 /// A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.
 @Schema(description: 'A treatment of people with physical, emotional, or social problems, using purposeful activity to help them overcome or learn to deal with their problems.')
 abstract class OccupationalTherapy implements MedicalTherapy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An ocean (for example, the Pacific).
 @Schema(description: 'An ocean (for example, the Pacific).')
 abstract class OceanBodyOfWater implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).
 @Schema(description: 'An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\\n\\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\\n\\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).')
 abstract class Offer implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The payment method(s) that are accepted in general by an organization, or for some specific demand or offer.
   @AnyOf([LoanOrCredit, PaymentMethod, String])
   @JsonKey(name: 'acceptedPaymentMethod', includeIfNull: false)
@@ -14457,14 +9393,6 @@ abstract class Offer implements Intangible, $Thing {
 /// An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.
 @Schema(description: 'An OfferCatalog is an ItemList that contains related Offers and/or further OfferCatalogs that are offeredBy the same provider.')
 abstract class OfferCatalog implements ItemList, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose
@@ -14473,14 +9401,6 @@ abstract class OfferCatalog implements ItemList, $Thing {
 ///
 @Schema(description: 'An [[OfferForLease]] in Schema.org represents an [[Offer]] to lease out something, i.e. an [[Offer]] whose   [[businessFunction]] is [lease out](http://purl.org/goodrelations/v1#LeaseOut.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for   background on the underlying concepts.   ')
 abstract class OfferForLease implements Offer, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose
@@ -14489,27 +9409,11 @@ abstract class OfferForLease implements Offer, $Thing {
 ///
 @Schema(description: 'An [[OfferForPurchase]] in Schema.org represents an [[Offer]] to sell something, i.e. an [[Offer]] whose   [[businessFunction]] is [sell](http://purl.org/goodrelations/v1#Sell.). See [Good Relations](https://en.wikipedia.org/wiki/GoodRelations) for   background on the underlying concepts.   ')
 abstract class OfferForPurchase implements Offer, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A list of possible conditions for the item.
 @Schema(description: 'A list of possible conditions for the item.')
 abstract class OfferItemCondition implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// OfferShippingDetails represents information about shipping destinations.
@@ -14526,14 +9430,6 @@ abstract class OfferItemCondition implements Enumeration, $Thing {
 /// or Fast and expensive: $15 in 1-2 days.
 @Schema(description: 'OfferShippingDetails represents information about shipping destinations.  Multiple of these entities can be used to represent different shipping rates for different destinations:  One entity for Alaska/Hawaii. A different one for continental US. A different one for all France.  Multiple of these entities can be used to represent different shipping costs and delivery times.  Two entities that are identical but differ in rate and time:  E.g. Cheaper and slower: \$5 in 5-7 days or Fast and expensive: \$15 in 1-2 days.')
 abstract class OfferShippingDetails implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The total delay between the receipt of the order and the goods reaching the final customer.
   @JsonKey(name: 'deliveryTime', includeIfNull: false)
   ShippingDeliveryTime? get deliveryTime;
@@ -14605,53 +9501,21 @@ abstract class OfferShippingDetails implements StructuredValue, $Thing {
 /// An office equipment store.
 @Schema(description: 'An office equipment store.')
 abstract class OfficeEquipmentStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.
 @Schema(description: 'A publication event, e.g. catch-up TV or radio podcast, during which a program is available on-demand.')
 abstract class OnDemandEvent implements PublicationEvent, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.
 @Schema(description: 'A particular online business, either standalone or the online part of a broader organization. Examples include an eCommerce site, an online travel booking site, an online learning site, an online logistics and shipping provider, an online (virtual) doctor, etc.')
 abstract class OnlineBusiness implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An eCommerce marketplace.
 @Schema(description: 'An eCommerce marketplace.')
 abstract class OnlineMarketplace implements OnlineStore, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An eCommerce store part of an online marketplace.
   @JsonKey(name: 'hasStore', includeIfNull: false)
   OnlineStore? get hasStore;
@@ -14661,14 +9525,6 @@ abstract class OnlineMarketplace implements OnlineStore, $Thing {
 /// An eCommerce site.
 @Schema(description: 'An eCommerce site.')
 abstract class OnlineStore implements OnlineBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The eCommerce marketplace this online store is on.
   @JsonKey(name: 'isStoreOn', includeIfNull: false)
   OnlineMarketplace? get isStoreOn;
@@ -14680,14 +9536,6 @@ abstract class OnlineStore implements OnlineBusiness, $Thing {
 ///
 @Schema(description: 'A structured value providing information about the opening hours of a place or a certain service inside a place.\\n\\n The place is __open__ if the [[opens]] property is specified, and __closed__ otherwise.\\n\\nIf the value for the [[closes]] property is less than the value for the [[opens]] property then the hour range is assumed to span over the next day.       ')
 abstract class OpeningHoursSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The closing hour of the place or service on the given day(s) of the week.
   @StringField(name: 'closes', format: 'time')
   String? get closes;
@@ -14713,53 +9561,21 @@ abstract class OpeningHoursSpecification implements StructuredValue, $Thing {
 /// System software that manages computer hardware and software resources, and provides common services for computer programs.
 @Schema(description: 'System software that manages computer hardware and software resources, and provides common services for computer programs.')
 abstract class OperatingSystem implements SoftwareApplication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication.
 @Schema(description: 'An [[OpinionNewsArticle]] is a [[NewsArticle]] that primarily expresses opinions rather than journalistic reporting of news and events. For example, a [[NewsArticle]] consisting of a column or [[Blog]]/[[BlogPosting]] entry in the Opinions section of a news publication. ')
 abstract class OpinionNewsArticle implements NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A store that sells reading glasses and similar devices for improving vision.
 @Schema(description: 'A store that sells reading glasses and similar devices for improving vision.')
 abstract class Optician implements MedicalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.
 @Schema(description: 'An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer.')
 abstract class Order implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The offer(s) -- e.g., product, quantity and price combinations -- included in the order.
   @JsonKey(name: 'acceptedOffer', includeIfNull: false)
   Offer? get acceptedOffer;
@@ -14860,14 +9676,6 @@ abstract class Order implements Intangible, $Thing {
 /// An agent orders an object/product/service to be delivered/sent.
 @Schema(description: 'An agent orders an object/product/service to be delivered/sent.')
 abstract class OrderAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of instrument. The method of delivery.
   @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get deliveryMethod;
@@ -14877,14 +9685,6 @@ abstract class OrderAction implements TradeAction, $Thing {
 /// An order item is a line of an order. It includes the quantity and shipping details of a bought offer.
 @Schema(description: 'An order item is a line of an order. It includes the quantity and shipping details of a bought offer.')
 abstract class OrderItem implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The delivery of the parcel related to this order or order item.
   @JsonKey(name: 'orderDelivery', includeIfNull: false)
   ParcelDelivery? get orderDelivery;
@@ -14912,27 +9712,11 @@ abstract class OrderItem implements StructuredValue, $Thing {
 /// Enumerated status values for Order.
 @Schema(description: 'Enumerated status values for Order.')
 abstract class OrderStatus implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An organization such as a school, NGO, corporation, club, etc.
 @Schema(description: 'An organization such as a school, NGO, corporation, club, etc.')
 abstract class Organization implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The payment method(s) that are accepted in general by an organization, or for some specific demand or offer.
   @AnyOf([LoanOrCredit, PaymentMethod, String])
   @JsonKey(name: 'acceptedPaymentMethod', includeIfNull: false)
@@ -15279,14 +10063,6 @@ abstract class Organization implements Thing, $Thing {
 /// A subclass of Role used to describe roles within organizations.
 @Schema(description: 'A subclass of Role used to describe roles within organizations.')
 abstract class OrganizationRole implements Role, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A number associated with a role in an organization, for example, the number on an athlete's jersey.
   @DoubleField(name: 'numberedPosition')
   double? get numberedPosition;
@@ -15296,40 +10072,16 @@ abstract class OrganizationRole implements Role, $Thing {
 /// The act of manipulating/administering/supervising/controlling one or more objects.
 @Schema(description: 'The act of manipulating/administering/supervising/controlling one or more objects.')
 abstract class OrganizeAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An outlet store.
 @Schema(description: 'An outlet store.')
 abstract class OutletStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A structured value providing information about when a certain organization or person owned a certain product.
 @Schema(description: 'A structured value providing information about when a certain organization or person owned a certain product.')
 abstract class OwnershipInfo implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The organization or person from which the product was acquired.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'acquiredFrom', includeIfNull: false)
@@ -15353,53 +10105,21 @@ abstract class OwnershipInfo implements StructuredValue, $Thing {
 /// The act of producing a painting, typically with paint and canvas as instruments.
 @Schema(description: 'The act of producing a painting, typically with paint and canvas as instruments.')
 abstract class PaintAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A painting.
 @Schema(description: 'A painting.')
 abstract class Painting implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.
 @Schema(description: 'A medical procedure intended primarily for palliative purposes, aimed at relieving the symptoms of an underlying health condition.')
 abstract class PalliativeProcedure implements MedicalProcedure, MedicalTherapy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The delivery of a parcel either via the postal service or a commercial service.
 @Schema(description: 'The delivery of a parcel either via the postal service or a commercial service.')
 abstract class ParcelDelivery implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
   @JsonKey(name: 'carrier', includeIfNull: false)
   Organization? get carrier;
@@ -15454,14 +10174,6 @@ abstract class ParcelDelivery implements Intangible, $Thing {
 /// A set of characteristics describing parents, who can be interested in viewing some content.
 @Schema(description: 'A set of characteristics describing parents, who can be interested in viewing some content.')
 abstract class ParentAudience implements PeopleAudience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Maximal age of the child.
   @DoubleField(name: 'childMaxAge')
   double? get childMaxAge;
@@ -15475,40 +10187,16 @@ abstract class ParentAudience implements PeopleAudience, $Thing {
 /// A park.
 @Schema(description: 'A park.')
 abstract class Park implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A parking lot or other parking facility.
 @Schema(description: 'A parking lot or other parking facility.')
 abstract class ParkingFacility implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.
 @Schema(description: 'A medical test performed by a laboratory that typically involves examination of a tissue sample by a pathologist.')
 abstract class PathologyTest implements MedicalTest, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of tissue sample required for the test.
   @StringField(name: 'tissueSample')
   String? get tissueSample;
@@ -15518,14 +10206,6 @@ abstract class PathologyTest implements MedicalTest, $Thing {
 /// A patient is any person recipient of health care services.
 @Schema(description: 'A patient is any person recipient of health care services.')
 abstract class Patient implements MedicalAudience, Person, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// One or more alternative conditions considered in the differential diagnosis process as output of a diagnosis process.
   @JsonKey(name: 'diagnosis', includeIfNull: false)
   MedicalCondition? get diagnosis;
@@ -15543,27 +10223,11 @@ abstract class Patient implements MedicalAudience, Person, $Thing {
 /// A shop that will buy, or lend money against the security of, personal possessions.
 @Schema(description: 'A shop that will buy, or lend money against the security of, personal possessions.')
 abstract class PawnShop implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent pays a price to a participant.
 @Schema(description: 'An agent pays a price to a participant.')
 abstract class PayAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'recipient', includeIfNull: false)
@@ -15574,14 +10238,6 @@ abstract class PayAction implements TradeAction, $Thing {
 /// A payment method using a credit, debit, store or other card to associate the payment with an account.
 @Schema(description: 'A payment method using a credit, debit, store or other card to associate the payment with an account.')
 abstract class PaymentCard implements FinancialProduct, PaymentMethod, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A cardholder benefit that pays the cardholder a small percentage of their net expenditures.
   @AnyOf([bool, double])
   @JsonKey(name: 'cashBack', includeIfNull: false)
@@ -15605,14 +10261,6 @@ abstract class PaymentCard implements FinancialProduct, PaymentMethod, $Thing {
 /// The costs of settling the payment using a particular payment method.
 @Schema(description: 'The costs of settling the payment using a particular payment method.')
 abstract class PaymentChargeSpecification implements PriceSpecification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The delivery method(s) to which the delivery charge or payment charge specification applies.
   @StringField(name: 'appliesToDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get appliesToDeliveryMethod;
@@ -15626,14 +10274,6 @@ abstract class PaymentChargeSpecification implements PriceSpecification, $Thing 
 /// A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted: \n\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\n* http://purl.org/goodrelations/v1#ByInvoice\n* http://purl.org/goodrelations/v1#Cash\n* http://purl.org/goodrelations/v1#CheckInAdvance\n* http://purl.org/goodrelations/v1#COD\n* http://purl.org/goodrelations/v1#DirectDebit\n* http://purl.org/goodrelations/v1#GoogleCheckout\n* http://purl.org/goodrelations/v1#PayPal\n* http://purl.org/goodrelations/v1#PaySwarm\n\nStructured values, or [UNCE payment means](https://vocabulary.uncefact.org/PaymentMeans) are recommended or for newer annotations.
 @Schema(description: 'A payment method is a standardized procedure for transferring the monetary amount for a purchase. Payment methods are characterized by the legal and technical structures used, and by the organization or group carrying out the transaction. The following legacy values should be accepted: \\n\\n* http://purl.org/goodrelations/v1#ByBankTransferInAdvance\\n* http://purl.org/goodrelations/v1#ByInvoice\\n* http://purl.org/goodrelations/v1#Cash\\n* http://purl.org/goodrelations/v1#CheckInAdvance\\n* http://purl.org/goodrelations/v1#COD\\n* http://purl.org/goodrelations/v1#DirectDebit\\n* http://purl.org/goodrelations/v1#GoogleCheckout\\n* http://purl.org/goodrelations/v1#PayPal\\n* http://purl.org/goodrelations/v1#PaySwarm\\n\\nStructured values, or [UNCE payment means](https://vocabulary.uncefact.org/PaymentMeans) are recommended or for newer annotations.')
 abstract class PaymentMethod implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of a payment method.
   @StringField(name: 'paymentMethodType', enumValues: ['ByBankTransferInAdvance', 'ByInvoice', 'COD', 'Cash', 'CheckInAdvance', 'DirectDebit', 'InStorePrepay', 'PhoneCarrierPayment'])
   String? get paymentMethodType;
@@ -15643,53 +10283,21 @@ abstract class PaymentMethod implements Intangible, $Thing {
 /// The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.
 @Schema(description: 'The type of payment method, only for generic payment types, specific forms of payments, like card payment should be expressed using subclasses of PaymentMethod.')
 abstract class PaymentMethodType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Service to transfer funds from a person or organization to a beneficiary person or organization.
 @Schema(description: 'A Service to transfer funds from a person or organization to a beneficiary person or organization.')
 abstract class PaymentService implements FinancialProduct, PaymentMethod, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A specific payment status. For example, PaymentDue, PaymentComplete, etc.
 @Schema(description: 'A specific payment status. For example, PaymentDue, PaymentComplete, etc.')
 abstract class PaymentStatusType implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A set of characteristics belonging to people, e.g. who compose an item's target audience.
 @Schema(description: 'A set of characteristics belonging to people, e.g. who compose an item\'s target audience.')
 abstract class PeopleAudience implements Audience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifying the health condition(s) of a patient, medical study, or other target audience.
   @JsonKey(name: 'healthCondition', includeIfNull: false)
   MedicalCondition? get healthCondition;
@@ -15731,14 +10339,6 @@ abstract class PeopleAudience implements Audience, $Thing {
 /// The act of participating in performance arts.
 @Schema(description: 'The act of participating in performance arts.')
 abstract class PerformAction implements PlayAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The entertainment business where the action occurred.
   @JsonKey(name: 'entertainmentBusiness', includeIfNull: false)
   EntertainmentBusiness? get entertainmentBusiness;
@@ -15748,14 +10348,6 @@ abstract class PerformAction implements PlayAction, $Thing {
 /// A PerformanceRole is a Role that some entity places with regard to a theatrical performance, e.g. in a Movie, TVSeries etc.
 @Schema(description: 'A PerformanceRole is a Role that some entity places with regard to a theatrical performance, e.g. in a Movie, TVSeries etc.')
 abstract class PerformanceRole implements Role, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The name of a character played in some acting or performing role, i.e. in a PerformanceRole.
   @StringField(name: 'characterName')
   String? get characterName;
@@ -15765,66 +10357,26 @@ abstract class PerformanceRole implements Role, $Thing {
 /// Live performance <a class="localLink" href="http://schema.org/Event">Event of the performing arts (music, theatre, dance, acrobatics, spoken word), including performance art and performative sports (e.g. choreographed forms of martial arts, figure skating, competitive ballroom dancing).<br/><br/>Note: Use <a class="localLink" href="http://schema.org/additionalType">additionalType</a> to differentiate between productions / shows (PerformanceWork, EventSeries), tours (EventSeries), and individual performances.
 @Schema(description: 'Live performance <a class="localLink" href="http://schema.org/Event">Event of the performing arts (music, theatre, dance, acrobatics, spoken word), including performance art and performative sports (e.g. choreographed forms of martial arts, figure skating, competitive ballroom dancing).<br/><br/>Note: Use <a class="localLink" href="http://schema.org/additionalType">additionalType</a> to differentiate between productions / shows (PerformanceWork, EventSeries), tours (EventSeries), and individual performances.')
 abstract class PerformingArtsEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A theater or other performing art center.
 @Schema(description: 'A theater or other performing art center.')
 abstract class PerformingArtsTheater implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A performance group, such as a band, an orchestra, or a circus.
 @Schema(description: 'A performance group, such as a band, an orchestra, or a circus.')
 abstract class PerformingGroup implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\n\nSee also [blog post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
 @Schema(description: 'A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper.\\n\\nSee also [blog post](https://blog.schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).')
 abstract class Periodical implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A permit issued by an organization, e.g. a parking pass.
 @Schema(description: 'A permit issued by an organization, e.g. a parking pass.')
 abstract class Permit implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
   @JsonKey(name: 'issuedBy', includeIfNull: false)
   Organization? get issuedBy;
@@ -15858,14 +10410,6 @@ abstract class Permit implements Intangible, $Thing {
 /// A person (alive, dead, undead, or fictional).
 @Schema(description: 'A person (alive, dead, undead, or fictional).')
 abstract class Person implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An additional name for a Person, can be used for a middle name.
   @StringField(name: 'additionalName')
   String? get additionalName;
@@ -16167,66 +10711,26 @@ abstract class Person implements Thing, $Thing {
 /// A pet store.
 @Schema(description: 'A pet store.')
 abstract class PetStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A pharmacy or drugstore.
 @Schema(description: 'A pharmacy or drugstore.')
 abstract class Pharmacy implements MedicalBusiness, MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A photograph.
 @Schema(description: 'A photograph.')
 abstract class Photograph implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of capturing still images of objects using a camera.
 @Schema(description: 'The act of capturing still images of objects using a camera.')
 abstract class PhotographAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.
 @Schema(description: 'Any bodily activity that enhances or maintains physical fitness and overall health and wellness. Includes activity that is part of daily living and routine, structured exercise, and exercise prescribed as part of a medical treatment or recovery plan.')
 abstract class PhysicalActivity implements LifestyleModification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The anatomy of the underlying organ system or structures associated with this entity.
   @AnyOf([AnatomicalStructure, AnatomicalSystem, SuperficialAnatomy])
   @JsonKey(name: 'associatedAnatomy', includeIfNull: false)
@@ -16250,53 +10754,21 @@ abstract class PhysicalActivity implements LifestyleModification, $Thing {
 /// Categories of physical activity, organized by physiologic classification.
 @Schema(description: 'Categories of physical activity, organized by physiologic classification.')
 abstract class PhysicalActivityCategory implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A type of physical examination of a patient performed by a physician.
 @Schema(description: 'A type of physical examination of a patient performed by a physician. ')
 abstract class PhysicalExam implements MedicalEnumeration, MedicalProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A process of progressive physical care and rehabilitation aimed at improving a health condition.
 @Schema(description: 'A process of progressive physical care and rehabilitation aimed at improving a health condition.')
 abstract class PhysicalTherapy implements MedicalTherapy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An individual physician or a physician's office considered as a [[MedicalOrganization]].
 @Schema(description: 'An individual physician or a physician\'s office considered as a [[MedicalOrganization]].')
 abstract class Physician implements MedicalBusiness, MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A medical service available from this provider.
   @AnyOf([MedicalProcedure, MedicalTest, MedicalTherapy])
   @JsonKey(name: 'availableService', includeIfNull: false)
@@ -16326,27 +10798,11 @@ abstract class Physician implements MedicalBusiness, MedicalOrganization, $Thing
 /// A doctor's office or clinic.
 @Schema(description: 'A doctor\'s office or clinic.')
 abstract class PhysiciansOffice implements Physician, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Entities that have a somewhat fixed, physical extension.
 @Schema(description: 'Entities that have a somewhat fixed, physical extension.')
 abstract class Place implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   ///
   @JsonKey(name: 'additionalProperty', includeIfNull: false)
@@ -16562,27 +11018,11 @@ abstract class Place implements Thing, $Thing {
 /// Place of worship, such as a church, synagogue, or mosque.
 @Schema(description: 'Place of worship, such as a church, synagogue, or mosque.')
 abstract class PlaceOfWorship implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of planning the execution of an event/task/action/reservation/plan to a future date.
 @Schema(description: 'The act of planning the execution of an event/task/action/reservation/plan to a future date.')
 abstract class PlanAction implements OrganizeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The time the object is scheduled to.
   @StringField(name: 'scheduledTime', format: 'date-time')
   String? get scheduledTime;
@@ -16592,27 +11032,11 @@ abstract class PlanAction implements OrganizeAction, $Thing {
 /// A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].
 @Schema(description: 'A play is a form of literature, usually consisting of dialogue between characters, intended for theatrical performance rather than just reading. Note: A performance of a Play would be a [[TheaterEvent]] or [[BroadcastEvent]] - the *Play* being the [[workPerformed]].')
 abstract class Play implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\n\nRelated actions:\n\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.
 @Schema(description: 'The act of playing/exercising/training/performing for enjoyment, leisure, recreation, competition or exercise.\\n\\nRelated actions:\\n\\n* [[ListenAction]]: Unlike ListenAction (which is under ConsumeAction), PlayAction refers to performing for an audience or at an event, rather than consuming music.\\n* [[WatchAction]]: Unlike WatchAction (which is under ConsumeAction), PlayAction refers to showing/displaying for an audience or at an event, rather than consuming visual content.')
 abstract class PlayAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An intended audience, i.e. a group for whom something was created.
   @JsonKey(name: 'audience', includeIfNull: false)
   Audience? get audience;
@@ -16626,14 +11050,6 @@ abstract class PlayAction implements Action, $Thing {
 /// The act of playing a video game.
 @Schema(description: 'The act of playing a video game.')
 abstract class PlayGameAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.
   @StringField(name: 'gameAvailabilityType', enumValues: ['DemoGameAvailability', 'FullGameAvailability'])
   String? get gameAvailabilityType;
@@ -16643,66 +11059,26 @@ abstract class PlayGameAction implements ConsumeAction, $Thing {
 /// A playground.
 @Schema(description: 'A playground.')
 abstract class Playground implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A plumbing service.
 @Schema(description: 'A plumbing service.')
 abstract class Plumber implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A single episode of a podcast series.
 @Schema(description: 'A single episode of a podcast series.')
 abstract class PodcastEpisode implements Episode, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.
 @Schema(description: 'A single season of a podcast. Many podcasts do not break down into separate seasons. In that case, PodcastSeries should be used.')
 abstract class PodcastSeason implements CreativeWorkSeason, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A podcast is an episodic series of digital audio or video files which a user can download and listen to.
 @Schema(description: 'A podcast is an episodic series of digital audio or video files which a user can download and listen to.')
 abstract class PodcastSeries implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -16718,66 +11094,26 @@ abstract class PodcastSeries implements CreativeWorkSeries, $Thing {
 /// A police station.
 @Schema(description: 'A police station.')
 abstract class PoliceStation implements CivicStructure, EmergencyService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Organization: Political Party.
 @Schema(description: 'Organization: Political Party.')
 abstract class PoliticalParty implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A pond.
 @Schema(description: 'A pond.')
 abstract class Pond implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A post office.
 @Schema(description: 'A post office.')
 abstract class PostOffice implements GovernmentOffice, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The mailing address.
 @Schema(description: 'The mailing address.')
 abstract class PostalAddress implements ContactPoint, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The country. Recommended to be in 2-letter [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1) format, for example "US". For backward compatibility, a 3-letter [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) country code such as "SGP" or a full country name such as "Singapore" can also be used.
   @AnyOf([Country, String])
   @JsonKey(name: 'addressCountry', includeIfNull: false)
@@ -16813,14 +11149,6 @@ abstract class PostalAddress implements ContactPoint, $Thing {
 /// Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.
 @Schema(description: 'Indicates a range of postal codes, usually defined as the set of valid codes between [[postalCodeBegin]] and [[postalCodeEnd]], inclusively.')
 abstract class PostalCodeRangeSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// First postal code in a range (included).
   @StringField(name: 'postalCodeBegin')
   String? get postalCodeBegin;
@@ -16834,105 +11162,41 @@ abstract class PostalCodeRangeSpecification implements StructuredValue, $Thing {
 /// A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.
 @Schema(description: 'A large, usually printed placard, bill, or announcement, often illustrated, that is posted to advertise or publicize something.')
 abstract class Poster implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent orders a (not yet released) object/product/service to be delivered/sent.
 @Schema(description: 'An agent orders a (not yet released) object/product/service to be delivered/sent.')
 abstract class PreOrderAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of inserting at the beginning if an ordered collection.
 @Schema(description: 'The act of inserting at the beginning if an ordered collection.')
 abstract class PrependAction implements InsertAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A preschool.
 @Schema(description: 'A preschool.')
 abstract class Preschool implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A file containing slides or used for a presentation.
 @Schema(description: 'A file containing slides or used for a presentation.')
 abstract class PresentationDigitalDocument implements DigitalDocument, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An indication for preventing an underlying condition, symptom, etc.
 @Schema(description: 'An indication for preventing an underlying condition, symptom, etc.')
 abstract class PreventionIndication implements MedicalIndication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates different price components that together make up the total price for an offered product.
 @Schema(description: 'Enumerates different price components that together make up the total price for an offered product.')
 abstract class PriceComponentTypeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.
 @Schema(description: 'A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use [[MonetaryAmount]] to describe independent amounts of money such as a salary, credit card limits, etc.')
 abstract class PriceSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The interval and unit of measurement of ordering quantities for which the offer or price specification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.
   @JsonKey(name: 'eligibleQuantity', includeIfNull: false)
   QuantitativeValue? get eligibleQuantity;
@@ -16985,27 +11249,11 @@ abstract class PriceSpecification implements StructuredValue, $Thing {
 /// Enumerates different price types, for example list price, invoice price, and sale price.
 @Schema(description: 'Enumerates different price types, for example list price, invoice price, and sale price.')
 abstract class PriceTypeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.
 @Schema(description: 'Any offered product or service. For example: a pair of shoes; a concert ticket; the rental of a car; a haircut; or an episode of a TV show streamed online.')
 abstract class Product implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   ///
   @JsonKey(name: 'additionalProperty', includeIfNull: false)
@@ -17335,14 +11583,6 @@ abstract class Product implements Thing, $Thing {
 /// A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].
 @Schema(description: 'A set of products (either [[ProductGroup]]s or specific variants) that are listed together e.g. in an [[Offer]].')
 abstract class ProductCollection implements Collection, Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// This links to a node or nodes indicating the exact quantity of the products included in  an [[Offer]] or [[ProductCollection]].
   @JsonKey(name: 'includesObject', includeIfNull: false)
   TypeAndQuantityNode? get includesObject;
@@ -17354,14 +11594,6 @@ abstract class ProductCollection implements Collection, Product, $Thing {
 /// While a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]].
 @Schema(description: 'A ProductGroup represents a group of [[Product]]s that vary only in certain well-described ways, such as by [[size]], [[color]], [[material]] etc.  While a ProductGroup itself is not directly offered for sale, the various varying products that it represents can be. The ProductGroup serves as a prototype or template, standing in for all of the products who have an [[isVariantOf]] relationship to it. As such, properties (including additional types) can be applied to the ProductGroup to represent characteristics shared by each of the (possibly very many) variants. Properties that reference a ProductGroup are not included in this mechanism; neither are the following specific properties [[variesBy]], [[hasVariant]], [[url]]. ')
 abstract class ProductGroup implements Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a [[Product]] that is a member of this [[ProductGroup]] (or [[ProductModel]]).
   @JsonKey(name: 'hasVariant', includeIfNull: false)
   Product? get hasVariant;
@@ -17380,14 +11612,6 @@ abstract class ProductGroup implements Product, $Thing {
 /// A datasheet or vendor specification of a product (in the sense of a prototypical description).
 @Schema(description: 'A datasheet or vendor specification of a product (in the sense of a prototypical description).')
 abstract class ProductModel implements Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the kind of product that this is a variant of. In the case of [[ProductModel]], this is a pointer (from a ProductModel) to a base product from which this product is a variant. It is safe to infer that the variant inherits all product features from the base model, unless defined locally. This is not transitive. In the case of a [[ProductGroup]], the group description also serves as a template, representing a set of Products that vary on explicitly defined, specific dimensions only (so it defines both a set of variants, as well as which values distinguish amongst those variants). When used with [[ProductGroup]], this property can apply to any [[Product]] included in the group.
   @AnyOf([ProductGroup, ProductModel])
   @JsonKey(name: 'isVariantOf', includeIfNull: false)
@@ -17406,27 +11630,11 @@ abstract class ProductModel implements Product, $Thing {
 /// ProductReturnEnumeration enumerates several kinds of product return policy. Note that this structure may not capture all aspects of the policy.
 @Schema(description: 'ProductReturnEnumeration enumerates several kinds of product return policy. Note that this structure may not capture all aspects of the policy.')
 abstract class ProductReturnEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A ProductReturnPolicy provides information about product return policies associated with an [[Organization]] or [[Product]].
 @Schema(description: 'A ProductReturnPolicy provides information about product return policies associated with an [[Organization]] or [[Product]].')
 abstract class ProductReturnPolicy implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The productReturnDays property indicates the number of days (from purchase) within which relevant product return policy is applicable.
   @IntegerField(name: 'productReturnDays')
   int? get productReturnDays;
@@ -17442,40 +11650,16 @@ abstract class ProductReturnPolicy implements Intangible, $Thing {
 /// [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].
 @Schema(description: 'Original definition: "provider of professional services."\\n\\nThe general [[ProfessionalService]] type for local businesses was deprecated due to confusion with [[Service]]. For reference, the types that it included were: [[Dentist]],         [[AccountingService]], [[Attorney]], [[Notary]], as well as types for several kinds of [[HomeAndConstructionBusiness]]: [[Electrician]], [[GeneralContractor]],         [[HousePainter]], [[Locksmith]], [[Plumber]], [[RoofingContractor]]. [[LegalService]] was introduced as a more inclusive supertype of [[Attorney]].')
 abstract class ProfessionalService implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Profile page.
 @Schema(description: 'Web page type: Profile page.')
 abstract class ProfilePage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.
 @Schema(description: 'Used to describe membership in a loyalty programs (e.g. "StarAliance"), traveler clubs (e.g. "AAA"), purchase clubs ("Safeway Club"), etc.')
 abstract class ProgramMembership implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The Organization (airline, travelers' club, retailer, etc.) the membership is made with or which offers the  MemberProgram.
   @JsonKey(name: 'hostingOrganization', includeIfNull: false)
   Organization? get hostingOrganization;
@@ -17514,27 +11698,11 @@ abstract class ProgramMembership implements Intangible, $Thing {
 ///
 @Schema(description: 'An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim. Use properties from [[Organization]], [[subOrganization]]/[[parentOrganization]] to indicate project sub-structures.     ')
 abstract class Project implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Data type: PronounceableText.
 @Schema(description: 'Data type: PronounceableText.')
 abstract class PronounceableText implements Text, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'inLanguage', includeIfNull: false)
@@ -17557,14 +11725,6 @@ abstract class PronounceableText implements Text, $Thing {
 /// A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.
 @Schema(description: 'A property, used to indicate attributes and relationships of some Thing; equivalent to rdf:Property.')
 abstract class Property implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Relates a property to a class that is (one of) the type(s) the property is expected to be used on.
   @JsonKey(name: 'domainIncludes', includeIfNull: false)
   SchemaClass? get domainIncludes;
@@ -17588,14 +11748,6 @@ abstract class Property implements Intangible, $Thing {
 ///
 @Schema(description: 'A property-value pair, e.g. representing a feature of a product or place. Use the \'name\' property for the name of the property. If there is an additional human-readable version of the value, put that into the \'description\' property.\\n\\n Always use specific schema.org properties when a) they exist and b) you can populate them. Using PropertyValue as a substitute will typically not trigger the same effect as using the original, specific property.     ')
 abstract class PropertyValue implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The upper value of some characteristic or property.
   @DoubleField(name: 'maxValue')
   double? get maxValue;
@@ -17655,14 +11807,6 @@ abstract class PropertyValue implements StructuredValue, $Thing {
 /// A Property value specification.
 @Schema(description: 'A Property value specification.')
 abstract class PropertyValueSpecification implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The default value of the input.  For properties that expect a literal, the default is a literal value, for properties that expect an object, it's an ID reference to one of the current values.
   @AnyOf([String, Thing])
   @JsonKey(name: 'defaultValue', includeIfNull: false)
@@ -17713,14 +11857,6 @@ abstract class PropertyValueSpecification implements Intangible, $Thing {
 /// Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.
 @Schema(description: 'Protein is here used in its widest possible definition, as classes of amino acid based molecules. Amyloid-beta Protein in human (UniProt P05067), eukaryota (e.g. an OrthoDB group) or even a single molecule that one can point to are all of type :Protein. A protein can thus be a subclass of another protein, e.g. :Protein as a UniProt record can have multiple isoforms inside it which would also be :Protein. They can be imagined, synthetic, hypothetical or naturally occurring.')
 abstract class Protein implements BioChemEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A symbolic representation of a BioChemEntity. For example, a nucleotide sequence of a Gene or an amino acid sequence of a Protein.
   @StringField(name: 'hasBioPolymerSequence')
   String? get hasBioPolymerSequence;
@@ -17730,53 +11866,21 @@ abstract class Protein implements BioChemEntity, $Thing {
 /// A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.
 @Schema(description: 'A process of care relying upon counseling, dialogue and communication  aimed at improving a mental health condition without use of drugs.')
 abstract class PsychologicalTreatment implements TherapeuticProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A public swimming pool.
 @Schema(description: 'A public swimming pool.')
 abstract class PublicSwimmingPool implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.
 @Schema(description: 'A public toilet is a room or small building containing one or more toilets (and possibly also urinals) which is available for use by the general public, or by customers or employees of certain businesses.')
 abstract class PublicToilet implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.
 @Schema(description: 'A PublicationEvent corresponds indifferently to the event of publication for a CreativeWork of any type, e.g. a broadcast event, an on-demand event, a book/journal publication via a variety of delivery media.')
 abstract class PublicationEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A flag to signal that the item, event, or place is accessible for free.
   @JsonKey(name: 'free', includeIfNull: false)
   bool? get free;
@@ -17795,14 +11899,6 @@ abstract class PublicationEvent implements Event, $Thing {
 /// A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\n\nSee also [blog post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
 @Schema(description: 'A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.\\n\\nSee also [blog post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).')
 abstract class PublicationIssue implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Identifies the issue of publication; for example, "iii" or "2".
   @AnyOf([int, String])
   @JsonKey(name: 'issueNumber', includeIfNull: false)
@@ -17827,14 +11923,6 @@ abstract class PublicationIssue implements CreativeWork, $Thing {
 /// A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\n\nSee also [blog post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).
 @Schema(description: 'A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.\\n\\nSee also [blog post](https://blog-schema.org/2014/09/02/schema-org-support-for-bibliographic-relationships-and-periodicals/).')
 abstract class PublicationVolume implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The page on which the work ends; for example "138" or "xvi".
   @AnyOf([int, String])
   @JsonKey(name: 'pageEnd', includeIfNull: false)
@@ -17859,40 +11947,16 @@ abstract class PublicationVolume implements CreativeWork, $Thing {
 /// Enumerates a purchase type for an item.
 @Schema(description: 'Enumerates a purchase type for an item.')
 abstract class PurchaseType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).
 @Schema(description: 'A QAPage is a WebPage focussed on a specific Question and its Answer(s), e.g. in a question answering site or documenting Frequently Asked Questions (FAQs).')
 abstract class QAPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A predefined value for a product characteristic, e.g. the power cord plug type 'US' or the garment sizes 'S', 'M', 'L', and 'XL'.
 @Schema(description: 'A predefined value for a product characteristic, e.g. the power cord plug type \'US\' or the garment sizes \'S\', \'M\', \'L\', and \'XL\'.')
 abstract class QualitativeValue implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   ///
   @JsonKey(name: 'additionalProperty', includeIfNull: false)
@@ -17932,14 +11996,6 @@ abstract class QualitativeValue implements Enumeration, $Thing {
 /// A point value or interval for product characteristics and other purposes.
 @Schema(description: ' A point value or interval for product characteristics and other purposes.')
 abstract class QuantitativeValue implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A property-value pair representing an additional characteristic of the entity, e.g. a product feature or another characteristic for which there is no matching property in schema.org.\n\nNote: Publishers should be aware that applications designed to use specific schema.org properties (e.g. https://schema.org/width, https://schema.org/color, https://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.
   ///
   @JsonKey(name: 'additionalProperty', includeIfNull: false)
@@ -17977,14 +12033,6 @@ abstract class QuantitativeValue implements StructuredValue, $Thing {
 /// A statistical distribution of values.
 @Schema(description: 'A statistical distribution of values.')
 abstract class QuantitativeValueDistribution implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @AnyOf([Duration, QuantitativeValue])
   @JsonKey(name: 'duration', includeIfNull: false)
@@ -18015,27 +12063,11 @@ abstract class QuantitativeValueDistribution implements StructuredValue, $Thing 
 /// Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are strings like '3 kg' or '4 milligrams'.
 @Schema(description: 'Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are strings like \'3 kg\' or \'4 milligrams\'.')
 abstract class Quantity implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.
 @Schema(description: 'A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.')
 abstract class Question implements Comment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The answer(s) that has been accepted as best, typically on a Question/Answer site. Sites vary in their selection mechanisms, e.g. drawing on community opinion and/or the view of the Question author.
   @AnyOf([Answer, ItemList])
   @JsonKey(name: 'acceptedAnswer', includeIfNull: false)
@@ -18064,27 +12096,11 @@ abstract class Question implements Comment, $Thing {
 /// Quiz: A test of knowledge, skills and abilities.
 @Schema(description: 'Quiz: A test of knowledge, skills and abilities.')
 abstract class Quiz implements LearningResource, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].
 @Schema(description: 'A quotation. Often but not necessarily from some written work, attributable to a real world author and - if associated with a fictional character - to any fictional Person. Use [[isBasedOn]] to link to source/origin. The [[recordedIn]] property can be used to reference a Quotation from an [[Event]].')
 abstract class Quotation implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The (e.g. fictional) character, Person or Organization to whom the quotation is attributed within the containing CreativeWork.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'spokenByCharacter', includeIfNull: false)
@@ -18095,118 +12111,46 @@ abstract class Quotation implements CreativeWork, $Thing {
 /// An agent quotes/estimates/appraises an object/product/service with a price at a location/store.
 @Schema(description: 'An agent quotes/estimates/appraises an object/product/service with a price at a location/store.')
 abstract class QuoteAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A place offering space for "Recreational Vehicles", Caravans, mobile homes and the like.
 @Schema(description: 'A place offering space for "Recreational Vehicles", Caravans, mobile homes and the like.')
 abstract class RVPark implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A process of care using radiation aimed at improving a health condition.
 @Schema(description: 'A process of care using radiation aimed at improving a health condition.')
 abstract class RadiationTherapy implements MedicalTherapy, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A delivery service through which radio content is provided via broadcast over the air or online.
 @Schema(description: 'A delivery service through which radio content is provided via broadcast over the air or online.')
 abstract class RadioBroadcastService implements BroadcastService, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.
 @Schema(description: 'A unique instance of a radio BroadcastService on a CableOrSatelliteService lineup.')
 abstract class RadioChannel implements BroadcastChannel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A short radio program or a segment/part of a radio program.
 @Schema(description: 'A short radio program or a segment/part of a radio program.')
 abstract class RadioClip implements Clip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A radio episode which can be part of a series or season.
 @Schema(description: 'A radio episode which can be part of a series or season.')
 abstract class RadioEpisode implements Episode, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Season dedicated to radio broadcast and associated online delivery.
 @Schema(description: 'Season dedicated to radio broadcast and associated online delivery.')
 abstract class RadioSeason implements CreativeWorkSeason, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// CreativeWorkSeries dedicated to radio broadcast and associated online delivery.
 @Schema(description: 'CreativeWorkSeries dedicated to radio broadcast and associated online delivery.')
 abstract class RadioSeries implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -18271,27 +12215,11 @@ abstract class RadioSeries implements CreativeWorkSeries, $Thing {
 /// A radio station.
 @Schema(description: 'A radio station.')
 abstract class RadioStation implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A rating is an evaluation on a numeric scale, such as 1 to 5 stars.
 @Schema(description: 'A rating is an evaluation on a numeric scale, such as 1 to 5 stars.')
 abstract class Rating implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'author', includeIfNull: false)
@@ -18326,40 +12254,16 @@ abstract class Rating implements Intangible, $Thing {
 /// The act of responding instinctively and emotionally to an object, expressing a sentiment.
 @Schema(description: 'The act of responding instinctively and emotionally to an object, expressing a sentiment.')
 abstract class ReactAction implements AssessAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of consuming written content.
 @Schema(description: 'The act of consuming written content.')
 abstract class ReadAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A real-estate agent.
 @Schema(description: 'A real-estate agent.')
 abstract class RealEstateAgent implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).
@@ -18367,14 +12271,6 @@ abstract class RealEstateAgent implements LocalBusiness, $Thing {
 ///
 @Schema(description: 'A [[RealEstateListing]] is a listing that describes one or more real-estate [[Offer]]s (whose [[businessFunction]] is typically to lease out, or to sell).   The [[RealEstateListing]] type itself represents the overall listing, as manifested in some [[WebPage]].   ')
 abstract class RealEstateListing implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Publication date of an online listing.
   @StringField(name: 'datePosted', format: 'date-time')
   String? get datePosted;
@@ -18389,14 +12285,6 @@ abstract class RealEstateListing implements WebPage, $Thing {
 /// The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\n\nRelated actions:\n\n* [[SendAction]]: The reciprocal of ReceiveAction.\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).
 @Schema(description: 'The act of physically/electronically taking delivery of an object that has been transferred from an origin to a destination. Reciprocal of SendAction.\\n\\nRelated actions:\\n\\n* [[SendAction]]: The reciprocal of ReceiveAction.\\n* [[TakeAction]]: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transferred (e.g. I can receive a package, but it does not mean the package is now mine).')
 abstract class ReceiveAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of instrument. The method of delivery.
   @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get deliveryMethod;
@@ -18411,14 +12299,6 @@ abstract class ReceiveAction implements TransferAction, $Thing {
 /// A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.
 @Schema(description: 'A recipe. For dietary restrictions covered by the recipe, a few common restrictions are enumerated via [[suitableForDiet]]. The [[keywords]] property can also be used to add more detail.')
 abstract class Recipe implements HowTo, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The time it takes to actually cook the dish, in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
   @JsonKey(name: 'cookTime', includeIfNull: false)
   Duration? get cookTime;
@@ -18468,14 +12348,6 @@ abstract class Recipe implements HowTo, $Thing {
 /// [[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.
 @Schema(description: '[[Recommendation]] is a type of [[Review]] that suggests or proposes something as the best option or best course of action. Recommendations may be for products or services, or other concrete things, as in the case of a ranked list or product guide. A [[Guide]] may list multiple recommendations for different categories. For example, in a [[Guide]] about which TVs to buy, the author may have several [[Recommendation]]s.')
 abstract class Recommendation implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
   @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
@@ -18486,79 +12358,31 @@ abstract class Recommendation implements Review, $Thing {
 /// A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement's manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.
 @Schema(description: 'A recommended dosing schedule for a drug or supplement as prescribed or recommended by an authority or by the drug/supplement\'s manufacturer. Capture the recommending authority in the recognizingAuthority property of MedicalEntity.')
 abstract class RecommendedDoseSchedule implements DoseSchedule, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A recycling center.
 @Schema(description: 'A recycling center.')
 abstract class RecyclingCenter implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates several kinds of product return refund types.
 @Schema(description: 'Enumerates several kinds of product return refund types.')
 abstract class RefundTypeEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of registering to be a user of a service, product or web page.\n\nRelated actions:\n\n* [[JoinAction]]: Unlike JoinAction, RegisterAction implies you are registering to be a user of a service, *not* a group/team of people.\n* [[FollowAction]]: Unlike FollowAction, RegisterAction doesn't imply that the agent is expecting to poll for updates from the object.\n* [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn't imply that the agent is expecting updates from the object.
 @Schema(description: 'The act of registering to be a user of a service, product or web page.\\n\\nRelated actions:\\n\\n* [[JoinAction]]: Unlike JoinAction, RegisterAction implies you are registering to be a user of a service, *not* a group/team of people.\\n* [[FollowAction]]: Unlike FollowAction, RegisterAction doesn\'t imply that the agent is expecting to poll for updates from the object.\\n* [[SubscribeAction]]: Unlike SubscribeAction, RegisterAction doesn\'t imply that the agent is expecting updates from the object.')
 abstract class RegisterAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of rejecting to/adopting an object.\n\nRelated actions:\n\n* [[AcceptAction]]: The antonym of RejectAction.
 @Schema(description: 'The act of rejecting to/adopting an object.\\n\\nRelated actions:\\n\\n* [[AcceptAction]]: The antonym of RejectAction.')
 abstract class RejectAction implements AllocateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.
 @Schema(description: 'The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment.')
 abstract class RentAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The owner of the real estate property.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'landlord', includeIfNull: false)
@@ -18573,14 +12397,6 @@ abstract class RentAction implements TradeAction, $Thing {
 /// A reservation for a rental car.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.
 @Schema(description: 'A reservation for a rental car.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations.')
 abstract class RentalCarReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Where a rental car can be dropped off.
   @JsonKey(name: 'dropoffLocation', includeIfNull: false)
   Place? get dropoffLocation;
@@ -18602,14 +12418,6 @@ abstract class RentalCarReservation implements Reservation, $Thing {
 /// A structured value representing repayment.
 @Schema(description: 'A structured value representing repayment.')
 abstract class RepaymentSpecification implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// a type of payment made in cash during the onset of the purchase of an expensive good/service. The payment typically represents only a percentage of the full purchase price.
   @AnyOf([MonetaryAmount, double])
   @JsonKey(name: 'downPayment', includeIfNull: false)
@@ -18636,14 +12444,6 @@ abstract class RepaymentSpecification implements StructuredValue, $Thing {
 /// The act of editing a recipient by replacing an old object with a new object.
 @Schema(description: 'The act of editing a recipient by replacing an old object with a new object.')
 abstract class ReplaceAction implements UpdateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. The object that is being replaced.
   @JsonKey(name: 'replacee', includeIfNull: false)
   Thing? get replacee;
@@ -18657,14 +12457,6 @@ abstract class ReplaceAction implements UpdateAction, $Thing {
 /// The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\n\nRelated actions:\n\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.
 @Schema(description: 'The act of responding to a question/message asked/sent by the object. Related to [[AskAction]].\\n\\nRelated actions:\\n\\n* [[AskAction]]: Appears generally as an origin of a ReplyAction.')
 abstract class ReplyAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of result. The Comment created or sent as a result of this action.
   @JsonKey(name: 'resultComment', includeIfNull: false)
   Comment? get resultComment;
@@ -18674,14 +12466,6 @@ abstract class ReplyAction implements CommunicateAction, $Thing {
 /// A Report generated by governmental or non-governmental organization.
 @Schema(description: 'A Report generated by governmental or non-governmental organization.')
 abstract class Report implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number or other unique designator assigned to a Report by the publishing organization.
   @StringField(name: 'reportNumber')
   String? get reportNumber;
@@ -18699,79 +12483,31 @@ abstract class Report implements Article, $Thing {
 ///
 @Schema(description: 'The [[ReportageNewsArticle]] type is a subtype of [[NewsArticle]] representing  news articles which are the result of journalistic news reporting conventions.  In practice many news publishers produce a wide variety of article types, many of which might be considered a [[NewsArticle]] but not a [[ReportageNewsArticle]]. For example, opinion pieces, reviews, analysis, sponsored or satirical articles, or articles that combine several of these elements.  The [[ReportageNewsArticle]] type is based on a stricter ideal for "news" as a work of journalism, with articles based on factual information either observed or verified by the author, or reported and verified from knowledgeable sources.  This often includes perspectives from multiple viewpoints on a particular issue (distinguishing news reports from public relations or propaganda).  News reports in the [[ReportageNewsArticle]] sense de-emphasize the opinion of the author, with commentary and value judgements typically expressed elsewhere.  A [[ReportageNewsArticle]] which goes deeper into analysis can also be marked with an additional type of [[AnalysisNewsArticle]]. ')
 abstract class ReportageNewsArticle implements NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A patient-reported or observed dosing schedule for a drug or supplement.
 @Schema(description: 'A patient-reported or observed dosing schedule for a drug or supplement.')
 abstract class ReportedDoseSchedule implements DoseSchedule, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Research Organization (e.g. scientific institute, research company).
 @Schema(description: 'A Research Organization (e.g. scientific institute, research company).')
 abstract class ResearchOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Research project.
 @Schema(description: 'A Research project.')
 abstract class ResearchProject implements Project, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Researchers.
 @Schema(description: 'Researchers.')
 abstract class Researcher implements Audience, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Describes a reservation for travel, dining or an event. Some reservations require tickets. \n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].
 @Schema(description: 'Describes a reservation for travel, dining or an event. Some reservations require tickets. \\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, restaurant reservations, flights, or rental cars, use [[Offer]].')
 abstract class Reservation implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// 'bookingAgent' is an out-dated term indicating a 'broker' that serves as a booking agent.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'bookingAgent', includeIfNull: false)
@@ -18834,14 +12570,6 @@ abstract class Reservation implements Intangible, $Thing {
 /// A group of multiple reservations with common values for all sub-reservations.
 @Schema(description: 'A group of multiple reservations with common values for all sub-reservations.')
 abstract class ReservationPackage implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The individual reservations included in the package. Typically a repeated property.
   @JsonKey(name: 'subReservation', includeIfNull: false)
   Reservation? get subReservation;
@@ -18851,66 +12579,26 @@ abstract class ReservationPackage implements Reservation, $Thing {
 /// Enumerated status values for Reservation.
 @Schema(description: 'Enumerated status values for Reservation.')
 abstract class ReservationStatusType implements StatusEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Reserving a concrete object.\n\nRelated actions:\n\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.
 @Schema(description: 'Reserving a concrete object.\\n\\nRelated actions:\\n\\n* [[ScheduleAction]]: Unlike ScheduleAction, ReserveAction reserves concrete objects (e.g. a table, a hotel) towards a time slot / spatial allocation.')
 abstract class ReserveAction implements PlanAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.
 @Schema(description: 'A reservoir of water, typically an artificially created lake, like the Lake Kariba reservoir.')
 abstract class Reservoir implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The action of resetting the password of a device or application.
 @Schema(description: 'The action of resetting the password of a device or application.')
 abstract class ResetPasswordAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The place where a person lives.
 @Schema(description: 'The place where a person lives.')
 abstract class Residence implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A floorplan of some [[Accommodation]].
   @JsonKey(name: 'accommodationFloorPlan', includeIfNull: false)
   FloorPlan? get accommodationFloorPlan;
@@ -18928,66 +12616,26 @@ abstract class Residence implements Place, $Thing {
 ///
 @Schema(description: 'A resort is a place used for relaxation or recreation, attracting visitors for holidays or vacations. Resorts are places, towns or sometimes commercial establishments operated by a single company (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Resort">http://en.wikipedia.org/wiki/Resort</a>). <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>.     ')
 abstract class Resort implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A restaurant.
 @Schema(description: 'A restaurant.')
 abstract class Restaurant implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons.
 @Schema(description: 'A diet restricted to certain foods or preparations for cultural, religious, health or lifestyle reasons. ')
 abstract class RestrictedDiet implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).
 @Schema(description: 'The act of resuming a device or application which was formerly paused (e.g. resume music playback or resume a timer).')
 abstract class ResumeAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).
 @Schema(description: 'The act of returning to the origin that which was previously received (concrete objects) or taken (ownership).')
 abstract class ReturnAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'recipient', includeIfNull: false)
@@ -18998,53 +12646,21 @@ abstract class ReturnAction implements TransferAction, $Thing {
 /// Enumerates several kinds of policies for product return fees.
 @Schema(description: 'Enumerates several kinds of policies for product return fees.')
 abstract class ReturnFeesEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates several types of return labels for product returns.
 @Schema(description: 'Enumerates several types of return labels for product returns.')
 abstract class ReturnLabelSourceEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates several types of product return methods.
 @Schema(description: 'Enumerates several types of product return methods.')
 abstract class ReturnMethodEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A review of an item - for example, of a restaurant, movie, or store.
 @Schema(description: 'A review of an item - for example, of a restaurant, movie, or store.')
 abstract class Review implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An associated [[ClaimReview]], related by specific common content, topic or claim. The expectation is that this property would be most typically used in cases where a single activity is conducting both claim reviews and media reviews, in which case [[relatedMediaReview]] would commonly be used on a [[ClaimReview]], while [[associatedClaimReview]] would be used on [[MediaReview]].
   @JsonKey(name: 'associatedClaimReview', includeIfNull: false)
   Review? get associatedClaimReview;
@@ -19098,14 +12714,6 @@ abstract class Review implements CreativeWork, $Thing {
 /// The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.
 @Schema(description: 'The act of producing a balanced opinion about the object for an audience. An agent reviews an object with participants resulting in a review.')
 abstract class ReviewAction implements AssessAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of result. The review that resulted in the performing of the action.
   @JsonKey(name: 'resultReview', includeIfNull: false)
   Review? get resultReview;
@@ -19115,40 +12723,16 @@ abstract class ReviewAction implements AssessAction, $Thing {
 /// A [[NewsArticle]] and [[CriticReview]] providing a professional critic's assessment of a service, product, performance, or artistic or literary work.
 @Schema(description: 'A [[NewsArticle]] and [[CriticReview]] providing a professional critic\'s assessment of a service, product, performance, or artistic or literary work.')
 abstract class ReviewNewsArticle implements CriticReview, NewsArticle, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A river (for example, the broad majestic Shannon).
 @Schema(description: 'A river (for example, the broad majestic Shannon).')
 abstract class RiverBodyOfWater implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Represents additional information about a relationship or property. For example a Role can be used to say that a 'member' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person's 'actor' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like 'member' or 'actor'.\n\nSee also [blog post](https://blog.schema.org/2014/06/16/introducing-role/).
 @Schema(description: 'Represents additional information about a relationship or property. For example a Role can be used to say that a \'member\' role linking some SportsTeam to a player occurred during a particular time period. Or that a Person\'s \'actor\' role in a Movie was for some particular characterName. Such properties can be attached to a Role entity, which is then associated with the main entities using ordinary properties like \'member\' or \'actor\'.\\n\\nSee also [blog post](https://blog.schema.org/2014/06/16/introducing-role/).')
 abstract class Role implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
   @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
@@ -19170,14 +12754,6 @@ abstract class Role implements Intangible, $Thing {
 /// A roofing contractor.
 @Schema(description: 'A roofing contractor.')
 abstract class RoofingContractor implements HomeAndConstructionBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>).
@@ -19186,27 +12762,11 @@ abstract class RoofingContractor implements HomeAndConstructionBusiness, $Thing 
 ///
 @Schema(description: 'A room is a distinguishable space within a structure, usually separated from other spaces by interior walls (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Room">http://en.wikipedia.org/wiki/Room</a>). <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Room implements Accommodation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of notifying an event organizer as to whether you expect to attend the event.
 @Schema(description: 'The act of notifying an event organizer as to whether you expect to attend the event.')
 abstract class RsvpAction implements InformAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// If responding yes, the number of guests who will attend in addition to the invitee.
   @DoubleField(name: 'additionalNumberOfGuests')
   double? get additionalNumberOfGuests;
@@ -19224,53 +12784,21 @@ abstract class RsvpAction implements InformAction, $Thing {
 /// RsvpResponseType is an enumeration type whose instances represent responding to an RSVP request.
 @Schema(description: 'RsvpResponseType is an enumeration type whose instances represent responding to an RSVP request.')
 abstract class RsvpResponseType implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Specialized software environment that provides the essential infrastructure, libraries, and services required to execute a program.
 @Schema(description: 'Specialized software environment that provides the essential infrastructure, libraries, and services required to execute a program.')
 abstract class RuntimePlatform implements SoftwareApplication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Sales event.
 @Schema(description: 'Event type: Sales event.')
 abstract class SaleEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.
 @Schema(description: 'An [[Article]] whose content is primarily [[satirical]](https://en.wikipedia.org/wiki/Satire) in nature, i.e. unlikely to be literally true. A satirical article is sometimes but not necessarily also a [[NewsArticle]]. [[ScholarlyArticle]]s are also sometimes satirized.')
 abstract class SatiricalArticle implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.
@@ -19278,14 +12806,6 @@ abstract class SatiricalArticle implements Article, $Thing {
 /// have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.
 @Schema(description: 'A schedule defines a repeating time period used to describe a regularly occurring [[Event]]. At a minimum a schedule will specify [[repeatFrequency]] which describes the interval between occurrences of the event. Additional information can be provided to specify the schedule more precisely.       This includes identifying the day(s) of the week or month when the recurring event will take place, in addition to its start and end time. Schedules may also       have start and end dates to indicate when they are active, e.g. to define a limited calendar of events.')
 abstract class Schedule implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.
   @StringField(name: 'byDay', enumValues: ['Friday', 'Monday', 'PublicHolidays', 'Saturday', 'Sunday', 'Thursday', 'Tuesday', 'Wednesday'])
   String? get byDay;
@@ -19349,66 +12869,26 @@ abstract class Schedule implements Intangible, $Thing {
 /// Scheduling future actions, events, or tasks.\n\nRelated actions:\n\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.
 @Schema(description: 'Scheduling future actions, events, or tasks.\\n\\nRelated actions:\\n\\n* [[ReserveAction]]: Unlike ReserveAction, ScheduleAction allocates future actions (e.g. an event, a task, etc) towards a time slot / spatial allocation.')
 abstract class ScheduleAction implements PlanAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A scholarly article.
 @Schema(description: 'A scholarly article.')
 abstract class ScholarlyArticle implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A school.
 @Schema(description: 'A school.')
 abstract class School implements EducationalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A School District is an administrative area for the administration of schools.
 @Schema(description: 'A School District is an administrative area for the administration of schools.')
 abstract class SchoolDistrict implements AdministrativeArea, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A screening of a movie or other video.
 @Schema(description: 'A screening of a movie or other video.')
 abstract class ScreeningEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Languages in which subtitles/captions are available, in [IETF BCP 47 standard format](http://tools.ietf.org/html/bcp47).
   @AnyOf([Language, String])
   @JsonKey(name: 'subtitleLanguage', includeIfNull: false)
@@ -19427,40 +12907,16 @@ abstract class ScreeningEvent implements Event, $Thing {
 /// A piece of sculpture.
 @Schema(description: 'A piece of sculpture.')
 abstract class Sculpture implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A sea (for example, the Caspian sea).
 @Schema(description: 'A sea (for example, the Caspian sea).')
 abstract class SeaBodyOfWater implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
 @Schema(description: 'The act of searching for an object.\\n\\nRelated actions:\\n\\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.')
 abstract class SearchAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of instrument. The query used on this action.
   @StringField(name: 'query')
   String? get query;
@@ -19470,53 +12926,21 @@ abstract class SearchAction implements Action, $Thing {
 /// A Search and Rescue organization of some kind.
 @Schema(description: 'A Search and Rescue organization of some kind.')
 abstract class SearchRescueOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Search results page.
 @Schema(description: 'Web page type: Search results page.')
 abstract class SearchResultsPage implements WebPage, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A media season, e.g. TV, radio, video game etc.
 @Schema(description: 'A media season, e.g. TV, radio, video game etc.')
 abstract class Season implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Used to describe a seat, such as a reserved seat in an event reservation.
 @Schema(description: 'Used to describe a seat, such as a reserved seat in an event reservation.')
 abstract class Seat implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The location of the reserved seat (e.g., 27).
   @StringField(name: 'seatNumber')
   String? get seatNumber;
@@ -19539,14 +12963,6 @@ abstract class Seat implements Intangible, $Thing {
 /// This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.
 @Schema(description: 'This is the [[Action]] of navigating to a specific [[startOffset]] timestamp within a [[VideoObject]], typically represented with a URL template structure.')
 abstract class SeekToAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The start time of the clip expressed as the number of seconds from the beginning of the work.
   @AnyOf([HyperTocEntry, double])
   @JsonKey(name: 'startOffset', includeIfNull: false)
@@ -19557,27 +12973,11 @@ abstract class SeekToAction implements Action, $Thing {
 /// A self-storage facility.
 @Schema(description: 'A self-storage facility.')
 abstract class SelfStorage implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.
 @Schema(description: 'The act of taking money from a buyer in exchange for goods or services rendered. An agent sells an object, product, or service to a buyer for a price. Reciprocal of BuyAction.')
 abstract class SellAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant/person/organization that bought the object.
   @AnyOf([Organization, Person])
   @JsonKey(name: 'buyer', includeIfNull: false)
@@ -19592,14 +12992,6 @@ abstract class SellAction implements TradeAction, $Thing {
 /// The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\n\n* [[ReceiveAction]]: The reciprocal of SendAction.\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I'm not necessarily giving it to you).
 @Schema(description: 'The act of physically/electronically dispatching an object for transfer from an origin to a destination. Related actions:\\n\\n* [[ReceiveAction]]: The reciprocal of SendAction.\\n* [[GiveAction]]: Unlike GiveAction, SendAction does not imply the transfer of ownership (e.g. I can send you my laptop, but I\'m not necessarily giving it to you).')
 abstract class SendAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of instrument. The method of delivery.
   @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get deliveryMethod;
@@ -19614,40 +13006,16 @@ abstract class SendAction implements TransferAction, $Thing {
 /// An art forms that use images deployed in a specific order for the purpose of graphic storytelling (i.e., narration of graphic stories) or conveying information. Examples of SequentialArt are Franco-Belgian Bande Dessinée, Comics in the USA and 漫画 (Manga) in Japan.
 @Schema(description: 'An art forms that use images deployed in a specific order for the purpose of graphic storytelling (i.e., narration of graphic stories) or conveying information. Examples of SequentialArt are Franco-Belgian Bande Dessinée, Comics in the USA and 漫画 (Manga) in Japan.')
 abstract class SequentialArt implements Book, VisualArtwork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].
 @Schema(description: 'A Series in schema.org is a group of related items, typically but not necessarily of the same kind. See also [[CreativeWorkSeries]], [[EventSeries]].')
 abstract class Series implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A service provided by an organization, e.g. delivery service, print services, etc.
 @Schema(description: 'A service provided by an organization, e.g. delivery service, print services, etc.')
 abstract class Service implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The overall rating, based on a collection of reviews or ratings, of the item.
   @JsonKey(name: 'aggregateRating', includeIfNull: false)
   AggregateRating? get aggregateRating;
@@ -19764,14 +13132,6 @@ abstract class Service implements Intangible, $Thing {
 /// A means for accessing a service, e.g. a government office location, web site, or phone number.
 @Schema(description: 'A means for accessing a service, e.g. a government office location, web site, or phone number.')
 abstract class ServiceChannel implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'availableLanguage', includeIfNull: false)
@@ -19810,14 +13170,6 @@ abstract class ServiceChannel implements Intangible, $Thing {
 /// ServicePeriod represents a duration with some constraints about cutoff time and business days. This is used e.g. in shipping for handling times or transit time.
 @Schema(description: 'ServicePeriod represents a duration with some constraints about cutoff time and business days. This is used e.g. in shipping for handling times or transit time.')
 abstract class ServicePeriod implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Days of the week when the merchant typically operates, indicated via opening hours markup.
   @AnyOf([String, OpeningHoursSpecification])
   @JsonKey(name: 'businessDays', includeIfNull: false)
@@ -19837,40 +13189,16 @@ abstract class ServicePeriod implements StructuredValue, $Thing {
 /// The act of distributing content to people for their amusement or edification.
 @Schema(description: 'The act of distributing content to people for their amusement or edification.')
 abstract class ShareAction implements CommunicateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Printed music, as opposed to performed or recorded music.
 @Schema(description: 'Printed music, as opposed to performed or recorded music.')
 abstract class SheetMusic implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// ShippingConditions represent a set of constraints and information about the conditions of shipping a product. Such conditions may apply to only a subset of the products being shipped, depending on aspects of the product like weight, size, price, destination, and others. All the specified conditions must be met for this ShippingConditions to apply.
 @Schema(description: 'ShippingConditions represent a set of constraints and information about the conditions of shipping a product. Such conditions may apply to only a subset of the products being shipped, depending on aspects of the product like weight, size, price, destination, and others. All the specified conditions must be met for this ShippingConditions to apply.')
 abstract class ShippingConditions implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The depth of the item.
   @AnyOf([Distance, QuantitativeValue])
   @JsonKey(name: 'depth', includeIfNull: false)
@@ -19935,14 +13263,6 @@ abstract class ShippingConditions implements StructuredValue, $Thing {
 /// ShippingDeliveryTime provides various pieces of information about delivery times for shipping.
 @Schema(description: 'ShippingDeliveryTime provides various pieces of information about delivery times for shipping.')
 abstract class ShippingDeliveryTime implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Days of the week when the merchant typically operates, indicated via opening hours markup.
   @AnyOf([String, OpeningHoursSpecification])
   @JsonKey(name: 'businessDays', includeIfNull: false)
@@ -19976,14 +13296,6 @@ abstract class ShippingDeliveryTime implements StructuredValue, $Thing {
 /// A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].
 @Schema(description: 'A ShippingRateSettings represents re-usable pieces of shipping information. It is designed for publication on an URL that may be referenced via the [[shippingSettingsLink]] property of an [[OfferShippingDetails]]. Several occurrences can be published, distinguished and matched (i.e. identified/referenced) by their different values for [[shippingLabel]].')
 abstract class ShippingRateSettings implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates when shipping to a particular [[shippingDestination]] is not available.
   @JsonKey(name: 'doesNotShip', includeIfNull: false)
   bool? get doesNotShip;
@@ -20028,14 +13340,6 @@ abstract class ShippingRateSettings implements StructuredValue, $Thing {
 /// ShippingService represents the criteria used to determine if and how an offer could be shipped to a customer.
 @Schema(description: 'ShippingService represents the criteria used to determine if and how an offer could be shipped to a customer.')
 abstract class ShippingService implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Type of fulfillment applicable to the [[ShippingService]].
   @StringField(name: 'fulfillmentType', enumValues: ['FulfillmentTypeCollectionPoint', 'FulfillmentTypeDelivery', 'FulfillmentTypePickupDropoff', 'FulfillmentTypePickupInStore', 'FulfillmentTypeScheduledDelivery'])
   String? get fulfillmentType;
@@ -20062,53 +13366,21 @@ abstract class ShippingService implements StructuredValue, $Thing {
 /// A shoe store.
 @Schema(description: 'A shoe store.')
 abstract class ShoeStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A shopping center or mall.
 @Schema(description: 'A shopping center or mall.')
 abstract class ShoppingCenter implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Short story or tale. A brief work of literature, usually written in narrative prose.
 @Schema(description: 'Short story or tale. A brief work of literature, usually written in narrative prose.')
 abstract class ShortStory implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Residence type: Single-family home.
 @Schema(description: 'Residence type: Single-family home.')
 abstract class SingleFamilyResidence implements House, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
   /// Typical unit code(s): ROM for room or C62 for no unit. The type of room can be put in the unitText property of the QuantitativeValue.
   @AnyOf([double, QuantitativeValue])
@@ -20125,40 +13397,16 @@ abstract class SingleFamilyResidence implements House, $Thing {
 /// A navigation element of the page.
 @Schema(description: 'A navigation element of the page.')
 abstract class SiteNavigationElement implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates common size groups for various product categories.
 @Schema(description: 'Enumerates common size groups for various product categories.')
 abstract class SizeGroupEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).
 @Schema(description: 'Size related properties of a product, typically a size code ([[name]]) and optionally a [[sizeSystem]], [[sizeGroup]], and product measurements ([[hasMeasurement]]). In addition, the intended audience can be defined through [[suggestedAge]], [[suggestedGender]], and suggested body measurements ([[suggestedMeasurement]]).')
 abstract class SizeSpecification implements QualitativeValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
   @JsonKey(name: 'hasMeasurement', includeIfNull: false)
   QuantitativeValue? get hasMeasurement;
@@ -20189,53 +13437,21 @@ abstract class SizeSpecification implements QualitativeValue, $Thing {
 /// Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.
 @Schema(description: 'Enumerates common size systems for different categories of products, for example "EN-13402" or "UK" for wearables or "Imperial" for screws.')
 abstract class SizeSystemEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A ski resort.
 @Schema(description: 'A ski resort.')
 abstract class SkiResort implements Resort, SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Social event.
 @Schema(description: 'Event type: Social event.')
 abstract class SocialEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A post to a social media platform, including blog posts, tweets, Facebook posts, etc.
 @Schema(description: 'A post to a social media platform, including blog posts, tweets, Facebook posts, etc.')
 abstract class SocialMediaPosting implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A CreativeWork such as an image, video, or audio clip shared as part of this posting.
   @JsonKey(name: 'sharedContent', includeIfNull: false)
   CreativeWork? get sharedContent;
@@ -20245,14 +13461,6 @@ abstract class SocialMediaPosting implements Article, $Thing {
 /// A software application.
 @Schema(description: 'A software application.')
 abstract class SoftwareApplication implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Type of software application, e.g. 'Game, Multimedia'.
   @StringField(name: 'applicationCategory', format: 'uri')
   String? get applicationCategory;
@@ -20362,14 +13570,6 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
 /// Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.
 @Schema(description: 'Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates.')
 abstract class SoftwareSourceCode implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
   @StringField(name: 'codeRepository', format: 'uri')
   String? get codeRepository;
@@ -20405,14 +13605,6 @@ abstract class SoftwareSourceCode implements CreativeWork, $Thing {
 /// The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.
 @Schema(description: 'The action that takes in a math expression and directs users to a page potentially capable of solving/simplifying that expression.')
 abstract class SolveMathAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// For questions that are part of learning resources (e.g. Quiz), eduQuestionType indicates the format of question being given. Example: "Multiple choice", "Open ended", "Flashcard".
   @StringField(name: 'eduQuestionType')
   String? get eduQuestionType;
@@ -20422,14 +13614,6 @@ abstract class SolveMathAction implements Action, $Thing {
 /// A placeholder for multiple similar products of the same kind.
 @Schema(description: 'A placeholder for multiple similar products of the same kind.')
 abstract class SomeProducts implements Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The current approximate inventory level for the item or items.
   @JsonKey(name: 'inventoryLevel', includeIfNull: false)
   QuantitativeValue? get inventoryLevel;
@@ -20439,14 +13623,6 @@ abstract class SomeProducts implements Product, $Thing {
 /// A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.
 @Schema(description: 'A SpeakableSpecification indicates (typically via [[xpath]] or [[cssSelector]]) sections of a document that are highlighted as particularly [[speakable]]. Instances of this type are expected to be used primarily as values of the [[speakable]] property.')
 abstract class SpeakableSpecification implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
   @StringField(name: 'cssSelector')
   String? get cssSelector;
@@ -20495,14 +13671,6 @@ abstract class SpeakableSpecification implements Intangible, $Thing {
 ///
 @Schema(description: 'A SpecialAnnouncement combines a simple date-stamped textual information update       with contextualized Web links and other structured data.  It represents an information update made by a       locally-oriented organization, for example schools, pharmacies, healthcare providers,  community groups, police,       local government.  For work in progress guidelines on Coronavirus-related markup see [this doc](https://docs.google.com/document/d/14ikaGCKxo50rRM7nvKSlbUpjyIk2WMQd3IkB1lItlrM/edit#).  The motivating scenario for SpecialAnnouncement is the [Coronavirus pandemic](https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic), and the initial vocabulary is oriented to this urgent situation. Schema.org expect to improve the markup iteratively as it is deployed and as feedback emerges from use. In addition to our usual [Github entry](https://github.com/schemaorg/schemaorg/issues/2490), feedback comments can also be provided in [this document](https://docs.google.com/document/d/1fpdFFxk8s87CWwACs53SGkYv3aafSxz_DTtOQxMrBJQ/edit#).   While this schema is designed to communicate urgent crisis-related information, it is not the same as an emergency warning technology like [CAP](https://en.wikipedia.org/wiki/Common_Alerting_Protocol), although there may be overlaps. The intent is to cover the kinds of everyday practical information being posted to existing websites during an emergency situation.  Several kinds of information can be provided:  We encourage the provision of "name", "text", "datePosted", "expires" (if appropriate), "category" and "url" as a simple baseline. It is important to provide a value for "category" where possible, most ideally as a well known URL from Wikipedia or Wikidata. In the case of the 2019-2020 Coronavirus pandemic, this should be "https://en.wikipedia.org/w/index.php?title=2019-20\\_coronavirus\\_pandemic" or "https://www.wikidata.org/wiki/Q81068910".  For many of the possible properties, values can either be simple links or an inline description, depending on whether a summary is available. For a link, provide just the URL of the appropriate page as the property\'s value. For an inline description, use a [[WebContent]] type, and provide the url as a property of that, alongside at least a simple "[[text]]" summary of the page. It is unlikely that a single SpecialAnnouncement will need all of the possible properties simultaneously.  We expect that in many cases the page referenced might contain more specialized structured data, e.g. contact info, [[openingHours]], [[Event]], [[FAQPage]] etc. By linking to those pages from a [[SpecialAnnouncement]] you can help make it clearer that the events are related to the situation (e.g. Coronavirus) indicated by the [[category]] property of the [[SpecialAnnouncement]].  Many [[SpecialAnnouncement]]s will relate to particular regions and to identifiable local organizations. Use [[spatialCoverage]] for the region, and [[announcementLocation]] to indicate specific [[LocalBusiness]]es and [[CivicStructure]]s. If the announcement affects both a particular region and a specific location (for example, a library closure that serves an entire region), use both [[spatialCoverage]] and [[announcementLocation]].  The [[about]] property can be used to indicate entities that are the focus of the announcement. We now recommend using [[about]] only for representing non-location entities (e.g. a [[Course]] or a [[RadioStation]]). For places, use [[announcementLocation]] and [[spatialCoverage]]. Consumers of this markup should be aware that the initial design encouraged the use of [[about]] for locations too.  The basic content of [[SpecialAnnouncement]] is similar to that of an [RSS](https://en.wikipedia.org/wiki/RSS) or [Atom](https://en.wikipedia.org/wiki/Atom_(Web_standard)) feed. For publishers without such feeds, basic feed-like information can be shared by posting [[SpecialAnnouncement]] updates in a page, e.g. using JSON-LD. For sites with Atom/RSS functionality, you can point to a feed with the [[webFeed]] property. This can be a simple URL, or an inline [[DataFeed]] object, with [[encodingFormat]] providing media type information, e.g. "application/rss+xml" or "application/atom+xml". ')
 abstract class SpecialAnnouncement implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates a specific [[CivicStructure]] or [[LocalBusiness]] associated with the SpecialAnnouncement. For example, a specific testing facility or business with special opening hours. For a larger geographic region like a quarantine of an entire region, use [[spatialCoverage]].
   @AnyOf([CivicStructure, LocalBusiness])
   @JsonKey(name: 'announcementLocation', includeIfNull: false)
@@ -20573,66 +13741,26 @@ abstract class SpecialAnnouncement implements CreativeWork, $Thing {
 /// Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.
 @Schema(description: 'Any branch of a field in which people typically develop specific expertise, usually after significant study, time, and effort.')
 abstract class Specialty implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A sporting goods store.
 @Schema(description: 'A sporting goods store.')
 abstract class SportingGoodsStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A sports location, such as a playing field.
 @Schema(description: 'A sports location, such as a playing field.')
 abstract class SportsActivityLocation implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A sports club.
 @Schema(description: 'A sports club.')
 abstract class SportsClub implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Sports event.
 @Schema(description: 'Event type: Sports event.')
 abstract class SportsEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The away team in a sports event.
   @AnyOf([Person, SportsTeam])
   @JsonKey(name: 'awayTeam', includeIfNull: false)
@@ -20661,14 +13789,6 @@ abstract class SportsEvent implements Event, $Thing {
 /// Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.
 @Schema(description: 'Represents the collection of all sports organizations, including sports teams, governing bodies, and sports associations.')
 abstract class SportsOrganization implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A type of sport (e.g. Baseball).
   @StringField(name: 'sport', format: 'uri')
   String? get sport;
@@ -20678,14 +13798,6 @@ abstract class SportsOrganization implements Organization, $Thing {
 /// Organization: Sports team.
 @Schema(description: 'Organization: Sports team.')
 abstract class SportsTeam implements SportsOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A person that acts as performing member of a sports team; a player as opposed to a coach.
   @JsonKey(name: 'athlete', includeIfNull: false)
   Person? get athlete;
@@ -20703,53 +13815,21 @@ abstract class SportsTeam implements SportsOrganization, $Thing {
 /// A spreadsheet file.
 @Schema(description: 'A spreadsheet file.')
 abstract class SpreadsheetDigitalDocument implements DigitalDocument, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A stadium.
 @Schema(description: 'A stadium.')
 abstract class StadiumOrArena implements CivicStructure, SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A state or province of a country.
 @Schema(description: 'A state or province of a country.')
 abstract class State implements AdministrativeArea, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.
 @Schema(description: 'A statement about something, for example a fun or interesting fact. If known, the main entity this statement is about can be indicated using mainEntity. For more formal claims (e.g. in Fact Checking), consider using [[Claim]] instead. Use the [[text]] property to capture the text of the statement.')
 abstract class Statement implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property [[populationType]] is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a [[StatisticalPopulation]] representing all [[Person]]s with a [[homeLocation]] of East Podunk California would be described by applying the appropriate [[homeLocation]] and [[populationType]] properties to a [[StatisticalPopulation]] item that stands for that set of people.
@@ -20757,14 +13837,6 @@ abstract class Statement implements CreativeWork, $Thing {
 /// population, and does not imply that the population consists of people. For example, a [[populationType]] of [[Event]] or [[NewsArticle]] could be used. See also [[Observation]], where a [[populationType]] such as [[Person]] or [[Event]] can be indicated directly. In most cases it may be better to use [[StatisticalVariable]] instead of [[StatisticalPopulation]].
 @Schema(description: 'A StatisticalPopulation is a set of instances of a certain given type that satisfy some set of constraints. The property [[populationType]] is used to specify the type. Any property that can be used on instances of that type can appear on the statistical population. For example, a [[StatisticalPopulation]] representing all [[Person]]s with a [[homeLocation]] of East Podunk California would be described by applying the appropriate [[homeLocation]] and [[populationType]] properties to a [[StatisticalPopulation]] item that stands for that set of people. The properties [[numConstraints]] and [[constraintProperty]] are used to specify which of the populations properties are used to specify the population. Note that the sense of "population" used here is the general sense of a statistical population, and does not imply that the population consists of people. For example, a [[populationType]] of [[Event]] or [[NewsArticle]] could be used. See also [[Observation]], where a [[populationType]] such as [[Person]] or [[Event]] can be indicated directly. In most cases it may be better to use [[StatisticalVariable]] instead of [[StatisticalPopulation]].')
 abstract class StatisticalPopulation implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Indicates the populationType common to all members of a [[StatisticalPopulation]] or all cases within the scope of a [[StatisticalVariable]].
   @JsonKey(name: 'populationType', includeIfNull: false)
   SchemaClass? get populationType;
@@ -20774,14 +13846,6 @@ abstract class StatisticalPopulation implements Intangible, $Thing {
 /// [[StatisticalVariable]] represents any type of statistical metric that can be measured at a place and time. The usage pattern for [[StatisticalVariable]] is typically expressed using [[Observation]] with an explicit [[populationType]], which is a type, typically drawn from Schema.org. Each [[StatisticalVariable]] is marked as a [[ConstraintNode]], meaning that some properties (those listed using [[constraintProperty]]) serve in this setting solely to define the statistical variable rather than literally describe a specific person, place or thing. For example, a [[StatisticalVariable]] Median_Height_Person_Female representing the median height of women, could be written as follows: the population type is [[Person]]; the measuredProperty [[height]]; the [[statType]] [[median]]; the [[gender]] [[Female]]. It is important to note that there are many kinds of scientific quantitative observation which are not fully, perfectly or unambiguously described following this pattern, or with solely Schema.org terminology. The approach taken here is designed to allow partial, incremental or minimal description of [[StatisticalVariable]]s, and the use of detailed sets of entity and property IDs from external repositories. The [[measurementMethod]], [[unitCode]] and [[unitText]] properties can also be used to clarify the specific nature and notation of an observed measurement.
 @Schema(description: '[[StatisticalVariable]] represents any type of statistical metric that can be measured at a place and time. The usage pattern for [[StatisticalVariable]] is typically expressed using [[Observation]] with an explicit [[populationType]], which is a type, typically drawn from Schema.org. Each [[StatisticalVariable]] is marked as a [[ConstraintNode]], meaning that some properties (those listed using [[constraintProperty]]) serve in this setting solely to define the statistical variable rather than literally describe a specific person, place or thing. For example, a [[StatisticalVariable]] Median_Height_Person_Female representing the median height of women, could be written as follows: the population type is [[Person]]; the measuredProperty [[height]]; the [[statType]] [[median]]; the [[gender]] [[Female]]. It is important to note that there are many kinds of scientific quantitative observation which are not fully, perfectly or unambiguously described following this pattern, or with solely Schema.org terminology. The approach taken here is designed to allow partial, incremental or minimal description of [[StatisticalVariable]]s, and the use of detailed sets of entity and property IDs from external repositories. The [[measurementMethod]], [[unitCode]] and [[unitText]] properties can also be used to clarify the specific nature and notation of an observed measurement. ')
 abstract class StatisticalVariable implements ConstraintNode, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The measuredProperty of an [[Observation]], typically via its [[StatisticalVariable]]. There are various kinds of applicable [[Property]]: a schema.org property, a property from other RDF-compatible systems, e.g. W3C RDF Data Cube, Data Commons, Wikidata, or schema.org extensions such as [GS1's](https://www.gs1.org/voc/?show=properties).
   @JsonKey(name: 'measuredProperty', includeIfNull: false)
   Property? get measuredProperty;
@@ -20824,79 +13888,31 @@ abstract class StatisticalVariable implements ConstraintNode, $Thing {
 /// Lists or enumerations dealing with status types.
 @Schema(description: 'Lists or enumerations dealing with status types.')
 abstract class StatusEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A value indicating a steering position.
 @Schema(description: 'A value indicating a steering position.')
 abstract class SteeringPositionValue implements QualitativeValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A retail good store.
 @Schema(description: 'A retail good store.')
 abstract class Store implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.
 @Schema(description: 'Structured values are used when the value of a property has a more complex structure than simply being a textual value or a reference to another thing.')
 abstract class StructuredValue implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.
 @Schema(description: 'The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.\\n* [[RegisterAction]]: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.\\n* [[JoinAction]]: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.')
 abstract class SubscribeAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.
 @Schema(description: 'Any matter of defined composition that has discrete existence, whose origin may be biological, mineral or chemical.')
 abstract class Substance implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An active ingredient, typically chemical compounds and/or biologic substances.
   @StringField(name: 'activeIngredient')
   String? get activeIngredient;
@@ -20910,14 +13926,6 @@ abstract class Substance implements MedicalEntity, $Thing {
 /// A subway station.
 @Schema(description: 'A subway station.')
 abstract class SubwayStation implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>).
@@ -20926,14 +13934,6 @@ abstract class SubwayStation implements CivicStructure, $Thing {
 ///
 @Schema(description: 'A suite in a hotel or other public accommodation, denotes a class of luxury accommodations, the key feature of which is multiple rooms (source: Wikipedia, the free encyclopedia, see <a href="http://en.wikipedia.org/wiki/Suite_(hotel)">http://en.wikipedia.org/wiki/Suite_(hotel)</a>). <br /><br /> See also the <a href="/docs/hotels.html">dedicated document on the use of schema.org for marking up hotels and other forms of accommodations</a>. ')
 abstract class Suite implements Accommodation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use bed directly with a text.
   /// If you want to indicate the quantity of a certain kind of bed, use an instance of BedDetails. For more detailed information, use the amenityFeature property.
   @AnyOf([BedDetails, BedType, String])
@@ -20956,14 +13956,6 @@ abstract class Suite implements Accommodation, $Thing {
 /// Anatomical features that can be observed by sight (without dissection), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa (such as the epicondyles of the humerus) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation (dislocation) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint (the related anatomical structure).
 @Schema(description: 'Anatomical features that can be observed by sight (without dissection), including the form and proportions of the human body as well as surface landmarks that correspond to deeper subcutaneous structures. Superficial anatomy plays an important role in sports medicine, phlebotomy, and other medical specialties as underlying anatomical structures can be identified through surface palpation. For example, during back surgery, superficial anatomy can be used to palpate and count vertebrae to find the site of incision. Or in phlebotomy, superficial anatomy can be used to locate an underlying vein; for example, the median cubital vein can be located by palpating the borders of the cubital fossa (such as the epicondyles of the humerus) and then looking for the superficial signs of the vein, such as size, prominence, ability to refill after depression, and feel of surrounding tissue support. As another example, in a subluxation (dislocation) of the glenohumeral joint, the bony structure becomes pronounced with the deltoid muscle failing to cover the glenohumeral joint allowing the edges of the scapula to be superficially visible. Here, the superficial anatomy is the visible edges of the scapula, implying the underlying dislocation of the joint (the related anatomical structure).')
 abstract class SuperficialAnatomy implements MedicalEntity, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// If applicable, a description of the pathophysiology associated with the anatomical system, including potential abnormal changes in the mechanical, physical, and biochemical functions of the system.
   @StringField(name: 'associatedPathophysiology')
   String? get associatedPathophysiology;
@@ -20990,66 +13982,26 @@ abstract class SuperficialAnatomy implements MedicalEntity, $Thing {
 /// A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.
 @Schema(description: 'A medical procedure involving an incision with instruments; performed for diagnose, or therapeutic purposes.')
 abstract class SurgicalProcedure implements MedicalProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).
 @Schema(description: 'The act of momentarily pausing a device or application (e.g. pause music playback or pause a timer).')
 abstract class SuspendAction implements ControlAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].
 @Schema(description: 'A syllabus that describes the material covered in a course, often with several such sections per [[Course]] so that a distinct [[timeRequired]] can be provided for that section of the [[Course]].')
 abstract class Syllabus implements LearningResource, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A synagogue.
 @Schema(description: 'A synagogue.')
 abstract class Synagogue implements PlaceOfWorship, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A short TV program or a segment/part of a TV program.
 @Schema(description: 'A short TV program or a segment/part of a TV program.')
 abstract class TVClip implements Clip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The TV series to which this episode or season belongs.
   @JsonKey(name: 'partOfTVSeries', includeIfNull: false)
   TVSeries? get partOfTVSeries;
@@ -21059,14 +14011,6 @@ abstract class TVClip implements Clip, $Thing {
 /// A TV episode which can be part of a series or season.
 @Schema(description: 'A TV episode which can be part of a series or season.')
 abstract class TVEpisode implements Episode, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The country of origin of something, including products as well as creative  works such as movie and TV content.
   ///
   /// In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
@@ -21098,14 +14042,6 @@ abstract class TVEpisode implements Episode, $Thing {
 /// Season dedicated to TV broadcast and associated online delivery.
 @Schema(description: 'Season dedicated to TV broadcast and associated online delivery.')
 abstract class TVSeason implements CreativeWork, CreativeWorkSeason, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The country of origin of something, including products as well as creative  works such as movie and TV content.
   ///
   /// In the case of TV and movie, this would be the country of the principle offices of the production company or individual responsible for the movie. For other kinds of [[CreativeWork]] it is difficult to provide fully general guidance, and properties such as [[contentLocation]] and [[locationCreated]] may be more applicable.
@@ -21132,14 +14068,6 @@ abstract class TVSeason implements CreativeWork, CreativeWorkSeason, $Thing {
 /// CreativeWorkSeries dedicated to TV broadcast and associated online delivery.
 @Schema(description: 'CreativeWorkSeries dedicated to TV broadcast and associated online delivery.')
 abstract class TVSeries implements CreativeWork, CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -21221,66 +14149,26 @@ abstract class TVSeries implements CreativeWork, CreativeWorkSeries, $Thing {
 /// A table on a Web page.
 @Schema(description: 'A table on a Web page.')
 abstract class Table implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\n\nRelated actions:\n\n* [[GiveAction]]: The reciprocal of TakeAction.\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.
 @Schema(description: 'The act of gaining ownership of an object from an origin. Reciprocal of GiveAction.\\n\\nRelated actions:\\n\\n* [[GiveAction]]: The reciprocal of TakeAction.\\n* [[ReceiveAction]]: Unlike ReceiveAction, TakeAction implies that ownership has been transferred.')
 abstract class TakeAction implements TransferAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A tattoo parlor.
 @Schema(description: 'A tattoo parlor.')
 abstract class TattooParlor implements HealthAndBeautyBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A taxi.
 @Schema(description: 'A taxi.')
 abstract class Taxi implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A reservation for a taxi.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for a taxi.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class TaxiReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Number of people the reservation should accommodate.
   @AnyOf([int, QuantitativeValue])
   @JsonKey(name: 'partySize', includeIfNull: false)
@@ -21299,40 +14187,16 @@ abstract class TaxiReservation implements Reservation, $Thing {
 /// A service for a vehicle for hire with a driver for local travel. Fares are usually calculated based on distance traveled.
 @Schema(description: 'A service for a vehicle for hire with a driver for local travel. Fares are usually calculated based on distance traveled.')
 abstract class TaxiService implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A taxi stand.
 @Schema(description: 'A taxi stand.')
 abstract class TaxiStand implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A set of organisms asserted to represent a natural cohesive biological unit.
 @Schema(description: 'A set of organisms asserted to represent a natural cohesive biological unit.')
 abstract class Taxon implements Thing, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Closest child taxa of the taxon in question.
   @AnyOf([Taxon, String])
   @JsonKey(name: 'childTaxon', includeIfNull: false)
@@ -21357,14 +14221,6 @@ abstract class Taxon implements Thing, $Thing {
 /// A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.
 @Schema(description: 'A technical article - Example: How-to (task) topics, step-by-step, procedural troubleshooting, specifications, etc.')
 abstract class TechArticle implements Article, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Prerequisites needed to fulfill steps in article.
   @StringField(name: 'dependencies')
   String? get dependencies;
@@ -21378,118 +14234,46 @@ abstract class TechArticle implements Article, $Thing {
 /// A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.
 @Schema(description: 'A unique instance of a television BroadcastService on a CableOrSatelliteService lineup.')
 abstract class TelevisionChannel implements BroadcastChannel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A television station.
 @Schema(description: 'A television station.')
 abstract class TelevisionStation implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A tennis complex.
 @Schema(description: 'A tennis complex.')
 abstract class TennisComplex implements SportsActivityLocation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Data type: Text.
 @Schema(description: 'Data type: Text.')
 abstract class Text implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A file composed primarily of text.
 @Schema(description: 'A file composed primarily of text.')
 abstract class TextDigitalDocument implements DigitalDocument, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A text file. The text can be unformatted or contain markup, html, etc.
 @Schema(description: 'A text file. The text can be unformatted or contain markup, html, etc.')
 abstract class TextObject implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Theater performance.
 @Schema(description: 'Event type: Theater performance.')
 abstract class TheaterEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.
 @Schema(description: 'A theater group or company, for example, the Royal Shakespeare Company or Druid Theatre.')
 abstract class TheaterGroup implements PerformingGroup, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.
 @Schema(description: 'A medical procedure intended primarily for therapeutic purposes, aimed at improving a health condition.')
 abstract class TherapeuticProcedure implements MedicalProcedure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A possible complication and/or side effect of this therapy. If it is known that an adverse outcome is serious (resulting in death, disability, or permanent damage; requiring hospitalization; or otherwise life-threatening or requiring immediate medical attention), tag it as a seriousAdverseOutcome instead.
   @JsonKey(name: 'adverseOutcome', includeIfNull: false)
   MedicalEntity? get adverseOutcome;
@@ -21507,14 +14291,6 @@ abstract class TherapeuticProcedure implements MedicalProcedure, $Thing {
 /// A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.
 @Schema(description: 'A thesis or dissertation document submitted in support of candidature for an academic degree or professional qualification.')
 abstract class Thesis implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Qualification, candidature, degree, application that Thesis supports.
   @StringField(name: 'inSupportOf')
   String? get inSupportOf;
@@ -21524,14 +14300,6 @@ abstract class Thesis implements CreativeWork, $Thing {
 /// The most generic type of item.
 @Schema(description: 'The most generic type of item.')
 abstract class Thing implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
   /// use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
   @StringField(name: 'additionalType', format: 'uri')
@@ -21597,14 +14365,6 @@ abstract class Thing implements $Thing {
 /// Used to describe a ticket to an event, a flight, a bus ride, etc.
 @Schema(description: 'Used to describe a ticket to an event, a flight, a bus ride, etc.')
 abstract class Ticket implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The date the ticket was issued.
   @StringField(name: 'dateIssued', format: 'date-time')
   String? get dateIssued;
@@ -21644,53 +14404,21 @@ abstract class Ticket implements Intangible, $Thing {
 /// The act of reaching a draw in a competitive activity.
 @Schema(description: 'The act of reaching a draw in a competitive activity.')
 abstract class TieAction implements AchieveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An enumeration of possible benefits as part of a loyalty (members) program.
 @Schema(description: 'An enumeration of possible benefits as part of a loyalty (members) program.')
 abstract class TierBenefitEnumeration implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).
 @Schema(description: 'A point in time recurring on multiple days in the form hh:mm:ss[Z|(+|-)hh:mm] (see [XML schema for details](http://www.w3.org/TR/xmlschema-2/#time)).')
 abstract class Time implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of giving money voluntarily to a beneficiary in recognition of services rendered.
 @Schema(description: 'The act of giving money voluntarily to a beneficiary in recognition of services rendered.')
 abstract class TipAction implements TradeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
   @JsonKey(name: 'recipient', includeIfNull: false)
@@ -21701,27 +14429,11 @@ abstract class TipAction implements TradeAction, $Thing {
 /// A tire shop.
 @Schema(description: 'A tire shop.')
 abstract class TireShop implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)
 @Schema(description: 'A tourist attraction.  In principle any Thing can be a [[TouristAttraction]], from a [[Mountain]] and [[LandmarksOrHistoricalBuildings]] to a [[LocalBusiness]].  This Type can be used on its own to describe a general [[TouristAttraction]], or be used as an [[additionalType]] to add tourist attraction properties to any other type.  (See examples below)')
 abstract class TouristAttraction implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A language someone may use with or at the item, service or place. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[inLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'availableLanguage', includeIfNull: false)
@@ -21738,14 +14450,6 @@ abstract class TouristAttraction implements Place, $Thing {
 /// (See examples below.)
 @Schema(description: 'A tourist destination. In principle any [[Place]] can be a [[TouristDestination]] from a [[City]], Region or [[Country]] to an [[AmusementPark]] or [[Hotel]]. This Type can be used on its own to describe a general [[TouristDestination]], or be used as an [[additionalType]] to add tourist relevant properties to any other [[Place]].  A [[TouristDestination]] is defined as a [[Place]] that contains, or is colocated with, one or more [[TouristAttraction]]s, often linked by a similar theme or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines Destination (main destination of a tourism trip) as the place visited that is central to the decision to take the trip.   (See examples below.)')
 abstract class TouristDestination implements Place, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Attraction located at destination.
   @JsonKey(name: 'includesAttraction', includeIfNull: false)
   TouristAttraction? get includesAttraction;
@@ -21760,28 +14464,12 @@ abstract class TouristDestination implements Place, $Thing {
 /// A tourist information center.
 @Schema(description: 'A tourist information center.')
 abstract class TouristInformationCenter implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A tourist trip. A created itinerary of visits to one or more places of interest ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme, geographic area, or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by visitors.
 /// (See examples below.)
 @Schema(description: 'A tourist trip. A created itinerary of visits to one or more places of interest ([[TouristAttraction]]/[[TouristDestination]]) often linked by a similar theme, geographic area, or interest to a particular [[touristType]]. The [UNWTO](http://www2.unwto.org/) defines tourism trip as the Trip taken by visitors.   (See examples below.)')
 abstract class TouristTrip implements Trip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Attraction suitable for type(s) of tourist. E.g. children, visitors from a particular country, etc.
   @AnyOf([Audience, String])
   @JsonKey(name: 'touristType', includeIfNull: false)
@@ -21792,27 +14480,11 @@ abstract class TouristTrip implements Trip, $Thing {
 /// A toy store.
 @Schema(description: 'A toy store.')
 abstract class ToyStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An agent tracks an object for updates.\n\nRelated actions:\n\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.
 @Schema(description: 'An agent tracks an object for updates.\\n\\nRelated actions:\\n\\n* [[FollowAction]]: Unlike FollowAction, TrackAction refers to the interest on the location of innanimates objects.\\n* [[SubscribeAction]]: Unlike SubscribeAction, TrackAction refers to  the interest on the location of innanimate objects.')
 abstract class TrackAction implements FindAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of instrument. The method of delivery.
   @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
   String? get deliveryMethod;
@@ -21822,14 +14494,6 @@ abstract class TrackAction implements FindAction, $Thing {
 /// The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.
 @Schema(description: 'The act of participating in an exchange of goods and services for monetary compensation. An agent trades an object, product or service with a participant in exchange for a one time or periodic payment.')
 abstract class TradeAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.\n\nUsage guidelines:\n\n* Use the [[priceCurrency]] property (with standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR") instead of including [ambiguous symbols](http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign) such as '$' in the value.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.\n* Note that both [RDFa](http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute) and Microdata syntax allow the use of a "content=" attribute for publishing simple machine-readable values alongside more human-friendly formatting.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.
   ///
   @AnyOf([double, String])
@@ -21849,40 +14513,16 @@ abstract class TradeAction implements Action, $Thing {
 /// A reservation for train travel.\n\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].
 @Schema(description: 'A reservation for train travel.\\n\\nNote: This type is for information about actual reservations, e.g. in confirmation emails or HTML pages with individual confirmations of reservations. For offers of tickets, use [[Offer]].')
 abstract class TrainReservation implements Reservation, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A train station.
 @Schema(description: 'A train station.')
 abstract class TrainStation implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A trip on a commercial train line.
 @Schema(description: 'A trip on a commercial train line.')
 abstract class TrainTrip implements Trip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The platform where the train arrives.
   @StringField(name: 'arrivalPlatform')
   String? get arrivalPlatform;
@@ -21912,14 +14552,6 @@ abstract class TrainTrip implements Trip, $Thing {
 /// The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.
 @Schema(description: 'The act of transferring/moving (abstract or concrete) animate or inanimate objects from one place to another.')
 abstract class TransferAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of location. The original location of the object or the agent before the action.
   @JsonKey(name: 'fromLocation', includeIfNull: false)
   Place? get fromLocation;
@@ -21933,14 +14565,6 @@ abstract class TransferAction implements Action, $Thing {
 /// The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.
 @Schema(description: 'The act of traveling from a fromLocation to a destination by a specified mode of transport, optionally with participants.')
 abstract class TravelAction implements MoveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The distance travelled, e.g. exercising or travelling.
   @JsonKey(name: 'distance', includeIfNull: false)
   Distance? get distance;
@@ -21950,40 +14574,16 @@ abstract class TravelAction implements MoveAction, $Thing {
 /// A travel agency.
 @Schema(description: 'A travel agency.')
 abstract class TravelAgency implements LocalBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An indication for treating an underlying condition, symptom, etc.
 @Schema(description: 'An indication for treating an underlying condition, symptom, etc.')
 abstract class TreatmentIndication implements MedicalIndication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A trip or journey. An itinerary of visits to one or more places.
 @Schema(description: 'A trip or journey. An itinerary of visits to one or more places.')
 abstract class Trip implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The expected arrival time.
   @StringField(name: 'arrivalTime', format: 'date-time')
   String? get arrivalTime;
@@ -22025,14 +14625,6 @@ abstract class Trip implements Intangible, $Thing {
 /// A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.
 @Schema(description: 'A structured value indicating the quantity, unit of measurement, and business function of goods included in a bundle offer.')
 abstract class TypeAndQuantityNode implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The quantity of the goods included in the offer.
   @DoubleField(name: 'amountOfThisGood')
   double? get amountOfThisGood;
@@ -22060,66 +14652,26 @@ abstract class TypeAndQuantityNode implements StructuredValue, $Thing {
 /// UKNonprofitType: Non-profit organization type originating from the United Kingdom.
 @Schema(description: 'UKNonprofitType: Non-profit organization type originating from the United Kingdom.')
 abstract class UKNonprofitType implements NonprofitType, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Data type: URL.
 @Schema(description: 'Data type: URL.')
 abstract class URL implements Text, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// USNonprofitType: Non-profit organization type originating from the United States.
 @Schema(description: 'USNonprofitType: Non-profit organization type originating from the United States.')
 abstract class USNonprofitType implements NonprofitType, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of un-registering from a service.\n\nRelated actions:\n\n* [[RegisterAction]]: antonym of UnRegisterAction.\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.
 @Schema(description: 'The act of un-registering from a service.\\n\\nRelated actions:\\n\\n* [[RegisterAction]]: antonym of UnRegisterAction.\\n* [[LeaveAction]]: Unlike LeaveAction, UnRegisterAction implies that you are unregistering from a service you were previously registered, rather than leaving a team/group of people.')
 abstract class UnRegisterAction implements InteractAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The price asked for a given offer by the respective organization or person.
 @Schema(description: 'The price asked for a given offer by the respective organization or person.')
 abstract class UnitPriceSpecification implements PriceSpecification, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifies for how long this price (or price component) will be billed. Can be used, for example, to model the contractual duration of a subscription or payment plan. Type can be either a Duration or a Number (in which case the unit of measurement, for example month, is specified by the unitCode property).
   @AnyOf([Duration, double, QuantitativeValue])
   @JsonKey(name: 'billingDuration', includeIfNull: false)
@@ -22159,14 +14711,6 @@ abstract class UnitPriceSpecification implements PriceSpecification, $Thing {
 /// The act of managing by changing/editing the state of the object.
 @Schema(description: 'The act of managing by changing/editing the state of the object.')
 abstract class UpdateAction implements Action, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. The collection target of the action.
   @JsonKey(name: 'collection', includeIfNull: false)
   Thing? get collection;
@@ -22180,53 +14724,21 @@ abstract class UpdateAction implements Action, $Thing {
 /// The act of applying an object to its intended purpose.
 @Schema(description: 'The act of applying an object to its intended purpose.')
 abstract class UseAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserBlocks implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserCheckins implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserComments implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The text of the UserComment.
   @StringField(name: 'commentText')
   String? get commentText;
@@ -22253,131 +14765,51 @@ abstract class UserComments implements UserInteraction, $Thing {
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserDownloads implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserInteraction implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserLikes implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserPageVisits implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserPlays implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserPlusOnes implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].
 @Schema(description: 'A review created by an end-user (e.g. consumer, purchaser, attendee etc.), in contrast with [[CriticReview]].')
 abstract class UserReview implements Review, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].
 @Schema(description: 'UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use [[Action]]-based vocabulary, alongside types such as [[Comment]].')
 abstract class UserTweets implements UserInteraction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A kind of lodging business that focuses on renting single properties for limited time.
 @Schema(description: 'A kind of lodging business that focuses on renting single properties for limited time.')
 abstract class VacationRental implements LodgingBusiness, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.
 @Schema(description: 'A vehicle is a device that is designed or used to transport people or cargo over land, water, air, or through space.')
 abstract class Vehicle implements Product, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The time needed to accelerate the vehicle from a given start velocity to a given target velocity.\n\nTypical unit code(s): SEC for seconds\n\n* Note: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use "SEC" for seconds and indicate the velocities in the [[name]] of the [[QuantitativeValue]], or use [[valueReference]] with a [[QuantitativeValue]] of 0..60 mph or 0..100 km/h to specify the reference speeds.
   @JsonKey(name: 'accelerationTime', includeIfNull: false)
   QuantitativeValue? get accelerationTime;
@@ -22550,14 +14982,6 @@ abstract class Vehicle implements Product, $Thing {
 /// A type of blood vessel that specifically carries blood to the heart.
 @Schema(description: 'A type of blood vessel that specifically carries blood to the heart.')
 abstract class Vein implements Vessel, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The vasculature that the vein drains into.
   @JsonKey(name: 'drainsTo', includeIfNull: false)
   Vessel? get drainsTo;
@@ -22576,53 +15000,21 @@ abstract class Vein implements Vessel, $Thing {
 /// A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.
 @Schema(description: 'A component of the human body circulatory system comprised of an intricate network of hollow tubes that transport blood throughout the entire body.')
 abstract class Vessel implements AnatomicalStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A vet's office.
 @Schema(description: 'A vet\'s office.')
 abstract class VeterinaryCare implements MedicalOrganization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Web page type: Video gallery page.
 @Schema(description: 'Web page type: Video gallery page.')
 abstract class VideoGallery implements MediaGallery, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.
 @Schema(description: 'A video game is an electronic game that involves human interaction with a user interface to generate visual feedback on a video device.')
 abstract class VideoGame implements Game, SoftwareApplication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -22679,27 +15071,11 @@ abstract class VideoGame implements Game, SoftwareApplication, $Thing {
 /// A short segment/part of a video game.
 @Schema(description: 'A short segment/part of a video game.')
 abstract class VideoGameClip implements Clip, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A video game series.
 @Schema(description: 'A video game series.')
 abstract class VideoGameSeries implements CreativeWorkSeries, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -22798,14 +15174,6 @@ abstract class VideoGameSeries implements CreativeWorkSeries, $Thing {
 /// A video file.
 @Schema(description: 'A video file.')
 abstract class VideoObject implements MediaObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// An actor (individual or a group), e.g. in TV, radio, movie, video games etc., or in an event. Actors can be associated with individual items or with a series, episode, clip.
   @AnyOf([PerformingGroup, Person])
   @JsonKey(name: 'actor', includeIfNull: false)
@@ -22854,66 +15222,26 @@ abstract class VideoObject implements MediaObject, $Thing {
 /// A specific and exact (byte-for-byte) version of a [[VideoObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren't represented in their actual content, do not affect this notion of identity.
 @Schema(description: 'A specific and exact (byte-for-byte) version of a [[VideoObject]]. Two byte-for-byte identical files, for the purposes of this type, considered identical. If they have different embedded metadata the files will differ. Different external facts about the files, e.g. creator or dateCreated that aren\'t represented in their actual content, do not affect this notion of identity.')
 abstract class VideoObjectSnapshot implements VideoObject, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of consuming static visual content.
 @Schema(description: 'The act of consuming static visual content.')
 abstract class ViewAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.
 @Schema(description: 'An online or virtual location for attending events. For example, one may attend an online seminar or educational event. While a virtual location may be used as the location of an event, virtual locations should not be confused with physical locations in the real world.')
 abstract class VirtualLocation implements Intangible, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Event type: Visual arts event.
 @Schema(description: 'Event type: Visual arts event.')
 abstract class VisualArtsEvent implements Event, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A work of art that is primarily visual in character.
 @Schema(description: 'A work of art that is primarily visual in character.')
 abstract class VisualArtwork implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The number of copies when multiple copies of a piece of artwork are produced - e.g. for a limited edition of 20 prints, 'artEdition' refers to the total number of copies (in this example "20").
   @AnyOf([int, String])
   @JsonKey(name: 'artEdition', includeIfNull: false)
@@ -22982,40 +15310,16 @@ abstract class VisualArtwork implements CreativeWork, $Thing {
 /// Vital signs are measures of various physiological functions in order to assess the most basic body functions.
 @Schema(description: 'Vital signs are measures of various physiological functions in order to assess the most basic body functions.')
 abstract class VitalSign implements MedicalSign, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A volcano, like Fujisan.
 @Schema(description: 'A volcano, like Fujisan.')
 abstract class Volcano implements Landform, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a preference from a fixed/finite/structured set of choices/options.
 @Schema(description: 'The act of expressing a preference from a fixed/finite/structured set of choices/options.')
 abstract class VoteAction implements ChooseAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of object. The candidate subject of this action.
   @JsonKey(name: 'candidate', includeIfNull: false)
   Person? get candidate;
@@ -23025,79 +15329,31 @@ abstract class VoteAction implements ChooseAction, $Thing {
 /// An advertising section of the page.
 @Schema(description: 'An advertising section of the page.')
 abstract class WPAdBlock implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The footer section of the page.
 @Schema(description: 'The footer section of the page.')
 abstract class WPFooter implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The header section of the page.
 @Schema(description: 'The header section of the page.')
 abstract class WPHeader implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A sidebar section of the page.
 @Schema(description: 'A sidebar section of the page.')
 abstract class WPSideBar implements WebPageElement, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of expressing a desire about the object. An agent wants an object.
 @Schema(description: 'The act of expressing a desire about the object. An agent wants an object.')
 abstract class WantAction implements ReactAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.
 @Schema(description: 'A structured value representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.')
 abstract class WarrantyPromise implements StructuredValue, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The duration of the warranty promise. Common unitCode values are ANN for year, MON for months, or DAY for days.
   @JsonKey(name: 'durationOfWarranty', includeIfNull: false)
   QuantitativeValue? get durationOfWarranty;
@@ -23112,105 +15368,41 @@ abstract class WarrantyPromise implements StructuredValue, $Thing {
 ///
 @Schema(description: 'A range of services that will be provided to a customer free of charge in case of a defect or malfunction of a product.\\n\\nCommonly used values:\\n\\n* http://purl.org/goodrelations/v1#Labor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-BringIn\\n* http://purl.org/goodrelations/v1#PartsAndLabor-PickUp       ')
 abstract class WarrantyScope implements Enumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of consuming dynamic/moving visual content.
 @Schema(description: 'The act of consuming dynamic/moving visual content.')
 abstract class WatchAction implements ConsumeAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A waterfall, like Niagara.
 @Schema(description: 'A waterfall, like Niagara.')
 abstract class Waterfall implements BodyOfWater, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of dressing oneself in clothing.
 @Schema(description: 'The act of dressing oneself in clothing.')
 abstract class WearAction implements UseAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates common types of measurement for wearables products.
 @Schema(description: 'Enumerates common types of measurement for wearables products.')
 abstract class WearableMeasurementTypeEnumeration implements MeasurementTypeEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates common size groups (also known as "size types") for wearable products.
 @Schema(description: 'Enumerates common size groups (also known as "size types") for wearable products.')
 abstract class WearableSizeGroupEnumeration implements SizeGroupEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// Enumerates common size systems specific for wearable products.
 @Schema(description: 'Enumerates common size systems specific for wearable products.')
 abstract class WearableSizeSystemEnumeration implements SizeSystemEnumeration, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// An application programming interface accessible over Web/Internet technologies.
 @Schema(description: 'An application programming interface accessible over Web/Internet technologies.')
 abstract class WebAPI implements Service, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Further documentation describing the Web API in more detail.
   @AnyOf([CreativeWork, String])
   @JsonKey(name: 'documentation', includeIfNull: false)
@@ -23221,14 +15413,6 @@ abstract class WebAPI implements Service, $Thing {
 /// Web applications.
 @Schema(description: 'Web applications.')
 abstract class WebApplication implements SoftwareApplication, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// Specifies browser requirements in human-readable text. For example, 'requires HTML5 support'.
   @StringField(name: 'browserRequirements')
   String? get browserRequirements;
@@ -23238,27 +15422,11 @@ abstract class WebApplication implements SoftwareApplication, $Thing {
 /// WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)
 @Schema(description: 'WebContent is a type representing all [[WebPage]], [[WebSite]] and [[WebPageElement]] content. It is sometimes the case that detailed distinctions between Web pages, sites and their parts are not always important or obvious. The  [[WebContent]] type makes it easier to describe Web-addressable content without requiring such distinctions to always be stated. (The intent is that the existing types [[WebPage]], [[WebSite]] and [[WebPageElement]] will eventually be declared as subtypes of [[WebContent]].)')
 abstract class WebContent implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.
 @Schema(description: 'A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as <code>breadcrumb</code> may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.')
 abstract class WebPage implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A set of links that can help a user understand and navigate a website hierarchy.
   @AnyOf([BreadcrumbList, String])
   @JsonKey(name: 'breadcrumb', includeIfNull: false)
@@ -23320,14 +15488,6 @@ abstract class WebPage implements CreativeWork, $Thing {
 /// A web page element, like a table or an image.
 @Schema(description: 'A web page element, like a table or an image.')
 abstract class WebPageElement implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A CSS selector, e.g. of a [[SpeakableSpecification]] or [[WebPageElement]]. In the latter case, multiple matches within a page can constitute a single conceptual "Web page element".
   @StringField(name: 'cssSelector')
   String? get cssSelector;
@@ -23341,14 +15501,6 @@ abstract class WebPageElement implements CreativeWork, $Thing {
 /// A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.
 @Schema(description: 'A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.')
 abstract class WebSite implements CreativeWork, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
   @StringField(name: 'issn')
   String? get issn;
@@ -23358,27 +15510,11 @@ abstract class WebSite implements CreativeWork, $Thing {
 /// A wholesale store.
 @Schema(description: 'A wholesale store.')
 abstract class WholesaleStore implements Store, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of achieving victory in a competitive activity.
 @Schema(description: 'The act of achieving victory in a competitive activity.')
 abstract class WinAction implements AchieveAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A sub property of participant. The loser of the action.
   @JsonKey(name: 'loser', includeIfNull: false)
   Person? get loser;
@@ -23388,27 +15524,11 @@ abstract class WinAction implements AchieveAction, $Thing {
 /// A winery.
 @Schema(description: 'A winery.')
 abstract class Winery implements FoodEstablishment, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.
 @Schema(description: 'A program with both an educational and employment component. Typically based at a workplace and structured around work-based learning, with the aim of instilling competencies related to an occupation. WorkBasedProgram is used to distinguish programs such as apprenticeships from school, college or other classroom based educational programs.')
 abstract class WorkBasedProgram implements EducationalOccupationalProgram, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
   /// Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
   @AnyOf([CategoryCode, String])
@@ -23424,27 +15544,11 @@ abstract class WorkBasedProgram implements EducationalOccupationalProgram, $Thin
 /// A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.
 @Schema(description: 'A Workers Union (also known as a Labor Union, Labour Union, or Trade Union) is an organization that promotes the interests of its worker members by collectively bargaining with management, organizing, and political lobbying.')
 abstract class WorkersUnion implements Organization, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// The act of authoring written creative content.
 @Schema(description: 'The act of authoring written creative content.')
 abstract class WriteAction implements CreateAction, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
   /// The language of the content or performance or used in an action. Please use one of the language codes from the [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47). See also [[availableLanguage]].
   @AnyOf([Language, String])
   @JsonKey(name: 'inLanguage', includeIfNull: false)
@@ -23459,349 +15563,117 @@ abstract class WriteAction implements CreateAction, $Thing {
 /// Text representing an XPath (typically but not necessarily version 1.0).
 @Schema(description: 'Text representing an XPath (typically but not necessarily version 1.0).')
 abstract class XPathType implements Text, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 /// A zoo.
 @Schema(description: 'A zoo.')
 abstract class Zoo implements CivicStructure, $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:105590001')
 abstract class snomed_105590001 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:116154003')
 abstract class snomed_116154003 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:277132007')
 abstract class snomed_277132007 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:387713003')
 abstract class snomed_387713003 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:410942007')
 abstract class snomed_410942007 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:50731006')
 abstract class snomed_50731006 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:51114001')
 abstract class snomed_51114001 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'snomed:63653004')
 abstract class snomed_63653004 implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:AmountType')
 abstract class unece_AmountType implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:BrandName')
 abstract class unece_BrandName implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:Country')
 abstract class unece_Country implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:ElectronicDocument')
 abstract class unece_ElectronicDocument implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:FinancialCard')
 abstract class unece_FinancialCard implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:GeographicalCoordinate')
 abstract class unece_GeographicalCoordinate implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:Invoice')
 abstract class unece_Invoice implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:LineTradeAgreement')
 abstract class unece_LineTradeAgreement implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:Offer')
 abstract class unece_Offer implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:Order')
 abstract class unece_Order implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:PaymentMeans')
 abstract class unece_PaymentMeans implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:RequestForQuotation')
 abstract class unece_RequestForQuotation implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:SpecifiedCertificate')
 abstract class unece_SpecifiedCertificate implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:SpecifiedTradeProduct')
 abstract class unece_SpecifiedTradeProduct implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:TradeAddress')
 abstract class unece_TradeAddress implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:TradeProduct')
 abstract class unece_TradeProduct implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'unece:TransportMethod')
 abstract class unece_TransportMethod implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'vcard:VCard')
 abstract class vcard_VCard implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }
 
 @Schema(description: 'void:Dataset')
 abstract class void_Dataset implements $Thing {
-  @override
-  @JsonKey(name: '@context', includeIfNull: false)
-  String? get context;
-
-  @override
-  @JsonKey(name: '@type', includeIfNull: false)
-  String? get type;
-
 }

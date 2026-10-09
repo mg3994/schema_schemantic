@@ -135,16 +135,6 @@ void main(List<String> args) async {
     buffer.writeln("@Schema(description: '$escapedComment')");
     buffer.writeln("abstract class $className $extendsOrImplements {");
 
-    // Standard $Thing properties overrides
-    buffer.writeln("  @override");
-    buffer.writeln("  @JsonKey(name: '@context', includeIfNull: false)");
-    buffer.writeln("  String? get context;");
-    buffer.writeln();
-    buffer.writeln("  @override");
-    buffer.writeln("  @JsonKey(name: '@type', includeIfNull: false)");
-    buffer.writeln("  String? get type;");
-    buffer.writeln();
-
     final props = classPropertiesMap[cls.name] ?? [];
     for (final prop in props) {
       final propName = sanitizePropertyName(prop.name);
