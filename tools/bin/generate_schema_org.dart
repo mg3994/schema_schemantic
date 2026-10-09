@@ -48,14 +48,15 @@ void main(List<String> args) async {
       cleaned = 'prop_$cleaned';
     }
     const dartKeywords = {
-      'abstract', 'as', 'assert', 'async', 'await', 'break', 'case', 'catch',
+      'abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch',
       'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do',
       'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external',
-      'factory', 'false', 'final', 'finally', 'for', 'Function', 'get', 'hide',
-      'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library',
+      'factory', 'false', 'final', 'finally', 'for', 'Function', 'function', 'get',
+      'hide', 'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library',
       'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow',
-      'return', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this',
-      'throw', 'true', 'try', 'typedef', 'var', 'void', 'while', 'with', 'yield'
+      'return', 'sealed', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this',
+      'throw', 'true', 'try', 'type', 'typedef', 'var', 'void', 'when', 'while',
+      'with', 'yield'
     };
     if (dartKeywords.contains(cleaned)) {
       cleaned = '${cleaned}_';
