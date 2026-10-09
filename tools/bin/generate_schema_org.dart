@@ -71,6 +71,17 @@ void main(List<String> args) async {
     return camel;
   }
 
+  String sanitizeConcreteClassName(String name) {
+    var camel = toUpperCamelCase(name);
+    if (camel == 'Class') return 'SchemaClass';
+    if (camel == 'Map') return 'SchemaMap';
+    if (camel == 'Set') return 'SchemaSet';
+    if (RegExp(r'^[0-9]').hasMatch(camel)) {
+      camel = 'Schema_$camel';
+    }
+    return camel;
+  }
+
   String sanitizePropertyName(String name) {
     var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
     if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
@@ -147,7 +158,7 @@ void main(List<String> args) async {
         .replaceAll(r'$', 'USD ')
         .replaceAll("'''", "''");
 
-    buffer.writeln("@Schema(description: '''$cleanComment''')");
+    buffer.writeln("@Schema(useRefs: true, description: '''$cleanComment''')");
     buffer.writeln("abstract class $className $extendsOrImplements {");
 
     // Gather own properties + ancestor properties
@@ -195,6 +206,15 @@ void main(List<String> args) async {
       final dartTypes = ranges.map((r) => mapRangeToDartType(r, allClassNames)).toSet().toList();
       final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
 
+      List<String>? enumValues;
+      for (final r in ranges) {
+        final members = ontology.enumMembers[r];
+        if (members != null && members.isNotEmpty) {
+          enumValues = members;
+          break;
+        }
+      }
+
       if (validTypes.length > 1) {
         buffer.writeln("  @AnyOf([${validTypes.join(', ')}])");
         buffer.writeln("  @JsonKey(name: '${prop.name}', includeIfNull: false)");
@@ -204,18 +224,19 @@ void main(List<String> args) async {
         final dartType = validTypes.first;
 
         if (dartType == 'String') {
+          final enumCode = enumValues != null ? ", enumValues: [${enumValues.map((e) => "'$e'").join(', ')}]" : "";
           if (primaryRange == 'URL' || prop.name == 'url') {
-            buffer.writeln("  @StringField(name: '${prop.name}', format: 'uri', pattern: r'^(https?|ftp)://.+')");
+            buffer.writeln("  @StringField(name: '${prop.name}', format: 'uri', pattern: r'^(https?|ftp)://.+'$enumCode)");
           } else if (prop.name == 'email') {
-            buffer.writeln("  @StringField(name: '${prop.name}', format: 'email', pattern: r'^[^@]+@[^@]+\\\$')");
+            buffer.writeln("  @StringField(name: '${prop.name}', format: 'email', pattern: r'^[^@]+@[^@]+\\\$'$enumCode)");
           } else if (primaryRange == 'Date') {
-            buffer.writeln("  @StringField(name: '${prop.name}', format: 'date', pattern: r'^\\d{4}-\\d{2}-\\d{2}\\\$')");
+            buffer.writeln("  @StringField(name: '${prop.name}', format: 'date', pattern: r'^\\d{4}-\\d{2}-\\d{2}\\\$'$enumCode)");
           } else if (primaryRange == 'DateTime') {
-            buffer.writeln("  @StringField(name: '${prop.name}', format: 'date-time')");
+            buffer.writeln("  @StringField(name: '${prop.name}', format: 'date-time'$enumCode)");
           } else if (primaryRange == 'Time') {
-            buffer.writeln("  @StringField(name: '${prop.name}', format: 'time', pattern: r'^\\d{2}:\\d{2}(:\\d{2})?\\\$')");
+            buffer.writeln("  @StringField(name: '${prop.name}', format: 'time', pattern: r'^\\d{2}:\\d{2}(:\\d{2})?\\\$'$enumCode)");
           } else {
-            buffer.writeln("  @StringField(name: '${prop.name}')");
+            buffer.writeln("  @StringField(name: '${prop.name}'$enumCode)");
           }
         } else if (dartType == 'int') {
           buffer.writeln("  @IntegerField(name: '${prop.name}')");
@@ -256,6 +277,15 @@ void main(List<String> args) async {
     buffer.writeln();
   }
 
+  // Generate Schema.org Universal Type Registry
+  buffer.writeln("/// Static registry mapping Schema.org @type names to concrete deserialization factories.");
+  buffer.writeln("final Map<String, dynamic Function(Map<String, dynamic>)> schemaTypeRegistry = {");
+  for (final cls in ontology.classes.values) {
+    final concreteName = sanitizeConcreteClassName(cls.name);
+    buffer.writeln("  '${cls.name}': (json) => $concreteName.fromJson(json),");
+  }
+  buffer.writeln("};");
+
   outputFile.writeAsStringSync(buffer.toString());
-  print('Generated lib/src/schema_org_classes.dart with \$ prefix successfully.');
+  print('Generated lib/src/schema_org_classes.dart with \$ prefix and schemaTypeRegistry successfully.');
 }

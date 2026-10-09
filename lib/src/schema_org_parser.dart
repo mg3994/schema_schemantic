@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
+import 'base_types.dart';
+import 'schema_org_classes.dart';
 
 class SchemaClass {
   final String id;
@@ -52,11 +54,13 @@ class SchemaOntology {
   final Map<String, SchemaClass> classes;
   final Map<String, SchemaProperty> properties;
   final Map<String, SchemaEnum> enums;
+  final Map<String, List<String>> enumMembers;
 
   SchemaOntology({
     required this.classes,
     required this.properties,
     required this.enums,
+    required this.enumMembers,
   });
 }
 
@@ -96,18 +100,10 @@ class SchemaOrgParser {
     final classesMap = <String, SchemaClass>{};
     final propertiesMap = <String, SchemaProperty>{};
     final enumsMap = <String, SchemaEnum>{};
+    final enumMembersMap = <String, List<String>>{};
 
     String cleanId(String rawId) {
-      if (rawId.startsWith('schema:')) {
-        return rawId.substring(7);
-      }
-      if (rawId.startsWith('https://schema.org/')) {
-        return rawId.substring('https://schema.org/'.length);
-      }
-      if (rawId.startsWith('http://schema.org/')) {
-        return rawId.substring('http://schema.org/'.length);
-      }
-      return rawId;
+      return SchemaOrgContext.resolveShortName(rawId);
     }
 
     List<String> extractList(dynamic val) {
@@ -168,14 +164,15 @@ class SchemaOrgParser {
           subClassOf: subClassOf,
         );
       } else {
-        // Potential Enum value if type is another Schema class
         if (rawTypes.isNotEmpty) {
+          final parentType = rawTypes.first;
           enumsMap[name] = SchemaEnum(
             id: rawId,
             name: name,
             comment: comment,
-            parentType: rawTypes.first,
+            parentType: parentType,
           );
+          enumMembersMap.putIfAbsent(parentType, () => []).add(name);
         }
       }
     }
@@ -184,6 +181,67 @@ class SchemaOrgParser {
       classes: classesMap,
       properties: propertiesMap,
       enums: enumsMap,
+      enumMembers: enumMembersMap,
     );
+  }
+}
+
+/// Universal Dynamic JSON-LD Parser for Schema.org and JSON-LD payloads.
+class SchemaOrg {
+  /// Dynamically parses any unknown JSON-LD object, array, or @graph payload into typed Dart instances.
+  static dynamic parseJsonLd(dynamic json) {
+    if (json == null) return null;
+
+    if (json is List) {
+      return json.map((item) => parseJsonLd(item)).toList();
+    }
+
+    if (json is Map<String, dynamic> || json is Map) {
+      final map = Map<String, dynamic>.from(json as Map);
+
+      // Handle top-level @graph
+      if (map.containsKey('@graph')) {
+        final graphData = map['@graph'];
+        if (graphData is List) {
+          return graphData.map((e) => parseJsonLd(e)).toList();
+        }
+      }
+
+      // Handle JSON-LD Value Object
+      if (map.containsKey('@value')) {
+        return ValueObject.fromJson(map);
+      }
+
+      // Handle @type
+      if (map.containsKey('@type')) {
+        final rawType = map['@type'];
+        String? typeName;
+        if (rawType is String) {
+          typeName = SchemaOrgContext.resolveShortName(rawType);
+        } else if (rawType is List && rawType.isNotEmpty) {
+          typeName = SchemaOrgContext.resolveShortName(rawType.first.toString());
+        }
+
+        if (typeName != null) {
+          final parsedInstance = _instantiateType(typeName, map);
+          if (parsedInstance != null) return parsedInstance;
+        }
+      }
+
+      // Fallback: parse map values recursively
+      return map.map((key, value) => MapEntry(key, parseJsonLd(value)));
+    }
+
+    return json;
+  }
+
+  static dynamic _instantiateType(String typeName, Map<String, dynamic> map) {
+    final factoryFunc = schemaTypeRegistry[typeName];
+    if (factoryFunc != null) {
+      try {
+        return factoryFunc(map);
+      } catch (_) {}
+    }
+    return map;
   }
 }
