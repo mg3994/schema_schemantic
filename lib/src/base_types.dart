@@ -42,6 +42,23 @@ class ValueObject {
   /// Helper getter to check if text is Right-To-Left
   bool get isRtl => direction == 'rtl';
 
+  /// Returns the resolved type IRI if a prefix was present (e.g. `xsd:integer` -> `http://www.w3.org/2001/XMLSchema#integer`).
+  String? get resolvedType => type != null ? SchemaOrgContext.resolvePrefix(type!) : null;
+
+  /// Safely converts [value] to an [int] if possible, or null otherwise.
+  int? get asInt => int.tryParse(value);
+
+  /// Safely converts [value] to a [double] if possible, or null otherwise.
+  double? get asDouble => double.tryParse(value);
+
+  /// Safely converts [value] to a [bool] if possible, or null otherwise.
+  bool? get asBool {
+    final lower = value.trim().toLowerCase();
+    if (lower == 'true' || lower == '1') return true;
+    if (lower == 'false' || lower == '0') return false;
+    return null;
+  }
+
   factory ValueObject.fromJson(Map<String, dynamic> json) => ValueObject(
         value: json['@value'] as String,
         type: json['@type'] as String?,

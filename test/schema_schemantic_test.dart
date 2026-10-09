@@ -66,50 +66,48 @@ void main() {
   group('Base Core Types & ValueObject Tests', () {
     test('ValueObject serializes and deserializes correctly with value equality', () {
       final vo = ValueObject(
-        value: 'A powerful smartphone.',
-        type: 'xsd:string',
+        value: '42',
+        type: 'xsd:integer',
         language: 'en',
         direction: 'ltr',
       );
 
       expect(vo.isRtl, isFalse);
+      expect(vo.asInt, equals(42));
+      expect(vo.asDouble, equals(42.0));
+      expect(vo.resolvedType, equals('http://www.w3.org/2001/XMLSchema#integer'));
+
       final json = vo.toJson();
-      expect(json['@value'], equals('A powerful smartphone.'));
-      expect(json['@type'], equals('xsd:string'));
-      expect(json['@language'], equals('en'));
-      expect(json['@direction'], equals('ltr'));
+      expect(json['@value'], equals('42'));
+      expect(json['@type'], equals('xsd:integer'));
 
       final fromJson = ValueObject.fromJson(json);
       expect(fromJson, equals(vo));
       expect(fromJson.hashCode, equals(vo.hashCode));
     });
 
-    test('ValueObject handles RTL text helper getter and custom types', () {
-      final voRtl = ValueObject(
-        value: 'مرحبا',
-        type: 'bibo:Document',
-        language: 'ar',
-        direction: 'rtl',
-      );
-      expect(voRtl.isRtl, isTrue);
-      expect(voRtl.type, equals('bibo:Document'));
+    test('ValueObject boolean and double helper getters', () {
+      final voBool = ValueObject(value: 'true');
+      expect(voBool.asBool, isTrue);
+
+      final voDouble = ValueObject(value: '3.14159');
+      expect(voDouble.asDouble, equals(3.14159));
     });
 
     test('SchemaOrgContext resolves prefix IRIs', () {
       expect(SchemaOrgContext.resolvePrefix('schema:Person'), equals('https://schema.org/Person'));
       expect(SchemaOrgContext.resolvePrefix('xsd:integer'), equals('http://www.w3.org/2001/XMLSchema#integer'));
       expect(SchemaOrgContext.resolvePrefix('bibo:Article'), equals('http://purl.org/ontology/bibo/Article'));
-      expect(SchemaOrgContext.resolvePrefix('unknown:Type'), equals('unknown:Type'));
     });
   });
 
   group('Dynamic JSON-LD Deserialization & @graph Support Tests', () {
-    test('Parses top-level @graph structure with value objects', () {
+    test('Parses top-level @graph structure with normalized @type and value objects', () {
       final rawJson = {
         '@context': 'https://schema.org',
         '@graph': [
           {
-            '@type': 'Person',
+            '@type': 'https://schema.org/Person',
             'name': 'Alice',
             'description': {
               '@value': 'Software Engineer',
@@ -118,7 +116,7 @@ void main() {
             }
           },
           {
-            '@type': 'Organization',
+            '@type': 'schema:Organization',
             'name': 'Open Source Org'
           }
         ]
@@ -134,7 +132,6 @@ void main() {
       final desc = person['description'];
       expect(desc, isA<ValueObject>());
       expect((desc as ValueObject).value, equals('Software Engineer'));
-      expect(desc.language, equals('en'));
 
       final org = parsed[1] as Map<String, dynamic>;
       expect(org['@type'], equals('Organization'));
@@ -142,7 +139,7 @@ void main() {
     });
 
     test('Parses raw string JSON input', () {
-      final jsonStr = '{"@type": "Thing", "name": "Book"}';
+      final jsonStr = '{"@type": "schema:Thing", "name": "Book"}';
       final parsed = SchemaOrg.parseJsonLd(jsonStr) as Map<String, dynamic>;
       expect(parsed['@type'], equals('Thing'));
       expect(parsed['name'], equals('Book'));

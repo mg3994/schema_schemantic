@@ -782,7 +782,7 @@ abstract class Accommodation implements Place, $Thing {
   Object? get petsAllowed;
 
   /// A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
-  @StringField(name: 'tourBookingPage')
+  @StringField(name: 'tourBookingPage', format: 'uri')
   String? get tourBookingPage;
 
   /// The year an [[Accommodation]] was constructed. This corresponds to the [YearBuilt field in RESO](https://ddwiki.reso.org/display/DDW17/YearBuilt+Field).
@@ -843,7 +843,7 @@ abstract class Action implements Thing, $Thing {
   Object? get agent;
 
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'endTime')
+  @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
 
   /// For failed actions, more information on the cause of the failure. Consider using the Error type.
@@ -878,7 +878,7 @@ abstract class Action implements Thing, $Thing {
   Thing? get result;
 
   /// The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'startTime')
+  @StringField(name: 'startTime', format: 'date-time')
   String? get startTime;
 
   /// Indicates a target EntryPoint, or url, for an Action.
@@ -900,11 +900,11 @@ abstract class ActionAccessSpecification implements Intangible, $Thing {
   String? get type;
 
   /// The end of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityEnds')
+  @StringField(name: 'availabilityEnds', format: 'date-time')
   String? get availabilityEnds;
 
   /// The beginning of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityStarts')
+  @StringField(name: 'availabilityStarts', format: 'date-time')
   String? get availabilityStarts;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
@@ -1168,7 +1168,7 @@ abstract class AlignmentObject implements Intangible, $Thing {
   String? get targetName;
 
   /// The URL of a node in an established educational framework.
-  @StringField(name: 'targetUrl')
+  @StringField(name: 'targetUrl', format: 'uri')
   String? get targetUrl;
 
 }
@@ -1394,7 +1394,7 @@ abstract class ApartmentComplex implements Residence, $Thing {
   Object? get petsAllowed;
 
   /// A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
-  @StringField(name: 'tourBookingPage')
+  @StringField(name: 'tourBookingPage', format: 'uri')
   String? get tourBookingPage;
 
 }
@@ -1944,7 +1944,7 @@ abstract class BankAccount implements FinancialProduct, $Thing {
   MonetaryAmount? get accountOverdraftLimit;
 
   /// The type of a bank account.
-  @StringField(name: 'bankAccountType')
+  @StringField(name: 'bankAccountType', format: 'uri')
   String? get bankAccountType;
 
 }
@@ -2910,7 +2910,7 @@ abstract class CDCPMDRecord implements StructuredValue, $Thing {
   String? get type;
 
   /// collectiondate - Date for which patient counts are reported.
-  @StringField(name: 'cvdCollectionDate')
+  @StringField(name: 'cvdCollectionDate', format: 'date-time')
   String? get cvdCollectionDate;
 
   /// Name of the County of the NHSN facility that this data record applies to. Use [[cvdFacilityId]] to identify the facility. To provide other details, [[healthcareReportingData]] can be used on a [[Hospital]] entry.
@@ -2974,7 +2974,7 @@ abstract class CDCPMDRecord implements StructuredValue, $Thing {
   double? get cvdNumVentUse;
 
   /// Publication date of an online listing.
-  @StringField(name: 'datePosted')
+  @StringField(name: 'datePosted', format: 'date-time')
   String? get datePosted;
 
 }
@@ -3193,7 +3193,7 @@ abstract class Certification implements CreativeWork, $Thing {
   Thing? get about;
 
   /// Date when a certification was last audited. See also  [gs1:certificationAuditDate](https://www.gs1.org/voc/certificationAuditDate).
-  @StringField(name: 'auditDate')
+  @StringField(name: 'auditDate', format: 'date-time')
   String? get auditDate;
 
   /// Identifier of a certification instance (as registered with an independent certification body). Typically this identifier can be used to consult and verify the certification instance. See also [gs1:certificationIdentification](https://www.gs1.org/voc/certificationIdentification).
@@ -3210,11 +3210,11 @@ abstract class Certification implements CreativeWork, $Thing {
   String? get certificationStatus;
 
   /// Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
-  @StringField(name: 'datePublished')
+  @StringField(name: 'datePublished', format: 'date-time')
   String? get datePublished;
 
   /// Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.
-  @StringField(name: 'expires')
+  @StringField(name: 'expires', format: 'date-time')
   String? get expires;
 
   /// A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
@@ -3231,7 +3231,7 @@ abstract class Certification implements CreativeWork, $Thing {
   Object? get logo;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
@@ -4307,7 +4307,7 @@ abstract class CourseInstance implements Event, $Thing {
   String? get type;
 
   /// The medium or means of delivery of the course instance or the mode of study, either as a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or as a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous).
-  @StringField(name: 'courseMode')
+  @StringField(name: 'courseMode', format: 'uri')
   String? get courseMode;
 
   /// Represents the length and pace of a course, expressed as a [[Schedule]].
@@ -4511,7 +4511,7 @@ abstract class CreativeWork implements Thing, $Thing {
   Object? get contentRating;
 
   /// The specific time described by a creative work, for works (e.g. articles, video objects etc.) that emphasise a particular moment within an Event.
-  @StringField(name: 'contentReferenceTime')
+  @StringField(name: 'contentReferenceTime', format: 'date-time')
   String? get contentReferenceTime;
 
   /// A secondary contributor to the CreativeWork or Event.
@@ -4560,15 +4560,15 @@ abstract class CreativeWork implements Thing, $Thing {
   String? get creditText;
 
   /// The date on which the CreativeWork was created or the item was added to a DataFeed.
-  @StringField(name: 'dateCreated')
+  @StringField(name: 'dateCreated', format: 'date-time')
   String? get dateCreated;
 
   /// The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-  @StringField(name: 'dateModified')
+  @StringField(name: 'dateModified', format: 'date-time')
   String? get dateModified;
 
   /// Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
-  @StringField(name: 'datePublished')
+  @StringField(name: 'datePublished', format: 'date-time')
   String? get datePublished;
 
   /// Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the digital source(s) for some [[CreativeWork]].
@@ -4576,7 +4576,7 @@ abstract class CreativeWork implements Thing, $Thing {
   String? get digitalSourceType;
 
   /// A link to the page containing the comments of the CreativeWork.
-  @StringField(name: 'discussionUrl')
+  @StringField(name: 'discussionUrl', format: 'uri')
   String? get discussionUrl;
 
   /// The location at which an item can be viewed or experienced in-person.
@@ -4589,7 +4589,7 @@ abstract class CreativeWork implements Thing, $Thing {
   ///
   /// Since schema.org types like [[Movie]] and [[TVEpisode]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
   ///
-  @StringField(name: 'editEIDR')
+  @StringField(name: 'editEIDR', format: 'uri')
   String? get editEIDR;
 
   /// Specifies the Person who edited the CreativeWork.
@@ -4621,7 +4621,7 @@ abstract class CreativeWork implements Thing, $Thing {
   /// In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
   ///
   /// Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
-  @StringField(name: 'encodingFormat')
+  @StringField(name: 'encodingFormat', format: 'uri')
   String? get encodingFormat;
 
   /// A media object that encodes this CreativeWork.
@@ -4633,11 +4633,11 @@ abstract class CreativeWork implements Thing, $Thing {
   CreativeWork? get exampleOfWork;
 
   /// Date the content expires and is no longer useful or available. For example a [[VideoObject]] or [[NewsArticle]] whose availability or relevance is time-limited, a [[ClaimReview]] fact check whose publisher wants to indicate that it may no longer be relevant (or helpful to highlight) after some date, or a [[Certification]] the validity has expired.
-  @StringField(name: 'expires')
+  @StringField(name: 'expires', format: 'date-time')
   String? get expires;
 
   /// Media type, typically MIME format (see [IANA site](http://www.iana.org/assignments/media-types/media-types.xhtml)) of the content, e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.
-  @StringField(name: 'fileFormat')
+  @StringField(name: 'fileFormat', format: 'uri')
   String? get fileFormat;
 
   /// A person or organization that supports (sponsors) something through some kind of financial contribution.
@@ -4810,11 +4810,11 @@ abstract class CreativeWork implements Thing, $Thing {
 
   /// Indicates (by URL or string) a particular version of a schema used in some CreativeWork. This property was created primarily to
   /// indicate the use of a specific schema.org release, e.g. ```10.0``` as a simple string, or more explicitly via URL, ```https://schema.org/docs/releases.html#v10.0```. There may be situations in which other schemas might usefully be referenced this way, e.g. ```http://dublincore.org/specifications/dublin-core/dces/1999-07-02/``` but this has not been carefully explored in the community.
-  @StringField(name: 'schemaVersion')
+  @StringField(name: 'schemaVersion', format: 'uri')
   String? get schemaVersion;
 
   /// Indicates the date on which the current structured data was generated / published. Typically used alongside [[sdPublisher]].
-  @StringField(name: 'sdDatePublished')
+  @StringField(name: 'sdDatePublished', format: 'date')
   String? get sdDatePublished;
 
   /// A license document that applies to this structured data, typically indicated by URL.
@@ -4860,7 +4860,7 @@ abstract class CreativeWork implements Thing, $Thing {
 
   /// The "temporal" property can be used in cases where more specific properties
   /// (e.g. [[temporalCoverage]], [[dateCreated]], [[dateModified]], [[datePublished]]) are not known to be appropriate.
-  @StringField(name: 'temporal')
+  @StringField(name: 'temporal', format: 'date-time')
   String? get temporal;
 
   /// The temporalCoverage of a CreativeWork indicates the period that the content applies to, i.e. that it describes, either as a DateTime or as a textual string indicating a time period in [ISO 8601 time interval format](https://en.wikipedia.org/wiki/ISO_8601#Time_intervals). In
@@ -4868,7 +4868,7 @@ abstract class CreativeWork implements Thing, $Thing {
   /// Written works such as books may sometimes have precise temporal coverage too, e.g. a work set in 1939 - 1945 can be indicated in ISO 8601 interval format format via "1939/1945".
   ///
   /// Open-ended date ranges can be written with ".." in place of the end date. For example, "2015-11/.." indicates a range beginning in November 2015 and with no specified final date. This is tentative and might be updated in future when ISO 8601 is officially updated.
-  @StringField(name: 'temporalCoverage')
+  @StringField(name: 'temporalCoverage', format: 'uri')
   String? get temporalCoverage;
 
   /// The textual content of this CreativeWork.
@@ -4880,7 +4880,7 @@ abstract class CreativeWork implements Thing, $Thing {
   ImageObject? get thumbnail;
 
   /// A thumbnail image relevant to the Thing.
-  @StringField(name: 'thumbnailUrl')
+  @StringField(name: 'thumbnailUrl', format: 'uri')
   String? get thumbnailUrl;
 
   /// Approximate or typical time it usually takes to work with or through the content of this work for the typical or target audience.
@@ -4952,7 +4952,7 @@ abstract class CreativeWorkSeason implements CreativeWork, $Thing {
   Person? get director;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// An episode of a TV, radio or game media within a series or season.
@@ -4981,7 +4981,7 @@ abstract class CreativeWorkSeason implements CreativeWork, $Thing {
   Object? get seasonNumber;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
   /// The trailer of a movie or TV/radio series, season, episode, etc.
@@ -5003,7 +5003,7 @@ abstract class CreativeWorkSeries implements CreativeWork, Series, $Thing {
   String? get type;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.
@@ -5011,7 +5011,7 @@ abstract class CreativeWorkSeries implements CreativeWork, Series, $Thing {
   String? get issn;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
 }
@@ -5264,15 +5264,15 @@ abstract class DataFeedItem implements Intangible, $Thing {
   String? get type;
 
   /// The date on which the CreativeWork was created or the item was added to a DataFeed.
-  @StringField(name: 'dateCreated')
+  @StringField(name: 'dateCreated', format: 'date-time')
   String? get dateCreated;
 
   /// The datetime the item was removed from the DataFeed.
-  @StringField(name: 'dateDeleted')
+  @StringField(name: 'dateDeleted', format: 'date-time')
   String? get dateDeleted;
 
   /// The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.
-  @StringField(name: 'dateModified')
+  @StringField(name: 'dateModified', format: 'date-time')
   String? get dateModified;
 
   /// An entity represented by an entry in a list or data feed (e.g. an 'artist' in a list of 'artists').
@@ -5310,7 +5310,7 @@ abstract class Dataset implements CreativeWork, $Thing {
   DataCatalog? get catalog;
 
   /// The range of temporal applicability of a dataset, e.g. for a 2011 census dataset, the year 2011 (in ISO 8601 time interval format).
-  @StringField(name: 'datasetTimeInterval')
+  @StringField(name: 'datasetTimeInterval', format: 'date-time')
   String? get datasetTimeInterval;
 
   /// A downloadable form of this dataset, at a specific location, in a specific format. This property can be repeated if different variations are available. There is no expectation that different downloadable distributions must contain exactly equivalent information (see also [DCAT](https://www.w3.org/TR/vocab-dcat-3/#Class:Distribution) on this point). Different distributions might include or exclude different subsets of the entire dataset, for example.
@@ -5399,11 +5399,11 @@ abstract class DatedMoneySpecification implements StructuredValue, $Thing {
   String? get currency;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
 }
@@ -5634,11 +5634,11 @@ abstract class DeliveryEvent implements Event, $Thing {
   String? get accessCode;
 
   /// When the item is available for pickup from the store, locker, etc.
-  @StringField(name: 'availableFrom')
+  @StringField(name: 'availableFrom', format: 'date-time')
   String? get availableFrom;
 
   /// After this date, the item will no longer be available for pickup.
-  @StringField(name: 'availableThrough')
+  @StringField(name: 'availableThrough', format: 'date-time')
   String? get availableThrough;
 
   /// Method used for delivery or shipping.
@@ -5719,7 +5719,7 @@ abstract class Demand implements Intangible, $Thing {
   ///
   /// Note also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.
   /// ASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-  @StringField(name: 'asin')
+  @StringField(name: 'asin', format: 'uri')
   String? get asin;
 
   /// The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
@@ -5727,11 +5727,11 @@ abstract class Demand implements Intangible, $Thing {
   String? get availability;
 
   /// The end of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityEnds')
+  @StringField(name: 'availabilityEnds', format: 'date-time')
   String? get availabilityEnds;
 
   /// The beginning of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityStarts')
+  @StringField(name: 'availabilityStarts', format: 'date-time')
   String? get availabilityStarts;
 
   /// The place(s) from which the offer can be obtained (e.g. store locations).
@@ -5780,7 +5780,7 @@ abstract class Demand implements Intangible, $Thing {
   /// Digital Links should be populated into the [[hasGS1DigitalLink]] attribute.
   ///
   /// Note also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.
-  @StringField(name: 'gtin')
+  @StringField(name: 'gtin', format: 'uri')
   String? get gtin;
 
   /// The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
@@ -5844,11 +5844,11 @@ abstract class Demand implements Intangible, $Thing {
   String? get sku;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
   /// The warranty promise(s) included in the offer.
@@ -6386,7 +6386,7 @@ abstract class Drug implements Product, Substance, $Thing {
   bool? get isProprietary;
 
   /// Link to the drug's label details.
-  @StringField(name: 'labelDetails')
+  @StringField(name: 'labelDetails', format: 'uri')
   String? get labelDetails;
 
   /// The drug or supplement's legal status, including any controlled substance schedules that apply.
@@ -6419,7 +6419,7 @@ abstract class Drug implements Product, Substance, $Thing {
   String? get pregnancyWarning;
 
   /// Link to prescribing information for the drug.
-  @StringField(name: 'prescribingInfo')
+  @StringField(name: 'prescribingInfo', format: 'uri')
   String? get prescribingInfo;
 
   /// Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
@@ -6439,7 +6439,7 @@ abstract class Drug implements Product, Substance, $Thing {
   String? get rxcui;
 
   /// Any FDA or other warnings about the drug (text or URL).
-  @StringField(name: 'warning')
+  @StringField(name: 'warning', format: 'uri')
   String? get warning;
 
 }
@@ -6720,11 +6720,11 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
   String? get type;
 
   /// The date on which the program stops collecting applications for the next enrollment cycle. Flexible application deadlines (for example, a program with rolling admissions) can be described in a textual string, rather than as a DateTime.
-  @StringField(name: 'applicationDeadline')
+  @StringField(name: 'applicationDeadline', format: 'date')
   String? get applicationDeadline;
 
   /// The date at which the program begins collecting applications for the next enrollment cycle.
-  @StringField(name: 'applicationStartDate')
+  @StringField(name: 'applicationStartDate', format: 'date')
   String? get applicationStartDate;
 
   /// The day of the week for which these opening hours are valid.
@@ -6737,11 +6737,11 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
   Object? get educationalCredentialAwarded;
 
   /// Similar to courseMode, the medium or means of delivery of the program as a whole. The value may either be a text label (e.g. "online", "onsite" or "blended"; "synchronous" or "asynchronous"; "full-time" or "part-time") or a URL reference to a term from a controlled vocabulary (e.g. https://ceds.ed.gov/element/001311#Asynchronous ).
-  @StringField(name: 'educationalProgramMode')
+  @StringField(name: 'educationalProgramMode', format: 'uri')
   String? get educationalProgramMode;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// A financial aid type or program which students may use to pay for tuition or fees associated with the program.
@@ -6799,7 +6799,7 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
   MonetaryAmountDistribution? get salaryUponCompletion;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
   /// The amount of time in a term as defined by the institution. A term is a length of time where students take one or more classes. Semesters and quarters are common units for term.
@@ -7151,7 +7151,7 @@ abstract class EntryPoint implements Intangible, $Thing {
   SoftwareApplication? get actionApplication;
 
   /// The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
-  @StringField(name: 'actionPlatform', enumValues: ['AndroidPlatform', 'DesktopWebPlatform', 'GenericWebPlatform', 'IOSPlatform', 'MobileWebPlatform'])
+  @StringField(name: 'actionPlatform', format: 'uri', enumValues: ['AndroidPlatform', 'DesktopWebPlatform', 'GenericWebPlatform', 'IOSPlatform', 'MobileWebPlatform'])
   String? get actionPlatform;
 
   /// An application that can complete the request.
@@ -7339,7 +7339,7 @@ abstract class Event implements Thing, $Thing {
   Person? get director;
 
   /// The time admission will commence.
-  @StringField(name: 'doorTime')
+  @StringField(name: 'doorTime', format: 'date-time')
   String? get doorTime;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
@@ -7348,7 +7348,7 @@ abstract class Event implements Thing, $Thing {
   Object? get duration;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// The eventAttendanceMode of an event indicates whether it occurs online, offline, or a mix.
@@ -7438,7 +7438,7 @@ abstract class Event implements Thing, $Thing {
   Object? get performers;
 
   /// Used in conjunction with eventStatus for rescheduled or cancelled events. This property contains the previously scheduled start date. For rescheduled events, the startDate property should be used for the newly scheduled start date. In the (rare) case of an event that has been postponed and rescheduled multiple times, this field may be repeated.
-  @StringField(name: 'previousStartDate')
+  @StringField(name: 'previousStartDate', format: 'date-time')
   String? get previousStartDate;
 
   /// The CreativeWork that captured all or part of this Event.
@@ -7459,7 +7459,7 @@ abstract class Event implements Thing, $Thing {
   Object? get sponsor;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
   /// An Event that is part of this event. For example, a conference event includes many presentations, each of which is a subEvent of the conference.
@@ -7962,11 +7962,11 @@ abstract class FinancialIncentive implements Intangible, $Thing {
   String? get qualifiedExpense;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
 }
@@ -7988,7 +7988,7 @@ abstract class FinancialProduct implements Service, $Thing {
   Object? get annualPercentageRate;
 
   /// Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-  @StringField(name: 'feesAndCommissionsSpecification')
+  @StringField(name: 'feesAndCommissionsSpecification', format: 'uri')
   String? get feesAndCommissionsSpecification;
 
   /// The interest rate, charged or paid, applicable to the financial product. Note: This is different from the calculated annualPercentageRate.
@@ -8010,7 +8010,7 @@ abstract class FinancialService implements LocalBusiness, $Thing {
   String? get type;
 
   /// Description of fees, commissions, and other terms applied either to a class of financial product, or by a financial service organization.
-  @StringField(name: 'feesAndCommissionsSpecification')
+  @StringField(name: 'feesAndCommissionsSpecification', format: 'uri')
   String? get feesAndCommissionsSpecification;
 
 }
@@ -8113,7 +8113,7 @@ abstract class Flight implements Trip, $Thing {
   Object? get seller;
 
   /// The time when a passenger can check into the flight online.
-  @StringField(name: 'webCheckinTime')
+  @StringField(name: 'webCheckinTime', format: 'date-time')
   String? get webCheckinTime;
 
 }
@@ -8307,7 +8307,7 @@ abstract class FoodEstablishmentReservation implements Reservation, $Thing {
   String? get type;
 
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'endTime')
+  @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
 
   /// Number of people the reservation should accommodate.
@@ -8316,7 +8316,7 @@ abstract class FoodEstablishmentReservation implements Reservation, $Thing {
   Object? get partySize;
 
   /// The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'startTime')
+  @StringField(name: 'startTime', format: 'date-time')
   String? get startTime;
 
 }
@@ -9068,7 +9068,7 @@ abstract class HealthInsurancePlan implements Intangible, $Thing {
   String? get type;
 
   /// The URL that goes directly to the summary of benefits and coverage for the specific standard plan or plan variation.
-  @StringField(name: 'benefitsSummaryUrl')
+  @StringField(name: 'benefitsSummaryUrl', format: 'uri')
   String? get benefitsSummaryUrl;
 
   /// A contact point for a person or organization.
@@ -9088,7 +9088,7 @@ abstract class HealthInsurancePlan implements Intangible, $Thing {
   String? get healthPlanId;
 
   /// The URL that goes directly to the plan brochure for the specific standard plan or plan variation.
-  @StringField(name: 'healthPlanMarketingUrl')
+  @StringField(name: 'healthPlanMarketingUrl', format: 'uri')
   String? get healthPlanMarketingUrl;
 
   /// Formularies covered by this plan.
@@ -9100,7 +9100,7 @@ abstract class HealthInsurancePlan implements Intangible, $Thing {
   HealthPlanNetwork? get includesHealthPlanNetwork;
 
   /// The standard for interpreting the Plan ID. The preferred is "HIOS". See the Centers for Medicare & Medicaid Services for more details.
-  @StringField(name: 'usesHealthPlanIdStandard')
+  @StringField(name: 'usesHealthPlanIdStandard', format: 'uri')
   String? get usesHealthPlanIdStandard;
 
 }
@@ -9942,7 +9942,7 @@ abstract class InstantaneousEvent implements StructuredValue, $Thing {
   Thing? get source;
 
   /// The instant the event occured.
-  @StringField(name: 'timestamp')
+  @StringField(name: 'timestamp', format: 'date-time')
   String? get timestamp;
 
 }
@@ -10011,7 +10011,7 @@ abstract class InteractionCounter implements StructuredValue, $Thing {
   String? get type;
 
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'endTime')
+  @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
 
   /// The WebSite or SoftwareApplication where the interactions took place.
@@ -10029,7 +10029,7 @@ abstract class InteractionCounter implements StructuredValue, $Thing {
   Object? get location;
 
   /// The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'startTime')
+  @StringField(name: 'startTime', format: 'date-time')
   String? get startTime;
 
   /// The number of interactions for the CreativeWork using the WebSite or SoftwareApplication.
@@ -10143,11 +10143,11 @@ abstract class Invoice implements Intangible, $Thing {
   Object? get minimumPaymentDue;
 
   /// The date that payment is due.
-  @StringField(name: 'paymentDue')
+  @StringField(name: 'paymentDue', format: 'date-time')
   String? get paymentDue;
 
   /// The date that payment is due.
-  @StringField(name: 'paymentDueDate')
+  @StringField(name: 'paymentDueDate', format: 'date-time')
   String? get paymentDueDate;
 
   /// The name of the credit card or other method of payment for the order.
@@ -10173,7 +10173,7 @@ abstract class Invoice implements Intangible, $Thing {
   Order? get referencesOrder;
 
   /// The date the invoice is scheduled to be paid.
-  @StringField(name: 'scheduledPaymentDate')
+  @StringField(name: 'scheduledPaymentDate', format: 'date')
   String? get scheduledPaymentDate;
 
   /// The total amount due.
@@ -10294,7 +10294,7 @@ abstract class JobPosting implements Intangible, $Thing {
   String? get benefits;
 
   /// Publication date of an online listing.
-  @StringField(name: 'datePosted')
+  @StringField(name: 'datePosted', format: 'date-time')
   String? get datePosted;
 
   /// Indicates whether an [[url]] that is associated with a [[JobPosting]] enables direct application for the job, via the posting website. A job posting is considered to have directApply of [[True]] if an application process for the specified job can be directly initiated via the url(s) given (noting that e.g. multiple internet domains might nevertheless be involved at an implementation level). A value of [[False]] is appropriate if there is no clear path to applying directly online for the specified job, navigating directly from the JobPosting url(s) supplied.
@@ -10376,7 +10376,7 @@ abstract class JobPosting implements Intangible, $Thing {
   String? get jobLocationType;
 
   /// The date on which a successful applicant for this job would be expected to start work. Choose a specific date in the future or use the jobImmediateStart property to indicate the position is to be filled as soon as possible.
-  @StringField(name: 'jobStartDate')
+  @StringField(name: 'jobStartDate', format: 'date')
   String? get jobStartDate;
 
   /// A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
@@ -10408,7 +10408,7 @@ abstract class JobPosting implements Intangible, $Thing {
   String? get salaryCurrency;
 
   /// A description of any security clearance requirements of the job.
-  @StringField(name: 'securityClearanceRequirement')
+  @StringField(name: 'securityClearanceRequirement', format: 'uri')
   String? get securityClearanceRequirement;
 
   /// A description of any sensory requirements and levels necessary to function on the job, including hearing and vision. Defined terms such as those in O*net may be used, but note that there is no way to specify the level of ability as well as its nature when using a defined term.
@@ -10434,7 +10434,7 @@ abstract class JobPosting implements Intangible, $Thing {
   int? get totalJobOpenings;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
   /// The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).
@@ -10693,15 +10693,15 @@ abstract class Legislation implements CreativeWork, $Thing {
   Object? get legislationCountersignedBy;
 
   /// The date of adoption or signature of the legislation. This is the date at which the text is officially aknowledged to be a legislation, even though it might not even be published or in force.
-  @StringField(name: 'legislationDate')
+  @StringField(name: 'legislationDate', format: 'date')
   String? get legislationDate;
 
   /// The date at which the Legislation becomes applicable. This can sometimes be distinct from the date of entry into force : a text may come in force today, and state it will become applicable in 3 months.
-  @StringField(name: 'legislationDateOfApplicability')
+  @StringField(name: 'legislationDateOfApplicability', format: 'date')
   String? get legislationDateOfApplicability;
 
   /// The point-in-time at which the provided description of the legislation is valid (e.g.: when looking at the law on the 2016-04-07 (= dateVersion), I get the consolidation of 2015-04-12 of the "National Insurance Contributions Act 2015")
-  @StringField(name: 'legislationDateVersion')
+  @StringField(name: 'legislationDateVersion', format: 'date')
   String? get legislationDateVersion;
 
   /// Indicates that this Legislation ensures the implementation of another Legislation, for example by modifying national legislations so that they do not contradict to an EU regulation or decision. This implies a legal meaning. Transpositions of EU Directive should be captured with <a href="/legislationTransposes">legislationTransposes</a>.
@@ -10709,7 +10709,7 @@ abstract class Legislation implements CreativeWork, $Thing {
   Legislation? get legislationEnsuresImplementationOf;
 
   /// An identifier for the legislation. This can be either a string-based identifier, like the CELEX at EU level or the NOR in France, or a web-based, URL/URI identifier, like an ELI (European Legislation Identifier) or an URN-Lex.
-  @StringField(name: 'legislationIdentifier')
+  @StringField(name: 'legislationIdentifier', format: 'uri')
   String? get legislationIdentifier;
 
   /// The jurisdiction from which the legislation originates.
@@ -10961,11 +10961,11 @@ abstract class LiveBlogPosting implements BlogPosting, $Thing {
   String? get type;
 
   /// The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
-  @StringField(name: 'coverageEndTime')
+  @StringField(name: 'coverageEndTime', format: 'date-time')
   String? get coverageEndTime;
 
   /// The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
-  @StringField(name: 'coverageStartTime')
+  @StringField(name: 'coverageStartTime', format: 'date-time')
   String? get coverageStartTime;
 
   /// An update to the LiveBlog.
@@ -11007,7 +11007,7 @@ abstract class LoanOrCredit implements FinancialProduct, $Thing {
   QuantitativeValue? get loanTerm;
 
   /// The type of a loan or credit.
-  @StringField(name: 'loanType')
+  @StringField(name: 'loanType', format: 'uri')
   String? get loanType;
 
   /// The only way you get the money back in the event of default is the security. Recourse is where you still have the opportunity to go back to the borrower for the rest of the money.
@@ -11079,11 +11079,11 @@ abstract class LocationFeatureSpecification implements PropertyValue, $Thing {
   OpeningHoursSpecification? get hoursAvailable;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
 }
@@ -11126,11 +11126,11 @@ abstract class LodgingBusiness implements LocalBusiness, $Thing {
   Object? get availableLanguage;
 
   /// The earliest someone may check into a lodging establishment.
-  @StringField(name: 'checkinTime')
+  @StringField(name: 'checkinTime', format: 'date-time')
   String? get checkinTime;
 
   /// The latest someone may check out of a lodging establishment.
-  @StringField(name: 'checkoutTime')
+  @StringField(name: 'checkoutTime', format: 'date-time')
   String? get checkoutTime;
 
   /// The number of rooms (excluding bathrooms and closets) of the accommodation or lodging business.
@@ -11162,11 +11162,11 @@ abstract class LodgingReservation implements Reservation, $Thing {
   String? get type;
 
   /// The earliest someone may check into a lodging establishment.
-  @StringField(name: 'checkinTime')
+  @StringField(name: 'checkinTime', format: 'date-time')
   String? get checkinTime;
 
   /// The latest someone may check out of a lodging establishment.
-  @StringField(name: 'checkoutTime')
+  @StringField(name: 'checkoutTime', format: 'date-time')
   String? get checkoutTime;
 
   /// A full description of the lodging unit.
@@ -11435,7 +11435,7 @@ abstract class MediaObject implements CreativeWork, $Thing {
   String? get contentSize;
 
   /// Actual bytes of the media object, for example the image file or video file.
-  @StringField(name: 'contentUrl')
+  @StringField(name: 'contentUrl', format: 'uri')
   String? get contentUrl;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
@@ -11444,7 +11444,7 @@ abstract class MediaObject implements CreativeWork, $Thing {
   Object? get duration;
 
   /// A URL pointing to a player for a specific video. In general, this is the information in the ```src``` element of an ```embed``` tag and should not be the same as the content of the ```loc``` tag.
-  @StringField(name: 'embedUrl')
+  @StringField(name: 'embedUrl', format: 'uri')
   String? get embedUrl;
 
   /// The CreativeWork encoded by this media object.
@@ -11456,11 +11456,11 @@ abstract class MediaObject implements CreativeWork, $Thing {
   /// In cases where a [[CreativeWork]] has several media type representations, [[encoding]] can be used to indicate each [[MediaObject]] alongside particular [[encodingFormat]] information.
   ///
   /// Unregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry.
-  @StringField(name: 'encodingFormat')
+  @StringField(name: 'encodingFormat', format: 'uri')
   String? get encodingFormat;
 
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'endTime')
+  @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
 
   /// The height of the item.
@@ -11500,11 +11500,11 @@ abstract class MediaObject implements CreativeWork, $Thing {
   String? get sha256;
 
   /// The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'startTime')
+  @StringField(name: 'startTime', format: 'date-time')
   String? get startTime;
 
   /// Date (including time if available) when this media object was uploaded to this site.
-  @StringField(name: 'uploadDate')
+  @StringField(name: 'uploadDate', format: 'date-time')
   String? get uploadDate;
 
   /// The width of the item.
@@ -11941,7 +11941,7 @@ abstract class MedicalGuideline implements MedicalEntity, $Thing {
   String? get evidenceOrigin;
 
   /// Date on which this guideline's recommendation was made.
-  @StringField(name: 'guidelineDate')
+  @StringField(name: 'guidelineDate', format: 'date')
   String? get guidelineDate;
 
   /// The medical conditions, treatments, etc. that are the subject of the guideline.
@@ -12692,7 +12692,7 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
   Object? get merchantReturnDays;
 
   /// Specifies a Web page or service by URL, for product returns.
-  @StringField(name: 'merchantReturnLink')
+  @StringField(name: 'merchantReturnLink', format: 'uri')
   String? get merchantReturnLink;
 
   /// A refund type, from an enumerated list.
@@ -12751,7 +12751,7 @@ abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thin
   String? get type;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// Specifies either a fixed return date or the number of days (from the delivery date) that a product can be returned. Used when the [[returnPolicyCategory]] property is specified as [[MerchantReturnFiniteReturnWindow]].
@@ -12785,7 +12785,7 @@ abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thin
   MonetaryAmount? get returnShippingFeesAmount;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
 }
@@ -12812,15 +12812,15 @@ abstract class Message implements CreativeWork, $Thing {
   Object? get ccRecipient;
 
   /// The date/time at which the message has been read by the recipient if a single recipient exists.
-  @StringField(name: 'dateRead')
+  @StringField(name: 'dateRead', format: 'date-time')
   String? get dateRead;
 
   /// The date/time the message was received if a single recipient exists.
-  @StringField(name: 'dateReceived')
+  @StringField(name: 'dateReceived', format: 'date-time')
   String? get dateReceived;
 
   /// The date/time at which the message was sent.
-  @StringField(name: 'dateSent')
+  @StringField(name: 'dateSent', format: 'date-time')
   String? get dateSent;
 
   /// A CreativeWork attached to the message.
@@ -12962,11 +12962,11 @@ abstract class MonetaryAmount implements StructuredValue, $Thing {
   double? get minValue;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
   /// The value of a [[QuantitativeValue]] (including [[Observation]]) or property value node.\n\n* For [[QuantitativeValue]] and [[MonetaryAmount]], the recommended type for values is 'Number'.\n* For [[PropertyValue]], it can be 'Text', 'Number', 'Boolean', 'StructuredValue' or 'QualitativeValue'.\n* Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similar Unicode symbols.\n* Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.
@@ -13236,7 +13236,7 @@ abstract class Movie implements CreativeWork, $Thing {
   ///
   /// Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
   ///
-  @StringField(name: 'titleEIDR')
+  @StringField(name: 'titleEIDR', format: 'uri')
   String? get titleEIDR;
 
   /// The trailer of a movie or TV/radio series, season, episode, etc.
@@ -14079,7 +14079,7 @@ abstract class Observation implements Intangible, QuantitativeValue, $Thing {
   Object? get observationAbout;
 
   /// The observationDate of an [[Observation]].
-  @StringField(name: 'observationDate')
+  @StringField(name: 'observationDate', format: 'date-time')
   String? get observationDate;
 
   /// The length of time an Observation took place over. The format follows `P[0-9]*[Y|M|D|h|m|s]`. For example, P1Y is Period 1 Year, P3M is Period 3 Months, P3h is Period 3 hours.
@@ -14230,7 +14230,7 @@ abstract class Offer implements Intangible, $Thing {
   ///
   /// Note also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.
   /// ASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-  @StringField(name: 'asin')
+  @StringField(name: 'asin', format: 'uri')
   String? get asin;
 
   /// The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
@@ -14238,11 +14238,11 @@ abstract class Offer implements Intangible, $Thing {
   String? get availability;
 
   /// The end of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityEnds')
+  @StringField(name: 'availabilityEnds', format: 'date-time')
   String? get availabilityEnds;
 
   /// The beginning of the availability of the product or service included in the offer.
-  @StringField(name: 'availabilityStarts')
+  @StringField(name: 'availabilityStarts', format: 'date-time')
   String? get availabilityStarts;
 
   /// The place(s) from which the offer can be obtained (e.g. store locations).
@@ -14300,7 +14300,7 @@ abstract class Offer implements Intangible, $Thing {
   /// Digital Links should be populated into the [[hasGS1DigitalLink]] attribute.
   ///
   /// Note also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.
-  @StringField(name: 'gtin')
+  @StringField(name: 'gtin', format: 'uri')
   String? get gtin;
 
   /// The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
@@ -14329,7 +14329,7 @@ abstract class Offer implements Intangible, $Thing {
   Object? get hasDigitalProductPassport;
 
   /// The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProducts]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>) should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
-  @StringField(name: 'hasGS1DigitalLink')
+  @StringField(name: 'hasGS1DigitalLink', format: 'uri')
   String? get hasGS1DigitalLink;
 
   /// A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
@@ -14408,7 +14408,7 @@ abstract class Offer implements Intangible, $Thing {
   PriceSpecification? get priceSpecification;
 
   /// The date after which the price is no longer available.
-  @StringField(name: 'priceValidUntil')
+  @StringField(name: 'priceValidUntil', format: 'date')
   String? get priceValidUntil;
 
   /// A review of the item.
@@ -14441,11 +14441,11 @@ abstract class Offer implements Intangible, $Thing {
   MemberProgramTier? get validForMemberTier;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
   /// The warranty promise(s) included in the offer.
@@ -14579,7 +14579,7 @@ abstract class OfferShippingDetails implements StructuredValue, $Thing {
   Object? get shippingRate;
 
   /// Link to a page containing [[ShippingRateSettings]] and [[DeliveryTimeSettings]] details.
-  @StringField(name: 'shippingSettingsLink')
+  @StringField(name: 'shippingSettingsLink', format: 'uri')
   String? get shippingSettingsLink;
 
   /// Label to match an [[OfferShippingDetails]] with a [[DeliveryTimeSettings]] (within the context of a [[shippingSettingsLink]] cross-reference).
@@ -14689,7 +14689,7 @@ abstract class OpeningHoursSpecification implements StructuredValue, $Thing {
   String? get type;
 
   /// The closing hour of the place or service on the given day(s) of the week.
-  @StringField(name: 'closes')
+  @StringField(name: 'closes', format: 'time')
   String? get closes;
 
   /// The day of the week for which these opening hours are valid.
@@ -14697,15 +14697,15 @@ abstract class OpeningHoursSpecification implements StructuredValue, $Thing {
   String? get dayOfWeek;
 
   /// The opening hour of the place or service on the given day(s) of the week.
-  @StringField(name: 'opens')
+  @StringField(name: 'opens', format: 'time')
   String? get opens;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
 }
@@ -14805,7 +14805,7 @@ abstract class Order implements Intangible, $Thing {
   Object? get merchant;
 
   /// Date order was placed.
-  @StringField(name: 'orderDate')
+  @StringField(name: 'orderDate', format: 'date-time')
   String? get orderDate;
 
   /// The delivery of the parcel related to this order or order item.
@@ -14830,11 +14830,11 @@ abstract class Order implements Intangible, $Thing {
   Invoice? get partOfInvoice;
 
   /// The date that payment is due.
-  @StringField(name: 'paymentDue')
+  @StringField(name: 'paymentDue', format: 'date-time')
   String? get paymentDue;
 
   /// The date that payment is due.
-  @StringField(name: 'paymentDueDate')
+  @StringField(name: 'paymentDueDate', format: 'date-time')
   String? get paymentDueDate;
 
   /// The name of the credit card or other method of payment for the order.
@@ -14847,7 +14847,7 @@ abstract class Order implements Intangible, $Thing {
   String? get paymentMethodId;
 
   /// The URL for sending a payment.
-  @StringField(name: 'paymentUrl')
+  @StringField(name: 'paymentUrl', format: 'uri')
   String? get paymentUrl;
 
   /// An entity which offers (sells / leases / lends / loans) the services / goods.  A seller may also be a provider.
@@ -15005,7 +15005,7 @@ abstract class Organization implements Thing, $Thing {
   Organization? get department;
 
   /// The date that this organization was dissolved.
-  @StringField(name: 'dissolutionDate')
+  @StringField(name: 'dissolutionDate', format: 'date')
   String? get dissolutionDate;
 
   /// Statement on diversity policy by an [[Organization]] e.g. a [[NewsMediaOrganization]]. For a [[NewsMediaOrganization]], a statement describing the newsroom’s diversity policy on both staffing and sources, typically providing staffing data.
@@ -15061,7 +15061,7 @@ abstract class Organization implements Thing, $Thing {
   Person? get founders;
 
   /// The date that this organization was founded.
-  @StringField(name: 'foundingDate')
+  @StringField(name: 'foundingDate', format: 'date')
   String? get foundingDate;
 
   /// The place where the Organization was founded.
@@ -15090,7 +15090,7 @@ abstract class Organization implements Thing, $Thing {
   Credential? get hasCredential;
 
   /// The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProducts]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>) should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
-  @StringField(name: 'hasGS1DigitalLink')
+  @StringField(name: 'hasGS1DigitalLink', format: 'uri')
   String? get hasGS1DigitalLink;
 
   /// MemberProgram offered by an Organization, for example an eCommerce merchant or an airline.
@@ -15336,11 +15336,11 @@ abstract class OwnershipInfo implements StructuredValue, $Thing {
   Object? get acquiredFrom;
 
   /// The date and time of obtaining the product.
-  @StringField(name: 'ownedFrom')
+  @StringField(name: 'ownedFrom', format: 'date-time')
   String? get ownedFrom;
 
   /// The date and time of giving up ownership on the product.
-  @StringField(name: 'ownedThrough')
+  @StringField(name: 'ownedThrough', format: 'date-time')
   String? get ownedThrough;
 
   /// The product that this structured value is referring to.
@@ -15413,11 +15413,11 @@ abstract class ParcelDelivery implements Intangible, $Thing {
   DeliveryEvent? get deliveryStatus;
 
   /// The earliest date the package may arrive.
-  @StringField(name: 'expectedArrivalFrom')
+  @StringField(name: 'expectedArrivalFrom', format: 'date-time')
   String? get expectedArrivalFrom;
 
   /// The latest date the package may arrive.
-  @StringField(name: 'expectedArrivalUntil')
+  @StringField(name: 'expectedArrivalUntil', format: 'date-time')
   String? get expectedArrivalUntil;
 
   /// Method used for delivery or shipping.
@@ -15446,7 +15446,7 @@ abstract class ParcelDelivery implements Intangible, $Thing {
   String? get trackingNumber;
 
   /// Tracking url for the parcel delivery.
-  @StringField(name: 'trackingUrl')
+  @StringField(name: 'trackingUrl', format: 'uri')
   String? get trackingUrl;
 
 }
@@ -15842,7 +15842,7 @@ abstract class Permit implements Intangible, $Thing {
   Duration? get validFor;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The geographic area where the item is valid. Applies for example to a [[Permit]], a [[Certification]], or an [[EducationalOccupationalCredential]].
@@ -15850,7 +15850,7 @@ abstract class Permit implements Intangible, $Thing {
   AdministrativeArea? get validIn;
 
   /// The date when the item is no longer valid.
-  @StringField(name: 'validUntil')
+  @StringField(name: 'validUntil', format: 'date')
   String? get validUntil;
 
 }
@@ -15897,7 +15897,7 @@ abstract class Person implements Thing, $Thing {
   String? get awards;
 
   /// Date of birth.
-  @StringField(name: 'birthDate')
+  @StringField(name: 'birthDate', format: 'date')
   String? get birthDate;
 
   /// The place where the person was born.
@@ -15935,7 +15935,7 @@ abstract class Person implements Thing, $Thing {
   ContactPoint? get contactPoints;
 
   /// Date of death.
-  @StringField(name: 'deathDate')
+  @StringField(name: 'deathDate', format: 'date')
   String? get deathDate;
 
   /// The place where the person died.
@@ -16462,7 +16462,7 @@ abstract class Place implements Thing, $Thing {
   bool? get hasDriveThroughService;
 
   /// The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProducts]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>) should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
-  @StringField(name: 'hasGS1DigitalLink')
+  @StringField(name: 'hasGS1DigitalLink', format: 'uri')
   String? get hasGS1DigitalLink;
 
   /// A URL to a map of the place.
@@ -16499,11 +16499,11 @@ abstract class Place implements Thing, $Thing {
   Object? get longitude;
 
   /// A URL to a map of the place.
-  @StringField(name: 'map')
+  @StringField(name: 'map', format: 'uri')
   String? get map;
 
   /// A URL to a map of the place.
-  @StringField(name: 'maps')
+  @StringField(name: 'maps', format: 'uri')
   String? get maps;
 
   /// The total number of individuals that may attend an event or venue.
@@ -16554,7 +16554,7 @@ abstract class Place implements Thing, $Thing {
   String? get telephone;
 
   /// A page providing information on how to book a tour of some [[Place]], such as an [[Accommodation]] or [[ApartmentComplex]] in a real estate setting, as well as other kinds of tours as appropriate.
-  @StringField(name: 'tourBookingPage')
+  @StringField(name: 'tourBookingPage', format: 'uri')
   String? get tourBookingPage;
 
 }
@@ -16584,7 +16584,7 @@ abstract class PlanAction implements OrganizeAction, $Thing {
   String? get type;
 
   /// The time the object is scheduled to.
-  @StringField(name: 'scheduledTime')
+  @StringField(name: 'scheduledTime', format: 'date-time')
   String? get scheduledTime;
 
 }
@@ -16969,11 +16969,11 @@ abstract class PriceSpecification implements StructuredValue, $Thing {
   MemberProgramTier? get validForMemberTier;
 
   /// The date when the item becomes valid.
-  @StringField(name: 'validFrom')
+  @StringField(name: 'validFrom', format: 'date-time')
   String? get validFrom;
 
   /// The date after when the item is not valid. For example the end of an offer, salary period, or a period of opening hours.
-  @StringField(name: 'validThrough')
+  @StringField(name: 'validThrough', format: 'date-time')
   String? get validThrough;
 
   /// Specifies whether the applicable value-added tax (VAT) is included in the price specification or not.
@@ -17019,7 +17019,7 @@ abstract class Product implements Thing, $Thing {
   ///
   /// Note also that this is a definition for how to include ASINs in Schema.org data, and not a definition of ASINs in general - see documentation from Amazon for authoritative details.
   /// ASINs are most commonly encoded as text strings, but the [asin] property supports URL/URI as potential values too.
-  @StringField(name: 'asin')
+  @StringField(name: 'asin', format: 'uri')
   String? get asin;
 
   /// An intended audience, i.e. a group for whom something was created.
@@ -17100,7 +17100,7 @@ abstract class Product implements Thing, $Thing {
   /// Digital Links should be populated into the [[hasGS1DigitalLink]] attribute.
   ///
   /// Note also that this is a definition for how to include GTINs in Schema.org data, and not a definition of GTINs in general - see the GS1 documentation for authoritative details.
-  @StringField(name: 'gtin')
+  @StringField(name: 'gtin', format: 'uri')
   String? get gtin;
 
   /// The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See [GS1 GTIN Summary](http://www.gs1.org/barcodes/technical/idkeys/gtin) for more details.
@@ -17137,7 +17137,7 @@ abstract class Product implements Thing, $Thing {
   EnergyConsumptionDetails? get hasEnergyConsumptionDetails;
 
   /// The <a href="https://www.gs1.org/standards/gs1-digital-link">GS1 digital link</a> associated with the object. This URL should conform to the particular requirements of digital links. The link should only contain the Application Identifiers (AIs) that are relevant for the entity being annotated, for instance a [[Product]] or an [[Organization]], and for the correct granularity. In particular, for products:<ul><li>A Digital Link that contains a serial number (AI <code>21</code>) should only be present on instances of [[IndividualProduct]]</li><li>A Digital Link that contains a lot number (AI <code>10</code>) should be annotated as [[SomeProducts]] if only products from that lot are sold, or [[IndividualProduct]] if there is only a specific product.</li><li>A Digital Link that contains a global model number (AI <code>8013</code>) should be attached to a [[Product]] or a [[ProductModel]].</li></ul> Other item types should be adapted similarly.
-  @StringField(name: 'hasGS1DigitalLink')
+  @StringField(name: 'hasGS1DigitalLink', format: 'uri')
   String? get hasGS1DigitalLink;
 
   /// A measurement of an item, For example, the inseam of pants, the wheel size of a bicycle, the gauge of a screw, or the carbon footprint measured for certification by an authority. Usually an exact measurement, but can also be a range of measurements for adjustable products, for example belts and ski bindings.
@@ -17275,11 +17275,11 @@ abstract class Product implements Thing, $Thing {
   String? get productID;
 
   /// The date of production of the item, e.g. vehicle.
-  @StringField(name: 'productionDate')
+  @StringField(name: 'productionDate', format: 'date')
   String? get productionDate;
 
   /// The date the item, e.g. vehicle, was purchased by the current owner.
-  @StringField(name: 'purchaseDate')
+  @StringField(name: 'purchaseDate', format: 'date')
   String? get purchaseDate;
 
   /// The percentage of recycled material in the product.
@@ -17287,7 +17287,7 @@ abstract class Product implements Thing, $Thing {
   double? get recycledContentPercentage;
 
   /// The release date of a product or product model. This can be used to distinguish the exact variant of a product.
-  @StringField(name: 'releaseDate')
+  @StringField(name: 'releaseDate', format: 'date')
   String? get releaseDate;
 
   /// A review of the item.
@@ -17432,7 +17432,7 @@ abstract class ProductReturnPolicy implements Intangible, $Thing {
   int? get productReturnDays;
 
   /// Indicates a Web page or service by URL, for product return.
-  @StringField(name: 'productReturnLink')
+  @StringField(name: 'productReturnLink', format: 'uri')
   String? get productReturnLink;
 
 }
@@ -17624,11 +17624,11 @@ abstract class PropertyValue implements StructuredValue, $Thing {
   /// (1) a prefixed string, mainly meant to be used with standards for product properties; (2) a site-specific, non-prefixed string (e.g. the primary key of the property or the vendor-specific ID of the property), or (3)
   /// a URL indicating the type of the property, either pointing to an external vocabulary, or a Web resource that describes the property (e.g. a glossary entry).
   /// Standards bodies should promote a standard prefix for the identifiers of properties from their standards.
-  @StringField(name: 'propertyID')
+  @StringField(name: 'propertyID', format: 'uri')
   String? get propertyID;
 
   /// The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-  @StringField(name: 'unitCode')
+  @StringField(name: 'unitCode', format: 'uri')
   String? get unitCode;
 
   /// A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
@@ -17954,7 +17954,7 @@ abstract class QuantitativeValue implements StructuredValue, $Thing {
   double? get minValue;
 
   /// The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-  @StringField(name: 'unitCode')
+  @StringField(name: 'unitCode', format: 'uri')
   String? get unitCode;
 
   /// A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
@@ -18376,7 +18376,7 @@ abstract class RealEstateListing implements WebPage, $Thing {
   String? get type;
 
   /// Publication date of an online listing.
-  @StringField(name: 'datePosted')
+  @StringField(name: 'datePosted', format: 'date-time')
   String? get datePosted;
 
   /// Length of the lease for some [[Accommodation]], either particular to some [[Offer]] or in some cases intrinsic to the property.
@@ -18586,7 +18586,7 @@ abstract class RentalCarReservation implements Reservation, $Thing {
   Place? get dropoffLocation;
 
   /// When a rental car can be dropped off.
-  @StringField(name: 'dropoffTime')
+  @StringField(name: 'dropoffTime', format: 'date-time')
   String? get dropoffTime;
 
   /// Where a taxi will pick up a passenger or a rental car can be picked up.
@@ -18594,7 +18594,7 @@ abstract class RentalCarReservation implements Reservation, $Thing {
   Place? get pickupLocation;
 
   /// When a taxi will pick up a passenger or a rental car can be picked up.
-  @StringField(name: 'pickupTime')
+  @StringField(name: 'pickupTime', format: 'date-time')
   String? get pickupTime;
 
 }
@@ -18778,7 +18778,7 @@ abstract class Reservation implements Intangible, $Thing {
   Object? get bookingAgent;
 
   /// The date and time the reservation was booked.
-  @StringField(name: 'bookingTime')
+  @StringField(name: 'bookingTime', format: 'date-time')
   String? get bookingTime;
 
   /// An entity that arranges for an exchange between a buyer and a seller.  In most cases a broker never acquires or releases ownership of a product or service involved in an exchange.  If it is not clear whether an entity is a broker, seller, or buyer, the latter two terms are preferred.
@@ -18787,7 +18787,7 @@ abstract class Reservation implements Intangible, $Thing {
   Object? get broker;
 
   /// The date and time the reservation was modified.
-  @StringField(name: 'modifiedTime')
+  @StringField(name: 'modifiedTime', format: 'date-time')
   String? get modifiedTime;
 
   /// The currency of the price, or a price component when attached to [[PriceSpecification]] and its subtypes.\n\nUse standard formats: [ISO 4217 currency format](http://en.wikipedia.org/wiki/ISO_4217), e.g. "USD"; [Ticker symbol](https://en.wikipedia.org/wiki/List_of_cryptocurrencies) for cryptocurrencies, e.g. "BTC"; well known names for [Local Exchange Trading Systems](https://en.wikipedia.org/wiki/Local_exchange_trading_system) (LETS) and other currency types, e.g. "Ithaca HOUR".
@@ -19150,19 +19150,19 @@ abstract class Role implements Intangible, $Thing {
   String? get type;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// A position played, performed or filled by a person or organization, as part of an organization. For example, an athlete in a SportsTeam might play in the position named 'Quarterback'.
-  @StringField(name: 'namedPosition')
+  @StringField(name: 'namedPosition', format: 'uri')
   String? get namedPosition;
 
   /// A role played, performed or filled by a person or organization. For example, the team of creators for a comic book might fill the roles named 'inker', 'penciller', and 'letterer'; or an athlete in a SportsTeam might play in the position named 'Quarterback'.
-  @StringField(name: 'roleName')
+  @StringField(name: 'roleName', format: 'uri')
   String? get roleName;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
 }
@@ -19308,18 +19308,18 @@ abstract class Schedule implements Intangible, $Thing {
   Object? get duration;
 
   /// The end date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'endDate')
+  @StringField(name: 'endDate', format: 'date-time')
   String? get endDate;
 
   /// The endTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to end. For actions that span a period of time, when the action was performed. E.g. John wrote a book from January to *December*. For media, including audio and video, it's the time offset of the end of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'endTime')
+  @StringField(name: 'endTime', format: 'date-time')
   String? get endTime;
 
   /// Defines a [[Date]] or [[DateTime]] during which a scheduled [[Event]] will not take place. The property allows exceptions to
   /// a [[Schedule]] to be specified. If an exception is specified as a [[DateTime]] then only the event that would have started at that specific date and time
   /// should be excluded from the schedule. If an exception is specified as a [[Date]] then any event that is scheduled for that 24 hour period should be
   /// excluded from the schedule. This allows a whole day to be excluded from the schedule without having to itemise every scheduled event.
-  @StringField(name: 'exceptDate')
+  @StringField(name: 'exceptDate', format: 'date-time')
   String? get exceptDate;
 
   /// Defines the number of times a recurring [[Event]] will take place.
@@ -19337,11 +19337,11 @@ abstract class Schedule implements Intangible, $Thing {
   String? get scheduleTimezone;
 
   /// The start date and time of the item (in [ISO 8601 date format](http://en.wikipedia.org/wiki/ISO_8601)).
-  @StringField(name: 'startDate')
+  @StringField(name: 'startDate', format: 'date-time')
   String? get startDate;
 
   /// The startTime of something. For a reserved event or service (e.g. FoodEstablishmentReservation), the time that it is expected to start. For actions that span a period of time, when the action was performed. E.g. John wrote a book from *January* to December. For media, including audio and video, it's the time offset of the start of a clip within a larger file.\n\nNote that Event uses startDate/endDate instead of startTime/endTime, even when describing dates with times. This situation may be clarified in future revisions.
-  @StringField(name: 'startTime')
+  @StringField(name: 'startTime', format: 'date-time')
   String? get startTime;
 
 }
@@ -19756,7 +19756,7 @@ abstract class Service implements Intangible, $Thing {
   String? get slogan;
 
   /// Human-readable terms of service documentation.
-  @StringField(name: 'termsOfService')
+  @StringField(name: 'termsOfService', format: 'uri')
   String? get termsOfService;
 
 }
@@ -19802,7 +19802,7 @@ abstract class ServiceChannel implements Intangible, $Thing {
   ContactPoint? get serviceSmsNumber;
 
   /// The website to access the service.
-  @StringField(name: 'serviceUrl')
+  @StringField(name: 'serviceUrl', format: 'uri')
   String? get serviceUrl;
 
 }
@@ -19824,7 +19824,7 @@ abstract class ServicePeriod implements StructuredValue, $Thing {
   Object? get businessDays;
 
   /// Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-  @StringField(name: 'cutoffTime')
+  @StringField(name: 'cutoffTime', format: 'time')
   String? get cutoffTime;
 
   /// The duration of the item (movie, audio recording, event, etc.) in [ISO 8601 duration format](http://en.wikipedia.org/wiki/ISO_8601).
@@ -19949,7 +19949,7 @@ abstract class ShippingDeliveryTime implements StructuredValue, $Thing {
   Object? get businessDays;
 
   /// Order cutoff time allows merchants to describe the time after which they will no longer process orders received on that day. For orders processed after cutoff time, one day gets added to the delivery time estimate. This property is expected to be most typically used via the [[ShippingRateSettings]] publication pattern. The time is indicated using the ISO-8601 Time format, e.g. "23:30:00-05:00" would represent 6:30 pm Eastern Standard Time (EST) which is 5 hours behind Coordinated Universal Time (UTC).
-  @StringField(name: 'cutoffTime')
+  @StringField(name: 'cutoffTime', format: 'time')
   String? get cutoffTime;
 
   /// The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.
@@ -20254,11 +20254,11 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
   String? get type;
 
   /// Type of software application, e.g. 'Game, Multimedia'.
-  @StringField(name: 'applicationCategory')
+  @StringField(name: 'applicationCategory', format: 'uri')
   String? get applicationCategory;
 
   /// Subcategory of the application, e.g. 'Arcade Game'.
-  @StringField(name: 'applicationSubCategory')
+  @StringField(name: 'applicationSubCategory', format: 'uri')
   String? get applicationSubCategory;
 
   /// The name of the application suite to which the application belongs (e.g. Excel belongs to Office).
@@ -20282,11 +20282,11 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
   String? get device;
 
   /// If the file can be downloaded, URL to download the binary.
-  @StringField(name: 'downloadUrl')
+  @StringField(name: 'downloadUrl', format: 'uri')
   String? get downloadUrl;
 
   /// Features or modules provided by this application (and possibly required by other applications).
-  @StringField(name: 'featureList')
+  @StringField(name: 'featureList', format: 'uri')
   String? get featureList;
 
   /// Size of the application / package (e.g. 18MB). In the absence of a unit (MB, KB etc.), KB will be assumed.
@@ -20294,11 +20294,11 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
   String? get fileSize;
 
   /// URL at which the app may be installed, if different from the URL of the item.
-  @StringField(name: 'installUrl')
+  @StringField(name: 'installUrl', format: 'uri')
   String? get installUrl;
 
   /// Minimum memory requirements.
-  @StringField(name: 'memoryRequirements')
+  @StringField(name: 'memoryRequirements', format: 'uri')
   String? get memoryRequirements;
 
   /// Operating systems supported (Windows 7, OS X 10.6, Android 1.6).
@@ -20315,11 +20315,11 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
   String? get processorRequirements;
 
   /// Description of what changed in this version.
-  @StringField(name: 'releaseNotes')
+  @StringField(name: 'releaseNotes', format: 'uri')
   String? get releaseNotes;
 
   /// Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (examples: DirectX, Java or .NET runtime).
-  @StringField(name: 'requirements')
+  @StringField(name: 'requirements', format: 'uri')
   String? get requirements;
 
   /// Runtime platform or script interpreter dependencies (example: Java v1, Python 2.3, .NET Framework 3.0).
@@ -20350,7 +20350,7 @@ abstract class SoftwareApplication implements CreativeWork, $Thing {
   String? get softwareVersion;
 
   /// Storage requirements (free space required).
-  @StringField(name: 'storageRequirements')
+  @StringField(name: 'storageRequirements', format: 'uri')
   String? get storageRequirements;
 
   /// Supporting data for a SoftwareApplication.
@@ -20371,7 +20371,7 @@ abstract class SoftwareSourceCode implements CreativeWork, $Thing {
   String? get type;
 
   /// Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex).
-  @StringField(name: 'codeRepository')
+  @StringField(name: 'codeRepository', format: 'uri')
   String? get codeRepository;
 
   /// What type of code sample: full (compile ready) solution, code snippet, inline code, scripts, template.
@@ -20514,7 +20514,7 @@ abstract class SpecialAnnouncement implements CreativeWork, $Thing {
   Object? get category;
 
   /// Publication date of an online listing.
-  @StringField(name: 'datePosted')
+  @StringField(name: 'datePosted', format: 'date-time')
   String? get datePosted;
 
   /// Information about disease prevention.
@@ -20653,7 +20653,7 @@ abstract class SportsEvent implements Event, $Thing {
   Person? get referee;
 
   /// A type of sport (e.g. Baseball).
-  @StringField(name: 'sport')
+  @StringField(name: 'sport', format: 'uri')
   String? get sport;
 
 }
@@ -20670,7 +20670,7 @@ abstract class SportsOrganization implements Organization, $Thing {
   String? get type;
 
   /// A type of sport (e.g. Baseball).
-  @StringField(name: 'sport')
+  @StringField(name: 'sport', format: 'uri')
   String? get sport;
 
 }
@@ -21090,7 +21090,7 @@ abstract class TVEpisode implements Episode, $Thing {
   ///
   /// Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
   ///
-  @StringField(name: 'titleEIDR')
+  @StringField(name: 'titleEIDR', format: 'uri')
   String? get titleEIDR;
 
 }
@@ -21124,7 +21124,7 @@ abstract class TVSeason implements CreativeWork, CreativeWorkSeason, $Thing {
   ///
   /// Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
   ///
-  @StringField(name: 'titleEIDR')
+  @StringField(name: 'titleEIDR', format: 'uri')
   String? get titleEIDR;
 
 }
@@ -21209,7 +21209,7 @@ abstract class TVSeries implements CreativeWork, CreativeWorkSeries, $Thing {
   ///
   /// Since schema.org types like [[Movie]], [[TVEpisode]], [[TVSeason]], and [[TVSeries]] can be used for both works and their multiple expressions, it is possible to use [[titleEIDR]] alone (for a general description), or alongside [[editEIDR]] for a more edit-specific description.
   ///
-  @StringField(name: 'titleEIDR')
+  @StringField(name: 'titleEIDR', format: 'uri')
   String? get titleEIDR;
 
   /// The trailer of a movie or TV/radio series, season, episode, etc.
@@ -21291,7 +21291,7 @@ abstract class TaxiReservation implements Reservation, $Thing {
   Place? get pickupLocation;
 
   /// When a taxi will pick up a passenger or a rental car can be picked up.
-  @StringField(name: 'pickupTime')
+  @StringField(name: 'pickupTime', format: 'date-time')
   String? get pickupTime;
 
 }
@@ -21534,7 +21534,7 @@ abstract class Thing implements $Thing {
 
   /// An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. Typically the value is a URI-identified RDF class, and in this case corresponds to the
   /// use of rdf:type in RDF. Text values can be used sparingly, for cases where useful information can be added without their being an appropriate schema to reference. In the case of text values, the class label should follow the schema.org <a href="https://schema.org/docs/styleguide.html">style guide</a>.
-  @StringField(name: 'additionalType')
+  @StringField(name: 'additionalType', format: 'uri')
   String? get additionalType;
 
   /// An alias for the item.
@@ -21580,7 +21580,7 @@ abstract class Thing implements $Thing {
   Action? get potentialAction;
 
   /// URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.
-  @StringField(name: 'sameAs')
+  @StringField(name: 'sameAs', format: 'uri')
   String? get sameAs;
 
   /// A CreativeWork or Event about this Thing.
@@ -21589,7 +21589,7 @@ abstract class Thing implements $Thing {
   Object? get subjectOf;
 
   /// URL of the item.
-  @StringField(name: 'url')
+  @StringField(name: 'url', format: 'uri')
   String? get url;
 
 }
@@ -21606,7 +21606,7 @@ abstract class Ticket implements Intangible, $Thing {
   String? get type;
 
   /// The date the ticket was issued.
-  @StringField(name: 'dateIssued')
+  @StringField(name: 'dateIssued', format: 'date-time')
   String? get dateIssued;
 
   /// The organization issuing the item, for example a [[Permit]], [[Ticket]], or [[Certification]].
@@ -21622,7 +21622,7 @@ abstract class Ticket implements Intangible, $Thing {
   String? get ticketNumber;
 
   /// Reference to an asset (e.g., Barcode, QR code image or PDF) usable for entrance.
-  @StringField(name: 'ticketToken')
+  @StringField(name: 'ticketToken', format: 'uri')
   String? get ticketToken;
 
   /// The seat associated with the ticket.
@@ -21985,11 +21985,11 @@ abstract class Trip implements Intangible, $Thing {
   String? get type;
 
   /// The expected arrival time.
-  @StringField(name: 'arrivalTime')
+  @StringField(name: 'arrivalTime', format: 'date-time')
   String? get arrivalTime;
 
   /// The expected departure time.
-  @StringField(name: 'departureTime')
+  @StringField(name: 'departureTime', format: 'date-time')
   String? get departureTime;
 
   /// Destination(s) ( [[Place]] ) that make up a trip. For a trip where destination order is important use [[ItemList]] to specify that order (see examples).
@@ -22047,7 +22047,7 @@ abstract class TypeAndQuantityNode implements StructuredValue, $Thing {
   Object? get typeOfGood;
 
   /// The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-  @StringField(name: 'unitCode')
+  @StringField(name: 'unitCode', format: 'uri')
   String? get unitCode;
 
   /// A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
@@ -22146,7 +22146,7 @@ abstract class UnitPriceSpecification implements PriceSpecification, $Thing {
   QuantitativeValue? get referenceQuantity;
 
   /// The unit of measurement given using the UN/CEFACT Common Code (3 characters) or a URL. Other codes than the UN/CEFACT Common Code may be used with a prefix followed by a colon.
-  @StringField(name: 'unitCode')
+  @StringField(name: 'unitCode', format: 'uri')
   String? get unitCode;
 
   /// A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for
@@ -22232,7 +22232,7 @@ abstract class UserComments implements UserInteraction, $Thing {
   String? get commentText;
 
   /// The time at which the UserComment was made.
-  @StringField(name: 'commentTime')
+  @StringField(name: 'commentTime', format: 'date-time')
   String? get commentTime;
 
   /// The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.
@@ -22245,7 +22245,7 @@ abstract class UserComments implements UserInteraction, $Thing {
   CreativeWork? get discusses;
 
   /// The URL at which a reply may be posted to the specified UserComment.
-  @StringField(name: 'replyToUrl')
+  @StringField(name: 'replyToUrl', format: 'uri')
   String? get replyToUrl;
 
 }
@@ -22396,7 +22396,7 @@ abstract class Vehicle implements Product, $Thing {
   QuantitativeValue? get cargoVolume;
 
   /// The date of the first registration of the vehicle with the respective public authorities.
-  @StringField(name: 'dateVehicleFirstRegistered')
+  @StringField(name: 'dateVehicleFirstRegistered', format: 'date')
   String? get dateVehicleFirstRegistered;
 
   /// The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
@@ -22438,7 +22438,7 @@ abstract class Vehicle implements Product, $Thing {
   QuantitativeValue? get mileageFromOdometer;
 
   /// The release date of a vehicle model (often used to differentiate versions of the same make and model).
-  @StringField(name: 'modelDate')
+  @StringField(name: 'modelDate', format: 'date')
   String? get modelDate;
 
   /// The number or type of airbags in the vehicle.
@@ -22471,11 +22471,11 @@ abstract class Vehicle implements Product, $Thing {
   QuantitativeValue? get payload;
 
   /// The date of production of the item, e.g. vehicle.
-  @StringField(name: 'productionDate')
+  @StringField(name: 'productionDate', format: 'date')
   String? get productionDate;
 
   /// The date the item, e.g. vehicle, was purchased by the current owner.
-  @StringField(name: 'purchaseDate')
+  @StringField(name: 'purchaseDate', format: 'date')
   String? get purchaseDate;
 
   /// The number of persons that can be seated (e.g. in a vehicle), both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
@@ -22520,7 +22520,7 @@ abstract class Vehicle implements Product, $Thing {
   String? get vehicleInteriorType;
 
   /// The release date of a vehicle model (often used to differentiate versions of the same make and model).
-  @StringField(name: 'vehicleModelDate')
+  @StringField(name: 'vehicleModelDate', format: 'date')
   String? get vehicleModelDate;
 
   /// The number of passengers that can be seated in the vehicle, both in terms of the physical space available, and in terms of limitations set by law.\n\nTypical unit code(s): C62 for persons.
@@ -22920,11 +22920,11 @@ abstract class VisualArtwork implements CreativeWork, $Thing {
   Object? get artEdition;
 
   /// The material used. (E.g. Oil, Watercolour, Acrylic, Linoprint, Marble, Cyanotype, Digital, Lithograph, DryPoint, Intaglio, Pastel, Woodcut, Pencil, Mixed Media, etc.)
-  @StringField(name: 'artMedium')
+  @StringField(name: 'artMedium', format: 'uri')
   String? get artMedium;
 
   /// e.g. Painting, Drawing, Sculpture, Print, Photograph, Assemblage, Collage, etc.
-  @StringField(name: 'artform')
+  @StringField(name: 'artform', format: 'uri')
   String? get artform;
 
   /// The primary artist for a work
@@ -22934,7 +22934,7 @@ abstract class VisualArtwork implements CreativeWork, $Thing {
   Person? get artist;
 
   /// The supporting materials for the artwork, e.g. Canvas, Paper, Wood, Board, etc.
-  @StringField(name: 'artworkSurface')
+  @StringField(name: 'artworkSurface', format: 'uri')
   String? get artworkSurface;
 
   /// The individual who adds color to inked drawings.
@@ -22964,7 +22964,7 @@ abstract class VisualArtwork implements CreativeWork, $Thing {
   Person? get penciler;
 
   /// A material used as a surface in some artwork, e.g. Canvas, Paper, Wood, Board, etc.
-  @StringField(name: 'surface')
+  @StringField(name: 'surface', format: 'uri')
   String? get surface;
 
   /// The weight of the product or person.
@@ -23265,7 +23265,7 @@ abstract class WebPage implements CreativeWork, $Thing {
   Object? get breadcrumb;
 
   /// Date on which the content on this web page was last reviewed for accuracy and/or completeness.
-  @StringField(name: 'lastReviewed')
+  @StringField(name: 'lastReviewed', format: 'date')
   String? get lastReviewed;
 
   /// Indicates if this web page element is the main subject of the page.
@@ -23277,7 +23277,7 @@ abstract class WebPage implements CreativeWork, $Thing {
   ImageObject? get primaryImageOfPage;
 
   /// A link related to this web page, for example to other related web pages.
-  @StringField(name: 'relatedLink')
+  @StringField(name: 'relatedLink', format: 'uri')
   String? get relatedLink;
 
   /// People or organizations that have reviewed the content on this web page for accuracy and/or completeness.
@@ -23286,11 +23286,11 @@ abstract class WebPage implements CreativeWork, $Thing {
   Object? get reviewedBy;
 
   /// One of the more significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
-  @StringField(name: 'significantLink')
+  @StringField(name: 'significantLink', format: 'uri')
   String? get significantLink;
 
   /// The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most.
-  @StringField(name: 'significantLinks')
+  @StringField(name: 'significantLinks', format: 'uri')
   String? get significantLinks;
 
   /// Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.

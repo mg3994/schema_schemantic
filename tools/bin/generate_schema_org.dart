@@ -59,6 +59,9 @@ void main(List<String> args) async {
       case 'XPathType':
       case 'CssSelectorType':
       case 'PronounceableText':
+      case 'Date':
+      case 'DateTime':
+      case 'Time':
         return 'String';
       case 'Number':
       case 'Float':
@@ -67,10 +70,6 @@ void main(List<String> args) async {
         return 'int';
       case 'Boolean':
         return 'bool';
-      case 'Date':
-      case 'DateTime':
-      case 'Time':
-        return 'String';
       default:
         if (ontology.enumMembersMap.containsKey(range)) {
           return 'String';
@@ -80,6 +79,14 @@ void main(List<String> args) async {
         }
         return 'dynamic';
     }
+  }
+
+  String? determineFormatForRanges(List<String> ranges) {
+    if (ranges.contains('URL')) return 'uri';
+    if (ranges.contains('DateTime')) return 'date-time';
+    if (ranges.contains('Date')) return 'date';
+    if (ranges.contains('Time')) return 'time';
+    return null;
   }
 
   for (final cls in ontology.classes.values) {
@@ -147,6 +154,8 @@ void main(List<String> args) async {
         }
       }
 
+      final format = determineFormatForRanges(ranges);
+
       if (validTypes.length > 1) {
         buffer.writeln("  @AnyOf([${validTypes.join(', ')}])");
         buffer.writeln("  @JsonKey(name: '${prop.name}', includeIfNull: false)");
@@ -155,6 +164,9 @@ void main(List<String> args) async {
         final dartType = validTypes.first;
         if (dartType == 'String') {
           final stringParams = <String>["name: '${prop.name}'"];
+          if (format != null) {
+            stringParams.add("format: '$format'");
+          }
           if (enumValues.isNotEmpty) {
             final enumValuesStr = enumValues.map((e) => "'$e'").join(', ');
             stringParams.add("enumValues: [$enumValuesStr]");

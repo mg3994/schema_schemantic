@@ -211,6 +211,20 @@ class SchemaOrgParser {
 
 /// Helper class for dynamic JSON-LD parsing.
 class SchemaOrg {
+  /// Normalizes a type string or IRI (e.g. `schema:Person`, `https://schema.org/Person` -> `Person`).
+  static String normalizeType(String typeStr) {
+    if (typeStr.startsWith('https://schema.org/')) {
+      return typeStr.substring('https://schema.org/'.length);
+    }
+    if (typeStr.startsWith('http://schema.org/')) {
+      return typeStr.substring('http://schema.org/'.length);
+    }
+    if (typeStr.startsWith('schema:')) {
+      return typeStr.substring(7);
+    }
+    return typeStr;
+  }
+
   /// Parses arbitrary incoming JSON-LD structure (single map, list, or `@graph` container)
   /// into a Dart object representation (e.g. `ValueObject`, Map, or List).
   static dynamic parseJsonLd(dynamic json) {
@@ -246,10 +260,20 @@ class SchemaOrg {
         return ValueObject.fromJson(map);
       }
 
-      // Process map recursively
+      // Process map recursively and normalize @type if present
       final resultMap = <String, dynamic>{};
       map.forEach((key, value) {
-        resultMap[key] = parseJsonLd(value);
+        if (key == '@type') {
+          if (value is String) {
+            resultMap[key] = normalizeType(value);
+          } else if (value is List) {
+            resultMap[key] = value.map((v) => v is String ? normalizeType(v) : v).toList();
+          } else {
+            resultMap[key] = value;
+          }
+        } else {
+          resultMap[key] = parseJsonLd(value);
+        }
       });
       return resultMap;
     }
