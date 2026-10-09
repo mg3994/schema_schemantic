@@ -8,7 +8,7 @@ void main(List<String> args) async {
   );
   final ontology = SchemaOrgParser.parse(jsonLd);
 
-  print('Found ${ontology.classes.length} classes, ${ontology.properties.length} properties.');
+  print('Found ${ontology.classes.length} classes, ${ontology.properties.length} properties, ${ontology.enums.length} enums.');
 
   // Attach properties to classes based on domainIncludes
   final classPropertiesMap = <String, List<SchemaProperty>>{};
@@ -50,7 +50,9 @@ void main(List<String> args) async {
     return cleaned;
   }
 
-  String mapRangeToDartType(String range, Set<String> allClassNames) {
+  final allClassNames = ontology.classes.keys.toSet();
+
+  String mapRangeToDartType(String range) {
     switch (range) {
       case 'Text':
       case 'URL':
@@ -70,14 +72,15 @@ void main(List<String> args) async {
       case 'Time':
         return 'String';
       default:
+        if (ontology.enumMembersMap.containsKey(range)) {
+          return 'String';
+        }
         if (allClassNames.contains(range)) {
           return sanitizeClassName(range);
         }
         return 'dynamic';
-      }
+    }
   }
-
-  final allClassNames = ontology.classes.keys.toSet();
 
   for (final cls in ontology.classes.values) {
     final className = sanitizeClassName(cls.name);
@@ -102,7 +105,6 @@ void main(List<String> args) async {
       }
     }
 
-    // Escape string and dollar sign
     final commentText = cls.comment ?? cls.name;
     final escapedComment = commentText
         .replaceAll(r'\', r'\\')
@@ -134,8 +136,16 @@ void main(List<String> args) async {
       }
 
       final ranges = prop.rangeIncludes;
-      final dartTypes = ranges.map((r) => mapRangeToDartType(r, allClassNames)).toSet().toList();
+      final dartTypes = ranges.map(mapRangeToDartType).toSet().toList();
       final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
+
+      // Check if property ranges include any Enumerations
+      final enumValues = <String>[];
+      for (final r in ranges) {
+        if (ontology.enumMembersMap.containsKey(r)) {
+          enumValues.addAll(ontology.enumMembersMap[r]!);
+        }
+      }
 
       if (validTypes.length > 1) {
         buffer.writeln("  @AnyOf([${validTypes.join(', ')}])");
@@ -144,7 +154,16 @@ void main(List<String> args) async {
       } else if (validTypes.length == 1) {
         final dartType = validTypes.first;
         if (dartType == 'String') {
-          buffer.writeln("  @StringField(name: '${prop.name}')");
+          final stringParams = <String>["name: '${prop.name}'"];
+          if (enumValues.isNotEmpty) {
+            final enumValuesStr = enumValues.map((e) => "'$e'").join(', ');
+            stringParams.add("enumValues: [$enumValuesStr]");
+          }
+          if (prop.pattern != null && prop.pattern!.isNotEmpty) {
+            final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
+            stringParams.add("pattern: '$escapedPattern'");
+          }
+          buffer.writeln("  @StringField(${stringParams.join(', ')})");
         } else if (dartType == 'int') {
           buffer.writeln("  @IntegerField(name: '${prop.name}')");
         } else if (dartType == 'double') {

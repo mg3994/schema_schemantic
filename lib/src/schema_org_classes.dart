@@ -834,8 +834,8 @@ abstract class Action implements Thing, $Thing {
   HowTo? get actionProcess;
 
   /// Indicates the current disposition of the Action.
-  @JsonKey(name: 'actionStatus', includeIfNull: false)
-  ActionStatusType? get actionStatus;
+  @StringField(name: 'actionStatus', enumValues: ['ActiveActionStatus', 'CompletedActionStatus', 'FailedActionStatus', 'PotentialActionStatus'])
+  String? get actionStatus;
 
   /// The direct performer or driver of the action (animate or inanimate). E.g. *John* wrote a book.
   @AnyOf([Organization, Person])
@@ -908,7 +908,7 @@ abstract class ActionAccessSpecification implements Intangible, $Thing {
   String? get availabilityStarts;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -1109,8 +1109,8 @@ abstract class Airline implements Organization, $Thing {
   String? get type;
 
   /// The type of boarding policy used by the airline (e.g. zone-based or group-based).
-  @JsonKey(name: 'boardingPolicy', includeIfNull: false)
-  BoardingPolicyType? get boardingPolicy;
+  @StringField(name: 'boardingPolicy', enumValues: ['GroupBoardingPolicy', 'ZoneBoardingPolicy'])
+  String? get boardingPolicy;
 
   /// IATA identifier for an airline or airport.
   @StringField(name: 'iataCode')
@@ -2334,8 +2334,8 @@ abstract class Book implements CreativeWork, $Thing {
   String? get bookEdition;
 
   /// The format of the book.
-  @JsonKey(name: 'bookFormat', includeIfNull: false)
-  BookFormatType? get bookFormat;
+  @StringField(name: 'bookFormat', enumValues: ['AudiobookFormat', 'EBook', 'GraphicNovel', 'Hardcover', 'Pamphlet', 'Paperback'])
+  String? get bookFormat;
 
   /// The illustrator of the book.
   @JsonKey(name: 'illustrator', includeIfNull: false)
@@ -3206,8 +3206,8 @@ abstract class Certification implements CreativeWork, $Thing {
   Rating? get certificationRating;
 
   /// Indicates the current status of a certification: active or inactive. See also  [gs1:certificationStatus](https://www.gs1.org/voc/certificationStatus).
-  @JsonKey(name: 'certificationStatus', includeIfNull: false)
-  CertificationStatusEnumeration? get certificationStatus;
+  @StringField(name: 'certificationStatus', enumValues: ['CertificationActive', 'CertificationInactive'])
+  String? get certificationStatus;
 
   /// Date of first publication or broadcast. For example the date a [[CreativeWork]] was broadcast or a [[Certification]] was issued.
   @StringField(name: 'datePublished')
@@ -3905,9 +3905,8 @@ abstract class CompoundPriceSpecification implements PriceSpecification, $Thing 
   PriceSpecification? get priceComponent;
 
   /// Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or, a UN/EDIFACT 5387 code, or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-  @AnyOf([PriceTypeEnumeration, String])
-  @JsonKey(name: 'priceType', includeIfNull: false)
-  Object? get priceType;
+  @StringField(name: 'priceType', enumValues: ['InvoicePrice', 'ListPrice', 'MSRP', 'MaximumRetailPrice', 'MinimumAdvertisedPrice', 'RegularPrice', 'SRP', 'SalePrice', 'StrikethroughPrice'])
+  String? get priceType;
 
 }
 
@@ -4055,8 +4054,8 @@ abstract class ContactPoint implements StructuredValue, $Thing {
   Object? get availableLanguage;
 
   /// An option available on this contact point (e.g. a toll-free number or support for hearing-impaired callers).
-  @JsonKey(name: 'contactOption', includeIfNull: false)
-  ContactPointOption? get contactOption;
+  @StringField(name: 'contactOption', enumValues: ['HearingImpairedSupported', 'TollFree'])
+  String? get contactOption;
 
   /// A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.
   @StringField(name: 'contactType')
@@ -4573,8 +4572,8 @@ abstract class CreativeWork implements Thing, $Thing {
   String? get datePublished;
 
   /// Indicates an IPTCDigitalSourceEnumeration code indicating the nature of the digital source(s) for some [[CreativeWork]].
-  @JsonKey(name: 'digitalSourceType', includeIfNull: false)
-  IPTCDigitalSourceEnumeration? get digitalSourceType;
+  @StringField(name: 'digitalSourceType', enumValues: ['AlgorithmicMediaDigitalSource', 'AlgorithmicallyEnhancedDigitalSource', 'CompositeCaptureDigitalSource', 'CompositeDigitalSource', 'CompositeSyntheticDigitalSource', 'CompositeWithTrainedAlgorithmicMediaDigitalSource', 'DataDrivenMediaDigitalSource', 'DigitalArtDigitalSource', 'DigitalCaptureDigitalSource', 'MinorHumanEditsDigitalSource', 'MultiFrameComputationalCaptureDigitalSource', 'NegativeFilmDigitalSource', 'PositiveFilmDigitalSource', 'PrintDigitalSource', 'ScreenCaptureDigitalSource', 'TrainedAlgorithmicMediaDigitalSource', 'VirtualRecordingDigitalSource'])
+  String? get digitalSourceType;
 
   /// A link to the page containing the comments of the CreativeWork.
   @StringField(name: 'discussionUrl')
@@ -5189,7 +5188,7 @@ abstract class DataCatalog implements CreativeWork, $Thing {
   Dataset? get dataset;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -5200,7 +5199,7 @@ abstract class DataCatalog implements CreativeWork, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -5218,7 +5217,7 @@ abstract class DataDownload implements MediaObject, $Thing {
   String? get type;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -5229,7 +5228,7 @@ abstract class DataDownload implements MediaObject, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -5331,7 +5330,7 @@ abstract class Dataset implements CreativeWork, $Thing {
   String? get issn;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -5342,7 +5341,7 @@ abstract class Dataset implements CreativeWork, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -5597,8 +5596,8 @@ abstract class DeliveryChargeSpecification implements PriceSpecification, $Thing
   String? get type;
 
   /// The delivery method(s) to which the delivery charge or payment charge specification applies.
-  @JsonKey(name: 'appliesToDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get appliesToDeliveryMethod;
+  @StringField(name: 'appliesToDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get appliesToDeliveryMethod;
 
   /// The geographic area where a service or offered item is provided.
   @AnyOf([AdministrativeArea, GeoShape, Place, String])
@@ -5643,8 +5642,8 @@ abstract class DeliveryEvent implements Event, $Thing {
   String? get availableThrough;
 
   /// Method used for delivery or shipping.
-  @JsonKey(name: 'hasDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get hasDeliveryMethod;
+  @StringField(name: 'hasDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get hasDeliveryMethod;
 
 }
 
@@ -5724,8 +5723,8 @@ abstract class Demand implements Intangible, $Thing {
   String? get asin;
 
   /// The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
-  @JsonKey(name: 'availability', includeIfNull: false)
-  ItemAvailability? get availability;
+  @StringField(name: 'availability', enumValues: ['BackOrder', 'Discontinued', 'InStock', 'InStoreOnly', 'LimitedAvailability', 'MadeToOrder', 'OnlineOnly', 'OutOfStock', 'PreOrder', 'PreSale', 'Reserved', 'SoldOut'])
+  String? get availability;
 
   /// The end of the availability of the product or service included in the offer.
   @StringField(name: 'availabilityEnds')
@@ -5740,8 +5739,8 @@ abstract class Demand implements Intangible, $Thing {
   Place? get availableAtOrFrom;
 
   /// The delivery method(s) available for this offer.
-  @JsonKey(name: 'availableDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get availableDeliveryMethod;
+  @StringField(name: 'availableDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get availableDeliveryMethod;
 
   /// The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
   @JsonKey(name: 'businessFunction', includeIfNull: false)
@@ -5815,8 +5814,8 @@ abstract class Demand implements Intangible, $Thing {
   QuantitativeValue? get inventoryLevel;
 
   /// A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
-  @JsonKey(name: 'itemCondition', includeIfNull: false)
-  OfferItemCondition? get itemCondition;
+  @StringField(name: 'itemCondition', enumValues: ['DamagedCondition', 'NewCondition', 'RefurbishedCondition', 'UsedCondition'])
+  String? get itemCondition;
 
   /// An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
   @AnyOf([AggregateOffer, CreativeWork, Event, MenuItem, Product, Service, Trip])
@@ -6062,8 +6061,8 @@ abstract class DigitalDocumentPermission implements Intangible, $Thing {
   Object? get grantee;
 
   /// The type of permission granted the person, organization, or audience.
-  @JsonKey(name: 'permissionType', includeIfNull: false)
-  DigitalDocumentPermissionType? get permissionType;
+  @StringField(name: 'permissionType', enumValues: ['CommentPermission', 'ReadPermission', 'WritePermission'])
+  String? get permissionType;
 
 }
 
@@ -6412,8 +6411,8 @@ abstract class Drug implements Product, Substance, $Thing {
   String? get overdosage;
 
   /// Pregnancy category of this drug.
-  @JsonKey(name: 'pregnancyCategory', includeIfNull: false)
-  DrugPregnancyCategory? get pregnancyCategory;
+  @StringField(name: 'pregnancyCategory', enumValues: ['FDAcategoryA', 'FDAcategoryB', 'FDAcategoryC', 'FDAcategoryD', 'FDAcategoryX', 'FDAnotEvaluated'])
+  String? get pregnancyCategory;
 
   /// Any precaution, guidance, contraindication, etc. related to this drug's use during pregnancy.
   @StringField(name: 'pregnancyWarning')
@@ -6424,9 +6423,8 @@ abstract class Drug implements Product, Substance, $Thing {
   String? get prescribingInfo;
 
   /// Indicates the status of drug prescription, e.g. local catalogs classifications or whether the drug is available by prescription or over-the-counter, etc.
-  @AnyOf([DrugPrescriptionStatus, String])
-  @JsonKey(name: 'prescriptionStatus', includeIfNull: false)
-  Object? get prescriptionStatus;
+  @StringField(name: 'prescriptionStatus', enumValues: ['OTC', 'PrescriptionOnly'])
+  String? get prescriptionStatus;
 
   /// Proprietary name given to the diet plan, typically by its originator or creator.
   @StringField(name: 'proprietaryName')
@@ -6479,8 +6477,8 @@ abstract class DrugCost implements MedicalEntity, $Thing {
   AdministrativeArea? get applicableLocation;
 
   /// The category of cost, such as wholesale, retail, reimbursement cap, etc.
-  @JsonKey(name: 'costCategory', includeIfNull: false)
-  DrugCostCategory? get costCategory;
+  @StringField(name: 'costCategory', enumValues: ['ReimbursementCap', 'Retail', 'Wholesale'])
+  String? get costCategory;
 
   /// The currency (in 3-letter) of the drug cost. See: http://en.wikipedia.org/wiki/ISO_4217.
   @StringField(name: 'costCurrency')
@@ -6730,8 +6728,8 @@ abstract class EducationalOccupationalProgram implements Intangible, $Thing {
   String? get applicationStartDate;
 
   /// The day of the week for which these opening hours are valid.
-  @JsonKey(name: 'dayOfWeek', includeIfNull: false)
-  DayOfWeek? get dayOfWeek;
+  @StringField(name: 'dayOfWeek', enumValues: ['Friday', 'Monday', 'PublicHolidays', 'Saturday', 'Sunday', 'Thursday', 'Tuesday', 'Wednesday'])
+  String? get dayOfWeek;
 
   /// A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course or program.
   @AnyOf([EducationalOccupationalCredential, String])
@@ -7049,12 +7047,12 @@ abstract class EnergyConsumptionDetails implements Intangible, $Thing {
   String? get type;
 
   /// Specifies the most energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
-  @JsonKey(name: 'energyEfficiencyScaleMax', includeIfNull: false)
-  EUEnergyEfficiencyEnumeration? get energyEfficiencyScaleMax;
+  @StringField(name: 'energyEfficiencyScaleMax', enumValues: ['EUEnergyEfficiencyCategoryA', 'EUEnergyEfficiencyCategoryA1Plus', 'EUEnergyEfficiencyCategoryA2Plus', 'EUEnergyEfficiencyCategoryA3Plus', 'EUEnergyEfficiencyCategoryB', 'EUEnergyEfficiencyCategoryC', 'EUEnergyEfficiencyCategoryD', 'EUEnergyEfficiencyCategoryE', 'EUEnergyEfficiencyCategoryF', 'EUEnergyEfficiencyCategoryG'])
+  String? get energyEfficiencyScaleMax;
 
   /// Specifies the least energy efficient class on the regulated EU energy consumption scale for the product category a product belongs to. For example, energy consumption for televisions placed on the market after January 1, 2020 is scaled from D to A+++.
-  @JsonKey(name: 'energyEfficiencyScaleMin', includeIfNull: false)
-  EUEnergyEfficiencyEnumeration? get energyEfficiencyScaleMin;
+  @StringField(name: 'energyEfficiencyScaleMin', enumValues: ['EUEnergyEfficiencyCategoryA', 'EUEnergyEfficiencyCategoryA1Plus', 'EUEnergyEfficiencyCategoryA2Plus', 'EUEnergyEfficiencyCategoryA3Plus', 'EUEnergyEfficiencyCategoryB', 'EUEnergyEfficiencyCategoryC', 'EUEnergyEfficiencyCategoryD', 'EUEnergyEfficiencyCategoryE', 'EUEnergyEfficiencyCategoryF', 'EUEnergyEfficiencyCategoryG'])
+  String? get energyEfficiencyScaleMin;
 
   /// Defines the energy efficiency Category (which could be either a rating out of range of values or a yes/no certification) for a product according to an international energy efficiency standard.
   @JsonKey(name: 'hasEnergyEfficiencyCategory', includeIfNull: false)
@@ -7153,9 +7151,8 @@ abstract class EntryPoint implements Intangible, $Thing {
   SoftwareApplication? get actionApplication;
 
   /// The high level platform(s) where the Action can be performed for the given URL. To specify a specific application or operating system instance, use actionApplication.
-  @AnyOf([DigitalPlatformEnumeration, String])
-  @JsonKey(name: 'actionPlatform', includeIfNull: false)
-  Object? get actionPlatform;
+  @StringField(name: 'actionPlatform', enumValues: ['AndroidPlatform', 'DesktopWebPlatform', 'GenericWebPlatform', 'IOSPlatform', 'MobileWebPlatform'])
+  String? get actionPlatform;
 
   /// An application that can complete the request.
   @JsonKey(name: 'application', includeIfNull: false)
@@ -7355,8 +7352,8 @@ abstract class Event implements Thing, $Thing {
   String? get endDate;
 
   /// The eventAttendanceMode of an event indicates whether it occurs online, offline, or a mix.
-  @JsonKey(name: 'eventAttendanceMode', includeIfNull: false)
-  EventAttendanceModeEnumeration? get eventAttendanceMode;
+  @StringField(name: 'eventAttendanceMode', enumValues: ['MixedEventAttendanceMode', 'OfflineEventAttendanceMode', 'OnlineEventAttendanceMode'])
+  String? get eventAttendanceMode;
 
   /// Associates an [[Event]] with a [[Schedule]]. There are circumstances where it is preferable to share a schedule for a series of
   /// repeating events rather than data on the individual events themselves. For example, a website or application might prefer to publish a schedule for a weekly
@@ -7368,8 +7365,8 @@ abstract class Event implements Thing, $Thing {
   Schedule? get eventSchedule;
 
   /// An eventStatus of an event represents its status; particularly useful when an event is cancelled or rescheduled.
-  @JsonKey(name: 'eventStatus', includeIfNull: false)
-  EventStatusType? get eventStatus;
+  @StringField(name: 'eventStatus', enumValues: ['EventCancelled', 'EventMovedOnline', 'EventPostponed', 'EventRescheduled', 'EventScheduled'])
+  String? get eventStatus;
 
   /// A person or organization that supports (sponsors) something through some kind of financial contribution.
   @AnyOf([Organization, Person])
@@ -7902,12 +7899,12 @@ abstract class FinancialIncentive implements Intangible, $Thing {
   Object? get incentiveAmount;
 
   /// The status of the incentive (active, on hold, retired, etc.).
-  @JsonKey(name: 'incentiveStatus', includeIfNull: false)
-  IncentiveStatus? get incentiveStatus;
+  @StringField(name: 'incentiveStatus', enumValues: ['IncentiveStatusActive', 'IncentiveStatusInDevelopment', 'IncentiveStatusOnHold', 'IncentiveStatusRetired'])
+  String? get incentiveStatus;
 
   /// The type of incentive offered (tax credit/rebate, tax deduction, tax waiver, subsidies, etc.).
-  @JsonKey(name: 'incentiveType', includeIfNull: false)
-  IncentiveType? get incentiveType;
+  @StringField(name: 'incentiveType', enumValues: ['IncentiveTypeLoan', 'IncentiveTypeRebateOrSubsidy', 'IncentiveTypeTaxCredit', 'IncentiveTypeTaxDeduction', 'IncentiveTypeTaxWaiver'])
+  String? get incentiveType;
 
   /// The type or specific product(s) and/or service(s) being incentivized.
   /// <p>DefinedTermSets are used for product and service categories such as the United Nations Standard Products and Services Code:</p>
@@ -7957,12 +7954,12 @@ abstract class FinancialIncentive implements Intangible, $Thing {
   MonetaryAmount? get purchasePriceLimit;
 
   /// Optional. The type of purchase the consumer must make in order to qualify for this incentive.
-  @JsonKey(name: 'purchaseType', includeIfNull: false)
-  PurchaseType? get purchaseType;
+  @StringField(name: 'purchaseType', enumValues: ['PurchaseTypeLease', 'PurchaseTypeNewPurchase', 'PurchaseTypeTradeIn', 'PurchaseTypeUsedPurchase'])
+  String? get purchaseType;
 
   /// Optional. The types of expenses that are covered by the incentive. For example some incentives are only for the goods (tangible items) but the services (labor) are excluded.
-  @JsonKey(name: 'qualifiedExpense', includeIfNull: false)
-  IncentiveQualifiedExpenseType? get qualifiedExpense;
+  @StringField(name: 'qualifiedExpense', enumValues: ['IncentiveQualifiedExpenseTypeGoodsOnly', 'IncentiveQualifiedExpenseTypeGoodsOrServices', 'IncentiveQualifiedExpenseTypeServicesOnly', 'IncentiveQualifiedExpenseTypeUtilityBill'])
+  String? get qualifiedExpense;
 
   /// The date when the item becomes valid.
   @StringField(name: 'validFrom')
@@ -8073,8 +8070,8 @@ abstract class Flight implements Trip, $Thing {
   String? get arrivalTerminal;
 
   /// The type of boarding policy used by the airline (e.g. zone-based or group-based).
-  @JsonKey(name: 'boardingPolicy', includeIfNull: false)
-  BoardingPolicyType? get boardingPolicy;
+  @StringField(name: 'boardingPolicy', enumValues: ['GroupBoardingPolicy', 'ZoneBoardingPolicy'])
+  String? get boardingPolicy;
 
   /// 'carrier' is an out-dated term indicating the 'provider' for parcel delivery and flights.
   @JsonKey(name: 'carrier', includeIfNull: false)
@@ -8489,8 +8486,8 @@ abstract class GameServer implements Intangible, $Thing {
   int? get playersOnline;
 
   /// Status of a game server.
-  @JsonKey(name: 'serverStatus', includeIfNull: false)
-  GameServerStatus? get serverStatus;
+  @StringField(name: 'serverStatus', enumValues: ['OfflinePermanently', 'OfflineTemporarily', 'Online', 'OnlineFull'])
+  String? get serverStatus;
 
 }
 
@@ -8957,7 +8954,7 @@ abstract class Guide implements CreativeWork, $Thing {
   String? get type;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -9206,8 +9203,8 @@ abstract class HealthTopicContent implements WebContent, $Thing {
   String? get type;
 
   /// Indicates the aspect or aspects specifically addressed in some [[HealthTopicContent]]. For example, that the content is an overview, or that it talks about treatment, self-care, treatments or their side-effects.
-  @JsonKey(name: 'hasHealthAspect', includeIfNull: false)
-  HealthAspectEnumeration? get hasHealthAspect;
+  @StringField(name: 'hasHealthAspect', enumValues: ['AllergiesHealthAspect', 'BenefitsHealthAspect', 'CausesHealthAspect', 'ContagiousnessHealthAspect', 'EffectivenessHealthAspect', 'GettingAccessHealthAspect', 'HowItWorksHealthAspect', 'HowOrWhereHealthAspect', 'IngredientsHealthAspect', 'LivingWithHealthAspect', 'MayTreatHealthAspect', 'MisconceptionsHealthAspect', 'OverviewHealthAspect', 'PatientExperienceHealthAspect', 'PregnancyHealthAspect', 'PreventionHealthAspect', 'PrognosisHealthAspect', 'RelatedTopicsHealthAspect', 'RisksOrComplicationsHealthAspect', 'SafetyHealthAspect', 'ScreeningHealthAspect', 'SeeDoctorHealthAspect', 'SelfCareHealthAspect', 'SideEffectsHealthAspect', 'StagesHealthAspect', 'SymptomsHealthAspect', 'TreatmentsHealthAspect', 'TypesHealthAspect', 'UsageOrScheduleHealthAspect'])
+  String? get hasHealthAspect;
 
 }
 
@@ -9298,8 +9295,8 @@ abstract class Hospital implements CivicStructure, EmergencyService, MedicalOrga
   Object? get healthcareReportingData;
 
   /// A medical specialty of the provider.
-  @JsonKey(name: 'medicalSpecialty', includeIfNull: false)
-  MedicalSpecialty? get medicalSpecialty;
+  @StringField(name: 'medicalSpecialty', enumValues: ['Anesthesia', 'Audiology', 'Cardiovascular', 'CommunityHealth', 'Dentistry', 'Dermatologic', 'Dermatology', 'DietNutrition', 'Emergency', 'Endocrine', 'Gastroenterologic', 'Genetic', 'Geriatric', 'Gynecologic', 'Hematologic', 'Infectious', 'LaboratoryScience', 'Midwifery', 'Musculoskeletal', 'Neurologic', 'Nursing', 'Obstetric', 'Oncologic', 'Ophthalmology', 'Optometric', 'Otolaryngologic', 'Pathology', 'Pediatric', 'PharmacySpecialty', 'Physiotherapy', 'PlasticSurgery', 'Podiatric', 'PrimaryCare', 'Psychiatric', 'PublicHealth', 'Pulmonary', 'Renal', 'RespiratoryTherapy', 'Rheumatologic', 'SpeechPathology', 'Surgical', 'Toxicologic', 'Urologic'])
+  String? get medicalSpecialty;
 
 }
 
@@ -9761,8 +9758,8 @@ abstract class ImagingTest implements MedicalTest, $Thing {
   String? get type;
 
   /// Imaging technique used.
-  @JsonKey(name: 'imagingTechnique', includeIfNull: false)
-  MedicalImagingTechnique? get imagingTechnique;
+  @StringField(name: 'imagingTechnique', enumValues: ['CT', 'MRI', 'PET', 'Radiography', 'Ultrasound', 'XRay'])
+  String? get imagingTechnique;
 
 }
 
@@ -9869,8 +9866,8 @@ abstract class InfectiousDisease implements MedicalCondition, $Thing {
   String? get infectiousAgent;
 
   /// The class of infectious agent (bacteria, prion, etc.) that causes the disease.
-  @JsonKey(name: 'infectiousAgentClass', includeIfNull: false)
-  InfectiousAgentClass? get infectiousAgentClass;
+  @StringField(name: 'infectiousAgentClass', enumValues: ['Bacteria', 'Fungus', 'MulticellularParasite', 'Prion', 'Protozoa', 'Virus'])
+  String? get infectiousAgentClass;
 
   /// How the disease spreads, either as a route or vector, for example 'direct contact', 'Aedes aegypti', etc.
   @StringField(name: 'transmissionMethod')
@@ -10127,7 +10124,7 @@ abstract class Invoice implements Intangible, $Thing {
   Object? get broker;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -10163,9 +10160,8 @@ abstract class Invoice implements Intangible, $Thing {
   String? get paymentMethodId;
 
   /// The status of payment; whether the invoice has been paid or not.
-  @AnyOf([PaymentStatusType, String])
-  @JsonKey(name: 'paymentStatus', includeIfNull: false)
-  Object? get paymentStatus;
+  @StringField(name: 'paymentStatus', enumValues: ['PaymentAutomaticallyApplied', 'PaymentComplete', 'PaymentDeclined', 'PaymentDue', 'PaymentPastDue'])
+  String? get paymentStatus;
 
   /// The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller.
   @AnyOf([Organization, Person])
@@ -10221,9 +10217,8 @@ abstract class ItemList implements Intangible, $Thing {
   Object? get itemListElement;
 
   /// Type of ordering (e.g. Ascending, Descending, Unordered).
-  @AnyOf([ItemListOrderType, String])
-  @JsonKey(name: 'itemListOrder', includeIfNull: false)
-  Object? get itemListOrder;
+  @StringField(name: 'itemListOrder', enumValues: ['ItemListOrderAscending', 'ItemListOrderDescending', 'ItemListUnordered'])
+  String? get itemListOrder;
 
   /// The number of items in an ItemList. Note that some descriptions might not fully describe all items in a list (e.g., multi-page pagination); in such cases, the numberOfItems would be for the entire list.
   @IntegerField(name: 'numberOfItems')
@@ -10723,8 +10718,8 @@ abstract class Legislation implements CreativeWork, $Thing {
   Object? get legislationJurisdiction;
 
   /// Whether the legislation is currently in force, not in force, or partially in force.
-  @JsonKey(name: 'legislationLegalForce', includeIfNull: false)
-  LegalForceStatus? get legislationLegalForce;
+  @StringField(name: 'legislationLegalForce', enumValues: ['InForce', 'NotInForce', 'PartiallyInForce'])
+  String? get legislationLegalForce;
 
   /// The person or organization that originally passed or made the law: typically parliament (for primary legislation) or government (for secondary legislation). This indicates the "legal author" of the law, as opposed to its physical author.
   @AnyOf([Organization, Person])
@@ -10763,8 +10758,8 @@ abstract class LegislationObject implements Legislation, MediaObject, $Thing {
   String? get type;
 
   /// The legal value of this legislation file. The same legislation can be written in multiple files with different legal values. Typically a digitally signed PDF have a "stronger" legal value than the HTML file of the same act.
-  @JsonKey(name: 'legislationLegalValue', includeIfNull: false)
-  LegalValueLevel? get legislationLegalValue;
+  @StringField(name: 'legislationLegalValue', enumValues: ['AuthoritativeLegalValue', 'DefinitiveLegalValue', 'OfficialLegalValue', 'UnofficialLegalValue'])
+  String? get legislationLegalValue;
 
 }
 
@@ -11276,8 +11271,8 @@ abstract class SchemaMap implements CreativeWork, $Thing {
   String? get type;
 
   /// Indicates the kind of Map, from the MapCategoryType Enumeration.
-  @JsonKey(name: 'mapType', includeIfNull: false)
-  MapCategoryType? get mapType;
+  @StringField(name: 'mapType', enumValues: ['ParkingMap', 'SeatingMap', 'TransitMap', 'VenueMap'])
+  String? get mapType;
 
 }
 
@@ -11534,8 +11529,8 @@ abstract class MediaReview implements Review, $Thing {
   String? get type;
 
   /// Indicates a MediaManipulationRatingEnumeration classification of a media object (in the context of how it was published or shared).
-  @JsonKey(name: 'mediaAuthenticityCategory', includeIfNull: false)
-  MediaManipulationRatingEnumeration? get mediaAuthenticityCategory;
+  @StringField(name: 'mediaAuthenticityCategory', enumValues: ['DecontextualizedContent', 'EditedOrCroppedContent', 'OriginalMediaContent', 'SatireOrParodyContent', 'StagedContent', 'TransformedContent'])
+  String? get mediaAuthenticityCategory;
 
   /// Describes, in a [[MediaReview]] when dealing with [[DecontextualizedContent]], background information that can contribute to better interpretation of the [[MediaObject]].
   @StringField(name: 'originalMediaContextDescription')
@@ -11659,8 +11654,8 @@ abstract class MedicalClinic implements MedicalBusiness, MedicalOrganization, $T
   Object? get availableService;
 
   /// A medical specialty of the provider.
-  @JsonKey(name: 'medicalSpecialty', includeIfNull: false)
-  MedicalSpecialty? get medicalSpecialty;
+  @StringField(name: 'medicalSpecialty', enumValues: ['Anesthesia', 'Audiology', 'Cardiovascular', 'CommunityHealth', 'Dentistry', 'Dermatologic', 'Dermatology', 'DietNutrition', 'Emergency', 'Endocrine', 'Gastroenterologic', 'Genetic', 'Geriatric', 'Gynecologic', 'Hematologic', 'Infectious', 'LaboratoryScience', 'Midwifery', 'Musculoskeletal', 'Neurologic', 'Nursing', 'Obstetric', 'Oncologic', 'Ophthalmology', 'Optometric', 'Otolaryngologic', 'Pathology', 'Pediatric', 'PharmacySpecialty', 'Physiotherapy', 'PlasticSurgery', 'Podiatric', 'PrimaryCare', 'Psychiatric', 'PublicHealth', 'Pulmonary', 'Renal', 'RespiratoryTherapy', 'Rheumatologic', 'SpeechPathology', 'Surgical', 'Toxicologic', 'Urologic'])
+  String? get medicalSpecialty;
 
 }
 
@@ -11760,9 +11755,8 @@ abstract class MedicalCondition implements MedicalEntity, $Thing {
   MedicalConditionStage? get stage;
 
   /// The status of the study (enumerated).
-  @AnyOf([EventStatusType, MedicalStudyStatus, String])
-  @JsonKey(name: 'status', includeIfNull: false)
-  Object? get status;
+  @StringField(name: 'status', enumValues: ['EventCancelled', 'EventMovedOnline', 'EventPostponed', 'EventRescheduled', 'EventScheduled', 'ActiveNotRecruiting', 'Completed', 'EnrollingByInvitation', 'NotYetRecruiting', 'Recruiting', 'ResultsAvailable', 'ResultsNotAvailable', 'Suspended', 'Terminated', 'Withdrawn'])
+  String? get status;
 
   /// A medical test typically performed given this condition.
   @JsonKey(name: 'typicalTest', includeIfNull: false)
@@ -11884,16 +11878,16 @@ abstract class MedicalEntity implements Thing, $Thing {
   Object? get legalStatus;
 
   /// The system of medicine that includes this MedicalEntity, for example 'evidence-based', 'homeopathic', 'chiropractic', etc.
-  @JsonKey(name: 'medicineSystem', includeIfNull: false)
-  MedicineSystem? get medicineSystem;
+  @StringField(name: 'medicineSystem', enumValues: ['Ayurvedic', 'Chiropractic', 'Homeopathic', 'Osteopathic', 'TraditionalChinese', 'WesternConventional'])
+  String? get medicineSystem;
 
   /// If applicable, the organization that officially recognizes this entity as part of its endorsed system of medicine.
   @JsonKey(name: 'recognizingAuthority', includeIfNull: false)
   Organization? get recognizingAuthority;
 
   /// If applicable, a medical specialty in which this entity is relevant.
-  @JsonKey(name: 'relevantSpecialty', includeIfNull: false)
-  MedicalSpecialty? get relevantSpecialty;
+  @StringField(name: 'relevantSpecialty', enumValues: ['Anesthesia', 'Audiology', 'Cardiovascular', 'CommunityHealth', 'Dentistry', 'Dermatologic', 'Dermatology', 'DietNutrition', 'Emergency', 'Endocrine', 'Gastroenterologic', 'Genetic', 'Geriatric', 'Gynecologic', 'Hematologic', 'Infectious', 'LaboratoryScience', 'Midwifery', 'Musculoskeletal', 'Neurologic', 'Nursing', 'Obstetric', 'Oncologic', 'Ophthalmology', 'Optometric', 'Otolaryngologic', 'Pathology', 'Pediatric', 'PharmacySpecialty', 'Physiotherapy', 'PlasticSurgery', 'Podiatric', 'PrimaryCare', 'Psychiatric', 'PublicHealth', 'Pulmonary', 'Renal', 'RespiratoryTherapy', 'Rheumatologic', 'SpeechPathology', 'Surgical', 'Toxicologic', 'Urologic'])
+  String? get relevantSpecialty;
 
   /// A medical study or trial related to this entity.
   @JsonKey(name: 'study', includeIfNull: false)
@@ -11939,8 +11933,8 @@ abstract class MedicalGuideline implements MedicalEntity, $Thing {
   String? get type;
 
   /// Strength of evidence of the data used to formulate the guideline (enumerated).
-  @JsonKey(name: 'evidenceLevel', includeIfNull: false)
-  MedicalEvidenceLevel? get evidenceLevel;
+  @StringField(name: 'evidenceLevel', enumValues: ['EvidenceLevelA', 'EvidenceLevelB', 'EvidenceLevelC'])
+  String? get evidenceLevel;
 
   /// Source of the data used to formulate the guidance, e.g. RCT, consensus opinion, etc.
   @StringField(name: 'evidenceOrigin')
@@ -12037,8 +12031,8 @@ abstract class MedicalObservationalStudy implements MedicalStudy, $Thing {
   String? get type;
 
   /// Specifics about the observational study design (enumerated).
-  @JsonKey(name: 'studyDesign', includeIfNull: false)
-  MedicalObservationalStudyDesign? get studyDesign;
+  @StringField(name: 'studyDesign', enumValues: ['CaseSeries', 'CohortStudy', 'CrossSectional', 'Longitudinal', 'Observational', 'Registry'])
+  String? get studyDesign;
 
 }
 
@@ -12075,8 +12069,8 @@ abstract class MedicalOrganization implements Organization, $Thing {
   bool? get isAcceptingNewPatients;
 
   /// A medical specialty of the provider.
-  @JsonKey(name: 'medicalSpecialty', includeIfNull: false)
-  MedicalSpecialty? get medicalSpecialty;
+  @StringField(name: 'medicalSpecialty', enumValues: ['Anesthesia', 'Audiology', 'Cardiovascular', 'CommunityHealth', 'Dentistry', 'Dermatologic', 'Dermatology', 'DietNutrition', 'Emergency', 'Endocrine', 'Gastroenterologic', 'Genetic', 'Geriatric', 'Gynecologic', 'Hematologic', 'Infectious', 'LaboratoryScience', 'Midwifery', 'Musculoskeletal', 'Neurologic', 'Nursing', 'Obstetric', 'Oncologic', 'Ophthalmology', 'Optometric', 'Otolaryngologic', 'Pathology', 'Pediatric', 'PharmacySpecialty', 'Physiotherapy', 'PlasticSurgery', 'Podiatric', 'PrimaryCare', 'Psychiatric', 'PublicHealth', 'Pulmonary', 'Renal', 'RespiratoryTherapy', 'Rheumatologic', 'SpeechPathology', 'Surgical', 'Toxicologic', 'Urologic'])
+  String? get medicalSpecialty;
 
 }
 
@@ -12109,13 +12103,12 @@ abstract class MedicalProcedure implements MedicalEntity, $Thing {
   Object? get preparation;
 
   /// The type of procedure, for example Surgical, Noninvasive, or Percutaneous.
-  @JsonKey(name: 'procedureType', includeIfNull: false)
-  MedicalProcedureType? get procedureType;
+  @StringField(name: 'procedureType', enumValues: ['NoninvasiveProcedure', 'PercutaneousProcedure'])
+  String? get procedureType;
 
   /// The status of the study (enumerated).
-  @AnyOf([EventStatusType, MedicalStudyStatus, String])
-  @JsonKey(name: 'status', includeIfNull: false)
-  Object? get status;
+  @StringField(name: 'status', enumValues: ['EventCancelled', 'EventMovedOnline', 'EventPostponed', 'EventRescheduled', 'EventScheduled', 'ActiveNotRecruiting', 'Completed', 'EnrollingByInvitation', 'NotYetRecruiting', 'Recruiting', 'ResultsAvailable', 'ResultsNotAvailable', 'Suspended', 'Terminated', 'Withdrawn'])
+  String? get status;
 
 }
 
@@ -12229,8 +12222,8 @@ abstract class MedicalSign implements MedicalSignOrSymptom, $Thing {
   String? get type;
 
   /// A physical examination that can identify this sign.
-  @JsonKey(name: 'identifyingExam', includeIfNull: false)
-  PhysicalExam? get identifyingExam;
+  @StringField(name: 'identifyingExam', enumValues: ['Abdomen', 'Appearance', 'CardiovascularExam', 'Ear', 'Eye', 'Genitourinary', 'Head', 'Lung', 'MusculoskeletalExam', 'Neck', 'Neuro', 'Nose', 'Skin', 'Throat'])
+  String? get identifyingExam;
 
   /// A diagnostic test that can identify this sign.
   @JsonKey(name: 'identifyingTest', includeIfNull: false)
@@ -12290,9 +12283,8 @@ abstract class MedicalStudy implements MedicalEntity, $Thing {
   Object? get sponsor;
 
   /// The status of the study (enumerated).
-  @AnyOf([EventStatusType, MedicalStudyStatus, String])
-  @JsonKey(name: 'status', includeIfNull: false)
-  Object? get status;
+  @StringField(name: 'status', enumValues: ['EventCancelled', 'EventMovedOnline', 'EventPostponed', 'EventRescheduled', 'EventScheduled', 'ActiveNotRecruiting', 'Completed', 'EnrollingByInvitation', 'NotYetRecruiting', 'Recruiting', 'ResultsAvailable', 'ResultsNotAvailable', 'Suspended', 'Terminated', 'Withdrawn'])
+  String? get status;
 
   /// The location in which the study is taking/took place.
   @JsonKey(name: 'studyLocation', includeIfNull: false)
@@ -12419,8 +12411,8 @@ abstract class MedicalTrial implements MedicalStudy, $Thing {
   String? get type;
 
   /// Specifics about the trial design (enumerated).
-  @JsonKey(name: 'trialDesign', includeIfNull: false)
-  MedicalTrialDesign? get trialDesign;
+  @StringField(name: 'trialDesign', enumValues: ['DoubleBlindedTrial', 'InternationalTrial', 'MultiCenterTrial', 'OpenTrial', 'PlaceboControlledTrial', 'RandomizedTrial', 'SingleBlindedTrial', 'SingleCenterTrial', 'TripleBlindedTrial'])
+  String? get trialDesign;
 
 }
 
@@ -12453,7 +12445,7 @@ abstract class MedicalWebPage implements WebPage, $Thing {
   String? get aspect;
 
   /// Medical audience for page.
-  @AnyOf([MedicalAudience, MedicalAudienceType])
+  @AnyOf([MedicalAudience, String])
   @JsonKey(name: 'medicalAudience', includeIfNull: false)
   Object? get medicalAudience;
 
@@ -12521,8 +12513,8 @@ abstract class MemberProgramTier implements Intangible, $Thing {
   String? get type;
 
   /// A member benefit for a particular tier of a loyalty program.
-  @JsonKey(name: 'hasTierBenefit', includeIfNull: false)
-  TierBenefitEnumeration? get hasTierBenefit;
+  @StringField(name: 'hasTierBenefit', enumValues: ['TierBenefitLoyaltyPoints', 'TierBenefitLoyaltyPrice', 'TierBenefitLoyaltyReturns', 'TierBenefitLoyaltyShipping'])
+  String? get hasTierBenefit;
 
   /// A requirement for a user to join a membership tier, for example: a CreditCard if the tier requires sign up for a credit card, A UnitPriceSpecification if the user is required to pay a (periodic) fee, or a MonetaryAmount if the user needs to spend a minimum amount to join the tier. If a tier is free to join then this property does not need to be specified.
   @AnyOf([CreditCard, MonetaryAmount, String, UnitPriceSpecification])
@@ -12601,7 +12593,7 @@ abstract class MenuItem implements Intangible, $Thing {
   Object? get offers;
 
   /// Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
-  @AnyOf([Diet, RestrictedDiet])
+  @AnyOf([Diet, String])
   @JsonKey(name: 'suitableForDiet', includeIfNull: false)
   Object? get suitableForDiet;
 
@@ -12663,12 +12655,12 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
   Object? get applicableCountry;
 
   /// The type of return fees if the product is returned due to customer remorse.
-  @JsonKey(name: 'customerRemorseReturnFees', includeIfNull: false)
-  ReturnFeesEnumeration? get customerRemorseReturnFees;
+  @StringField(name: 'customerRemorseReturnFees', enumValues: ['FreeReturn', 'OriginalShippingFees', 'RestockingFees', 'ReturnFeesCustomerResponsibility', 'ReturnShippingFees'])
+  String? get customerRemorseReturnFees;
 
   /// The method (from an enumeration) by which the customer obtains a return shipping label for a product returned due to customer remorse.
-  @JsonKey(name: 'customerRemorseReturnLabelSource', includeIfNull: false)
-  ReturnLabelSourceEnumeration? get customerRemorseReturnLabelSource;
+  @StringField(name: 'customerRemorseReturnLabelSource', enumValues: ['ReturnLabelCustomerResponsibility', 'ReturnLabelDownloadAndPrint', 'ReturnLabelInBox'])
+  String? get customerRemorseReturnLabelSource;
 
   /// The amount of shipping costs if a product is returned due to customer remorse. Applicable when property [[customerRemorseReturnFees]] equals [[ReturnShippingFees]].
   @JsonKey(name: 'customerRemorseReturnShippingFeesAmount', includeIfNull: false)
@@ -12679,16 +12671,16 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
   bool? get inStoreReturnsOffered;
 
   /// A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
-  @JsonKey(name: 'itemCondition', includeIfNull: false)
-  OfferItemCondition? get itemCondition;
+  @StringField(name: 'itemCondition', enumValues: ['DamagedCondition', 'NewCondition', 'RefurbishedCondition', 'UsedCondition'])
+  String? get itemCondition;
 
   /// The type of return fees for returns of defect products.
-  @JsonKey(name: 'itemDefectReturnFees', includeIfNull: false)
-  ReturnFeesEnumeration? get itemDefectReturnFees;
+  @StringField(name: 'itemDefectReturnFees', enumValues: ['FreeReturn', 'OriginalShippingFees', 'RestockingFees', 'ReturnFeesCustomerResponsibility', 'ReturnShippingFees'])
+  String? get itemDefectReturnFees;
 
   /// The method (from an enumeration) by which the customer obtains a return shipping label for a defect product.
-  @JsonKey(name: 'itemDefectReturnLabelSource', includeIfNull: false)
-  ReturnLabelSourceEnumeration? get itemDefectReturnLabelSource;
+  @StringField(name: 'itemDefectReturnLabelSource', enumValues: ['ReturnLabelCustomerResponsibility', 'ReturnLabelDownloadAndPrint', 'ReturnLabelInBox'])
+  String? get itemDefectReturnLabelSource;
 
   /// Amount of shipping costs for defect product returns. Applicable when property [[itemDefectReturnFees]] equals [[ReturnShippingFees]].
   @JsonKey(name: 'itemDefectReturnShippingFeesAmount', includeIfNull: false)
@@ -12704,8 +12696,8 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
   String? get merchantReturnLink;
 
   /// A refund type, from an enumerated list.
-  @JsonKey(name: 'refundType', includeIfNull: false)
-  RefundTypeEnumeration? get refundType;
+  @StringField(name: 'refundType', enumValues: ['ExchangeRefund', 'FullRefund', 'StoreCreditRefund'])
+  String? get refundType;
 
   /// Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
   @AnyOf([MonetaryAmount, double])
@@ -12713,20 +12705,20 @@ abstract class MerchantReturnPolicy implements Intangible, $Thing {
   Object? get restockingFee;
 
   /// The type of return fees for purchased products (for any return reason).
-  @JsonKey(name: 'returnFees', includeIfNull: false)
-  ReturnFeesEnumeration? get returnFees;
+  @StringField(name: 'returnFees', enumValues: ['FreeReturn', 'OriginalShippingFees', 'RestockingFees', 'ReturnFeesCustomerResponsibility', 'ReturnShippingFees'])
+  String? get returnFees;
 
   /// The method (from an enumeration) by which the customer obtains a return shipping label for a product returned for any reason.
-  @JsonKey(name: 'returnLabelSource', includeIfNull: false)
-  ReturnLabelSourceEnumeration? get returnLabelSource;
+  @StringField(name: 'returnLabelSource', enumValues: ['ReturnLabelCustomerResponsibility', 'ReturnLabelDownloadAndPrint', 'ReturnLabelInBox'])
+  String? get returnLabelSource;
 
   /// The type of return method offered, specified from an enumeration.
-  @JsonKey(name: 'returnMethod', includeIfNull: false)
-  ReturnMethodEnumeration? get returnMethod;
+  @StringField(name: 'returnMethod', enumValues: ['KeepProduct', 'ReturnAtKiosk', 'ReturnByMail', 'ReturnInStore'])
+  String? get returnMethod;
 
   /// Specifies an applicable return policy (from an enumeration).
-  @JsonKey(name: 'returnPolicyCategory', includeIfNull: false)
-  MerchantReturnEnumeration? get returnPolicyCategory;
+  @StringField(name: 'returnPolicyCategory', enumValues: ['MerchantReturnFiniteReturnWindow', 'MerchantReturnNotPermitted', 'MerchantReturnUnlimitedWindow', 'MerchantReturnUnspecified'])
+  String? get returnPolicyCategory;
 
   /// The country where the product has to be sent to for returns, for example "Ireland" using the [[name]] property of [[Country]]. You can also provide the two-letter [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1). Note that this can be different from the country where the product was originally shipped from or sent to.
   @AnyOf([Country, String])
@@ -12768,8 +12760,8 @@ abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thin
   Object? get merchantReturnDays;
 
   /// A refund type, from an enumerated list.
-  @JsonKey(name: 'refundType', includeIfNull: false)
-  RefundTypeEnumeration? get refundType;
+  @StringField(name: 'refundType', enumValues: ['ExchangeRefund', 'FullRefund', 'StoreCreditRefund'])
+  String? get refundType;
 
   /// Use [[MonetaryAmount]] to specify a fixed restocking fee for product returns, or use [[Number]] to specify a percentage of the product price paid by the customer.
   @AnyOf([MonetaryAmount, double])
@@ -12777,16 +12769,16 @@ abstract class MerchantReturnPolicySeasonalOverride implements Intangible, $Thin
   Object? get restockingFee;
 
   /// The type of return fees for purchased products (for any return reason).
-  @JsonKey(name: 'returnFees', includeIfNull: false)
-  ReturnFeesEnumeration? get returnFees;
+  @StringField(name: 'returnFees', enumValues: ['FreeReturn', 'OriginalShippingFees', 'RestockingFees', 'ReturnFeesCustomerResponsibility', 'ReturnShippingFees'])
+  String? get returnFees;
 
   /// The type of return method offered, specified from an enumeration.
-  @JsonKey(name: 'returnMethod', includeIfNull: false)
-  ReturnMethodEnumeration? get returnMethod;
+  @StringField(name: 'returnMethod', enumValues: ['KeepProduct', 'ReturnAtKiosk', 'ReturnByMail', 'ReturnInStore'])
+  String? get returnMethod;
 
   /// Specifies an applicable return policy (from an enumeration).
-  @JsonKey(name: 'returnPolicyCategory', includeIfNull: false)
-  MerchantReturnEnumeration? get returnPolicyCategory;
+  @StringField(name: 'returnPolicyCategory', enumValues: ['MerchantReturnFiniteReturnWindow', 'MerchantReturnNotPermitted', 'MerchantReturnUnlimitedWindow', 'MerchantReturnUnspecified'])
+  String? get returnPolicyCategory;
 
   /// Amount of shipping costs for product returns (for any reason). Applicable when property [[returnFees]] equals [[ReturnShippingFees]].
   @JsonKey(name: 'returnShippingFeesAmount', includeIfNull: false)
@@ -13410,16 +13402,16 @@ abstract class MusicAlbum implements MusicPlaylist, $Thing {
   String? get type;
 
   /// Classification of the album by its type of content: soundtrack, live album, studio album, etc.
-  @JsonKey(name: 'albumProductionType', includeIfNull: false)
-  MusicAlbumProductionType? get albumProductionType;
+  @StringField(name: 'albumProductionType', enumValues: ['CompilationAlbum', 'DJMixAlbum', 'DemoAlbum', 'LiveAlbum', 'MixtapeAlbum', 'RemixAlbum', 'SoundtrackAlbum', 'SpokenWordAlbum', 'StudioAlbum'])
+  String? get albumProductionType;
 
   /// A release of this album.
   @JsonKey(name: 'albumRelease', includeIfNull: false)
   MusicRelease? get albumRelease;
 
   /// The kind of release which this album is: single, EP or album.
-  @JsonKey(name: 'albumReleaseType', includeIfNull: false)
-  MusicAlbumReleaseType? get albumReleaseType;
+  @StringField(name: 'albumReleaseType', enumValues: ['AlbumRelease', 'BroadcastRelease', 'EPRelease', 'SingleRelease'])
+  String? get albumReleaseType;
 
   /// The artist that performed this album or recording.
   @AnyOf([MusicGroup, Person])
@@ -13651,8 +13643,8 @@ abstract class MusicRelease implements MusicPlaylist, $Thing {
   Object? get duration;
 
   /// Format of this release (the type of recording media used, i.e. compact disc, digital media, LP, etc.).
-  @JsonKey(name: 'musicReleaseFormat', includeIfNull: false)
-  MusicReleaseFormatType? get musicReleaseFormat;
+  @StringField(name: 'musicReleaseFormat', enumValues: ['CDFormat', 'CassetteFormat', 'DVDFormat', 'DigitalAudioTapeFormat', 'DigitalFormat', 'LaserDiscFormat', 'VinylFormat'])
+  String? get musicReleaseFormat;
 
   /// The label that issued the release.
   @JsonKey(name: 'recordLabel', includeIfNull: false)
@@ -14062,7 +14054,7 @@ abstract class Observation implements Intangible, QuantitativeValue, $Thing {
   StatisticalVariable? get measurementDenominator;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -14077,7 +14069,7 @@ abstract class Observation implements Intangible, QuantitativeValue, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -14242,8 +14234,8 @@ abstract class Offer implements Intangible, $Thing {
   String? get asin;
 
   /// The availability of this item&#x2014;for example In stock, Out of stock, Pre-order, etc.
-  @JsonKey(name: 'availability', includeIfNull: false)
-  ItemAvailability? get availability;
+  @StringField(name: 'availability', enumValues: ['BackOrder', 'Discontinued', 'InStock', 'InStoreOnly', 'LimitedAvailability', 'MadeToOrder', 'OnlineOnly', 'OutOfStock', 'PreOrder', 'PreSale', 'Reserved', 'SoldOut'])
+  String? get availability;
 
   /// The end of the availability of the product or service included in the offer.
   @StringField(name: 'availabilityEnds')
@@ -14258,15 +14250,15 @@ abstract class Offer implements Intangible, $Thing {
   Place? get availableAtOrFrom;
 
   /// The delivery method(s) available for this offer.
-  @JsonKey(name: 'availableDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get availableDeliveryMethod;
+  @StringField(name: 'availableDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get availableDeliveryMethod;
 
   /// The business function (e.g. sell, lease, repair, dispose) of the offer or component of a bundle (TypeAndQuantityNode). The default is http://purl.org/goodrelations/v1#Sell.
   @JsonKey(name: 'businessFunction', includeIfNull: false)
   BusinessFunction? get businessFunction;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -14328,8 +14320,8 @@ abstract class Offer implements Intangible, $Thing {
   String? get gtin8;
 
   /// Used to tag an item to be intended or suitable for consumption or use by adults only.
-  @JsonKey(name: 'hasAdultConsideration', includeIfNull: false)
-  AdultOrientedEnumeration? get hasAdultConsideration;
+  @StringField(name: 'hasAdultConsideration', enumValues: ['AlcoholConsideration', 'DangerousGoodConsideration', 'HealthcareConsideration', 'NarcoticConsideration', 'ReducedRelevanceForChildrenConsideration', 'SexualContentConsideration', 'TobaccoNicotineConsideration', 'UnclassifiedAdultConsideration', 'ViolenceConsideration', 'WeaponConsideration'])
+  String? get hasAdultConsideration;
 
   /// A link to a Digital Product Passport (DPP) or a digital record detailing the lifecycle, sustainability, and compliance data for this product or offer. This may be a direct URL, a GS1 Digital Link URI, or a nested DigitalProductPassport object. Note: This property is aligned with the IANA 'dpp' link relation and the GS1 Web Vocabulary 'dpp' link type.
   @AnyOf([DigitalProductPassport, String])
@@ -14367,8 +14359,8 @@ abstract class Offer implements Intangible, $Thing {
   bool? get isFamilyFriendly;
 
   /// A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
-  @JsonKey(name: 'itemCondition', includeIfNull: false)
-  OfferItemCondition? get itemCondition;
+  @StringField(name: 'itemCondition', enumValues: ['DamagedCondition', 'NewCondition', 'RefurbishedCondition', 'UsedCondition'])
+  String? get itemCondition;
 
   /// An item being offered (or demanded). The transactional nature of the offer or demand is documented using [[businessFunction]], e.g. sell, lease etc. While several common expected types are listed explicitly in this definition, others can be used. Using a second type, such as Product or a subtype of Product, can clarify the nature of the offer.
   @AnyOf([AggregateOffer, CreativeWork, Event, MenuItem, Product, Service, Trip])
@@ -14701,8 +14693,8 @@ abstract class OpeningHoursSpecification implements StructuredValue, $Thing {
   String? get closes;
 
   /// The day of the week for which these opening hours are valid.
-  @JsonKey(name: 'dayOfWeek', includeIfNull: false)
-  DayOfWeek? get dayOfWeek;
+  @StringField(name: 'dayOfWeek', enumValues: ['Friday', 'Monday', 'PublicHolidays', 'Saturday', 'Sunday', 'Thursday', 'Tuesday', 'Wednesday'])
+  String? get dayOfWeek;
 
   /// The opening hour of the place or service on the given day(s) of the week.
   @StringField(name: 'opens')
@@ -14825,8 +14817,8 @@ abstract class Order implements Intangible, $Thing {
   String? get orderNumber;
 
   /// The current status of the order.
-  @JsonKey(name: 'orderStatus', includeIfNull: false)
-  OrderStatus? get orderStatus;
+  @StringField(name: 'orderStatus', enumValues: ['OrderCancelled', 'OrderDelivered', 'OrderInTransit', 'OrderPaymentDue', 'OrderPickupAvailable', 'OrderProblem', 'OrderProcessing', 'OrderReturned'])
+  String? get orderStatus;
 
   /// The item ordered.
   @AnyOf([OrderItem, Product, Service])
@@ -14877,8 +14869,8 @@ abstract class OrderAction implements TradeAction, $Thing {
   String? get type;
 
   /// A sub property of instrument. The method of delivery.
-  @JsonKey(name: 'deliveryMethod', includeIfNull: false)
-  DeliveryMethod? get deliveryMethod;
+  @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get deliveryMethod;
 
 }
 
@@ -14902,8 +14894,8 @@ abstract class OrderItem implements StructuredValue, $Thing {
   String? get orderItemNumber;
 
   /// The current status of the order item.
-  @JsonKey(name: 'orderItemStatus', includeIfNull: false)
-  OrderStatus? get orderItemStatus;
+  @StringField(name: 'orderItemStatus', enumValues: ['OrderCancelled', 'OrderDelivered', 'OrderInTransit', 'OrderPaymentDue', 'OrderPickupAvailable', 'OrderProblem', 'OrderProcessing', 'OrderReturned'])
+  String? get orderItemStatus;
 
   /// The number of the item ordered. If the property is not set, assume the quantity is one.
   @AnyOf([double, QuantitativeValue])
@@ -15429,8 +15421,8 @@ abstract class ParcelDelivery implements Intangible, $Thing {
   String? get expectedArrivalUntil;
 
   /// Method used for delivery or shipping.
-  @JsonKey(name: 'hasDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get hasDeliveryMethod;
+  @StringField(name: 'hasDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get hasDeliveryMethod;
 
   /// Item(s) being shipped.
   @JsonKey(name: 'itemShipped', includeIfNull: false)
@@ -15622,8 +15614,8 @@ abstract class PaymentChargeSpecification implements PriceSpecification, $Thing 
   String? get type;
 
   /// The delivery method(s) to which the delivery charge or payment charge specification applies.
-  @JsonKey(name: 'appliesToDeliveryMethod', includeIfNull: false)
-  DeliveryMethod? get appliesToDeliveryMethod;
+  @StringField(name: 'appliesToDeliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get appliesToDeliveryMethod;
 
   /// The payment method(s) to which the payment charge specification applies.
   @JsonKey(name: 'appliesToPaymentMethod', includeIfNull: false)
@@ -15643,8 +15635,8 @@ abstract class PaymentMethod implements Intangible, $Thing {
   String? get type;
 
   /// The type of a payment method.
-  @JsonKey(name: 'paymentMethodType', includeIfNull: false)
-  PaymentMethodType? get paymentMethodType;
+  @StringField(name: 'paymentMethodType', enumValues: ['ByBankTransferInAdvance', 'ByInvoice', 'COD', 'Cash', 'CheckInAdvance', 'DirectDebit', 'InStorePrepay', 'PhoneCarrierPayment'])
+  String? get paymentMethodType;
 
 }
 
@@ -15719,9 +15711,8 @@ abstract class PeopleAudience implements Audience, $Thing {
   QuantitativeValue? get suggestedAge;
 
   /// The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-  @AnyOf([GenderType, String])
-  @JsonKey(name: 'suggestedGender', includeIfNull: false)
-  Object? get suggestedGender;
+  @StringField(name: 'suggestedGender', enumValues: ['Female', 'Male'])
+  String? get suggestedGender;
 
   /// Maximum recommended age in years for the audience or user.
   @DoubleField(name: 'suggestedMaxAge')
@@ -15981,9 +15972,8 @@ abstract class Person implements Thing, $Thing {
   Grant? get funding;
 
   /// Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who are not a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-  @AnyOf([GenderType, String])
-  @JsonKey(name: 'gender', includeIfNull: false)
-  Object? get gender;
+  @StringField(name: 'gender', enumValues: ['Female', 'Male'])
+  String? get gender;
 
   /// Given name. In the U.S., the first name of a Person.
   @StringField(name: 'givenName')
@@ -16243,7 +16233,7 @@ abstract class PhysicalActivity implements LifestyleModification, $Thing {
   Object? get associatedAnatomy;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -16317,8 +16307,8 @@ abstract class Physician implements MedicalBusiness, MedicalOrganization, $Thing
   Hospital? get hospitalAffiliation;
 
   /// A medical specialty of the provider.
-  @JsonKey(name: 'medicalSpecialty', includeIfNull: false)
-  MedicalSpecialty? get medicalSpecialty;
+  @StringField(name: 'medicalSpecialty', enumValues: ['Anesthesia', 'Audiology', 'Cardiovascular', 'CommunityHealth', 'Dentistry', 'Dermatologic', 'Dermatology', 'DietNutrition', 'Emergency', 'Endocrine', 'Gastroenterologic', 'Genetic', 'Geriatric', 'Gynecologic', 'Hematologic', 'Infectious', 'LaboratoryScience', 'Midwifery', 'Musculoskeletal', 'Neurologic', 'Nursing', 'Obstetric', 'Oncologic', 'Ophthalmology', 'Optometric', 'Otolaryngologic', 'Pathology', 'Pediatric', 'PharmacySpecialty', 'Physiotherapy', 'PlasticSurgery', 'Podiatric', 'PrimaryCare', 'Psychiatric', 'PublicHealth', 'Pulmonary', 'Renal', 'RespiratoryTherapy', 'Rheumatologic', 'SpeechPathology', 'Surgical', 'Toxicologic', 'Urologic'])
+  String? get medicalSpecialty;
 
   /// A category describing the job, preferably using a term from a taxonomy such as [BLS O*NET-SOC](http://www.onetcenter.org/taxonomy.html), [ISCO-08](https://www.ilo.org/public/english/bureau/stat/isco/isco08/) or similar, with the property repeated for each applicable value. Ideally the taxonomy should be identified, and both the textual label and formal code for the category should be provided.\n
   /// Note: for historical reasons, any textual label and formal code provided as a literal may be assumed to be from O*NET-SOC.
@@ -16645,9 +16635,8 @@ abstract class PlayGameAction implements ConsumeAction, $Thing {
   String? get type;
 
   /// Indicates the availability type of the game content associated with this action, such as whether it is a full version or a demo.
-  @AnyOf([GameAvailabilityEnumeration, String])
-  @JsonKey(name: 'gameAvailabilityType', includeIfNull: false)
-  Object? get gameAvailabilityType;
+  @StringField(name: 'gameAvailabilityType', enumValues: ['DemoGameAvailability', 'FullGameAvailability'])
+  String? get gameAvailabilityType;
 
 }
 
@@ -17056,7 +17045,7 @@ abstract class Product implements Thing, $Thing {
   Object? get brand;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -17131,8 +17120,8 @@ abstract class Product implements Thing, $Thing {
   String? get gtin8;
 
   /// Used to tag an item to be intended or suitable for consumption or use by adults only.
-  @JsonKey(name: 'hasAdultConsideration', includeIfNull: false)
-  AdultOrientedEnumeration? get hasAdultConsideration;
+  @StringField(name: 'hasAdultConsideration', enumValues: ['AlcoholConsideration', 'DangerousGoodConsideration', 'HealthcareConsideration', 'NarcoticConsideration', 'ReducedRelevanceForChildrenConsideration', 'SexualContentConsideration', 'TobaccoNicotineConsideration', 'UnclassifiedAdultConsideration', 'ViolenceConsideration', 'WeaponConsideration'])
+  String? get hasAdultConsideration;
 
   /// Certification information about a product, organization, service, place, or person.
   @JsonKey(name: 'hasCertification', includeIfNull: false)
@@ -17209,8 +17198,8 @@ abstract class Product implements Thing, $Thing {
   Object? get isVariantOf;
 
   /// A predefined value from OfferItemCondition specifying the condition of the product or service, or the products or services included in the offer. Also used for product return policies to specify the condition of products accepted for returns.
-  @JsonKey(name: 'itemCondition', includeIfNull: false)
-  OfferItemCondition? get itemCondition;
+  @StringField(name: 'itemCondition', enumValues: ['DamagedCondition', 'NewCondition', 'RefurbishedCondition', 'UsedCondition'])
+  String? get itemCondition;
 
   /// Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property.
   @AnyOf([DefinedTerm, String])
@@ -17612,7 +17601,7 @@ abstract class PropertyValue implements StructuredValue, $Thing {
   double? get maxValue;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -17623,7 +17612,7 @@ abstract class PropertyValue implements StructuredValue, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -18409,8 +18398,8 @@ abstract class ReceiveAction implements TransferAction, $Thing {
   String? get type;
 
   /// A sub property of instrument. The method of delivery.
-  @JsonKey(name: 'deliveryMethod', includeIfNull: false)
-  DeliveryMethod? get deliveryMethod;
+  @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get deliveryMethod;
 
   /// A sub property of participant. The participant who is at the sending end of the action.
   @AnyOf([Audience, Organization, Person])
@@ -18470,7 +18459,7 @@ abstract class Recipe implements HowTo, $Thing {
   Object? get recipeYield;
 
   /// Indicates a dietary restriction or guideline for which this recipe or menu item is suitable, e.g. diabetic, halal etc.
-  @AnyOf([Diet, RestrictedDiet])
+  @AnyOf([Diet, String])
   @JsonKey(name: 'suitableForDiet', includeIfNull: false)
   Object? get suitableForDiet;
 
@@ -18488,7 +18477,7 @@ abstract class Recommendation implements Review, $Thing {
   String? get type;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -18823,8 +18812,8 @@ abstract class Reservation implements Intangible, $Thing {
   String? get reservationId;
 
   /// The current status of the reservation.
-  @JsonKey(name: 'reservationStatus', includeIfNull: false)
-  ReservationStatusType? get reservationStatus;
+  @StringField(name: 'reservationStatus', enumValues: ['ReservationCancelled', 'ReservationConfirmed', 'ReservationHold', 'ReservationPending'])
+  String? get reservationStatus;
 
   /// A ticket associated with the reservation.
   @JsonKey(name: 'reservedTicket', includeIfNull: false)
@@ -19227,8 +19216,8 @@ abstract class RsvpAction implements InformAction, $Thing {
   Comment? get comment;
 
   /// The response (yes, no, maybe) to the RSVP.
-  @JsonKey(name: 'rsvpResponse', includeIfNull: false)
-  RsvpResponseType? get rsvpResponse;
+  @StringField(name: 'rsvpResponse', enumValues: ['RsvpResponseMaybe', 'RsvpResponseNo', 'RsvpResponseYes'])
+  String? get rsvpResponse;
 
 }
 
@@ -19298,9 +19287,8 @@ abstract class Schedule implements Intangible, $Thing {
   String? get type;
 
   /// Defines the day(s) of the week on which a recurring [[Event]] takes place. May be specified using either [[DayOfWeek]], or alternatively [[Text]] conforming to iCal's syntax for byDay recurrence rules.
-  @AnyOf([DayOfWeek, String])
-  @JsonKey(name: 'byDay', includeIfNull: false)
-  Object? get byDay;
+  @StringField(name: 'byDay', enumValues: ['Friday', 'Monday', 'PublicHolidays', 'Saturday', 'Sunday', 'Thursday', 'Tuesday', 'Wednesday'])
+  String? get byDay;
 
   /// Defines the month(s) of the year on which a recurring [[Event]] takes place. Specified as an [[Integer]] between 1-12. January is 1.
   @IntegerField(name: 'byMonth')
@@ -19613,8 +19601,8 @@ abstract class SendAction implements TransferAction, $Thing {
   String? get type;
 
   /// A sub property of instrument. The method of delivery.
-  @JsonKey(name: 'deliveryMethod', includeIfNull: false)
-  DeliveryMethod? get deliveryMethod;
+  @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get deliveryMethod;
 
   /// A sub property of participant. The participant who is at the receiving end of the action.
   @AnyOf([Audience, ContactPoint, Organization, Person])
@@ -19692,7 +19680,7 @@ abstract class Service implements Intangible, $Thing {
   Object? get broker;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -19760,9 +19748,8 @@ abstract class Service implements Intangible, $Thing {
   Thing? get serviceOutput;
 
   /// The type of service being offered, e.g. veterans' benefits, emergency relief, etc.
-  @AnyOf([GovernmentBenefitsType, String])
-  @JsonKey(name: 'serviceType', includeIfNull: false)
-  Object? get serviceType;
+  @StringField(name: 'serviceType', enumValues: ['BasicIncome', 'BusinessSupport', 'DisabilitySupport', 'HealthCare', 'OneTimePayments', 'PaidLeave', 'ParentalSupport', 'UnemploymentSupport'])
+  String? get serviceType;
 
   /// A slogan or motto associated with the item.
   @StringField(name: 'slogan')
@@ -19832,7 +19819,7 @@ abstract class ServicePeriod implements StructuredValue, $Thing {
   String? get type;
 
   /// Days of the week when the merchant typically operates, indicated via opening hours markup.
-  @AnyOf([DayOfWeek, OpeningHoursSpecification])
+  @AnyOf([String, OpeningHoursSpecification])
   @JsonKey(name: 'businessDays', includeIfNull: false)
   Object? get businessDays;
 
@@ -19957,7 +19944,7 @@ abstract class ShippingDeliveryTime implements StructuredValue, $Thing {
   String? get type;
 
   /// Days of the week when the merchant typically operates, indicated via opening hours markup.
-  @AnyOf([DayOfWeek, OpeningHoursSpecification])
+  @AnyOf([String, OpeningHoursSpecification])
   @JsonKey(name: 'businessDays', includeIfNull: false)
   Object? get businessDays;
 
@@ -20050,8 +20037,8 @@ abstract class ShippingService implements StructuredValue, $Thing {
   String? get type;
 
   /// Type of fulfillment applicable to the [[ShippingService]].
-  @JsonKey(name: 'fulfillmentType', includeIfNull: false)
-  FulfillmentTypeEnumeration? get fulfillmentType;
+  @StringField(name: 'fulfillmentType', enumValues: ['FulfillmentTypeCollectionPoint', 'FulfillmentTypeDelivery', 'FulfillmentTypePickupDropoff', 'FulfillmentTypePickupInStore', 'FulfillmentTypeScheduledDelivery'])
+  String? get fulfillmentType;
 
   /// The typical delay between the receipt of the order and the goods either leaving the warehouse or being prepared for pickup, in case the delivery method is on site pickup.
   ///
@@ -20182,18 +20169,16 @@ abstract class SizeSpecification implements QualitativeValue, $Thing {
   Object? get sizeGroup;
 
   /// The size system used to identify a product's size. Typically either a standard (for example, "GS1" or "ISO-EN13402"), country code (for example "US" or "JP"), or a measuring system (for example "Metric" or "Imperial").
-  @AnyOf([SizeSystemEnumeration, String])
-  @JsonKey(name: 'sizeSystem', includeIfNull: false)
-  Object? get sizeSystem;
+  @StringField(name: 'sizeSystem', enumValues: ['SizeSystemImperial', 'SizeSystemMetric'])
+  String? get sizeSystem;
 
   /// The age or age range for the intended audience or person, for example 3-12 months for infants, 1-5 years for toddlers.
   @JsonKey(name: 'suggestedAge', includeIfNull: false)
   QuantitativeValue? get suggestedAge;
 
   /// The suggested gender of the intended person or audience, for example "male", "female", or "unisex".
-  @AnyOf([GenderType, String])
-  @JsonKey(name: 'suggestedGender', includeIfNull: false)
-  Object? get suggestedGender;
+  @StringField(name: 'suggestedGender', enumValues: ['Female', 'Male'])
+  String? get suggestedGender;
 
   /// A suggested range of body measurements for the intended audience or person, for example inseam between 32 and 34 inches or height between 170 and 190 cm. Typically found on a size chart for wearable products.
   @JsonKey(name: 'suggestedMeasurement', includeIfNull: false)
@@ -20524,7 +20509,7 @@ abstract class SpecialAnnouncement implements CreativeWork, $Thing {
   Object? get announcementLocation;
 
   /// A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy.
-  @AnyOf([CategoryCode, PhysicalActivityCategory, String, Thing])
+  @AnyOf([CategoryCode, String, Thing])
   @JsonKey(name: 'category', includeIfNull: false)
   Object? get category;
 
@@ -20710,9 +20695,8 @@ abstract class SportsTeam implements SportsOrganization, $Thing {
   Person? get coach;
 
   /// Gender of something, typically a [[Person]], but possibly also fictional characters, animals, etc. While https://schema.org/Male and https://schema.org/Female may be used, text strings are also acceptable for people who are not a binary gender. The [[gender]] property can also be used in an extended sense to cover e.g. the gender of sports teams. As with the gender of individuals, we do not try to enumerate all possibilities. A mixed-gender [[SportsTeam]] can be indicated with a text value of "Mixed".
-  @AnyOf([GenderType, String])
-  @JsonKey(name: 'gender', includeIfNull: false)
-  Object? get gender;
+  @StringField(name: 'gender', enumValues: ['Female', 'Male'])
+  String? get gender;
 
 }
 
@@ -20807,7 +20791,7 @@ abstract class StatisticalVariable implements ConstraintNode, $Thing {
   StatisticalVariable? get measurementDenominator;
 
   /// A subproperty of [[measurementTechnique]] that can be used for specifying specific methods, in particular via [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementMethod', includeIfNull: false)
   Object? get measurementMethod;
 
@@ -20822,7 +20806,7 @@ abstract class StatisticalVariable implements ConstraintNode, $Thing {
   /// For example, if [[variableMeasured]] is: molecule concentration, [[measurementTechnique]] could be: "mass spectrometry" or "nmr spectroscopy" or "colorimetry" or "immunofluorescence". If the [[variableMeasured]] is "depression rating", the [[measurementTechnique]] could be "Zung Scale" or "HAM-D" or "Beck Depression Inventory".
   ///
   /// If there are several [[variableMeasured]] properties recorded for some given data object, use a [[PropertyValue]] for each [[variableMeasured]] and attach the corresponding [[measurementTechnique]]. The value can also be from an enumeration, organized as a [[MeasurementMethodEnum]].
-  @AnyOf([DefinedTerm, MeasurementMethodEnum, String])
+  @AnyOf([DefinedTerm, String])
   @JsonKey(name: 'measurementTechnique', includeIfNull: false)
   Object? get measurementTechnique;
 
@@ -21830,8 +21814,8 @@ abstract class TrackAction implements FindAction, $Thing {
   String? get type;
 
   /// A sub property of instrument. The method of delivery.
-  @JsonKey(name: 'deliveryMethod', includeIfNull: false)
-  DeliveryMethod? get deliveryMethod;
+  @StringField(name: 'deliveryMethod', enumValues: ['LockerDelivery', 'OnSitePickup', 'ParcelService'])
+  String? get deliveryMethod;
 
 }
 
@@ -22150,13 +22134,12 @@ abstract class UnitPriceSpecification implements PriceSpecification, $Thing {
   double? get billingStart;
 
   /// Identifies a price component (for example, a line item on an invoice), part of the total price for an offer.
-  @JsonKey(name: 'priceComponentType', includeIfNull: false)
-  PriceComponentTypeEnumeration? get priceComponentType;
+  @StringField(name: 'priceComponentType', enumValues: ['ActivationFee', 'CleaningFee', 'DistanceFee', 'Downpayment', 'Installment', 'Subscription'])
+  String? get priceComponentType;
 
   /// Defines the type of a price specified for an offered product, for example a list price, a (temporary) sale price or a manufacturer suggested retail price. If multiple prices are specified for an offer the [[priceType]] property can be used to identify the type of each such specified price. The value of priceType can be specified as a value from enumeration PriceTypeEnumeration or, a UN/EDIFACT 5387 code, or as a free form text string for price types that are not already predefined in PriceTypeEnumeration.
-  @AnyOf([PriceTypeEnumeration, String])
-  @JsonKey(name: 'priceType', includeIfNull: false)
-  Object? get priceType;
+  @StringField(name: 'priceType', enumValues: ['InvoicePrice', 'ListPrice', 'MSRP', 'MaximumRetailPrice', 'MinimumAdvertisedPrice', 'RegularPrice', 'SRP', 'SalePrice', 'StrikethroughPrice'])
+  String? get priceType;
 
   /// The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit.
   @JsonKey(name: 'referenceQuantity', includeIfNull: false)
@@ -22417,9 +22400,8 @@ abstract class Vehicle implements Product, $Thing {
   String? get dateVehicleFirstRegistered;
 
   /// The drive wheel configuration, i.e. which roadwheels will receive torque from the vehicle's engine via the drivetrain.
-  @AnyOf([DriveWheelConfigurationValue, String])
-  @JsonKey(name: 'driveWheelConfiguration', includeIfNull: false)
-  Object? get driveWheelConfiguration;
+  @StringField(name: 'driveWheelConfiguration', enumValues: ['AllWheelDriveConfiguration', 'FourWheelDriveConfiguration', 'FrontWheelDriveConfiguration', 'RearWheelDriveConfiguration'])
+  String? get driveWheelConfiguration;
 
   /// The CO2 emissions in g/km. When used in combination with a QuantitativeValue, put "g/km" into the unitText property of that value, since there is no UN/CEFACT Common Code for "g/km".
   @DoubleField(name: 'emissionsCO2')
@@ -22506,8 +22488,8 @@ abstract class Vehicle implements Product, $Thing {
   QuantitativeValue? get speed;
 
   /// The position of the steering wheel or similar device (mostly for cars).
-  @JsonKey(name: 'steeringPosition', includeIfNull: false)
-  SteeringPositionValue? get steeringPosition;
+  @StringField(name: 'steeringPosition', enumValues: ['LeftHandDriving', 'RightHandDriving'])
+  String? get steeringPosition;
 
   /// The permitted vertical load (TWR) of a trailer attached to the vehicle. Also referred to as Tongue Load Rating (TLR) or Vertical Load Rating (VLR).\n\nTypical unit code(s): KGM for kilogram, LBR for pound\n\n* Note 1: You can indicate additional information in the [[name]] of the [[QuantitativeValue]] node.\n* Note 2: You may also link to a [[QualitativeValue]] node that provides additional information using [[valueReference]].\n* Note 3: Note that you can use [[minValue]] and [[maxValue]] to indicate ranges.
   @JsonKey(name: 'tongueWeight', includeIfNull: false)
@@ -22547,9 +22529,8 @@ abstract class Vehicle implements Product, $Thing {
   Object? get vehicleSeatingCapacity;
 
   /// Indicates whether the vehicle has been used for special purposes, like commercial rental, driving school, or as a taxi. The legislation in many countries requires this information to be revealed when offering a car for sale.
-  @AnyOf([CarUsageType, String])
-  @JsonKey(name: 'vehicleSpecialUsage', includeIfNull: false)
-  Object? get vehicleSpecialUsage;
+  @StringField(name: 'vehicleSpecialUsage', enumValues: ['DrivingSchoolVehicleUsage', 'RentalVehicleUsage', 'TaxiVehicleUsage'])
+  String? get vehicleSpecialUsage;
 
   /// The type of component used for transmitting the power from a rotating power source to the wheels or other relevant component(s) ("gearbox" for cars).
   @AnyOf([QualitativeValue, String])
@@ -22686,8 +22667,8 @@ abstract class VideoGame implements Game, SoftwareApplication, $Thing {
   Object? get musicBy;
 
   /// Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
-  @JsonKey(name: 'playMode', includeIfNull: false)
-  GamePlayMode? get playMode;
+  @StringField(name: 'playMode', enumValues: ['CoOp', 'MultiPlayer', 'SinglePlayer'])
+  String? get playMode;
 
   /// The trailer of a movie or TV/radio series, season, episode, etc.
   @JsonKey(name: 'trailer', includeIfNull: false)
@@ -22788,8 +22769,8 @@ abstract class VideoGameSeries implements CreativeWorkSeries, $Thing {
   int? get numberOfSeasons;
 
   /// Indicates whether this game is multi-player, co-op or single-player.  The game can be marked as multi-player, co-op and single-player at the same time.
-  @JsonKey(name: 'playMode', includeIfNull: false)
-  GamePlayMode? get playMode;
+  @StringField(name: 'playMode', enumValues: ['CoOp', 'MultiPlayer', 'SinglePlayer'])
+  String? get playMode;
 
   /// The production company or studio responsible for the item, e.g. series, video game, episode etc.
   @JsonKey(name: 'productionCompany', includeIfNull: false)

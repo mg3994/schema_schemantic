@@ -1,224 +1,31 @@
-// ignore_for_file: annotate_overrides, override_on_non_overriding_member
-
 import 'package:test/test.dart';
 import 'package:schemantic/schemantic.dart';
 import 'package:schema_schemantic/schema_schemantic.dart';
 
-class PersonImpl implements Person {
+class TestThing implements $Thing {
   @override
   final String? context;
   @override
   final String? type;
-  @override
   final String? name;
-  @override
-  final String? email;
-  @override
-  final Object? address;
 
-  // Other inherited fields from Person/Thing stubbed with null
-  @override
-  Null get additionalName => null;
-  @override
-  Null get additionalType => null;
-  @override
-  Null get addressCountry => null;
-  @override
-  Null get addressLocality => null;
-  @override
-  Null get addressRegion => null;
-  @override
-  Null get affiliation => null;
-  @override
-  Null get agentInteractionStatistic => null;
-  @override
-  Null get alumni => null;
-  @override
-  Null get alumniOf => null;
-  @override
-  Null get alternateName => null;
-  @override
-  Null get award => null;
-  @override
-  Null get awards => null;
-  @override
-  Null get birthDate => null;
-  @override
-  Null get birthPlace => null;
-  @override
-  Null get brand => null;
-  @override
-  Null get callSign => null;
-  @override
-  Null get children => null;
-  @override
-  Null get colleague => null;
-  @override
-  Null get colleagues => null;
-  @override
-  Null get contactPoint => null;
-  @override
-  Null get contactPoints => null;
-  @override
-  Null get deathDate => null;
-  @override
-  Null get deathPlace => null;
-  @override
-  Null get description => null;
-  @override
-  Null get disambiguatingDescription => null;
-  @override
-  Null get duns => null;
-  @override
-  Null get familyName => null;
-  @override
-  Null get faxNumber => null;
-  @override
-  Null get follows => null;
-  @override
-  Null get funder => null;
-  @override
-  Null get funding => null;
-  @override
-  Null get gender => null;
-  @override
-  Null get givenName => null;
-  @override
-  Null get globalLocationNumber => null;
-  @override
-  Null get hasCertification => null;
-  @override
-  Null get hasCredential => null;
-  @override
-  Null get hasOccupation => null;
-  @override
-  Null get hasOfferCatalog => null;
-  @override
-  Null get hasPOS => null;
-  @override
-  Null get height => null;
-  @override
-  Null get homeLocation => null;
-  @override
-  Null get honorificPrefix => null;
-  @override
-  Null get honorificSuffix => null;
-  @override
-  Null get identifier => null;
-  @override
-  Null get image => null;
-  @override
-  Null get interactionStatistic => null;
-  @override
-  Null get isicV4 => null;
-  @override
-  Null get jobTitle => null;
-  @override
-  Null get knows => null;
-  @override
-  Null get knowsAbout => null;
-  @override
-  Null get knowsLanguage => null;
-  @override
-  Null get lifeEvent => null;
-  @override
-  Null get mainEntityOfPage => null;
-  @override
-  Null get makesOffer => null;
-  @override
-  Null get memberOf => null;
-  @override
-  Null get naics => null;
-  @override
-  Null get nationality => null;
-  @override
-  Null get netWorth => null;
-  @override
-  Null get owner => null;
-  @override
-  Null get owns => null;
-  @override
-  Null get parent => null;
-  @override
-  Null get parents => null;
-  @override
-  Null get performerIn => null;
-  @override
-  Null get postalCode => null;
-  @override
-  Null get postOfficeBoxNumber => null;
-  @override
-  Null get potentialAction => null;
-  @override
-  Null get pronouns => null;
-  @override
-  Null get publishingPrinciples => null;
-  @override
-  Null get relatedTo => null;
-  @override
-  Null get sameAs => null;
-  @override
-  Null get seeks => null;
-  @override
-  Null get sibling => null;
-  @override
-  Null get siblings => null;
-  @override
-  Null get skills => null;
-  @override
-  Null get sponsor => null;
-  @override
-  Null get spouse => null;
-  @override
-  Null get streetAddress => null;
-  @override
-  Null get subjectOf => null;
-  @override
-  Null get taxID => null;
-  @override
-  Null get telephone => null;
-  @override
-  Null get url => null;
-  @override
-  Null get vatID => null;
-  @override
-  Null get weight => null;
-  @override
-  Null get workLocation => null;
-  @override
-  Null get worksFor => null;
+  TestThing({this.context, this.type = 'Thing', this.name});
 
-  PersonImpl({
-    this.context = 'https://schema.org',
-    this.type = 'Person',
-    this.name,
-    this.email,
-    this.address,
-  });
-
-  factory PersonImpl.fromJson(Map json) {
-    return PersonImpl(
-      context: json['@context'] as String?,
-      type: json['@type'] as String?,
-      name: json['name'] as String?,
-      email: json['email'] as String?,
-      address: json['address'],
-    );
-  }
-
-  Map toJson() => {
-        if (context != null) '@context': context,
-        if (type != null) '@type': type,
-        if (name != null) 'name': name,
-        if (email != null) 'email': email,
-        if (address != null) 'address': address,
-      };
+  factory TestThing.fromJson(Map<String, dynamic> json) => TestThing(
+        context: json['@context'] as String?,
+        type: json['@type'] as String? ?? 'Thing',
+        name: json['name'] as String?,
+      );
 }
 
 void main() {
   group('Schema.org Ontology Parser Tests', () {
-    test('Parses classes, properties, and enums from JSON-LD', () async {
+    test('Parses classes, properties, enums, and context prefixes from JSON-LD', () async {
       final sampleJsonLd = {
+        '@context': {
+          'bibo': 'http://purl.org/ontology/bibo/',
+          'schema': 'https://schema.org/',
+        },
         '@graph': [
           {
             '@id': 'schema:Person',
@@ -247,16 +54,20 @@ void main() {
 
       final ontology = SchemaOrgParser.parse(sampleJsonLd);
       expect(ontology.classes.containsKey('Person'), isTrue);
+      expect(ontology.classes['Person']?.comment, contains('alive, dead'));
       expect(ontology.properties.containsKey('name'), isTrue);
       expect(ontology.enums.containsKey('InStock'), isTrue);
       expect(ontology.enums['InStock']?.parentType, equals('ItemAvailability'));
+      expect(ontology.enumMembersMap['ItemAvailability'], contains('InStock'));
+      expect(ontology.contextPrefixes['bibo'], equals('http://purl.org/ontology/bibo/'));
     });
   });
 
   group('Base Core Types & ValueObject Tests', () {
-    test('ValueObject serializes and deserializes correctly', () {
+    test('ValueObject serializes and deserializes correctly with value equality', () {
       final vo = ValueObject(
         value: 'A powerful smartphone.',
+        type: 'xsd:string',
         language: 'en',
         direction: 'ltr',
       );
@@ -264,28 +75,83 @@ void main() {
       expect(vo.isRtl, isFalse);
       final json = vo.toJson();
       expect(json['@value'], equals('A powerful smartphone.'));
+      expect(json['@type'], equals('xsd:string'));
       expect(json['@language'], equals('en'));
       expect(json['@direction'], equals('ltr'));
 
       final fromJson = ValueObject.fromJson(json);
-      expect(fromJson.value, equals(vo.value));
-      expect(fromJson.language, equals(vo.language));
-      expect(fromJson.direction, equals(vo.direction));
+      expect(fromJson, equals(vo));
+      expect(fromJson.hashCode, equals(vo.hashCode));
     });
 
-    test('ValueObject handles RTL text helper getter', () {
+    test('ValueObject handles RTL text helper getter and custom types', () {
       final voRtl = ValueObject(
         value: 'مرحبا',
+        type: 'bibo:Document',
         language: 'ar',
         direction: 'rtl',
       );
       expect(voRtl.isRtl, isTrue);
+      expect(voRtl.type, equals('bibo:Document'));
+    });
+
+    test('SchemaOrgContext resolves prefix IRIs', () {
+      expect(SchemaOrgContext.resolvePrefix('schema:Person'), equals('https://schema.org/Person'));
+      expect(SchemaOrgContext.resolvePrefix('xsd:integer'), equals('http://www.w3.org/2001/XMLSchema#integer'));
+      expect(SchemaOrgContext.resolvePrefix('bibo:Article'), equals('http://purl.org/ontology/bibo/Article'));
+      expect(SchemaOrgContext.resolvePrefix('unknown:Type'), equals('unknown:Type'));
     });
   });
 
-  group('SchemanticType Schema Wrapping Tests', () {
-    test('Creates SchemanticType.from with jsonSchema, parse, and serialize', () {
-      final personSchema = SchemanticType.from<PersonImpl>(
+  group('Dynamic JSON-LD Deserialization & @graph Support Tests', () {
+    test('Parses top-level @graph structure with value objects', () {
+      final rawJson = {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Person',
+            'name': 'Alice',
+            'description': {
+              '@value': 'Software Engineer',
+              '@type': 'xsd:string',
+              '@language': 'en'
+            }
+          },
+          {
+            '@type': 'Organization',
+            'name': 'Open Source Org'
+          }
+        ]
+      };
+
+      final parsed = SchemaOrg.parseJsonLd(rawJson) as List;
+      expect(parsed.length, equals(2));
+
+      final person = parsed[0] as Map<String, dynamic>;
+      expect(person['@type'], equals('Person'));
+      expect(person['name'], equals('Alice'));
+
+      final desc = person['description'];
+      expect(desc, isA<ValueObject>());
+      expect((desc as ValueObject).value, equals('Software Engineer'));
+      expect(desc.language, equals('en'));
+
+      final org = parsed[1] as Map<String, dynamic>;
+      expect(org['@type'], equals('Organization'));
+      expect(org['name'], equals('Open Source Org'));
+    });
+
+    test('Parses raw string JSON input', () {
+      final jsonStr = '{"@type": "Thing", "name": "Book"}';
+      final parsed = SchemaOrg.parseJsonLd(jsonStr) as Map<String, dynamic>;
+      expect(parsed['@type'], equals('Thing'));
+      expect(parsed['name'], equals('Book'));
+    });
+  });
+
+  group('SchemanticType Integration Tests', () {
+    test('Generated class annotation schema test', () {
+      final personSchema = SchemanticType.from<TestThing>(
         jsonSchema: {
           'type': 'object',
           'properties': {
@@ -293,20 +159,18 @@ void main() {
             '@type': {'type': 'string'},
             'name': {'type': 'string'},
           },
-          'required': ['name'],
         },
-        parse: (json) => PersonImpl.fromJson(json as Map),
+        parse: (json) => TestThing.fromJson(json as Map<String, dynamic>),
       );
 
-      final person = personSchema.parse({
+      final result = personSchema.parse({
         '@context': 'https://schema.org',
-        '@type': 'Person',
+        '@type': 'Thing',
         'name': 'Jane Doe',
       });
 
-      expect(person.name, equals('Jane Doe'));
-      expect(person.context, equals('https://schema.org'));
-      expect(person.type, equals('Person'));
+      expect(result.name, equals('Jane Doe'));
+      expect(result.type, equals('Thing'));
     });
   });
 }

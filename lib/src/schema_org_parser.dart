@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
+import 'base_types.dart';
 
 class SchemaClass {
   final String id;
@@ -22,6 +23,7 @@ class SchemaProperty {
   final String id;
   final String name;
   final String? comment;
+  final String? pattern;
   final List<String> domainIncludes;
   final List<String> rangeIncludes;
 
@@ -29,6 +31,7 @@ class SchemaProperty {
     required this.id,
     required this.name,
     this.comment,
+    this.pattern,
     this.domainIncludes = const [],
     this.rangeIncludes = const [],
   });
@@ -52,11 +55,15 @@ class SchemaOntology {
   final Map<String, SchemaClass> classes;
   final Map<String, SchemaProperty> properties;
   final Map<String, SchemaEnum> enums;
+  final Map<String, List<String>> enumMembersMap;
+  final Map<String, String> contextPrefixes;
 
   SchemaOntology({
     required this.classes,
     required this.properties,
     required this.enums,
+    required this.enumMembersMap,
+    required this.contextPrefixes,
   });
 }
 
@@ -79,7 +86,7 @@ class SchemaOrgParser {
         return jsonDecode(response.body) as Map<String, dynamic>;
       }
     } catch (_) {
-      // Fallback if network request fails or fails offline
+      // Fallback
     }
 
     if (localFilePath != null && File(localFilePath).existsSync()) {
@@ -92,10 +99,17 @@ class SchemaOrgParser {
 
   static SchemaOntology parse(Map<String, dynamic> jsonLd) {
     final graph = (jsonLd['@graph'] as List?) ?? [];
+    final contextMap = <String, String>{};
+    if (jsonLd['@context'] is Map) {
+      (jsonLd['@context'] as Map).forEach((k, v) {
+        contextMap[k.toString()] = v.toString();
+      });
+    }
 
     final classesMap = <String, SchemaClass>{};
     final propertiesMap = <String, SchemaProperty>{};
     final enumsMap = <String, SchemaEnum>{};
+    final enumMembersMap = <String, List<String>>{};
 
     String cleanId(String rawId) {
       if (rawId.startsWith('schema:')) {
@@ -129,8 +143,8 @@ class SchemaOrgParser {
     String? extractComment(dynamic val) {
       if (val == null) return null;
       if (val is String) return val;
-      if (val is Map) {
-        if (val.containsKey('@value')) return val['@value'].toString();
+      if (val is Map && val.containsKey('@value')) {
+        return val['@value'].toString();
       }
       return val.toString();
     }
@@ -144,9 +158,12 @@ class SchemaOrgParser {
 
       final rawTypes = extractList(node['@type']);
       final comment = extractComment(node['rdfs:comment']);
+      final pattern = node['schema:pattern']?.toString() ?? node['pattern']?.toString();
 
-      final isClass = rawTypes.contains('rdfs:Class') || rawTypes.contains('http://www.w3.org/2000/01/rdf-schema#Class');
-      final isProperty = rawTypes.contains('rdf:Property') || rawTypes.contains('http://www.w3.org/1999/02/22-rdf-syntax-ns#Property');
+      final isClass = rawTypes.contains('rdfs:Class') ||
+          rawTypes.contains('http://www.w3.org/2000/01/rdf-schema#Class');
+      final isProperty = rawTypes.contains('rdf:Property') ||
+          rawTypes.contains('http://www.w3.org/1999/02/22-rdf-syntax-ns#Property');
 
       if (isProperty) {
         final domains = extractList(node['schema:domainIncludes']);
@@ -156,6 +173,7 @@ class SchemaOrgParser {
           id: rawId,
           name: name,
           comment: comment,
+          pattern: pattern,
           domainIncludes: domains,
           rangeIncludes: ranges,
         );
@@ -168,14 +186,15 @@ class SchemaOrgParser {
           subClassOf: subClassOf,
         );
       } else {
-        // Potential Enum value if type is another Schema class
         if (rawTypes.isNotEmpty) {
+          final parentType = rawTypes.first;
           enumsMap[name] = SchemaEnum(
             id: rawId,
             name: name,
             comment: comment,
-            parentType: rawTypes.first,
+            parentType: parentType,
           );
+          enumMembersMap.putIfAbsent(parentType, () => []).add(name);
         }
       }
     }
@@ -184,6 +203,57 @@ class SchemaOrgParser {
       classes: classesMap,
       properties: propertiesMap,
       enums: enumsMap,
+      enumMembersMap: enumMembersMap,
+      contextPrefixes: contextMap.isNotEmpty ? contextMap : SchemaOrgContext.prefixes,
     );
+  }
+}
+
+/// Helper class for dynamic JSON-LD parsing.
+class SchemaOrg {
+  /// Parses arbitrary incoming JSON-LD structure (single map, list, or `@graph` container)
+  /// into a Dart object representation (e.g. `ValueObject`, Map, or List).
+  static dynamic parseJsonLd(dynamic json) {
+    if (json == null) return null;
+
+    if (json is String) {
+      try {
+        final decoded = jsonDecode(json);
+        return parseJsonLd(decoded);
+      } catch (_) {
+        return json;
+      }
+    }
+
+    if (json is List) {
+      return json.map((item) => parseJsonLd(item)).toList();
+    }
+
+    if (json is Map) {
+      final map = Map<String, dynamic>.from(json);
+
+      // Handle top-level @graph
+      if (map.containsKey('@graph')) {
+        final graphData = map['@graph'];
+        if (graphData is List) {
+          return graphData.map((item) => parseJsonLd(item)).toList();
+        }
+        return parseJsonLd(graphData);
+      }
+
+      // Handle JSON-LD Value Object
+      if (map.containsKey('@value')) {
+        return ValueObject.fromJson(map);
+      }
+
+      // Process map recursively
+      final resultMap = <String, dynamic>{};
+      map.forEach((key, value) {
+        resultMap[key] = parseJsonLd(value);
+      });
+      return resultMap;
+    }
+
+    return json;
   }
 }
