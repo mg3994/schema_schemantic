@@ -33,14 +33,15 @@ Language-Tagged String (or Language-Tagged Text)
 
 This is the W3C JSON-LD specification term for a literal value bound to an IETF BCP 47 language tag using @value and @language:
 
-JSON
+```JSON
 {
 "@value": "A powerful smartphone.",
 "@language": "en"
 }
+```
 Value Object
 
-The broader JSON-LD term for any JSON object containing an @value key (along with @language or @type and that "@direction" related stuf).
+The broader JSON-LD term for any JSON object containing an @value key (along with @language or @type and that "@direction" related stuffs).
 
 
 ```
