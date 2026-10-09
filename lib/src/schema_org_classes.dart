@@ -4397,7 +4397,7 @@ abstract class CreativeWork implements Thing, $Thing {
 
   /// An abstract is a short description that summarizes a [[CreativeWork]].
   @StringField(name: 'abstract')
-  String? get abstract;
+  String? get abstract_;
 
   /// The human sensory perceptual system or cognitive faculty through which a person may process or perceive the intellectual content of a resource, not including any adaptations of the content (e.g., text alternatives for images). Values should be drawn from the [approved vocabulary](https://www.w3.org/2021/a11y-discov-vocab/latest/#accessMode-vocabulary).
   @StringField(name: 'accessMode')
@@ -9442,7 +9442,7 @@ abstract class HowTo implements CreativeWork, $Thing {
   /// The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles.
   @AnyOf([QuantitativeValue, String])
   @JsonKey(name: 'yield', includeIfNull: false)
-  Object? get yield;
+  Object? get yield_;
 
 }
 
