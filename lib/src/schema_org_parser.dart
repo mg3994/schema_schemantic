@@ -210,6 +210,26 @@ class SchemaOrgParser {
   }
 }
 
+/// Helper for deep value equality checking.
+bool _deepEquals(dynamic a, dynamic b) {
+  if (identical(a, b)) return true;
+  if (a is Map && b is Map) {
+    if (a.length != b.length) return false;
+    for (final key in a.keys) {
+      if (!b.containsKey(key) || !_deepEquals(a[key], b[key])) return false;
+    }
+    return true;
+  }
+  if (a is List && b is List) {
+    if (a.length != b.length) return false;
+    for (var i = 0; i < a.length; i++) {
+      if (!_deepEquals(a[i], b[i])) return false;
+    }
+    return true;
+  }
+  return a == b;
+}
+
 /// Safely resolves raw JSON-LD values into primitive values, ValueObjects, or $Thing entities.
 dynamic resolveSchemaValue(dynamic val) {
   if (val == null) return null;
@@ -288,13 +308,12 @@ class DynamicSchemaThing implements $Thing {
   bool operator ==(Object other) =>
       identical(this, other) ||
       other is DynamicSchemaThing &&
-          runtimeType == other.runtimeType &&
           context == other.context &&
           type == other.type &&
-          rawJson == other.rawJson;
+          _deepEquals(rawJson, other.rawJson);
 
   @override
-  int get hashCode => context.hashCode ^ type.hashCode ^ rawJson.hashCode;
+  int get hashCode => context.hashCode ^ type.hashCode ^ rawJson.length.hashCode;
 
   @override
   String toString() => 'DynamicSchemaThing(type: $type, rawJson: $rawJson)';

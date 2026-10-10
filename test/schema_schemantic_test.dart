@@ -200,6 +200,28 @@ void main() {
       }
     });
 
+    test('Generated \$Thing instances support value equality and hashCode', () {
+      final json1 = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': 'Alice',
+        'jobTitle': 'Engineer'
+      };
+
+      final json2 = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': 'Alice',
+        'jobTitle': 'Engineer'
+      };
+
+      final p1 = SchemaOrg.fromJson(json1);
+      final p2 = SchemaOrg.fromJson(json2);
+
+      expect(p1, equals(p2));
+      expect(p1.hashCode, equals(p2.hashCode));
+    });
+
     test('Handles lists of strings, lists of ValueObjects, and multi-type lists seamlessly', () {
       final jsonLd = {
         '@type': ['https://schema.org/Person', 'https://schema.org/Author'],
