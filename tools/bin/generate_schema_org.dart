@@ -33,9 +33,25 @@ void main(List<String> args) async {
 
   String sanitizeClassName(String name) {
     var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
-    if (cleaned == 'Class') return 'SchemaClass';
-    if (cleaned == 'Map') return 'SchemaMap';
-    if (cleaned == 'Set') return 'SchemaSet';
+    const dartCoreTypes = {
+      'Class': 'SchemaClass',
+      'Map': 'SchemaMap',
+      'Set': 'SchemaSet',
+      'List': 'SchemaList',
+      'DateTime': 'SchemaDateTime',
+      'Duration': 'SchemaDuration',
+      'Type': 'SchemaType',
+      'Function': 'SchemaFunction',
+      'Object': 'SchemaObject',
+      'String': 'SchemaString',
+      'int': 'SchemaInt',
+      'double': 'SchemaDouble',
+      'num': 'SchemaNum',
+      'bool': 'SchemaBool',
+    };
+    if (dartCoreTypes.containsKey(cleaned)) {
+      return dartCoreTypes[cleaned]!;
+    }
     if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
       cleaned = 'Schema_$cleaned';
     }
@@ -46,6 +62,20 @@ void main(List<String> args) async {
     var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
     if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
       cleaned = 'prop_$cleaned';
+    }
+    const dartKeywords = {
+      'abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch',
+      'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do',
+      'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external',
+      'factory', 'false', 'final', 'finally', 'for', 'Function', 'function', 'get',
+      'hide', 'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library',
+      'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow',
+      'return', 'sealed', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this',
+      'throw', 'true', 'try', 'type', 'typedef', 'var', 'void', 'when', 'while',
+      'with', 'yield'
+    };
+    if (dartKeywords.contains(cleaned)) {
+      cleaned = '${cleaned}_';
     }
     return cleaned;
   }
@@ -122,16 +152,6 @@ void main(List<String> args) async {
     buffer.writeln("@Schema(description: '$escapedComment')");
     buffer.writeln("abstract class $className $extendsOrImplements {");
 
-    // Standard $Thing properties overrides
-    buffer.writeln("  @override");
-    buffer.writeln("  @JsonKey(name: '@context', includeIfNull: false)");
-    buffer.writeln("  String? get context;");
-    buffer.writeln();
-    buffer.writeln("  @override");
-    buffer.writeln("  @JsonKey(name: '@type', includeIfNull: false)");
-    buffer.writeln("  String? get type;");
-    buffer.writeln();
-
     final props = classPropertiesMap[cls.name] ?? [];
     for (final prop in props) {
       final propName = sanitizePropertyName(prop.name);
@@ -172,8 +192,13 @@ void main(List<String> args) async {
             stringParams.add("enumValues: [$enumValuesStr]");
           }
           if (prop.pattern != null && prop.pattern!.isNotEmpty) {
-            final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
-            stringParams.add("pattern: '$escapedPattern'");
+            try {
+              RegExp(prop.pattern!);
+              final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
+              stringParams.add("pattern: '$escapedPattern'");
+            } catch (_) {
+              // Skip invalid regular expressions from schema definition
+            }
           }
           buffer.writeln("  @StringField(${stringParams.join(', ')})");
         } else if (dartType == 'int') {

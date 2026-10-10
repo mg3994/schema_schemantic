@@ -92,6 +92,12 @@ void main() {
 
       final voDouble = ValueObject(value: '3.14159');
       expect(voDouble.asDouble, equals(3.14159));
+
+      final voDate = ValueObject(value: '2023-10-25T12:00:00Z');
+      expect(voDate.asDateTime, equals(DateTime.utc(2023, 10, 25, 12, 0, 0)));
+
+      final voUri = ValueObject(value: 'https://schema.org/Person');
+      expect(voUri.asUri, equals(Uri.parse('https://schema.org/Person')));
     });
 
     test('SchemaOrgContext resolves prefix IRIs', () {
@@ -143,6 +149,37 @@ void main() {
       final parsed = SchemaOrg.parseJsonLd(jsonStr) as Map<String, dynamic>;
       expect(parsed['@type'], equals('Thing'));
       expect(parsed['name'], equals('Book'));
+    });
+
+    test('Handles lists of strings, lists of ValueObjects, and multi-type lists seamlessly', () {
+      final jsonLd = {
+        '@type': ['https://schema.org/Person', 'https://schema.org/Author'],
+        'name': ['Alice Smith', 'A. Smith'],
+        'description': [
+          {'@value': 'Software Engineer', '@language': 'en'},
+          {'@value': 'Ingénieur Logiciel', '@language': 'fr'}
+        ],
+        'knowsLanguage': ['en', 'fr', 'es']
+      };
+
+      final parsed = SchemaOrg.parseJsonLd(jsonLd) as Map<String, dynamic>;
+
+      // Array of @types normalized
+      expect(parsed['@type'], equals(['Person', 'Author']));
+
+      // List of strings
+      expect(parsed['name'], equals(['Alice Smith', 'A. Smith']));
+      expect(parsed['knowsLanguage'], equals(['en', 'fr', 'es']));
+
+      // List of ValueObjects
+      final descriptions = parsed['description'] as List;
+      expect(descriptions.length, equals(2));
+      expect(descriptions[0], isA<ValueObject>());
+      expect((descriptions[0] as ValueObject).value, equals('Software Engineer'));
+      expect((descriptions[0] as ValueObject).language, equals('en'));
+      expect(descriptions[1], isA<ValueObject>());
+      expect((descriptions[1] as ValueObject).value, equals('Ingénieur Logiciel'));
+      expect((descriptions[1] as ValueObject).language, equals('fr'));
     });
   });
 

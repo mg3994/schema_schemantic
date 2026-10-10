@@ -59,6 +59,12 @@ class ValueObject {
     return null;
   }
 
+  /// Safely converts [value] to a [DateTime] if possible, or null otherwise.
+  DateTime? get asDateTime => DateTime.tryParse(value);
+
+  /// Safely converts [value] to a [Uri] if possible, or null otherwise.
+  Uri? get asUri => Uri.tryParse(value);
+
   factory ValueObject.fromJson(Map<String, dynamic> json) => ValueObject(
         value: json['@value'] as String,
         type: json['@type'] as String?,
