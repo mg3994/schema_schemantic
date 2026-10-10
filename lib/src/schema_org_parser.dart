@@ -354,6 +354,28 @@ class SchemaOrg {
     return typeStr;
   }
 
+  /// Serializes any `$Thing` entity, `ValueObject`, Map, or List back to JSON-LD.
+  static dynamic toJsonLd(dynamic item) {
+    if (item == null) return null;
+    if (item is ValueObject) return item.toJson();
+    if (item is DynamicSchemaThing) return item.rawJson;
+    if (item is $Thing) {
+      final map = <String, dynamic>{};
+      if (item.context != null) map['@context'] = item.context;
+      if (item.type != null) map['@type'] = item.type;
+      return map;
+    }
+    if (item is List) return item.map((e) => toJsonLd(e)).toList();
+    if (item is Map) {
+      final map = <String, dynamic>{};
+      item.forEach((k, v) {
+        map[k.toString()] = toJsonLd(v);
+      });
+      return map;
+    }
+    return item;
+  }
+
   /// Parses arbitrary incoming JSON-LD structure (single map, list, or `@graph` container)
   /// into a Dart object representation (e.g. `ValueObject`, Map, or List).
   static dynamic parseJsonLd(dynamic json) {

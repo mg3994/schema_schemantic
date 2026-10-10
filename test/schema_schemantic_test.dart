@@ -100,7 +100,7 @@ void main() {
       expect(voUri.asUri, equals(Uri.parse('https://schema.org/Person')));
     });
 
-    test('SchemaOrgContext resolves and compacts prefix IRIs', () {
+    test('SchemaOrgContext resolves, compacts, and registers custom prefix IRIs', () {
       expect(SchemaOrgContext.resolvePrefix('schema:Person'), equals('https://schema.org/Person'));
       expect(SchemaOrgContext.resolvePrefix('xsd:integer'), equals('http://www.w3.org/2001/XMLSchema#integer'));
       expect(SchemaOrgContext.resolvePrefix('bibo:Article'), equals('http://purl.org/ontology/bibo/Article'));
@@ -108,6 +108,10 @@ void main() {
       expect(SchemaOrgContext.compactPrefix('https://schema.org/Person'), equals('schema:Person'));
       expect(SchemaOrgContext.compactPrefix('http://www.w3.org/2001/XMLSchema#integer'), equals('xsd:integer'));
       expect(SchemaOrgContext.compactPrefix('http://purl.org/ontology/bibo/Article'), equals('bibo:Article'));
+
+      SchemaOrgContext.registerPrefix('ex', 'https://example.org/ns#');
+      expect(SchemaOrgContext.resolvePrefix('ex:CustomClass'), equals('https://example.org/ns#CustomClass'));
+      expect(SchemaOrgContext.compactPrefix('https://example.org/ns#CustomClass'), equals('ex:CustomClass'));
     });
   });
 
@@ -224,6 +228,10 @@ void main() {
 
       expect(p1, equals(p2));
       expect(p1.hashCode, equals(p2.hashCode));
+
+      final jsonLd = SchemaOrg.toJsonLd(p1) as Map<String, dynamic>;
+      expect(jsonLd['@type'], equals('Person'));
+      expect(jsonLd['name'], equals('Alice'));
     });
 
     test('Handles lists of strings, lists of ValueObjects, and multi-type lists seamlessly', () {

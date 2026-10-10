@@ -107,6 +107,8 @@ class ValueObject {
 
 /// Helper mapping of standard JSON-LD @context prefixes in `schemaorg-current-https.jsonld`.
 class SchemaOrgContext {
+  static final Map<String, String> _customPrefixes = {};
+
   static const Map<String, String> prefixes = {
     "bibo": "http://purl.org/ontology/bibo/",
     "brick": "https://brickschema.org/schema/Brick#",
@@ -183,11 +185,21 @@ class SchemaOrgContext {
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   };
 
+  /// Registers a custom prefix mapping (e.g. `SchemaOrgContext.registerPrefix('my', 'https://example.com/ns#')`).
+  static void registerPrefix(String prefix, String iri) {
+    _customPrefixes[prefix] = iri;
+  }
+
   /// Expands a prefixed term (e.g. `schema:Person`, `xsd:integer`) to a full IRI if possible.
   static String resolvePrefix(String term) {
     final parts = term.split(':');
-    if (parts.length == 2 && prefixes.containsKey(parts[0])) {
-      return '${prefixes[parts[0]]}${parts[1]}';
+    if (parts.length == 2) {
+      if (_customPrefixes.containsKey(parts[0])) {
+        return '${_customPrefixes[parts[0]]}${parts[1]}';
+      }
+      if (prefixes.containsKey(parts[0])) {
+        return '${prefixes[parts[0]]}${parts[1]}';
+      }
     }
     return term;
   }
@@ -195,6 +207,11 @@ class SchemaOrgContext {
   /// Compacts a full IRI to a prefixed term if a matching prefix is registered
   /// (e.g. `https://schema.org/Person` -> `schema:Person`).
   static String compactPrefix(String fullIri) {
+    for (final entry in _customPrefixes.entries) {
+      if (fullIri.startsWith(entry.value)) {
+        return '${entry.key}:${fullIri.substring(entry.value.length)}';
+      }
+    }
     for (final entry in prefixes.entries) {
       if (fullIri.startsWith(entry.value)) {
         return '${entry.key}:${fullIri.substring(entry.value.length)}';
