@@ -1,0 +1,123 @@
+// Generated file. Do not edit directly.
+import 'package:equatable/equatable.dart';
+import 'package:schemantic/schemantic.dart';
+import 'package:json_annotation/json_annotation.dart';
+import '../../schema_schemantic.dart';
+part 'covidtestingfacility.g.dart';
+
+/// A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus
+/// disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other
+/// non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information
+/// about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.
+/// 
+@Schema(description: '''A CovidTestingFacility is a [[MedicalClinic]] where testing for the COVID-19 Coronavirus       disease is available. If the facility is being made available from an established [[Pharmacy]], [[Hotel]], or other       non-medical organization, multiple types can be listed. This makes it easier to re-use existing schema.org information       about that place, e.g. contact info, address, opening hours. Note that in an emergency, such information may not always be reliable.       ''')
+@JsonSerializable(explicitToJson: true, createJsonSchema: true, includeIfNull: false, createToJson: true)
+abstract class $CovidTestingFacility extends $MedicalClinic {
+
+  const $CovidTestingFacility({
+    super.availableService,
+    super.medicalSpecialty,
+    super.branchOf,
+    super.currenciesAccepted,
+    super.floorLevel,
+    super.openingHours,
+    super.paymentAccepted,
+    super.priceRange,
+    super.acceptedPaymentMethod,
+    super.actionableFeedbackPolicy,
+    super.address,
+    super.agentInteractionStatistic,
+    super.aggregateRating,
+    super.alumni,
+    super.areaServed,
+    super.authorizedRepresentative,
+    super.award,
+    super.awards,
+    super.brand,
+    super.companyRegistration,
+    super.contactPoint,
+    super.contactPoints,
+    super.correctionsPolicy,
+    super.department,
+    super.dissolutionDate,
+    super.diversityPolicy,
+    super.diversityStaffingReport,
+    super.duns,
+    super.email,
+    super.employee,
+    super.employees,
+    super.ethicsPolicy,
+    super.event,
+    super.events,
+    super.faxNumber,
+    super.founder,
+    super.founders,
+    super.foundingDate,
+    super.foundingLocation,
+    super.funder,
+    super.funding,
+    super.globalLocationNumber,
+    super.hasCertification,
+    super.hasCredential,
+    super.hasGS1DigitalLink,
+    super.hasMemberProgram,
+    super.hasMerchantReturnPolicy,
+    super.hasOfferCatalog,
+    super.hasPOS,
+    super.hasProductReturnPolicy,
+    super.hasShippingService,
+    super.interactionStatistic,
+    super.isicV4,
+    super.iso6523Code,
+    super.keywords,
+    super.knowsAbout,
+    super.knowsLanguage,
+    super.legalAddress,
+    super.legalName,
+    super.legalRepresentative,
+    super.leiCode,
+    super.location,
+    super.logo,
+    super.makesOffer,
+    super.member,
+    super.memberOf,
+    super.members,
+    super.naics,
+    super.nonprofitStatus,
+    super.numberOfEmployees,
+    super.ownershipFundingInfo,
+    super.owns,
+    super.parentOrganization,
+    super.publishingPrinciples,
+    super.review,
+    super.reviews,
+    super.seeks,
+    super.serviceArea,
+    super.skills,
+    super.slogan,
+    super.sponsor,
+    super.subOrganization,
+    super.taxID,
+    super.telephone,
+    super.unnamedSourcesPolicy,
+    super.vatID,
+    super.additionalType,
+    super.alternateName,
+    super.description,
+    super.disambiguatingDescription,
+    super.identifier,
+    super.image,
+    super.mainEntityOfPage,
+    super.name,
+    super.owner,
+    super.potentialAction,
+    super.sameAs,
+    super.subjectOf,
+    super.url,
+  });
+
+  @override
+  List<Object?> get props => [
+    ...super.props,
+  ];
+}

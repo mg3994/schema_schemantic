@@ -1,0 +1,130 @@
+// Generated file. Do not edit directly.
+import 'package:equatable/equatable.dart';
+import 'package:schemantic/schemantic.dart';
+import 'package:json_annotation/json_annotation.dart';
+import '../../schema_schemantic.dart';
+part 'individualphysician.g.dart';
+
+/// An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]].
+/// The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.
+@Schema(description: '''An individual medical practitioner. For their official address use [[address]], for affiliations to hospitals use [[hospitalAffiliation]].  The [[practicesAt]] property can be used to indicate [[MedicalOrganization]] hospitals, clinics, pharmacies etc. where this physician practices.''')
+@JsonSerializable(explicitToJson: true, createJsonSchema: true, includeIfNull: false, createToJson: true)
+abstract class $IndividualPhysician extends $Physician {
+
+  /// A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.
+  @Field(name: 'practicesAt', description: '''A [[MedicalOrganization]] where the [[IndividualPhysician]] practices.''')
+  @JsonKey(name: 'practicesAt', includeIfNull: false, includeFromJson: true, includeToJson: true)
+  final $MedicalOrganization? practicesAt;
+
+  const $IndividualPhysician({
+    super.availableService,
+    super.hospitalAffiliation,
+    super.medicalSpecialty,
+    super.occupationalCategory,
+    super.usNPI,
+    super.branchOf,
+    super.currenciesAccepted,
+    super.floorLevel,
+    super.openingHours,
+    super.paymentAccepted,
+    super.priceRange,
+    super.acceptedPaymentMethod,
+    super.actionableFeedbackPolicy,
+    super.address,
+    super.agentInteractionStatistic,
+    super.aggregateRating,
+    super.alumni,
+    super.areaServed,
+    super.authorizedRepresentative,
+    super.award,
+    super.awards,
+    super.brand,
+    super.companyRegistration,
+    super.contactPoint,
+    super.contactPoints,
+    super.correctionsPolicy,
+    super.department,
+    super.dissolutionDate,
+    super.diversityPolicy,
+    super.diversityStaffingReport,
+    super.duns,
+    super.email,
+    super.employee,
+    super.employees,
+    super.ethicsPolicy,
+    super.event,
+    super.events,
+    super.faxNumber,
+    super.founder,
+    super.founders,
+    super.foundingDate,
+    super.foundingLocation,
+    super.funder,
+    super.funding,
+    super.globalLocationNumber,
+    super.hasCertification,
+    super.hasCredential,
+    super.hasGS1DigitalLink,
+    super.hasMemberProgram,
+    super.hasMerchantReturnPolicy,
+    super.hasOfferCatalog,
+    super.hasPOS,
+    super.hasProductReturnPolicy,
+    super.hasShippingService,
+    super.interactionStatistic,
+    super.isicV4,
+    super.iso6523Code,
+    super.keywords,
+    super.knowsAbout,
+    super.knowsLanguage,
+    super.legalAddress,
+    super.legalName,
+    super.legalRepresentative,
+    super.leiCode,
+    super.location,
+    super.logo,
+    super.makesOffer,
+    super.member,
+    super.memberOf,
+    super.members,
+    super.naics,
+    super.nonprofitStatus,
+    super.numberOfEmployees,
+    super.ownershipFundingInfo,
+    super.owns,
+    super.parentOrganization,
+    super.publishingPrinciples,
+    super.review,
+    super.reviews,
+    super.seeks,
+    super.serviceArea,
+    super.skills,
+    super.slogan,
+    super.sponsor,
+    super.subOrganization,
+    super.taxID,
+    super.telephone,
+    super.unnamedSourcesPolicy,
+    super.vatID,
+    super.additionalType,
+    super.alternateName,
+    super.description,
+    super.disambiguatingDescription,
+    super.identifier,
+    super.image,
+    super.mainEntityOfPage,
+    super.name,
+    super.owner,
+    super.potentialAction,
+    super.sameAs,
+    super.subjectOf,
+    super.url,
+    this.practicesAt,
+  });
+
+  @override
+  List<Object?> get props => [
+    ...super.props,
+    practicesAt,
+  ];
+}
