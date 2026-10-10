@@ -191,4 +191,15 @@ class SchemaOrgContext {
     }
     return term;
   }
+
+  /// Compacts a full IRI to a prefixed term if a matching prefix is registered
+  /// (e.g. `https://schema.org/Person` -> `schema:Person`).
+  static String compactPrefix(String fullIri) {
+    for (final entry in prefixes.entries) {
+      if (fullIri.startsWith(entry.value)) {
+        return '${entry.key}:${fullIri.substring(entry.value.length)}';
+      }
+    }
+    return fullIri;
+  }
 }

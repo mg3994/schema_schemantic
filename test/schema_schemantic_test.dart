@@ -100,10 +100,14 @@ void main() {
       expect(voUri.asUri, equals(Uri.parse('https://schema.org/Person')));
     });
 
-    test('SchemaOrgContext resolves prefix IRIs', () {
+    test('SchemaOrgContext resolves and compacts prefix IRIs', () {
       expect(SchemaOrgContext.resolvePrefix('schema:Person'), equals('https://schema.org/Person'));
       expect(SchemaOrgContext.resolvePrefix('xsd:integer'), equals('http://www.w3.org/2001/XMLSchema#integer'));
       expect(SchemaOrgContext.resolvePrefix('bibo:Article'), equals('http://purl.org/ontology/bibo/Article'));
+
+      expect(SchemaOrgContext.compactPrefix('https://schema.org/Person'), equals('schema:Person'));
+      expect(SchemaOrgContext.compactPrefix('http://www.w3.org/2001/XMLSchema#integer'), equals('xsd:integer'));
+      expect(SchemaOrgContext.compactPrefix('http://purl.org/ontology/bibo/Article'), equals('bibo:Article'));
     });
   });
 
