@@ -1,18 +1,18 @@
 name: schema_schemantic
-description: A sample command-line application.
+description: A command-line application and generator for Schema.org JSON-LD definitions with package:schemantic.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
 
 environment:
   sdk: '>=3.11.0 <4.0.0'
+
 dependencies:
   http: ^1.6.0
   json_annotation: ^4.12.0
   path: ^1.9.0
-  schemantic: 0.2.0
+  schemantic: ^1.0.0
 
 dev_dependencies:
   json_serializable: ^6.14.1
   lints: ^6.0.0
-  schemantic_builder: 0.1.0
+  schemantic_builder: ^1.0.0
   test: ^1.25.6
