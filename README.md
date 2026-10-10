@@ -1,63 +1,109 @@
-Useful links 
-> https://dart.dev/language/primary-constructors
-> https://pub.dev/packages/schemantic
-> https://github.com/schemaorg/schemaorg
-> https://schema.org/version/latest/schemaorg-current-https.jsonld
-> 
-These packages has been added 
-```bash
+# Schema Schemantic (`schema_schemantic`)
 
-dart pub add schemantic
-dart pub add dev:schemantic_builder
-dart pub add json_annotation 
-dart pub add dev:json_serializable
-dart pub add dev:build_runner
+A complete, high-performance Dart solution for parsing [Schema.org](https://schema.org) JSON-LD ontologies and generating Dart schema classes annotated with [`package:schemantic`](https://pub.dev/packages/schemantic).
+
+---
+
+## Features
+
+- 🏛️ **Complete Schema.org Coverage**: Parses `schemaorg-current-https.jsonld` to generate abstract schema classes for all ~1000 Schema.org types, properties, and enums.
+- 🎯 **`package:schemantic` Integration**: Annotated with `@Schema()`, `@AnyOf()`, `@StringField()`, `@IntegerField()`, `@DoubleField()`, and `@JsonKey()`.
+- 🌐 **W3C JSON-LD Value Object Support**: Full support for language-tagged strings (`@value`, `@language`, `@direction`, `@type`, `@context`) with `isRtl`, `resolvedType`, `asInt`, `asDouble`, `asBool`, `asDateTime`, and `asUri` helper getters.
+- 🛠️ **CLI Code Generator**: `tools/bin/generate_schema_org.dart` automatically generates clean, DRY Dart schema classes from the official Schema.org ontology with RegExp pattern validation and Dart keyword/type collision protection.
+- 🔄 **Dynamic JSON-LD Parser**: `SchemaOrg.parseJsonLd(...)` unwraps `@graph` containers, normalizes prefixed IRIs (`schema:Person` -> `Person`), handles single or array `@type` values, and converts value objects seamlessly.
+
+---
+
+## Setup
+
+Add the required dependencies to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  schemantic: ^0.2.0
+  json_annotation: ^4.12.0
+  http: ^1.6.0
+  schema_schemantic:
+    path: .
+
+dev_dependencies:
+  schemantic_builder: ^0.1.0
+  json_serializable: ^6.14.1
+  build_runner: ^2.4.0
+  test: ^1.25.6
 ```
-- Generated abstract Dart classes for all ~1000 Schema.org types annotated with `@Schema()` and doc comments.
-> > - Built Schema.org JSON-LD parser (`tools/lib/schema_org_parser.dart`) and CLI generator (`tools/bin/generate_schema_org.dart`)
 
-> please brainstorm best arch. alsong with Using with json_serializable
-Recursive Schemas
-For recursive structures like trees, use the useRefs: true option when generating the schema. This utilizes JSON Schema $ref to handle recursion.
-1. **Schema.org Ontology Parser**: Fetches and parses `schemaorg-current-https.jsonld` to extract classes, properties, sub-classes, and domain/range relationships, make sure you follow naming according to >https://schema.org/version/latest/schemaorg-current-https.jsonld .
-2. **`@Schema()` and `@AnyOf()` Generator**: Generates abstract classes with `@Schema()` annotations and `@AnyOf([...])` union annotations for multi-range properties using `package:schemantic/schemantic.dart`.
-3. **DRY Architecture**: `$Thing` base interface holds `@context` and `@type` declarations, avoiding repetition in derived schema classes.
+Run `dart pub get` to install packages.
 
-# Goals
-> Please ensure you cover every schema keywords , contexts  types , enums , properties and many more stuffs that exists in schema and their features.
-Primary Goal & Deliverable: Are you looking to build a code generator / CLI tool (or a set of generated Dart classes) that parses schemaorg-current-https.jsonld and generates Dart schema classes annotated with @Schema() (from package:schemantic for Schema.org types?
-> In Schema.org (via the W3C JSON-LD standard), this structure is officially called a Language-Tagged String (which is a specific form of a JSON-LD Value Object).
+---
 
-Official Terminology
-Language-Tagged String (or Language-Tagged Text)
+## Usage
 
-This is the W3C JSON-LD specification term for a literal value bound to an IETF BCP 47 language tag using @value and @language:
+### 1. Dynamic JSON-LD Parsing
 
-```JSON
-{
-"@value": "A powerful smartphone.",
-"@language": "en"
+Parse arbitrary incoming JSON-LD API responses or string payloads:
+
+```dart
+import 'package:schema_schemantic/schema_schemantic.dart';
+
+void main() {
+  final jsonPayload = '''
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "https://schema.org/Person",
+        "name": "Alice Smith",
+        "description": {
+          "@value": "Senior Software Architect",
+          "@language": "en"
+        }
+      }
+    ]
+  }
+  ''';
+
+  final parsed = SchemaOrg.parseJsonLd(jsonPayload) as List;
+  final person = parsed.first as Map<String, dynamic>;
+
+  print('Type: ${person["@type"]}'); // Person
+  print('Name: ${person["name"]}');   // Alice Smith
+
+  if (person['description'] is ValueObject) {
+    final desc = person['description'] as ValueObject;
+    print('Description: ${desc.value} (${desc.language})');
+  }
 }
 ```
-Value Object
 
-The broader JSON-LD term for any JSON object containing an @value key (along with @language or @type and that "@direction" related stuffs).
+### 2. Using W3C JSON-LD `ValueObject`
 
+```dart
+final vo = ValueObject(
+  value: '2023-10-25T12:00:00Z',
+  type: 'xsd:dateTime',
+  language: 'en',
+  direction: 'ltr',
+);
 
+print(vo.isRtl);        // false
+print(vo.asDateTime);   // 2023-10-25 12:00:00.000Z
+print(vo.resolvedType); // http://www.w3.org/2001/XMLSchema#dateTime
 ```
-@JsonKey(name: '@value')
-  final String value;
 
-  @JsonKey(name: '@language', includeIfNull: false)
-  final String? language;
+### 3. Generating Schema.org Dart Classes
 
-  /// Text directionality: 'rtl' (Right-to-Left) or 'ltr' (Left-to-Right)
-  @JsonKey(name: '@direction', includeIfNull: false)
-  final String? direction; //....
-  // and a
-   /// Helper getter to check if text is Right-To-Left
-  bool get isRtl => direction == 'rtl';
+Run the generator CLI to parse `schemaorg-current-https.jsonld` and generate `lib/src/schema_org_classes.dart`:
+
+```bash
+dart run tools/bin/generate_schema_org.dart
 ```
-> Base Core Types
-$Thing acts as the primary base interface for all Schema.org entities, providing standard JSON-LD @context and @type fields.
-> > please read all case scenerios carefully
+
+---
+
+## Verification & Testing
+
+```bash
+dart analyze
+dart test
+```
