@@ -1,0 +1,178 @@
+// Generated file. Do not edit directly.
+import 'package:equatable/equatable.dart';
+import 'package:schemantic/schemantic.dart';
+import 'package:json_annotation/json_annotation.dart';
+import '../../schema_schemantic.dart';
+part 'liveblogposting.g.dart';
+
+/// A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.
+@Schema(description: '''A [[LiveBlogPosting]] is a [[BlogPosting]] intended to provide a rolling textual coverage of an ongoing event through continuous updates.''')
+@JsonSerializable(explicitToJson: true, createJsonSchema: true, includeIfNull: false, createToJson: true)
+abstract class $LiveBlogPosting extends $BlogPosting {
+
+  /// The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.
+  @Field(name: 'coverageEndTime', description: '''The time when the live blog will stop covering the Event. Note that coverage may continue after the Event concludes.''')
+  @JsonKey(name: 'coverageEndTime', includeIfNull: false, includeFromJson: true, includeToJson: true)
+  final String? coverageEndTime;
+
+  /// The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.
+  @Field(name: 'coverageStartTime', description: '''The time when the live blog will begin covering the Event. Note that coverage may begin before the Event's start time. The LiveBlogPosting may also be created before coverage begins.''')
+  @JsonKey(name: 'coverageStartTime', includeIfNull: false, includeFromJson: true, includeToJson: true)
+  final String? coverageStartTime;
+
+  /// An update to the LiveBlog.
+  @Field(name: 'liveBlogUpdate', description: '''An update to the LiveBlog.''')
+  @JsonKey(name: 'liveBlogUpdate', includeIfNull: false, includeFromJson: true, includeToJson: true)
+  final $BlogPosting? liveBlogUpdate;
+
+  const $LiveBlogPosting({
+    super.sharedContent,
+    super.articleBody,
+    super.articleSection,
+    super.backstory,
+    super.pageEnd,
+    super.pageStart,
+    super.pagination,
+    super.speakable,
+    super.wordCount,
+    super.about,
+    super.abstractValue,
+    super.accessMode,
+    super.accessModeSufficient,
+    super.accessibilityAPI,
+    super.accessibilityControl,
+    super.accessibilityFeature,
+    super.accessibilityHazard,
+    super.accessibilitySummary,
+    super.accountablePerson,
+    super.acquireLicensePage,
+    super.aggregateRating,
+    super.alternativeHeadline,
+    super.archivedAt,
+    super.assesses,
+    super.associatedMedia,
+    super.audience,
+    super.audio,
+    super.author,
+    super.award,
+    super.awards,
+    super.character,
+    super.citation,
+    super.comment,
+    super.commentCount,
+    super.conditionsOfAccess,
+    super.contentLocation,
+    super.contentRating,
+    super.contentReferenceTime,
+    super.contributor,
+    super.copyrightHolder,
+    super.copyrightNotice,
+    super.copyrightYear,
+    super.correction,
+    super.countryOfOrigin,
+    super.creativeWorkStatus,
+    super.creator,
+    super.creditText,
+    super.dateCreated,
+    super.dateModified,
+    super.datePublished,
+    super.digitalSourceType,
+    super.discussionUrl,
+    super.displayLocation,
+    super.editEIDR,
+    super.editor,
+    super.educationalAlignment,
+    super.educationalLevel,
+    super.educationalUse,
+    super.encoding,
+    super.encodingFormat,
+    super.encodings,
+    super.exampleOfWork,
+    super.expires,
+    super.fileFormat,
+    super.funder,
+    super.funding,
+    super.genre,
+    super.hasPart,
+    super.headline,
+    super.inLanguage,
+    super.interactionStatistic,
+    super.interactivityType,
+    super.interpretedAsClaim,
+    super.isAccessibleForFree,
+    super.isBasedOn,
+    super.isBasedOnUrl,
+    super.isFamilyFriendly,
+    super.isPartOf,
+    super.keywords,
+    super.learningResourceType,
+    super.license,
+    super.locationCreated,
+    super.mainEntity,
+    super.maintainer,
+    super.material,
+    super.materialExtent,
+    super.mentions,
+    super.offers,
+    super.pattern,
+    super.position,
+    super.producer,
+    super.provider,
+    super.publication,
+    super.publisher,
+    super.publisherImprint,
+    super.publishingPrinciples,
+    super.recordedAt,
+    super.releasedEvent,
+    super.review,
+    super.reviews,
+    super.schemaVersion,
+    super.sdDatePublished,
+    super.sdLicense,
+    super.sdPublisher,
+    super.size,
+    super.sourceOrganization,
+    super.spatial,
+    super.spatialCoverage,
+    super.sponsor,
+    super.teaches,
+    super.temporal,
+    super.temporalCoverage,
+    super.text,
+    super.thumbnail,
+    super.thumbnailUrl,
+    super.timeRequired,
+    super.translationOfWork,
+    super.translator,
+    super.typicalAgeRange,
+    super.usageInfo,
+    super.version,
+    super.video,
+    super.workExample,
+    super.workTranslation,
+    super.additionalType,
+    super.alternateName,
+    super.description,
+    super.disambiguatingDescription,
+    super.identifier,
+    super.image,
+    super.mainEntityOfPage,
+    super.name,
+    super.owner,
+    super.potentialAction,
+    super.sameAs,
+    super.subjectOf,
+    super.url,
+    this.coverageEndTime,
+    this.coverageStartTime,
+    this.liveBlogUpdate,
+  });
+
+  @override
+  List<Object?> get props => [
+    ...super.props,
+    coverageEndTime,
+    coverageStartTime,
+    liveBlogUpdate,
+  ];
+}

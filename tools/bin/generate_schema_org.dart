@@ -1,297 +1,486 @@
+import 'dart:convert';
 import 'dart:io';
-import 'package:schema_schemantic/src/schema_org_parser.dart';
+
+class SchemaOrgGraph {
+  final Map<String, Map<String, dynamic>> itemsById = {};
+  final Map<String, List<Map<String, dynamic>>> propertiesByDomain = {};
+  final Map<String, List<String>> subclassesByParent = {};
+
+  SchemaOrgGraph(List<dynamic> graph) {
+    for (var item in graph) {
+      if (item is Map<String, dynamic>) {
+        final id = item['@id'] as String?;
+        if (id != null) {
+          itemsById[id] = item;
+        }
+      }
+    }
+
+    // Index properties by domain and subclass relations
+    for (var item in itemsById.values) {
+      final id = item['@id'] as String;
+      final type = item['@type'];
+      final types = type is List ? type.cast<String>() : [if (type != null) type as String];
+
+      if (types.contains('rdf:Property')) {
+        final domains = _extractList(item['schema:domainIncludes']);
+        for (var domainId in domains) {
+          propertiesByDomain.putIfAbsent(domainId, () => []).add(item);
+        }
+      }
+
+      if (types.contains('rdfs:Class')) {
+        final parents = _extractList(item['rdfs:subClassOf']);
+        for (var parentId in parents) {
+          subclassesByParent.putIfAbsent(parentId, () => []).add(id);
+        }
+      }
+    }
+  }
+
+  List<String> _extractList(dynamic entry) {
+    if (entry == null) return [];
+    if (entry is List) {
+      return entry
+          .map((e) => e is Map ? e['@id'] as String? : null)
+          .whereType<String>()
+          .toList();
+    }
+    if (entry is Map && entry['@id'] != null) {
+      return [entry['@id'] as String];
+    }
+    return [];
+  }
+
+  List<String> getPrimaryParentChain(String classId) {
+    final parents = <String>[];
+    final visited = <String>{};
+
+    void recurse(String current) {
+      if (!visited.add(current)) return;
+      final item = itemsById[current];
+      if (item == null) return;
+      final directParents = _extractList(item['rdfs:subClassOf']);
+      final primary = directParents.firstWhere((p) => p.startsWith('schema:'), orElse: () => '');
+      if (primary.isNotEmpty) {
+        parents.add(primary);
+        recurse(primary);
+      }
+    }
+
+    recurse(classId);
+    return parents;
+  }
+}
+
+String extractStringValue(dynamic entry, [String defaultVal = '']) {
+  if (entry == null) return defaultVal;
+  if (entry is String) return entry;
+  if (entry is Map) {
+    if (entry.containsKey('@value')) {
+      return entry['@value'].toString();
+    }
+  }
+  if (entry is List && entry.isNotEmpty) {
+    return extractStringValue(entry.first, defaultVal);
+  }
+  return defaultVal;
+}
+
+Set<String> getKeywords() => {
+  'abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch',
+  'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do', 'dynamic',
+  'else', 'enum', 'export', 'extends', 'extension', 'external', 'factory', 'false',
+  'final', 'finally', 'for', 'function', 'get', 'hide', 'if', 'implements', 'import',
+  'in', 'interface', 'is', 'late', 'library', 'mixin', 'new', 'null', 'on', 'operator',
+  'part', 'required', 'rethrow', 'return', 'sealed', 'set', 'show', 'static', 'super',
+  'switch', 'sync', 'this', 'throw', 'true', 'try', 'type', 'typedef', 'var', 'void',
+  'when', 'with', 'yield',
+};
+
+String sanitizeIdentifier(String name) {
+  var s = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '');
+  if (getKeywords().contains(s)) {
+    s = '${s}Value';
+  }
+  if (RegExp(r'^[0-9]').hasMatch(s)) {
+    s = 'Num$s';
+  }
+  return s;
+}
+
+String capitalize(String s) {
+  if (s.isEmpty) return s;
+  return s[0].toUpperCase() + s.substring(1);
+}
+
+String lowerFirst(String s) {
+  if (s.isEmpty) return s;
+  return s[0].toLowerCase() + s.substring(1);
+}
+
+String cleanDocComment(dynamic comment) {
+  final text = extractStringValue(comment, '');
+  if (text.isEmpty) return '';
+  final cleaned = text.replaceAll('\\n', '\n').replaceAll(r'\', '');
+  final lines = cleaned.split('\n');
+  return lines.map((l) => '/// ${l.trim()}').join('\n');
+}
+
+String cleanDescription(dynamic comment) {
+  final text = extractStringValue(comment, '');
+  if (text.isEmpty) return '';
+  return text
+      .replaceAll('\$', 'USD ')
+      .replaceAll('\n', ' ')
+      .replaceAll('\r', '')
+      .replaceAll("'''", r"\'\'\'");
+}
 
 void main(List<String> args) async {
-  print('Fetching and parsing Schema.org ontology...');
-  final jsonLd = await SchemaOrgParser.fetchJsonLd(
-    localFilePath: 'schemaorg-current-https.jsonld',
-  );
-  final ontology = SchemaOrgParser.parse(jsonLd);
+  final file = File('schemaorg-current-https.jsonld');
+  if (!await file.exists()) {
+    print('Error: schemaorg-current-https.jsonld not found.');
+    exit(1);
+  }
 
-  print('Found ${ontology.classes.length} classes, ${ontology.properties.length} properties, ${ontology.enums.length} enums.');
+  print('Reading schemaorg-current-https.jsonld...');
+  final content = await file.readAsString();
+  final data = jsonDecode(content) as Map<String, dynamic>;
+  final graphList = data['@graph'] as List<dynamic>;
 
-  // Attach properties to classes based on domainIncludes
-  final classPropertiesMap = <String, List<SchemaProperty>>{};
-  for (final prop in ontology.properties.values) {
-    for (final domain in prop.domainIncludes) {
-      classPropertiesMap.putIfAbsent(domain, () => []).add(prop);
+  final graph = SchemaOrgGraph(graphList);
+
+  final outputDir = Directory('lib/src/schema');
+  if (await outputDir.exists()) {
+    await outputDir.delete(recursive: true);
+  }
+  await outputDir.create(recursive: true);
+
+  final schemaClasses = <String, Map<String, dynamic>>{};
+  final schemaProps = <String, Map<String, dynamic>>{};
+
+  bool isDataType(String classId) {
+    if (classId == 'schema:DataType') return true;
+    final label = extractStringValue(graph.itemsById[classId]?['rdfs:label']).toLowerCase();
+    const primitiveTypes = {
+      'datatype', 'boolean', 'date', 'datetime', 'time', 'number', 'integer',
+      'float', 'text', 'url', 'cssselectortype', 'xpathactiontype', 'xpathtype',
+      'quantity', 'distance', 'duration', 'energy', 'mass'
+    };
+    if (primitiveTypes.contains(label)) return true;
+    final chain = graph.getPrimaryParentChain(classId);
+    return chain.contains('schema:DataType');
+  }
+
+  bool isEnumerationClass(String classId) {
+    if (classId == 'schema:Enumeration') return true;
+    final chain = graph.getPrimaryParentChain(classId);
+    return chain.contains('schema:Enumeration');
+  }
+
+  for (var entry in graph.itemsById.entries) {
+    final id = entry.key;
+    final item = entry.value;
+
+    if (!id.startsWith('schema:')) continue;
+    if (isDataType(id)) continue; // Skip primitive data types
+
+    final type = item['@type'];
+    final types = type is List ? type.cast<String>() : [if (type != null) type as String];
+
+    if (types.contains('rdfs:Class')) {
+      schemaClasses[id] = item;
+    } else if (types.contains('rdf:Property')) {
+      schemaProps[id] = item;
     }
   }
 
-  // Helper to recursively collect all properties for a class including ancestors
-  List<SchemaProperty> getAllPropertiesForClass(String className) {
-    final visited = <String>{};
-    final propsMap = <String, SchemaProperty>{};
+  // Separate enumerations
+  final enumClassIds = <String>{};
+  for (var classId in schemaClasses.keys) {
+    if (isEnumerationClass(classId)) {
+      enumClassIds.add(classId);
+    }
+  }
 
-    void collect(String cName) {
-      if (!visited.add(cName)) return;
-      final direct = classPropertiesMap[cName] ?? [];
-      for (final p in direct) {
-        propsMap.putIfAbsent(p.name, () => p);
+  print('Found ${schemaClasses.length} total classes (${enumClassIds.length} enums, ${schemaClasses.length - enumClassIds.length} models), ${schemaProps.length} properties.');
+
+  // Generate Enum files
+  final generatedEnumFiles = <String>[];
+  for (var enumId in enumClassIds) {
+    final item = schemaClasses[enumId]!;
+    var rawName = extractStringValue(item['rdfs:label'], enumId.replaceFirst('schema:', ''));
+    if (rawName.toLowerCase() == 'map') rawName = 'SchemaMap';
+    final className = capitalize(sanitizeIdentifier(rawName));
+    final doc = cleanDocComment(item['rdfs:comment']);
+
+    // Find enum values belonging to this enum class
+    final values = <Map<String, dynamic>>[];
+    for (var candidate in graph.itemsById.values) {
+      final cType = candidate['@type'];
+      final cTypes = cType is List ? cType.cast<String>() : [if (cType != null) cType as String];
+      if (cTypes.contains(enumId) && !cTypes.contains('rdfs:Class') && !cTypes.contains('rdf:Property')) {
+        values.add(candidate);
       }
-      final cls = ontology.classes[cName];
-      if (cls != null) {
-        for (final parent in cls.subClassOf) {
-          collect(parent);
+    }
+
+    final fileNameClass = sanitizeIdentifier(rawName.toLowerCase());
+    final fileName = "$fileNameClass.dart";
+    final fileNameGenerated = "$fileNameClass.g.dart";
+
+    final buffer = StringBuffer();
+    buffer.writeln("// Generated file. Do not edit directly.");
+    buffer.writeln("import 'package:schemantic/schemantic.dart';");
+    buffer.writeln("import 'package:json_annotation/json_annotation.dart';");
+    buffer.writeln("import '../../schema_schemantic.dart';");
+    buffer.writeln("part '$fileNameGenerated';");
+    buffer.writeln();
+    if (doc.isNotEmpty) buffer.writeln(doc);
+    buffer.writeln("@JsonEnum(alwaysCreate: true)");
+    buffer.writeln("enum $className {");
+
+    final usedEnumNames = <String>{};
+    for (var val in values) {
+      final valId = val['@id'] as String;
+      final valLabel = extractStringValue(val['rdfs:label'], valId.replaceFirst('schema:', ''));
+      final valDoc = cleanDocComment(val['rdfs:comment']);
+      var fieldName = lowerFirst(sanitizeIdentifier(valLabel));
+      if (!usedEnumNames.add(fieldName)) {
+        fieldName = '${fieldName}_${usedEnumNames.length}';
+      }
+
+      if (valDoc.isNotEmpty) buffer.writeln("  $valDoc");
+      buffer.writeln("  @JsonValue('$valId')");
+      buffer.writeln("  $fieldName,");
+    }
+
+    buffer.writeln("}");
+
+    final filePath = 'lib/src/schema/$fileName';
+    await File(filePath).writeAsString(buffer.toString());
+    generatedEnumFiles.add(fileName);
+  }
+
+  // Generate Model Class files
+  final modelClassIds = schemaClasses.keys.where((id) => !enumClassIds.contains(id)).toList();
+
+  for (var classId in modelClassIds) {
+    final item = schemaClasses[classId]!;
+    var rawName = extractStringValue(item['rdfs:label'], classId.replaceFirst('schema:', ''));
+    if (rawName.toLowerCase() == 'map') rawName = 'SchemaMap';
+    final className = capitalize(sanitizeIdentifier(rawName));
+    final doc = cleanDocComment(item['rdfs:comment']);
+    final commentText = cleanDescription(item['rdfs:comment']);
+
+    final fileNameClass = sanitizeIdentifier(rawName.toLowerCase());
+    final fileName = "$fileNameClass.dart";
+    final fileNameGenerated = "$fileNameClass.g.dart";
+
+    final parents = graph._extractList(item['rdfs:subClassOf']);
+    final primaryParentId = parents.firstWhere((p) => p.startsWith('schema:'), orElse: () => '');
+
+    var parentRawName = primaryParentId.isNotEmpty
+        ? extractStringValue(schemaClasses[primaryParentId]?['rdfs:label'], primaryParentId.replaceFirst('schema:', ''))
+        : '';
+    if (parentRawName.toLowerCase() == 'map') parentRawName = 'SchemaMap';
+
+    var primaryParentName = parentRawName.isNotEmpty
+        ? capitalize(sanitizeIdentifier(parentRawName))
+        : '';
+    if (primaryParentName == 'DataType' || primaryParentName == 'RdfsClass' || isDataType(primaryParentId)) {
+      primaryParentName = '';
+    }
+
+    // Direct properties
+    final props = graph.propertiesByDomain[classId] ?? [];
+
+    // Fields
+    final fieldDeclarations = <String>[];
+    final fieldNames = <String>[];
+    final usedPropertyNames = <String>{};
+
+    for (var prop in props) {
+      final propId = prop['@id'] as String;
+      final propLabel = extractStringValue(prop['rdfs:label'], propId.replaceFirst('schema:', ''));
+      var propName = lowerFirst(sanitizeIdentifier(propLabel));
+      if (!usedPropertyNames.add(propName)) {
+        propName = '${propName}_${usedPropertyNames.length}';
+      }
+
+      fieldDeclarations.add(propName);
+      fieldNames.add(propName);
+    }
+
+    // Collect inherited properties ONLY from the primary parent's inheritance chain
+    final primaryChainParentIds = primaryParentId.isNotEmpty ? graph.getPrimaryParentChain(classId) : <String>[];
+    final inheritedPropNames = <String>{};
+    final parentParams = <String>[];
+
+    for (var parentId in primaryChainParentIds) {
+      if (isDataType(parentId)) continue;
+      final parentProps = graph.propertiesByDomain[parentId] ?? [];
+      for (var p in parentProps) {
+        final pId = p['@id'] as String;
+        final pLabel = extractStringValue(p['rdfs:label'], pId.replaceFirst('schema:', ''));
+        final pName = lowerFirst(sanitizeIdentifier(pLabel));
+        if (!usedPropertyNames.contains(pName) && inheritedPropNames.add(pName)) {
+          parentParams.add('super.$pName');
         }
       }
     }
 
-    collect(className);
-    return propsMap.values.toList();
+    final buffer = StringBuffer();
+    buffer.writeln("// Generated file. Do not edit directly.");
+    buffer.writeln("import 'package:equatable/equatable.dart';");
+    buffer.writeln("import 'package:schemantic/schemantic.dart';");
+    buffer.writeln("import 'package:json_annotation/json_annotation.dart';");
+    buffer.writeln("import '../../schema_schemantic.dart';");
+    buffer.writeln("part '$fileNameGenerated';");
+    buffer.writeln();
+
+    if (doc.isNotEmpty) buffer.writeln(doc);
+    buffer.writeln("@Schema(description: '''$commentText''')");
+    buffer.writeln("@JsonSerializable(explicitToJson: true, createJsonSchema: true, includeIfNull: false, createToJson: true)");
+
+    var classModifier = 'abstract class';
+
+    var inheritanceClause = '';
+    if (primaryParentName.isNotEmpty && primaryParentName != className) {
+      inheritanceClause = ' extends \$$primaryParentName';
+    } else {
+      inheritanceClause = ' extends Equatable';
+    }
+
+    buffer.writeln("$classModifier \$$className$inheritanceClause {");
+
+    for (var prop in props) {
+      final propId = prop['@id'] as String;
+      final propLabel = extractStringValue(prop['rdfs:label'], propId.replaceFirst('schema:', ''));
+      final propName = lowerFirst(sanitizeIdentifier(propLabel));
+
+      final propDoc = cleanDocComment(prop['rdfs:comment']);
+      final propCommentText = cleanDescription(prop['rdfs:comment']);
+
+      final ranges = graph._extractList(prop['schema:rangeIncludes']);
+      final dartType = _mapRangeToDartType(ranges, schemaClasses, enumClassIds, graph, isDataType);
+
+      buffer.writeln();
+      if (propDoc.isNotEmpty) buffer.writeln("  $propDoc");
+      buffer.writeln("  @Field(name: '$propLabel', description: '''$propCommentText''')");
+      buffer.writeln("  @JsonKey(name: '$propLabel', includeIfNull: false, includeFromJson: true, includeToJson: true)");
+      buffer.writeln("  final $dartType? $propName;");
+    }
+
+    // Primary constructor
+    buffer.writeln();
+    buffer.writeln("  const \$$className({");
+    if (primaryParentName.isNotEmpty && primaryParentName != className) {
+      for (var pParam in parentParams) {
+        buffer.writeln("    $pParam,");
+      }
+    }
+    for (var fname in fieldNames) {
+      buffer.writeln("    this.$fname,");
+    }
+    buffer.writeln("  });");
+
+    // props getter for Equatable
+    buffer.writeln();
+    buffer.writeln("  @override");
+    buffer.writeln("  List<Object?> get props => [");
+    if (primaryParentName.isNotEmpty && primaryParentName != className) {
+      buffer.writeln("    ...super.props,");
+    }
+    for (var fname in fieldNames) {
+      buffer.writeln("    $fname,");
+    }
+    buffer.writeln("  ];");
+
+    buffer.writeln("}");
+
+    final filePath = 'lib/src/schema/$fileName';
+    await File(filePath).writeAsString(buffer.toString());
   }
 
-  final outputFile = File('lib/src/schema_org_classes.dart');
-  outputFile.parent.createSync(recursive: true);
+  // Generate lib/schema_schemantic.dart library file export
+  final exportBuffer = StringBuffer();
+  exportBuffer.writeln("// Generated file. Exporting all Schema.org definitions.");
+  exportBuffer.writeln();
+  exportBuffer.writeln("export 'src/base_types.dart';");
+  exportBuffer.writeln("export 'src/schema_org_parser.dart';");
+  exportBuffer.writeln();
 
-  final buffer = StringBuffer();
-  buffer.writeln("// GENERATED CODE - DO NOT MODIFY BY HAND");
-  buffer.writeln();
-  buffer.writeln("// ignore_for_file: camel_case_types, non_constant_identifier_names, annotate_overrides");
-  buffer.writeln();
-  buffer.writeln("import 'package:json_annotation/json_annotation.dart';");
-  buffer.writeln("import 'package:schemantic/schemantic.dart';");
-  buffer.writeln("import 'base_types.dart';");
-  buffer.writeln("import 'schema_org_parser.dart';");
-  buffer.writeln();
-
-  String sanitizeClassName(String name) {
-    var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
-    const dartCoreTypes = {
-      'Class': 'SchemaClass',
-      'Map': 'SchemaMap',
-      'Set': 'SchemaSet',
-      'List': 'SchemaList',
-      'DateTime': 'SchemaDateTime',
-      'Duration': 'SchemaDuration',
-      'Type': 'SchemaType',
-      'Function': 'SchemaFunction',
-      'Object': 'SchemaObject',
-      'String': 'SchemaString',
-      'int': 'SchemaInt',
-      'double': 'SchemaDouble',
-      'num': 'SchemaNum',
-      'bool': 'SchemaBool',
-    };
-    if (dartCoreTypes.containsKey(cleaned)) {
-      return dartCoreTypes[cleaned]!;
-    }
-    if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
-      cleaned = 'Schema_$cleaned';
-    }
-    return cleaned;
+  final allFiles = outputDir.listSync().whereType<File>().map((f) => f.path.split('/').last).toList()..sort();
+  for (var f in allFiles) {
+    exportBuffer.writeln("export 'src/schema/$f';");
   }
 
-  String sanitizePropertyName(String name) {
-    var cleaned = name.replaceAll(RegExp(r'[^a-zA-Z0-9_]'), '_');
-    if (RegExp(r'^[0-9]').hasMatch(cleaned)) {
-      cleaned = 'prop_$cleaned';
-    }
-    const dartKeywords = {
-      'abstract', 'as', 'assert', 'async', 'await', 'base', 'break', 'case', 'catch',
-      'class', 'const', 'continue', 'covariant', 'default', 'deferred', 'do',
-      'dynamic', 'else', 'enum', 'export', 'extends', 'extension', 'external',
-      'factory', 'false', 'final', 'finally', 'for', 'Function', 'function', 'get',
-      'hide', 'if', 'implements', 'import', 'in', 'interface', 'is', 'late', 'library',
-      'mixin', 'new', 'null', 'on', 'operator', 'part', 'required', 'rethrow',
-      'return', 'sealed', 'set', 'show', 'static', 'super', 'switch', 'sync', 'this',
-      'throw', 'true', 'try', 'type', 'typedef', 'var', 'void', 'when', 'while',
-      'with', 'yield'
-    };
-    if (dartKeywords.contains(cleaned)) {
-      cleaned = '${cleaned}_';
-    }
-    return cleaned;
-  }
+  await File('lib/schema_schemantic.dart').writeAsString(exportBuffer.toString());
 
-  final allClassNames = ontology.classes.keys.toSet();
+  print('Successfully generated ${allFiles.length} Schema.org Dart files!');
+}
 
-  String mapRangeToDartType(String range) {
+String _mapRangeToDartType(
+    List<String> ranges,
+    Map<String, Map<String, dynamic>> schemaClasses,
+    Set<String> enumClassIds,
+    SchemaOrgGraph graph,
+    bool Function(String) isDataType,
+    ) {
+  if (ranges.isEmpty) return 'Object';
+  if (ranges.length == 1) {
+    final range = ranges.first;
+    if (isDataType(range)) {
+      switch (range) {
+        case 'schema:Integer':
+          return 'int';
+        case 'schema:Number':
+        case 'schema:Float':
+        case 'schema:Distance':
+        case 'schema:Mass':
+        case 'schema:Energy':
+        case 'schema:Quantity':
+          return 'num';
+        case 'schema:Boolean':
+          return 'bool';
+        default:
+          return 'String';
+      }
+    }
     switch (range) {
-      case 'Text':
-      case 'URL':
-      case 'XPathType':
-      case 'CssSelectorType':
-      case 'PronounceableText':
-      case 'Date':
-      case 'DateTime':
-      case 'Time':
+      case 'schema:Text':
+      case 'schema:URL':
+      case 'schema:Date':
+      case 'schema:DateTime':
+      case 'schema:Time':
+      case 'schema:Duration':
+      case 'schema:CssSelectorType':
+      case 'schema:XPathType':
         return 'String';
-      case 'Number':
-      case 'Float':
-        return 'double';
-      case 'Integer':
+      case 'schema:Integer':
         return 'int';
-      case 'Boolean':
+      case 'schema:Number':
+      case 'schema:Float':
+      case 'schema:Distance':
+      case 'schema:Mass':
+      case 'schema:Energy':
+      case 'schema:Quantity':
+        return 'num';
+      case 'schema:Boolean':
         return 'bool';
       default:
-        if (ontology.enumMembersMap.containsKey(range)) {
-          return 'String';
+        var raw = extractStringValue(
+          schemaClasses[range]?['rdfs:label'] ?? graph.itemsById[range]?['rdfs:label'],
+          range.replaceFirst('schema:', ''),
+        );
+        if (raw.toLowerCase() == 'map') raw = 'SchemaMap';
+        final className = capitalize(sanitizeIdentifier(raw));
+        if (enumClassIds.contains(range)) {
+          return className;
         }
-        if (allClassNames.contains(range)) {
-          return sanitizeClassName(range);
-        }
-        return 'dynamic';
+        return '\$$className';
     }
   }
-
-  String? determineFormatForRanges(List<String> ranges) {
-    if (ranges.contains('URL')) return 'uri';
-    if (ranges.contains('DateTime')) return 'date-time';
-    if (ranges.contains('Date')) return 'date';
-    if (ranges.contains('Time')) return 'time';
-    return null;
-  }
-
-  final generatedClassNames = <String, String>{};
-
-  for (final cls in ontology.classes.values) {
-    final className = sanitizeClassName(cls.name);
-    final dataClassName = '${className}Data';
-    generatedClassNames[cls.name] = dataClassName;
-
-    if (cls.comment != null && cls.comment!.isNotEmpty) {
-      final docLines = cls.comment!.replaceAll('\r', '').split('\n');
-      for (final line in docLines) {
-        buffer.writeln('/// ${line.trim()}');
-      }
-    }
-
-    final parents = cls.subClassOf
-        .map(sanitizeClassName)
-        .where((p) => ontology.classes.containsKey(p) || p == 'SchemaClass' || p == 'SchemaMap' || p == 'SchemaSet' || p.startsWith('Schema_'))
-        .toList();
-
-    String extendsOrImplements = 'implements \$Thing';
-    if (parents.isNotEmpty) {
-      extendsOrImplements = 'implements ${parents.join(', ')}';
-      if (!parents.contains('\$Thing')) {
-        extendsOrImplements += ', \$Thing';
-      }
-    }
-
-    final commentText = cls.comment ?? cls.name;
-    final escapedComment = commentText
-        .replaceAll(r'\', r'\\')
-        .replaceAll(r'$', r'\$')
-        .replaceAll("'", r"\'")
-        .replaceAll('\n', ' ');
-
-    // 1. Abstract Schema Interface Definition
-    buffer.writeln("@Schema(description: '$escapedComment')");
-    buffer.writeln("abstract class $className $extendsOrImplements {");
-
-    final directProps = classPropertiesMap[cls.name] ?? [];
-    for (final prop in directProps) {
-      final propName = sanitizePropertyName(prop.name);
-      if (prop.comment != null && prop.comment!.isNotEmpty) {
-        final docLines = prop.comment!.replaceAll('\r', '').split('\n');
-        for (final line in docLines) {
-          buffer.writeln('  /// ${line.trim()}');
-        }
-      }
-
-      final ranges = prop.rangeIncludes;
-      final dartTypes = ranges.map(mapRangeToDartType).toSet().toList();
-      final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
-
-      final enumValues = <String>[];
-      for (final r in ranges) {
-        if (ontology.enumMembersMap.containsKey(r)) {
-          enumValues.addAll(ontology.enumMembersMap[r]!);
-        }
-      }
-
-      final format = determineFormatForRanges(ranges);
-
-      if (validTypes.length > 1) {
-        buffer.writeln("  @AnyOf([${validTypes.join(', ')}])");
-        buffer.writeln("  @JsonKey(name: '${prop.name}', includeIfNull: false)");
-        buffer.writeln("  Object? get $propName;");
-      } else if (validTypes.length == 1) {
-        final dartType = validTypes.first;
-        if (dartType == 'String') {
-          final stringParams = <String>["name: '${prop.name}'"];
-          if (format != null) {
-            stringParams.add("format: '$format'");
-          }
-          if (enumValues.isNotEmpty) {
-            final enumValuesStr = enumValues.map((e) => "'$e'").join(', ');
-            stringParams.add("enumValues: [$enumValuesStr]");
-          }
-          if (prop.pattern != null && prop.pattern!.isNotEmpty) {
-            try {
-              RegExp(prop.pattern!);
-              final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
-              stringParams.add("pattern: '$escapedPattern'");
-            } catch (_) {}
-          }
-          buffer.writeln("  @StringField(${stringParams.join(', ')})");
-        } else if (dartType == 'int') {
-          buffer.writeln("  @IntegerField(name: '${prop.name}')");
-        } else if (dartType == 'double') {
-          buffer.writeln("  @DoubleField(name: '${prop.name}')");
-        } else {
-          buffer.writeln("  @JsonKey(name: '${prop.name}', includeIfNull: false)");
-        }
-        buffer.writeln("  $dartType? get $propName;");
-      } else {
-        buffer.writeln("  @JsonKey(name: '${prop.name}', includeIfNull: false)");
-        buffer.writeln("  dynamic get $propName;");
-      }
-      buffer.writeln();
-    }
-
-    buffer.writeln("}");
-    buffer.writeln();
-
-    // 2. Concrete Data Class Implementation implementing ALL inherited & direct properties
-    final allProps = getAllPropertiesForClass(cls.name);
-
-    buffer.writeln("class $dataClassName extends DynamicSchemaThing implements $className {");
-    buffer.writeln("  const $dataClassName({super.context, super.type = '${cls.name}', required super.rawJson});");
-    buffer.writeln();
-    buffer.writeln("  factory $dataClassName.fromJson(Map<String, dynamic> json) => $dataClassName(");
-    buffer.writeln("        context: json['@context'] as String?,");
-    buffer.writeln("        type: json['@type'] != null ? SchemaOrg.normalizeType(json['@type'].toString()) : '${cls.name}',");
-    buffer.writeln("        rawJson: Map<String, dynamic>.unmodifiable(json),");
-    buffer.writeln("      );");
-    buffer.writeln();
-
-    for (final prop in allProps) {
-      final propName = sanitizePropertyName(prop.name);
-      final ranges = prop.rangeIncludes;
-      final dartTypes = ranges.map(mapRangeToDartType).toSet().toList();
-      final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
-
-      String returnType = 'dynamic';
-      if (validTypes.length == 1) {
-        returnType = '${validTypes.first}?';
-      } else if (validTypes.length > 1) {
-        returnType = 'Object?';
-      }
-
-      buffer.writeln("  @override");
-      buffer.writeln("  $returnType get $propName {");
-      buffer.writeln("    final res = resolveSchemaValue(rawJson['${prop.name}']);");
-      buffer.writeln("    if (res is $returnType) return res;");
-      buffer.writeln("    if (res is ValueObject && '$returnType' == 'String?') return res.value as $returnType;");
-      buffer.writeln("    return null;");
-      buffer.writeln("  }");
-      buffer.writeln();
-    }
-
-    buffer.writeln("}");
-    buffer.writeln();
-  }
-
-  // 3. Generate Type Registry Map for SchemaOrg.fromJson
-  buffer.writeln("final Map<String, \$Thing Function(Map<String, dynamic>)> schemaOrgTypeParsers = {");
-  generatedClassNames.forEach((schemaType, dataClass) {
-    buffer.writeln("  '$schemaType': $dataClass.fromJson,");
-  });
-  buffer.writeln("};");
-
-  outputFile.writeAsStringSync(buffer.toString());
-  print('Generated lib/src/schema_org_classes.dart successfully.');
+  return 'Object';
 }
