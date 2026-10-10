@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'base_types.dart';
+import 'schema_org_classes.dart';
 
 class SchemaClass {
   final String id;
@@ -209,8 +210,117 @@ class SchemaOrgParser {
   }
 }
 
+/// Safely resolves raw JSON-LD values into primitive values, ValueObjects, or $Thing entities.
+dynamic resolveSchemaValue(dynamic val) {
+  if (val == null) return null;
+  if (val is Map<String, dynamic>) {
+    if (val.containsKey('@value')) {
+      return ValueObject.fromJson(val);
+    }
+    return SchemaOrg.fromJson(val);
+  }
+  if (val is List) {
+    return val.map((e) => resolveSchemaValue(e)).toList();
+  }
+  return val;
+}
+
+/// Generic dynamic map representation of a parsed Schema.org entity that implements $Thing.
+class DynamicSchemaThing implements $Thing {
+  @override
+  final String? context;
+
+  @override
+  final String? type;
+
+  final Map<String, dynamic> rawJson;
+
+  const DynamicSchemaThing({
+    this.context,
+    this.type,
+    required this.rawJson,
+  });
+
+  factory DynamicSchemaThing.fromJson(Map<String, dynamic> json) {
+    final ctx = json['@context'] as String?;
+    final rawType = json['@type'];
+    String? resolvedType;
+    if (rawType is String) {
+      resolvedType = SchemaOrg.normalizeType(rawType);
+    } else if (rawType is List && rawType.isNotEmpty) {
+      resolvedType = SchemaOrg.normalizeType(rawType.first.toString());
+    }
+
+    return DynamicSchemaThing(
+      context: ctx,
+      type: resolvedType,
+      rawJson: Map<String, dynamic>.unmodifiable(json),
+    );
+  }
+
+  dynamic operator [](String key) => rawJson[key];
+
+  @override
+  dynamic noSuchMethod(Invocation invocation) {
+    if (invocation.isGetter) {
+      final symbolStr = invocation.memberName.toString();
+      var name = symbolStr.startsWith('Symbol("') && symbolStr.endsWith('")')
+          ? symbolStr.substring(8, symbolStr.length - 2)
+          : symbolStr;
+
+      if (name.endsWith('_') && !rawJson.containsKey(name) && rawJson.containsKey(name.substring(0, name.length - 1))) {
+        name = name.substring(0, name.length - 1);
+      }
+
+      final val = rawJson[name];
+      if (val is Map<String, dynamic>) {
+        return SchemaOrg.fromJson(val);
+      }
+      if (val is List) {
+        return val.map((e) => e is Map<String, dynamic> ? SchemaOrg.fromJson(e) : e).toList();
+      }
+      return val;
+    }
+    return super.noSuchMethod(invocation);
+  }
+
+  @override
+  bool operator ==(Object other) =>
+      identical(this, other) ||
+      other is DynamicSchemaThing &&
+          runtimeType == other.runtimeType &&
+          context == other.context &&
+          type == other.type &&
+          rawJson == other.rawJson;
+
+  @override
+  int get hashCode => context.hashCode ^ type.hashCode ^ rawJson.hashCode;
+
+  @override
+  String toString() => 'DynamicSchemaThing(type: $type, rawJson: $rawJson)';
+}
+
 /// Helper class for dynamic JSON-LD parsing.
 class SchemaOrg {
+  /// Parses JSON or Map into a typed `$Thing` entity.
+  static $Thing fromJson(dynamic json) {
+    final parsed = parseJsonLd(json);
+    if (parsed is Map<String, dynamic>) {
+      final rawType = parsed['@type'];
+      final typeName = rawType is String
+          ? normalizeType(rawType)
+          : (rawType is List && rawType.isNotEmpty ? normalizeType(rawType.first.toString()) : null);
+      if (typeName != null && schemaOrgTypeParsers.containsKey(typeName)) {
+        return schemaOrgTypeParsers[typeName]!(parsed);
+      }
+      return DynamicSchemaThing.fromJson(parsed);
+    }
+    if (parsed is List && parsed.isNotEmpty && parsed.first is Map<String, dynamic>) {
+      return fromJson(parsed.first);
+    }
+    throw ArgumentError('Invalid JSON structure for Schema.org entity');
+  }
+
   /// Normalizes a type string or IRI (e.g. `schema:Person`, `https://schema.org/Person` -> `Person`).
   static String normalizeType(String typeStr) {
     if (typeStr.startsWith('https://schema.org/')) {

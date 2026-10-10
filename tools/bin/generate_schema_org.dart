@@ -18,6 +18,29 @@ void main(List<String> args) async {
     }
   }
 
+  // Helper to recursively collect all properties for a class including ancestors
+  List<SchemaProperty> getAllPropertiesForClass(String className) {
+    final visited = <String>{};
+    final propsMap = <String, SchemaProperty>{};
+
+    void collect(String cName) {
+      if (!visited.add(cName)) return;
+      final direct = classPropertiesMap[cName] ?? [];
+      for (final p in direct) {
+        propsMap.putIfAbsent(p.name, () => p);
+      }
+      final cls = ontology.classes[cName];
+      if (cls != null) {
+        for (final parent in cls.subClassOf) {
+          collect(parent);
+        }
+      }
+    }
+
+    collect(className);
+    return propsMap.values.toList();
+  }
+
   final outputFile = File('lib/src/schema_org_classes.dart');
   outputFile.parent.createSync(recursive: true);
 
@@ -29,6 +52,7 @@ void main(List<String> args) async {
   buffer.writeln("import 'package:json_annotation/json_annotation.dart';");
   buffer.writeln("import 'package:schemantic/schemantic.dart';");
   buffer.writeln("import 'base_types.dart';");
+  buffer.writeln("import 'schema_org_parser.dart';");
   buffer.writeln();
 
   String sanitizeClassName(String name) {
@@ -119,8 +143,12 @@ void main(List<String> args) async {
     return null;
   }
 
+  final generatedClassNames = <String, String>{};
+
   for (final cls in ontology.classes.values) {
     final className = sanitizeClassName(cls.name);
+    final dataClassName = '${className}Data';
+    generatedClassNames[cls.name] = dataClassName;
 
     if (cls.comment != null && cls.comment!.isNotEmpty) {
       final docLines = cls.comment!.replaceAll('\r', '').split('\n');
@@ -149,11 +177,12 @@ void main(List<String> args) async {
         .replaceAll("'", r"\'")
         .replaceAll('\n', ' ');
 
+    // 1. Abstract Schema Interface Definition
     buffer.writeln("@Schema(description: '$escapedComment')");
     buffer.writeln("abstract class $className $extendsOrImplements {");
 
-    final props = classPropertiesMap[cls.name] ?? [];
-    for (final prop in props) {
+    final directProps = classPropertiesMap[cls.name] ?? [];
+    for (final prop in directProps) {
       final propName = sanitizePropertyName(prop.name);
       if (prop.comment != null && prop.comment!.isNotEmpty) {
         final docLines = prop.comment!.replaceAll('\r', '').split('\n');
@@ -166,7 +195,6 @@ void main(List<String> args) async {
       final dartTypes = ranges.map(mapRangeToDartType).toSet().toList();
       final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
 
-      // Check if property ranges include any Enumerations
       final enumValues = <String>[];
       for (final r in ranges) {
         if (ontology.enumMembersMap.containsKey(r)) {
@@ -196,9 +224,7 @@ void main(List<String> args) async {
               RegExp(prop.pattern!);
               final escapedPattern = prop.pattern!.replaceAll(r'\', r'\\').replaceAll("'", r"\'");
               stringParams.add("pattern: '$escapedPattern'");
-            } catch (_) {
-              // Skip invalid regular expressions from schema definition
-            }
+            } catch (_) {}
           }
           buffer.writeln("  @StringField(${stringParams.join(', ')})");
         } else if (dartType == 'int') {
@@ -218,7 +244,53 @@ void main(List<String> args) async {
 
     buffer.writeln("}");
     buffer.writeln();
+
+    // 2. Concrete Data Class Implementation implementing ALL inherited & direct properties
+    final allProps = getAllPropertiesForClass(cls.name);
+
+    buffer.writeln("class $dataClassName extends DynamicSchemaThing implements $className {");
+    buffer.writeln("  const $dataClassName({super.context, super.type = '${cls.name}', required super.rawJson});");
+    buffer.writeln();
+    buffer.writeln("  factory $dataClassName.fromJson(Map<String, dynamic> json) => $dataClassName(");
+    buffer.writeln("        context: json['@context'] as String?,");
+    buffer.writeln("        type: json['@type'] != null ? SchemaOrg.normalizeType(json['@type'].toString()) : '${cls.name}',");
+    buffer.writeln("        rawJson: Map<String, dynamic>.unmodifiable(json),");
+    buffer.writeln("      );");
+    buffer.writeln();
+
+    for (final prop in allProps) {
+      final propName = sanitizePropertyName(prop.name);
+      final ranges = prop.rangeIncludes;
+      final dartTypes = ranges.map(mapRangeToDartType).toSet().toList();
+      final validTypes = dartTypes.where((t) => t != 'dynamic').toList();
+
+      String returnType = 'dynamic';
+      if (validTypes.length == 1) {
+        returnType = '${validTypes.first}?';
+      } else if (validTypes.length > 1) {
+        returnType = 'Object?';
+      }
+
+      buffer.writeln("  @override");
+      buffer.writeln("  $returnType get $propName {");
+      buffer.writeln("    final res = resolveSchemaValue(rawJson['${prop.name}']);");
+      buffer.writeln("    if (res is $returnType) return res;");
+      buffer.writeln("    if (res is ValueObject && '$returnType' == 'String?') return res.value as $returnType;");
+      buffer.writeln("    return null;");
+      buffer.writeln("  }");
+      buffer.writeln();
+    }
+
+    buffer.writeln("}");
+    buffer.writeln();
   }
+
+  // 3. Generate Type Registry Map for SchemaOrg.fromJson
+  buffer.writeln("final Map<String, \$Thing Function(Map<String, dynamic>)> schemaOrgTypeParsers = {");
+  generatedClassNames.forEach((schemaType, dataClass) {
+    buffer.writeln("  '$schemaType': $dataClass.fromJson,");
+  });
+  buffer.writeln("};");
 
   outputFile.writeAsStringSync(buffer.toString());
   print('Generated lib/src/schema_org_classes.dart successfully.');

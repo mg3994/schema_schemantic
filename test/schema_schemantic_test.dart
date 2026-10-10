@@ -151,6 +151,55 @@ void main() {
       expect(parsed['name'], equals('Book'));
     });
 
+    test('SchemaOrg.fromJson creates typed \$Thing instances for pattern matching', () {
+      final rawJson = {
+        '@context': 'https://schema.org',
+        '@type': 'https://schema.org/Person',
+        'name': 'Bob Ross'
+      };
+
+      final $Thing entity = SchemaOrg.fromJson(rawJson);
+      expect(entity, isA<Person>());
+      expect(entity.type, equals('Person'));
+      expect(entity.context, equals('https://schema.org'));
+
+      if (entity is Person) {
+        expect(entity.name, equals('Bob Ross'));
+      }
+
+      // Pattern matching test on typed class instances
+      final label = switch (entity) {
+        Person p => 'Person: ${p.name}',
+        Organization o => 'Organization: ${o.name}',
+        _ => 'Unknown'
+      };
+
+      expect(label, equals('Person: Bob Ross'));
+    });
+
+    test('SchemaOrg.fromJson parses nested schema objects into typed class instances', () {
+      final articleJson = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        'articleBody': 'Dart 3 Schema.org Redesign',
+        'author': {
+          '@type': 'Person',
+          'name': 'Alice Architect'
+        }
+      };
+
+      final $Thing entity = SchemaOrg.fromJson(articleJson);
+      expect(entity, isA<Article>());
+
+      if (entity is Article) {
+        final author = entity.author;
+        expect(author, isA<Person>());
+        if (author is Person) {
+          expect(author.name, equals('Alice Architect'));
+        }
+      }
+    });
+
     test('Handles lists of strings, lists of ValueObjects, and multi-type lists seamlessly', () {
       final jsonLd = {
         '@type': ['https://schema.org/Person', 'https://schema.org/Author'],
