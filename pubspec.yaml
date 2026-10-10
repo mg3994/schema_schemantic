@@ -23,7 +23,7 @@ funding:
   - https://github.com/sponsors/manishmg3994
 
 environment:
-  sdk: ^3.13
+  sdk: ^3.13.5
 
 dependencies:
   equatable: ^3.0.0
